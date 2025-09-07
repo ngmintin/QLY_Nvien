@@ -304,7 +304,7 @@
             Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Margin = new Padding(4);
             Name = "FormTrinhDo";
-            Text = "Trình độ";
+            Text = "TRÌNH ĐỘ";
             Load += FormTrinhDo_Load;
             ((System.ComponentModel.ISupportInitialize)barManager1).EndInit();
             ((System.ComponentModel.ISupportInitialize)splitContainerControl1.Panel1).EndInit();

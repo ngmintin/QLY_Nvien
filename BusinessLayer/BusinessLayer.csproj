@@ -52,6 +52,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BOPHAN_bs.cs" />
     <Compile Include="CONGTY_bs.cs" />
     <Compile Include="PHONGBAN_bs.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

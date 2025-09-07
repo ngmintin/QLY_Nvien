@@ -1,6 +1,6 @@
 ﻿namespace Qly_NVien
 {
-    partial class FormCongTy
+    partial class FormBoPhan
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCongTy));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormBoPhan));
             barManager1 = new DevExpress.XtraBars.BarManager(components);
             bar2 = new DevExpress.XtraBars.Bar();
             btnThem = new DevExpress.XtraBars.BarButtonItem();
@@ -47,21 +47,12 @@
             btnDong = new DevExpress.XtraBars.BarButtonItem();
             btnIn = new DevExpress.XtraBars.BarButtonItem();
             splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
-            textEditDiaChi = new DevExpress.XtraEditors.TextEdit();
-            labelControl4 = new DevExpress.XtraEditors.LabelControl();
-            textEditSoDienThoai = new DevExpress.XtraEditors.TextEdit();
-            labelControl3 = new DevExpress.XtraEditors.LabelControl();
             textEditTen = new DevExpress.XtraEditors.TextEdit();
-            labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            textEditEmail = new DevExpress.XtraEditors.TextEdit();
             labelControl1 = new DevExpress.XtraEditors.LabelControl();
             gcDanhSach = new DevExpress.XtraGrid.GridControl();
             gvDanhSach = new DevExpress.XtraGrid.Views.Grid.GridView();
-            ID_CTY = new DevExpress.XtraGrid.Columns.GridColumn();
-            TENCTY = new DevExpress.XtraGrid.Columns.GridColumn();
-            EMAIL = new DevExpress.XtraGrid.Columns.GridColumn();
-            SĐT = new DevExpress.XtraGrid.Columns.GridColumn();
-            DIACHI = new DevExpress.XtraGrid.Columns.GridColumn();
+            ID_BP = new DevExpress.XtraGrid.Columns.GridColumn();
+            TENBP = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)barManager1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)splitContainerControl1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)splitContainerControl1.Panel1).BeginInit();
@@ -69,10 +60,7 @@
             ((System.ComponentModel.ISupportInitialize)splitContainerControl1.Panel2).BeginInit();
             splitContainerControl1.Panel2.SuspendLayout();
             splitContainerControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)textEditDiaChi.Properties).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)textEditSoDienThoai.Properties).BeginInit();
             ((System.ComponentModel.ISupportInitialize)textEditTen.Properties).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)textEditEmail.Properties).BeginInit();
             ((System.ComponentModel.ISupportInitialize)gcDanhSach).BeginInit();
             ((System.ComponentModel.ISupportInitialize)gvDanhSach).BeginInit();
             SuspendLayout();
@@ -183,7 +171,7 @@
             // 
             barDockControlBottom.CausesValidation = false;
             barDockControlBottom.Dock = DockStyle.Bottom;
-            barDockControlBottom.Location = new Point(0, 558);
+            barDockControlBottom.Location = new Point(0, 592);
             barDockControlBottom.Manager = barManager1;
             barDockControlBottom.Size = new Size(989, 20);
             // 
@@ -193,7 +181,7 @@
             barDockControlLeft.Dock = DockStyle.Left;
             barDockControlLeft.Location = new Point(0, 28);
             barDockControlLeft.Manager = barManager1;
-            barDockControlLeft.Size = new Size(0, 530);
+            barDockControlLeft.Size = new Size(0, 564);
             // 
             // barDockControlRight
             // 
@@ -201,7 +189,7 @@
             barDockControlRight.Dock = DockStyle.Right;
             barDockControlRight.Location = new Point(989, 28);
             barDockControlRight.Manager = barManager1;
-            barDockControlRight.Size = new Size(0, 530);
+            barDockControlRight.Size = new Size(0, 564);
             // 
             // btnDong
             // 
@@ -226,13 +214,7 @@
             // 
             // splitContainerControl1.Panel1
             // 
-            splitContainerControl1.Panel1.Controls.Add(textEditDiaChi);
-            splitContainerControl1.Panel1.Controls.Add(labelControl4);
-            splitContainerControl1.Panel1.Controls.Add(textEditSoDienThoai);
-            splitContainerControl1.Panel1.Controls.Add(labelControl3);
             splitContainerControl1.Panel1.Controls.Add(textEditTen);
-            splitContainerControl1.Panel1.Controls.Add(labelControl2);
-            splitContainerControl1.Panel1.Controls.Add(textEditEmail);
             splitContainerControl1.Panel1.Controls.Add(labelControl1);
             splitContainerControl1.Panel1.Text = "Panel1";
             // 
@@ -240,86 +222,29 @@
             // 
             splitContainerControl1.Panel2.Controls.Add(gcDanhSach);
             splitContainerControl1.Panel2.Text = "Panel2";
-            splitContainerControl1.Size = new Size(989, 530);
-            splitContainerControl1.SplitterPosition = 126;
+            splitContainerControl1.Size = new Size(989, 564);
+            splitContainerControl1.SplitterPosition = 118;
             splitContainerControl1.TabIndex = 5;
-            // 
-            // textEditDiaChi
-            // 
-            textEditDiaChi.Location = new Point(523, 79);
-            textEditDiaChi.Name = "textEditDiaChi";
-            textEditDiaChi.Properties.Appearance.Font = new Font("Times New Roman", 12F);
-            textEditDiaChi.Properties.Appearance.Options.UseFont = true;
-            textEditDiaChi.Size = new Size(260, 26);
-            textEditDiaChi.TabIndex = 1;
-            // 
-            // labelControl4
-            // 
-            labelControl4.Appearance.Font = new Font("Times New Roman", 14.25F);
-            labelControl4.Appearance.Options.UseFont = true;
-            labelControl4.Location = new Point(458, 81);
-            labelControl4.Name = "labelControl4";
-            labelControl4.Size = new Size(59, 21);
-            labelControl4.TabIndex = 0;
-            labelControl4.Text = "Địa chỉ:";
-            // 
-            // textEditSoDienThoai
-            // 
-            textEditSoDienThoai.Location = new Point(523, 28);
-            textEditSoDienThoai.Name = "textEditSoDienThoai";
-            textEditSoDienThoai.Properties.Appearance.Font = new Font("Times New Roman", 12F);
-            textEditSoDienThoai.Properties.Appearance.Options.UseFont = true;
-            textEditSoDienThoai.Size = new Size(260, 26);
-            textEditSoDienThoai.TabIndex = 1;
-            // 
-            // labelControl3
-            // 
-            labelControl3.Appearance.Font = new Font("Times New Roman", 14.25F);
-            labelControl3.Appearance.Options.UseFont = true;
-            labelControl3.Location = new Point(415, 30);
-            labelControl3.Name = "labelControl3";
-            labelControl3.Size = new Size(102, 21);
-            labelControl3.TabIndex = 0;
-            labelControl3.Text = "Số điện thoại:";
             // 
             // textEditTen
             // 
-            textEditTen.Location = new Point(95, 28);
+            textEditTen.Location = new Point(91, 40);
+            textEditTen.MenuManager = barManager1;
             textEditTen.Name = "textEditTen";
-            textEditTen.Properties.Appearance.Font = new Font("Times New Roman", 12F);
+            textEditTen.Properties.Appearance.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             textEditTen.Properties.Appearance.Options.UseFont = true;
-            textEditTen.Size = new Size(260, 26);
+            textEditTen.Size = new Size(260, 30);
             textEditTen.TabIndex = 1;
-            // 
-            // labelControl2
-            // 
-            labelControl2.Appearance.Font = new Font("Times New Roman", 14.25F);
-            labelControl2.Appearance.Options.UseFont = true;
-            labelControl2.Location = new Point(56, 30);
-            labelControl2.Name = "labelControl2";
-            labelControl2.Size = new Size(33, 21);
-            labelControl2.TabIndex = 0;
-            labelControl2.Text = "Tên:";
-            // 
-            // textEditEmail
-            // 
-            textEditEmail.Location = new Point(95, 79);
-            textEditEmail.MenuManager = barManager1;
-            textEditEmail.Name = "textEditEmail";
-            textEditEmail.Properties.Appearance.Font = new Font("Times New Roman", 12F);
-            textEditEmail.Properties.Appearance.Options.UseFont = true;
-            textEditEmail.Size = new Size(260, 26);
-            textEditEmail.TabIndex = 1;
             // 
             // labelControl1
             // 
-            labelControl1.Appearance.Font = new Font("Times New Roman", 14.25F);
+            labelControl1.Appearance.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             labelControl1.Appearance.Options.UseFont = true;
-            labelControl1.Location = new Point(46, 81);
+            labelControl1.Location = new Point(48, 43);
             labelControl1.Name = "labelControl1";
-            labelControl1.Size = new Size(45, 21);
+            labelControl1.Size = new Size(37, 23);
             labelControl1.TabIndex = 0;
-            labelControl1.Text = "Email:";
+            labelControl1.Text = "Tên:";
             // 
             // gcDanhSach
             // 
@@ -328,96 +253,57 @@
             gcDanhSach.MainView = gvDanhSach;
             gcDanhSach.MenuManager = barManager1;
             gcDanhSach.Name = "gcDanhSach";
-            gcDanhSach.Size = new Size(989, 394);
+            gcDanhSach.Size = new Size(989, 436);
             gcDanhSach.TabIndex = 0;
             gcDanhSach.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] { gvDanhSach });
             // 
             // gvDanhSach
             // 
-            gvDanhSach.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] { ID_CTY, TENCTY, EMAIL, SĐT, DIACHI });
+            gvDanhSach.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] { ID_BP, TENBP });
             gvDanhSach.GridControl = gcDanhSach;
             gvDanhSach.Name = "gvDanhSach";
             gvDanhSach.OptionsView.ShowGroupPanel = false;
             gvDanhSach.Click += gvDanhSach_Click;
             // 
-            // ID_CTY
+            // ID_BP
             // 
-            ID_CTY.AppearanceHeader.Font = new Font("Times New Roman", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            ID_CTY.AppearanceHeader.Options.UseFont = true;
-            ID_CTY.Caption = "ID";
-            ID_CTY.FieldName = "ID_CTY";
-            ID_CTY.MaxWidth = 50;
-            ID_CTY.MinWidth = 50;
-            ID_CTY.Name = "ID_CTY";
-            ID_CTY.Visible = true;
-            ID_CTY.VisibleIndex = 0;
-            ID_CTY.Width = 50;
+            ID_BP.AppearanceHeader.Font = new Font("Times New Roman", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            ID_BP.AppearanceHeader.Options.UseFont = true;
+            ID_BP.Caption = "ID";
+            ID_BP.FieldName = "ID_BP";
+            ID_BP.MaxWidth = 50;
+            ID_BP.MinWidth = 50;
+            ID_BP.Name = "ID_BP";
+            ID_BP.Visible = true;
+            ID_BP.VisibleIndex = 0;
+            ID_BP.Width = 50;
             // 
-            // TENCTY
+            // TENBP
             // 
-            TENCTY.AppearanceHeader.Font = new Font("Times New Roman", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            TENCTY.AppearanceHeader.Options.UseFont = true;
-            TENCTY.Caption = "TÊN";
-            TENCTY.FieldName = "TENCTY";
-            TENCTY.MaxWidth = 200;
-            TENCTY.MinWidth = 200;
-            TENCTY.Name = "TENCTY";
-            TENCTY.Visible = true;
-            TENCTY.VisibleIndex = 1;
-            TENCTY.Width = 200;
+            TENBP.AppearanceHeader.Font = new Font("Times New Roman", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            TENBP.AppearanceHeader.Options.UseFont = true;
+            TENBP.Caption = "TÊN";
+            TENBP.FieldName = "TENBP";
+            TENBP.MaxWidth = 300;
+            TENBP.MinWidth = 300;
+            TENBP.Name = "TENBP";
+            TENBP.Visible = true;
+            TENBP.VisibleIndex = 1;
+            TENBP.Width = 300;
             // 
-            // EMAIL
-            // 
-            EMAIL.AppearanceHeader.Font = new Font("Times New Roman", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            EMAIL.AppearanceHeader.Options.UseFont = true;
-            EMAIL.Caption = "EMAIL";
-            EMAIL.FieldName = "EMAIL";
-            EMAIL.MaxWidth = 200;
-            EMAIL.MinWidth = 200;
-            EMAIL.Name = "EMAIL";
-            EMAIL.Visible = true;
-            EMAIL.VisibleIndex = 2;
-            EMAIL.Width = 200;
-            // 
-            // SĐT
-            // 
-            SĐT.AppearanceHeader.Font = new Font("Times New Roman", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            SĐT.AppearanceHeader.Options.UseFont = true;
-            SĐT.Caption = "SĐT";
-            SĐT.FieldName = "SĐT";
-            SĐT.MaxWidth = 130;
-            SĐT.MinWidth = 130;
-            SĐT.Name = "SĐT";
-            SĐT.Visible = true;
-            SĐT.VisibleIndex = 3;
-            SĐT.Width = 130;
-            // 
-            // DIACHI
-            // 
-            DIACHI.AppearanceHeader.Font = new Font("Times New Roman", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            DIACHI.AppearanceHeader.Options.UseFont = true;
-            DIACHI.Caption = "ĐỊA CHỈ";
-            DIACHI.FieldName = "DIACHI";
-            DIACHI.MaxWidth = 300;
-            DIACHI.MinWidth = 300;
-            DIACHI.Name = "DIACHI";
-            DIACHI.Visible = true;
-            DIACHI.VisibleIndex = 4;
-            DIACHI.Width = 300;
-            // 
-            // FormCongTy
+            // FormBoPhan
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(989, 578);
+            ClientSize = new Size(989, 612);
             Controls.Add(splitContainerControl1);
             Controls.Add(barDockControlLeft);
             Controls.Add(barDockControlRight);
             Controls.Add(barDockControlBottom);
             Controls.Add(barDockControlTop);
-            Name = "FormCongTy";
-            Text = "CÔNG TY";
-            Load += FormCongTy_Load;
+            Name = "FormBoPhan";
+            Text = "BỘ PHẬN";
+            Load += FormBoPhan_Load;
             ((System.ComponentModel.ISupportInitialize)barManager1).EndInit();
             ((System.ComponentModel.ISupportInitialize)splitContainerControl1.Panel1).EndInit();
             splitContainerControl1.Panel1.ResumeLayout(false);
@@ -426,10 +312,7 @@
             splitContainerControl1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)splitContainerControl1).EndInit();
             splitContainerControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)textEditDiaChi.Properties).EndInit();
-            ((System.ComponentModel.ISupportInitialize)textEditSoDienThoai.Properties).EndInit();
             ((System.ComponentModel.ISupportInitialize)textEditTen.Properties).EndInit();
-            ((System.ComponentModel.ISupportInitialize)textEditEmail.Properties).EndInit();
             ((System.ComponentModel.ISupportInitialize)gcDanhSach).EndInit();
             ((System.ComponentModel.ISupportInitialize)gvDanhSach).EndInit();
             ResumeLayout(false);
@@ -455,20 +338,11 @@
         private DevExpress.XtraBars.BarButtonItem btnDong;
         private DevExpress.XtraBars.BarButtonItem btnIn;
         private DevExpress.XtraEditors.SplitContainerControl splitContainerControl1;
-        private DevExpress.XtraEditors.TextEdit textEditEmail;
+        private DevExpress.XtraEditors.TextEdit textEditTen;
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraGrid.GridControl gcDanhSach;
         private DevExpress.XtraGrid.Views.Grid.GridView gvDanhSach;
-        private DevExpress.XtraGrid.Columns.GridColumn ID_CTY;
-        private DevExpress.XtraGrid.Columns.GridColumn TENCTY;
-        private DevExpress.XtraEditors.TextEdit textEditDiaChi;
-        private DevExpress.XtraEditors.LabelControl labelControl4;
-        private DevExpress.XtraEditors.TextEdit textEditSoDienThoai;
-        private DevExpress.XtraEditors.LabelControl labelControl3;
-        private DevExpress.XtraEditors.TextEdit textEditTen;
-        private DevExpress.XtraEditors.LabelControl labelControl2;
-        private DevExpress.XtraGrid.Columns.GridColumn EMAIL;
-        private DevExpress.XtraGrid.Columns.GridColumn SĐT;
-        private DevExpress.XtraGrid.Columns.GridColumn DIACHI;
+        private DevExpress.XtraGrid.Columns.GridColumn ID_BP;
+        private DevExpress.XtraGrid.Columns.GridColumn TENBP;
     }
 }

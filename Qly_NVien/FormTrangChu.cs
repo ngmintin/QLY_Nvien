@@ -58,5 +58,10 @@ namespace Qly_NVien
         {
             openForm(typeof(FormCongTy));
         }
+
+        private void btnBoPhan_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            openForm(typeof(FormBoPhan));
+        }
     }
 }

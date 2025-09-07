@@ -315,6 +315,7 @@
             btnBoPhan.ImageOptions.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("btnBoPhan.ImageOptions.SvgImage");
             btnBoPhan.Name = "btnBoPhan";
             btnBoPhan.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            btnBoPhan.ItemClick += btnBoPhan_ItemClick;
             // 
             // ribbonPageHeThong
             // 

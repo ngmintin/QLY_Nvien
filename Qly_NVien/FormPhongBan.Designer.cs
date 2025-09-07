@@ -302,7 +302,7 @@
             Controls.Add(barDockControlBottom);
             Controls.Add(barDockControlTop);
             Name = "FormPhongBan";
-            Text = "FormPhongBan";
+            Text = "PHÒNG BAN";
             Load += FormPhongBan_Load;
             ((System.ComponentModel.ISupportInitialize)barManager1).EndInit();
             ((System.ComponentModel.ISupportInitialize)splitContainerControl1.Panel1).EndInit();
