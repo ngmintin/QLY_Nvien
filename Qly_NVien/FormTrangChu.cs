@@ -17,5 +17,46 @@ namespace Qly_NVien
         {
             InitializeComponent();
         }
+
+        //ĐK KH BỊ LẶP FORM
+        void openForm(Type typeForm)
+        {
+            foreach (var fr in MdiChildren)
+            {
+                if (fr.GetType() == typeForm)
+                {
+                    fr.Activate();
+                    return;
+                }
+            }
+            Form f = (Form)Activator.CreateInstance(typeForm);
+            f.MdiParent = this;
+            f.Show();
+        }
+
+        private void btThongBao_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            openForm(typeof(FormThongBao));
+        }
+
+        private void btSuKien_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            openForm(typeof(FormSuKien));
+        }
+
+        private void btmTrinhDo_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            openForm(typeof(FormTrinhDo));
+        }
+
+        private void btnPhongBan_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            openForm(typeof(FormPhongBan));
+        }
+
+        private void btnCongTy_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            openForm(typeof(FormCongTy));
+        }
     }
 }

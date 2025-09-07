@@ -7,30 +7,30 @@ using DataLayer;
 
 namespace BusinessLayer
 {
-    public class TRINHDOs
+    public class CONGTY_bs
     {
         Qly_NvienEntities1 db = new Qly_NvienEntities1();
 
         //
-        public TRINHDO getItem(int idtd)
+        public CONGTY getItem(int idct)
         {
-            return db.TRINHDOes.FirstOrDefault(x => x.ID_TD == idtd);
+            return db.CONGTies.FirstOrDefault(x => x.ID_CTY == idct);
         }
 
         //LẤY VỀ DANH SÁCH
-        public List<TRINHDO> getList()
+        public List<CONGTY> getList()
         {
-            return db.TRINHDOes.ToList();
+            return db.CONGTies.ToList();
         }
 
         //THÊM
-        public TRINHDO Add(TRINHDO td)
+        public CONGTY Add(CONGTY ct)
         {
             try
             {
-                db.TRINHDOes.Add(td);
+                db.CONGTies.Add(ct);
                 db.SaveChanges();
-                return td;
+                return ct;
             }
             catch (Exception ex)
             {
@@ -39,14 +39,17 @@ namespace BusinessLayer
         }
 
         //SỬA
-        public TRINHDO Update(TRINHDO td)
+        public CONGTY Update(CONGTY ct)
         {
             try
             {
-                var _td = db.TRINHDOes.FirstOrDefault(x => x.ID_TD == td.ID_TD);
-                _td.TENTD = td.TENTD;
+                var _ct = db.CONGTies.FirstOrDefault(x => x.ID_CTY == ct.ID_CTY);
+                _ct.TENCTY = ct.TENCTY;
+                _ct.SĐT = ct.SĐT;
+                _ct.EMAIL = ct.EMAIL;
+                _ct.DIACHI = ct.DIACHI;
                 db.SaveChanges();
-                return td;
+                return ct;
             }
             catch (Exception ex)
             {
@@ -55,12 +58,12 @@ namespace BusinessLayer
         }
 
         //XÓA
-        public void Delete(int idtd)
+        public void Delete(int idct)
         {
             try
             {
-                var _td = db.TRINHDOes.FirstOrDefault(x => x.ID_TD == idtd);
-                db.TRINHDOes.Remove(_td);
+                var _ct = db.CONGTies.FirstOrDefault(x => x.ID_CTY == idct);
+                db.CONGTies.Remove(_ct);
                 db.SaveChanges();
             }
             catch (Exception ex)

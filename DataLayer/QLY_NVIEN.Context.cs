@@ -25,16 +25,17 @@ namespace DataLayer
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<BANGCONG> BANGCONG { get; set; }
-        public virtual DbSet<BOPHAN> BOPHAN { get; set; }
-        public virtual DbSet<CHAMCONG> CHAMCONG { get; set; }
-        public virtual DbSet<CHUCVU> CHUCVU { get; set; }
-        public virtual DbSet<KHENTHUONGKYLUAT> KHENTHUONGKYLUAT { get; set; }
-        public virtual DbSet<LOAICA> LOAICA { get; set; }
-        public virtual DbSet<LOAICONG> LOAICONG { get; set; }
-        public virtual DbSet<NHANVIEN> NHANVIEN { get; set; }
-        public virtual DbSet<PHONGBAN> PHONGBAN { get; set; }
-        public virtual DbSet<TANGCA> TANGCA { get; set; }
-        public virtual DbSet<TRINHDO> TRINHDO { get; set; }
+        public virtual DbSet<BANGCONG> BANGCONGs { get; set; }
+        public virtual DbSet<BOPHAN> BOPHANs { get; set; }
+        public virtual DbSet<CHAMCONG> CHAMCONGs { get; set; }
+        public virtual DbSet<CHUCVU> CHUCVUs { get; set; }
+        public virtual DbSet<CONGTY> CONGTies { get; set; }
+        public virtual DbSet<KHENTHUONGKYLUAT> KHENTHUONGKYLUATs { get; set; }
+        public virtual DbSet<LOAICA> LOAICAs { get; set; }
+        public virtual DbSet<LOAICONG> LOAICONGs { get; set; }
+        public virtual DbSet<NHANVIEN> NHANVIENs { get; set; }
+        public virtual DbSet<PHONGBAN> PHONGBANs { get; set; }
+        public virtual DbSet<TANGCA> TANGCAs { get; set; }
+        public virtual DbSet<TRINHDO> TRINHDOes { get; set; }
     }
 }

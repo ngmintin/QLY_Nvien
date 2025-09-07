@@ -53,8 +53,12 @@
             barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
             btmThoat = new DevExpress.XtraBars.BarButtonItem();
             btmCa = new DevExpress.XtraBars.BarButtonItem();
-            btmTrinhDo = new DevExpress.XtraBars.BarButtonItem();
+            btmCapBac = new DevExpress.XtraBars.BarButtonItem();
             btGopYKhieuNai = new DevExpress.XtraBars.BarButtonItem();
+            btmTrinhDo = new DevExpress.XtraBars.BarButtonItem();
+            btnPhongBan = new DevExpress.XtraBars.BarButtonItem();
+            btnCongTy = new DevExpress.XtraBars.BarButtonItem();
+            btnBoPhan = new DevExpress.XtraBars.BarButtonItem();
             ribbonPageHeThong = new DevExpress.XtraBars.Ribbon.RibbonPage();
             ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -77,10 +81,10 @@
             // 
             ribbon.EmptyAreaImageOptions.ImagePadding = new Padding(45, 44, 45, 44);
             ribbon.ExpandCollapseItem.Id = 0;
-            ribbon.Items.AddRange(new DevExpress.XtraBars.BarItem[] { ribbon.ExpandCollapseItem, btThongBao, btSuKien, btCa, btTrinhDo, btNhanVien, btDieuChuyen, btKhenThuongKyLuat, btBaoLoi, btThoiViec, btHoSo, btDoiMatKhau, btThoat, btCaLam, btTangCa, btBangCong, btLoaiCong, btBangLuong, barButtonItem1, barButtonItem2, barButtonItem3, btmThoat, btmCa, btmTrinhDo, btGopYKhieuNai });
+            ribbon.Items.AddRange(new DevExpress.XtraBars.BarItem[] { ribbon.ExpandCollapseItem, btThongBao, btSuKien, btCa, btTrinhDo, btNhanVien, btDieuChuyen, btKhenThuongKyLuat, btBaoLoi, btThoiViec, btHoSo, btDoiMatKhau, btThoat, btCaLam, btTangCa, btBangCong, btLoaiCong, btBangLuong, barButtonItem1, barButtonItem2, barButtonItem3, btmThoat, btmCa, btmCapBac, btGopYKhieuNai, btmTrinhDo, btnPhongBan, btnCongTy, btnBoPhan });
             ribbon.Location = new Point(0, 0);
             ribbon.Margin = new Padding(4);
-            ribbon.MaxItemId = 26;
+            ribbon.MaxItemId = 30;
             ribbon.Name = "ribbon";
             ribbon.OptionsMenuMinWidth = 495;
             ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] { ribbonPageHeThong, ribbonPageHoSo, ribbonPageChamCong });
@@ -94,6 +98,7 @@
             btThongBao.ImageOptions.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("btThongBao.ImageOptions.SvgImage");
             btThongBao.Name = "btThongBao";
             btThongBao.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            btThongBao.ItemClick += btThongBao_ItemClick;
             // 
             // btSuKien
             // 
@@ -102,6 +107,7 @@
             btSuKien.ImageOptions.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("btSuKien.ImageOptions.SvgImage");
             btSuKien.Name = "btSuKien";
             btSuKien.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            btSuKien.ItemClick += btSuKien_ItemClick;
             // 
             // btCa
             // 
@@ -259,13 +265,13 @@
             btmCa.Name = "btmCa";
             btmCa.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             // 
-            // btmTrinhDo
+            // btmCapBac
             // 
-            btmTrinhDo.Caption = "Trình độ";
-            btmTrinhDo.Id = 24;
-            btmTrinhDo.ImageOptions.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("btmTrinhDo.ImageOptions.SvgImage");
-            btmTrinhDo.Name = "btmTrinhDo";
-            btmTrinhDo.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            btmCapBac.Caption = "Cấp bậc";
+            btmCapBac.Id = 24;
+            btmCapBac.ImageOptions.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("btmCapBac.ImageOptions.SvgImage");
+            btmCapBac.Name = "btmCapBac";
+            btmCapBac.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             // 
             // btGopYKhieuNai
             // 
@@ -275,6 +281,41 @@
             btGopYKhieuNai.Name = "btGopYKhieuNai";
             btGopYKhieuNai.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             // 
+            // btmTrinhDo
+            // 
+            btmTrinhDo.Caption = "Trình độ";
+            btmTrinhDo.Id = 26;
+            btmTrinhDo.ImageOptions.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("btmTrinhDo.ImageOptions.SvgImage");
+            btmTrinhDo.Name = "btmTrinhDo";
+            btmTrinhDo.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            btmTrinhDo.ItemClick += btmTrinhDo_ItemClick;
+            // 
+            // btnPhongBan
+            // 
+            btnPhongBan.Caption = "Phòng ban";
+            btnPhongBan.Id = 27;
+            btnPhongBan.ImageOptions.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("btnPhongBan.ImageOptions.SvgImage");
+            btnPhongBan.Name = "btnPhongBan";
+            btnPhongBan.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            btnPhongBan.ItemClick += btnPhongBan_ItemClick;
+            // 
+            // btnCongTy
+            // 
+            btnCongTy.Caption = "Công ty";
+            btnCongTy.Id = 28;
+            btnCongTy.ImageOptions.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("btnCongTy.ImageOptions.SvgImage");
+            btnCongTy.Name = "btnCongTy";
+            btnCongTy.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            btnCongTy.ItemClick += btnCongTy_ItemClick;
+            // 
+            // btnBoPhan
+            // 
+            btnBoPhan.Caption = "Bộ phận";
+            btnBoPhan.Id = 29;
+            btnBoPhan.ImageOptions.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("btnBoPhan.ImageOptions.SvgImage");
+            btnBoPhan.Name = "btnBoPhan";
+            btnBoPhan.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            // 
             // ribbonPageHeThong
             // 
             ribbonPageHeThong.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] { ribbonPageGroup1, ribbonPageGroup4, ribbonPageGroup6 });
@@ -283,16 +324,20 @@
             // 
             // ribbonPageGroup1
             // 
+            ribbonPageGroup1.ItemLinks.Add(btnCongTy, true);
+            ribbonPageGroup1.ItemLinks.Add(btnPhongBan, true);
+            ribbonPageGroup1.ItemLinks.Add(btnBoPhan, true);
+            ribbonPageGroup1.ItemLinks.Add(btNhanVien, true);
+            ribbonPageGroup1.ItemLinks.Add(btmTrinhDo, true);
             ribbonPageGroup1.ItemLinks.Add(btThongBao, true);
             ribbonPageGroup1.ItemLinks.Add(btSuKien, true);
-            ribbonPageGroup1.ItemLinks.Add(btNhanVien, true);
-            ribbonPageGroup1.ItemLinks.Add(btDieuChuyen, true);
             ribbonPageGroup1.ItemLinks.Add(btKhenThuongKyLuat, true);
             ribbonPageGroup1.Name = "ribbonPageGroup1";
             ribbonPageGroup1.Text = "THÔNG TIN";
             // 
             // ribbonPageGroup4
             // 
+            ribbonPageGroup4.ItemLinks.Add(btDieuChuyen, true);
             ribbonPageGroup4.ItemLinks.Add(btGopYKhieuNai, true);
             ribbonPageGroup4.ItemLinks.Add(btThoiViec, true);
             ribbonPageGroup4.Name = "ribbonPageGroup4";
@@ -321,7 +366,7 @@
             // ribbonPageGroup7
             // 
             ribbonPageGroup7.ItemLinks.Add(btmCa);
-            ribbonPageGroup7.ItemLinks.Add(btmTrinhDo);
+            ribbonPageGroup7.ItemLinks.Add(btmCapBac);
             ribbonPageGroup7.Name = "ribbonPageGroup7";
             ribbonPageGroup7.Text = "ĐĂNG KÝ";
             // 
@@ -356,7 +401,7 @@
             // 
             // documentManager1
             // 
-            documentManager1.ContainerControl = this;
+            documentManager1.MdiParent = this;
             documentManager1.MenuManager = ribbon;
             documentManager1.View = tabbedView1;
             documentManager1.ViewCollection.AddRange(new DevExpress.XtraBars.Docking2010.Views.BaseView[] { tabbedView1 });
@@ -370,12 +415,14 @@
             Controls.Add(ribbonStatusBar);
             Controls.Add(ribbon);
             Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            IsMdiContainer = true;
             Margin = new Padding(4);
             Name = "FormTrangChu";
             Ribbon = ribbon;
             StartPosition = FormStartPosition.CenterScreen;
             StatusBar = ribbonStatusBar;
             Text = "Trang Chủ";
+            WindowState = FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)ribbon).EndInit();
             ((System.ComponentModel.ISupportInitialize)documentManager1).EndInit();
             ((System.ComponentModel.ISupportInitialize)tabbedView1).EndInit();
@@ -418,10 +465,14 @@
         private DevExpress.XtraBars.BarButtonItem btmThoat;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup6;
         private DevExpress.XtraBars.BarButtonItem btmCa;
-        private DevExpress.XtraBars.BarButtonItem btmTrinhDo;
+        private DevExpress.XtraBars.BarButtonItem btmCapBac;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup7;
         private DevExpress.XtraBars.BarButtonItem btGopYKhieuNai;
         private DevExpress.XtraBars.Docking2010.DocumentManager documentManager1;
         private DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView tabbedView1;
+        private DevExpress.XtraBars.BarButtonItem btmTrinhDo;
+        private DevExpress.XtraBars.BarButtonItem btnPhongBan;
+        private DevExpress.XtraBars.BarButtonItem btnCongTy;
+        private DevExpress.XtraBars.BarButtonItem btnBoPhan;
     }
 }

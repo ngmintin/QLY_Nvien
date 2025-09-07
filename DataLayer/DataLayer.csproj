@@ -66,6 +66,9 @@
     <Compile Include="CHUCVU.cs">
       <DependentUpon>QLY_NVIEN.tt</DependentUpon>
     </Compile>
+    <Compile Include="CONGTY.cs">
+      <DependentUpon>QLY_NVIEN.tt</DependentUpon>
+    </Compile>
     <Compile Include="KHENTHUONGKYLUAT.cs">
       <DependentUpon>QLY_NVIEN.tt</DependentUpon>
     </Compile>
