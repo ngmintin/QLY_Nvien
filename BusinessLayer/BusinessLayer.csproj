@@ -55,6 +55,7 @@
     <Compile Include="BOPHAN_bs.cs" />
     <Compile Include="CHUCVU_bs.cs" />
     <Compile Include="CONGTY_bs.cs" />
+    <Compile Include="DTO_bs\NHANVIEN_dto.cs" />
     <Compile Include="NHANVIEN_bs.cs" />
     <Compile Include="PHONGBAN_bs.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -70,6 +71,7 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

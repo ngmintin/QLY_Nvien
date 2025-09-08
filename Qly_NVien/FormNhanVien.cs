@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using DataLayer;
 using BusinessLayer;
 using System.IO;
+using DevExpress.XtraNavBar.ViewInfo;
 
 namespace Qly_NVien
 {
@@ -24,6 +25,10 @@ namespace Qly_NVien
         NHANVIEN_bs _nhanvien;
         bool _them;
         int _idnv;
+        BOPHAN_bs _bophan;
+        CHUCVU_bs _chucvu;
+        PHONGBAN_bs _phongban;
+        TRINHDOs _trinhdo;
 
         private void FormNhanVien_Load(object sender, EventArgs e)
         {
@@ -31,10 +36,10 @@ namespace Qly_NVien
             gvDanhSach.RowHeight = 30;
             gvDanhSach.ColumnPanelRowHeight = 40;
             //TIÊU ĐỀ CỘT
-            gvDanhSach.Appearance.HeaderPanel.Font = new Font("Times New Roman", 15F, FontStyle.Bold);
+            gvDanhSach.Appearance.HeaderPanel.Font = new Font("Times New Roman", 10F, FontStyle.Bold);
             gvDanhSach.Appearance.HeaderPanel.Options.UseFont = true;
             //Ô DỮ LIỆU
-            gvDanhSach.Appearance.Row.Font = new Font("Times New Roman", 15F);
+            gvDanhSach.Appearance.Row.Font = new Font("Times New Roman", 10F);
             gvDanhSach.Appearance.Row.Options.UseFont = true;
             //TỤ ĐỘNG CO DÃN THEO NỘI DUNG
             gvDanhSach.OptionsView.RowAutoHeight = true;
@@ -42,8 +47,13 @@ namespace Qly_NVien
             //THAO TÁC
             _them = false;
             _nhanvien = new NHANVIEN_bs();
+            _bophan = new BOPHAN_bs();
+            _chucvu = new CHUCVU_bs();
+            _phongban = new PHONGBAN_bs();
+            _trinhdo = new TRINHDOs();
             showHide(true);
             loadData();
+            loadComBo();
             splitContainerControl1.PanelVisibility = DevExpress.XtraEditors.SplitPanelVisibility.Panel2;    //CHỈ HIỆN THỊ PANEL 2
         }
 
@@ -68,6 +78,7 @@ namespace Qly_NVien
             comboBoxTrinhDo.Enabled = !kt;
             simpleButtonHinhAnh.Enabled = !kt;
             dateTimePickerNgaySinh.Enabled = !kt;
+            checkBoxGioiTinh.Enabled = !kt;
 
         }
 
@@ -78,14 +89,35 @@ namespace Qly_NVien
             textEditSDT.Text = string.Empty;
             textEditDiaChi.Text = string.Empty;
             textEditEmail.Text = string.Empty;
+            checkBoxGioiTinh.Checked = false;
 
         }
 
         //CẬP NHẬT DL
         void loadData()
         {
-            gcDanhSach.DataSource = _nhanvien.getList();
+            gcDanhSach.DataSource = _nhanvien.getListFull();
             gvDanhSach.OptionsBehavior.Editable = false;
+        }
+
+        void loadComBo()
+        {
+            comboBoxBoPhan.DataSource = _bophan.getList();
+            comboBoxBoPhan.DisplayMember = "TENBP";
+            comboBoxBoPhan.ValueMember = "ID_BP";
+
+            comboBoxChucVu.DataSource = _chucvu.getList();
+            comboBoxChucVu.DisplayMember = "TENCV";
+            comboBoxChucVu.ValueMember = "ID_CV";
+
+            comboBoxPhongBan.DataSource = _phongban.getList();
+            comboBoxPhongBan.DisplayMember = "TENPB";
+            comboBoxPhongBan.ValueMember = "ID_PB";
+
+            comboBoxTrinhDo.DataSource = _trinhdo.getList();
+            comboBoxTrinhDo.DisplayMember = "TENTD";
+            comboBoxTrinhDo.ValueMember = "ID_TD";
+
         }
 
         private void btnThem_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -114,11 +146,18 @@ namespace Qly_NVien
 
         private void btnLuu_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            saveData();
-            loadData();
-            _them = false;
-            showHide(true);
-            splitContainerControl1.PanelVisibility = DevExpress.XtraEditors.SplitPanelVisibility.Panel2; //CHỈ HIỆN THỊ PANEL 2
+            if (textEditHovaTen.Text == "" || textEditSDT.Text == "" || textEditEmail.Text == "" || textEditDiaChi.Text == "" || !checkBoxGioiTinh.Checked || comboBoxBoPhan.Text == "" || comboBoxChucVu.Text == "" || comboBoxPhongBan.Text == "" || comboBoxTrinhDo.Text == "")
+            {
+                MessageBox.Show("Bạn chưa nhập đủ thông tin!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                saveData();
+                loadData();
+                _them = false;
+                showHide(true);
+                splitContainerControl1.PanelVisibility = DevExpress.XtraEditors.SplitPanelVisibility.Panel2;    //CHỈ HIỆN THỊ PANEL 2
+            }
         }
 
         private void btnHuy_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -149,6 +188,8 @@ namespace Qly_NVien
                 nv.DIACHI = textEditDiaChi.Text;
                 nv.EMAIL = textEditEmail.Text;
                 nv.HINHANH = ImageToBase64(pictureBoxHinhAnh.Image, pictureBoxHinhAnh.Image.RawFormat);
+                nv.GIOITINH = checkBoxGioiTinh.Checked;
+                nv.NGAYSINH = dateTimePickerNgaySinh.Value;
                 nv.ID_BP = int.Parse(comboBoxBoPhan.SelectedValue.ToString());
                 nv.ID_CV = int.Parse(comboBoxChucVu.SelectedValue.ToString());
                 nv.ID_PB = int.Parse(comboBoxPhongBan.SelectedValue.ToString());
@@ -163,6 +204,8 @@ namespace Qly_NVien
                 nv.SDT = textEditSDT.Text;
                 nv.DIACHI = textEditDiaChi.Text;
                 nv.EMAIL = textEditEmail.Text;
+                nv.GIOITINH = checkBoxGioiTinh.Checked;
+                nv.NGAYSINH = dateTimePickerNgaySinh.Value;
                 nv.HINHANH = ImageToBase64(pictureBoxHinhAnh.Image, pictureBoxHinhAnh.Image.RawFormat);
                 nv.ID_BP = int.Parse(comboBoxBoPhan.SelectedValue.ToString());
                 nv.ID_CV = int.Parse(comboBoxChucVu.SelectedValue.ToString());
@@ -183,6 +226,7 @@ namespace Qly_NVien
                 textEditSDT.Text = nv.SDT;
                 textEditDiaChi.Text = nv.DIACHI;
                 textEditEmail.Text = nv.EMAIL;
+                checkBoxGioiTinh.Checked = nv.GIOITINH.Value;
                 pictureBoxHinhAnh.Image = Base64ToImage(nv.HINHANH);
                 comboBoxBoPhan.SelectedValue = nv.ID_BP;
                 comboBoxChucVu.SelectedValue = nv.ID_CV;
@@ -211,5 +255,17 @@ namespace Qly_NVien
             Image image = Image.FromStream(ms, true);
             return image;
         }
-    } 
+
+        private void simpleButtonHinhAnh_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.Filter = "Picture file (.png, .jpg)| *.png; *.jpg";
+            ofd.Title = "Chọn ảnh đại diện";
+            if(ofd.ShowDialog()==DialogResult.OK)
+            {
+                pictureBoxHinhAnh.Image = Image.FromFile(ofd.FileName);
+                pictureBoxHinhAnh.SizeMode = PictureBoxSizeMode.StretchImage;
+            }    
+        }
+    }
 }

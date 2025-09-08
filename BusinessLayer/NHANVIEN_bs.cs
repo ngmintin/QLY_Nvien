@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BusinessLayer.DTO_bs;
 using DataLayer;
 
 namespace BusinessLayer
@@ -21,6 +22,43 @@ namespace BusinessLayer
         public List<NHANVIEN> getList()
         {
             return db.NHANVIENs.ToList();
+        }
+
+        public List<NHANVIEN_dto> getListFull()
+        {
+            var lsnv = db.NHANVIENs.ToList();
+            List<NHANVIEN_dto> lsnvdto = new List<NHANVIEN_dto>();
+            NHANVIEN_dto _nvdto;
+            foreach(var item in lsnv)
+            {
+                _nvdto = new NHANVIEN_dto();
+                _nvdto.MANV = item.MANV;
+                _nvdto.HOTEN = item.HOTEN;
+                _nvdto.GIOITINH = item.GIOITINH;
+                _nvdto.NGAYSINH = item.NGAYSINH;
+                _nvdto.SDT = item.SDT;
+                _nvdto.DIACHI = item.DIACHI;
+                _nvdto.EMAIL = item.EMAIL;
+                _nvdto.ID_PB = item.ID_PB;
+                var pb = db.PHONGBANs.FirstOrDefault(x => x.ID_PB == item.ID_PB);
+                _nvdto.TENPB = pb.TENPB;
+
+                _nvdto.ID_BP = item.ID_BP;
+                var bp = db.BOPHANs.FirstOrDefault(x => x.ID_BP == item.ID_BP);
+                _nvdto.TENBP = bp.TENBP;
+
+                _nvdto.ID_CV = item.ID_CV;
+                var cv = db.CHUCVUs.FirstOrDefault(x => x.ID_CV == item.ID_CV);
+                _nvdto.TENCV = cv.TENCV;
+
+                _nvdto.ID_TD = item.ID_TD;
+                var td = db.TRINHDOes.FirstOrDefault(x => x.ID_TD == item.ID_TD);
+                _nvdto.TENTD = td.TENTD;
+
+                _nvdto.HINHANH = item.HINHANH;
+                lsnvdto.Add(_nvdto);
+            }    
+            return lsnvdto;
         }
 
         //THÊM

@@ -47,13 +47,12 @@
             btnDong = new DevExpress.XtraBars.BarButtonItem();
             btnIn = new DevExpress.XtraBars.BarButtonItem();
             splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
+            checkBoxGioiTinh = new CheckBox();
             simpleButtonHinhAnh = new DevExpress.XtraEditors.SimpleButton();
             comboBoxTrinhDo = new ComboBox();
             comboBoxChucVu = new ComboBox();
             comboBoxBoPhan = new ComboBox();
             comboBoxPhongBan = new ComboBox();
-            radioButtonNu = new RadioButton();
-            radioButtonNam = new RadioButton();
             pictureBoxHinhAnh = new PictureBox();
             dateTimePickerNgaySinh = new DateTimePicker();
             textEditEmail = new DevExpress.XtraEditors.TextEdit();
@@ -258,13 +257,12 @@
             // 
             // splitContainerControl1.Panel1
             // 
+            splitContainerControl1.Panel1.Controls.Add(checkBoxGioiTinh);
             splitContainerControl1.Panel1.Controls.Add(simpleButtonHinhAnh);
             splitContainerControl1.Panel1.Controls.Add(comboBoxTrinhDo);
             splitContainerControl1.Panel1.Controls.Add(comboBoxChucVu);
             splitContainerControl1.Panel1.Controls.Add(comboBoxBoPhan);
             splitContainerControl1.Panel1.Controls.Add(comboBoxPhongBan);
-            splitContainerControl1.Panel1.Controls.Add(radioButtonNu);
-            splitContainerControl1.Panel1.Controls.Add(radioButtonNam);
             splitContainerControl1.Panel1.Controls.Add(pictureBoxHinhAnh);
             splitContainerControl1.Panel1.Controls.Add(dateTimePickerNgaySinh);
             splitContainerControl1.Panel1.Controls.Add(textEditEmail);
@@ -291,75 +289,63 @@
             splitContainerControl1.SplitterPosition = 339;
             splitContainerControl1.TabIndex = 5;
             // 
+            // checkBoxGioiTinh
+            // 
+            checkBoxGioiTinh.AutoSize = true;
+            checkBoxGioiTinh.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            checkBoxGioiTinh.Location = new Point(471, 92);
+            checkBoxGioiTinh.Name = "checkBoxGioiTinh";
+            checkBoxGioiTinh.Size = new Size(91, 23);
+            checkBoxGioiTinh.TabIndex = 13;
+            checkBoxGioiTinh.Text = "Nam / Nữ";
+            checkBoxGioiTinh.UseVisualStyleBackColor = true;
+            // 
             // simpleButtonHinhAnh
             // 
             simpleButtonHinhAnh.Appearance.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             simpleButtonHinhAnh.Appearance.Options.UseFont = true;
-            simpleButtonHinhAnh.Location = new Point(135, 267);
+            simpleButtonHinhAnh.Location = new Point(146, 271);
             simpleButtonHinhAnh.Name = "simpleButtonHinhAnh";
-            simpleButtonHinhAnh.Size = new Size(163, 54);
+            simpleButtonHinhAnh.Size = new Size(138, 52);
             simpleButtonHinhAnh.TabIndex = 12;
             simpleButtonHinhAnh.Text = "Chọn ảnh đại diện";
+            simpleButtonHinhAnh.Click += simpleButtonHinhAnh_Click;
             // 
             // comboBoxTrinhDo
             // 
             comboBoxTrinhDo.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             comboBoxTrinhDo.FormattingEnabled = true;
-            comboBoxTrinhDo.Location = new Point(984, 181);
+            comboBoxTrinhDo.Location = new Point(943, 182);
             comboBoxTrinhDo.Name = "comboBoxTrinhDo";
-            comboBoxTrinhDo.Size = new Size(203, 27);
+            comboBoxTrinhDo.Size = new Size(244, 27);
             comboBoxTrinhDo.TabIndex = 11;
             // 
             // comboBoxChucVu
             // 
             comboBoxChucVu.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             comboBoxChucVu.FormattingEnabled = true;
-            comboBoxChucVu.Location = new Point(984, 136);
+            comboBoxChucVu.Location = new Point(943, 136);
             comboBoxChucVu.Name = "comboBoxChucVu";
-            comboBoxChucVu.Size = new Size(203, 27);
+            comboBoxChucVu.Size = new Size(244, 27);
             comboBoxChucVu.TabIndex = 11;
             // 
             // comboBoxBoPhan
             // 
             comboBoxBoPhan.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             comboBoxBoPhan.FormattingEnabled = true;
-            comboBoxBoPhan.Location = new Point(984, 89);
+            comboBoxBoPhan.Location = new Point(943, 90);
             comboBoxBoPhan.Name = "comboBoxBoPhan";
-            comboBoxBoPhan.Size = new Size(203, 27);
+            comboBoxBoPhan.Size = new Size(244, 27);
             comboBoxBoPhan.TabIndex = 11;
             // 
             // comboBoxPhongBan
             // 
             comboBoxPhongBan.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             comboBoxPhongBan.FormattingEnabled = true;
-            comboBoxPhongBan.Location = new Point(984, 44);
+            comboBoxPhongBan.Location = new Point(943, 43);
             comboBoxPhongBan.Name = "comboBoxPhongBan";
-            comboBoxPhongBan.Size = new Size(203, 27);
+            comboBoxPhongBan.Size = new Size(244, 27);
             comboBoxPhongBan.TabIndex = 11;
-            // 
-            // radioButtonNu
-            // 
-            radioButtonNu.AutoSize = true;
-            radioButtonNu.Font = new Font("Times New Roman", 12F);
-            radioButtonNu.Location = new Point(553, 90);
-            radioButtonNu.Name = "radioButtonNu";
-            radioButtonNu.Size = new Size(48, 23);
-            radioButtonNu.TabIndex = 10;
-            radioButtonNu.TabStop = true;
-            radioButtonNu.Text = "Nữ";
-            radioButtonNu.UseVisualStyleBackColor = true;
-            // 
-            // radioButtonNam
-            // 
-            radioButtonNam.AutoSize = true;
-            radioButtonNam.Font = new Font("Times New Roman", 12F);
-            radioButtonNam.Location = new Point(490, 90);
-            radioButtonNam.Name = "radioButtonNam";
-            radioButtonNam.Size = new Size(57, 23);
-            radioButtonNam.TabIndex = 10;
-            radioButtonNam.TabStop = true;
-            radioButtonNam.Text = "Nam";
-            radioButtonNam.UseVisualStyleBackColor = true;
             // 
             // pictureBoxHinhAnh
             // 
@@ -377,7 +363,7 @@
             dateTimePickerNgaySinh.CustomFormat = "dd/MM/yyyy";
             dateTimePickerNgaySinh.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dateTimePickerNgaySinh.Format = DateTimePickerFormat.Custom;
-            dateTimePickerNgaySinh.Location = new Point(472, 137);
+            dateTimePickerNgaySinh.Location = new Point(472, 133);
             dateTimePickerNgaySinh.Margin = new Padding(4);
             dateTimePickerNgaySinh.Name = "dateTimePickerNgaySinh";
             dateTimePickerNgaySinh.Size = new Size(291, 26);
@@ -385,7 +371,7 @@
             // 
             // textEditEmail
             // 
-            textEditEmail.Location = new Point(471, 237);
+            textEditEmail.Location = new Point(471, 223);
             textEditEmail.Margin = new Padding(4);
             textEditEmail.Name = "textEditEmail";
             textEditEmail.Properties.Appearance.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -395,7 +381,7 @@
             // 
             // textEditDiaChi
             // 
-            textEditDiaChi.Location = new Point(471, 290);
+            textEditDiaChi.Location = new Point(471, 268);
             textEditDiaChi.Margin = new Padding(4);
             textEditDiaChi.Name = "textEditDiaChi";
             textEditDiaChi.Properties.Appearance.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -405,7 +391,7 @@
             // 
             // textEditSDT
             // 
-            textEditSDT.Location = new Point(471, 186);
+            textEditSDT.Location = new Point(471, 178);
             textEditSDT.Margin = new Padding(4);
             textEditSDT.Name = "textEditSDT";
             textEditSDT.Properties.Appearance.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -417,7 +403,7 @@
             // 
             labelControl6.Appearance.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             labelControl6.Appearance.Options.UseFont = true;
-            labelControl6.Location = new Point(428, 240);
+            labelControl6.Location = new Point(428, 230);
             labelControl6.Margin = new Padding(4);
             labelControl6.Name = "labelControl6";
             labelControl6.Size = new Size(36, 19);
@@ -439,7 +425,7 @@
             // 
             labelControl5.Appearance.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             labelControl5.Appearance.Options.UseFont = true;
-            labelControl5.Location = new Point(419, 293);
+            labelControl5.Location = new Point(419, 271);
             labelControl5.Margin = new Padding(4);
             labelControl5.Name = "labelControl5";
             labelControl5.Size = new Size(45, 19);
@@ -450,7 +436,7 @@
             // 
             labelControl3.Appearance.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             labelControl3.Appearance.Options.UseFont = true;
-            labelControl3.Location = new Point(401, 141);
+            labelControl3.Location = new Point(401, 136);
             labelControl3.Margin = new Padding(4);
             labelControl3.Name = "labelControl3";
             labelControl3.Size = new Size(63, 19);
@@ -461,7 +447,7 @@
             // 
             labelControl4.Appearance.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             labelControl4.Appearance.Options.UseFont = true;
-            labelControl4.Location = new Point(381, 189);
+            labelControl4.Location = new Point(382, 181);
             labelControl4.Margin = new Padding(4);
             labelControl4.Name = "labelControl4";
             labelControl4.Size = new Size(82, 19);
@@ -483,7 +469,7 @@
             // 
             labelControl10.Appearance.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             labelControl10.Appearance.Options.UseFont = true;
-            labelControl10.Location = new Point(918, 90);
+            labelControl10.Location = new Point(882, 92);
             labelControl10.Margin = new Padding(4);
             labelControl10.Name = "labelControl10";
             labelControl10.Size = new Size(54, 19);
@@ -494,7 +480,7 @@
             // 
             labelControl9.Appearance.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             labelControl9.Appearance.Options.UseFont = true;
-            labelControl9.Location = new Point(900, 46);
+            labelControl9.Location = new Point(869, 46);
             labelControl9.Margin = new Padding(4);
             labelControl9.Name = "labelControl9";
             labelControl9.Size = new Size(67, 19);
@@ -505,7 +491,7 @@
             // 
             labelControl8.Appearance.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             labelControl8.Appearance.Options.UseFont = true;
-            labelControl8.Location = new Point(919, 189);
+            labelControl8.Location = new Point(883, 185);
             labelControl8.Margin = new Padding(4);
             labelControl8.Name = "labelControl8";
             labelControl8.Size = new Size(53, 19);
@@ -516,7 +502,7 @@
             // 
             labelControl7.Appearance.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             labelControl7.Appearance.Options.UseFont = true;
-            labelControl7.Location = new Point(915, 141);
+            labelControl7.Location = new Point(881, 139);
             labelControl7.Margin = new Padding(4);
             labelControl7.Name = "labelControl7";
             labelControl7.Size = new Size(55, 19);
@@ -538,6 +524,7 @@
             // 
             gcDanhSach.Dock = DockStyle.Fill;
             gcDanhSach.EmbeddedNavigator.Margin = new Padding(4);
+            gcDanhSach.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             gcDanhSach.Location = new Point(0, 0);
             gcDanhSach.MainView = gvDanhSach;
             gcDanhSach.Margin = new Padding(4);
@@ -804,7 +791,6 @@
         private DevExpress.XtraGrid.Views.Grid.GridView gvDanhSach;
         private DevExpress.XtraGrid.Columns.GridColumn MANV;
         private DevExpress.XtraGrid.Columns.GridColumn HOTEN;
-        private DevExpress.XtraEditors.ComboBoxEdit comboBoxGioiTinh;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DateTimePicker dateTimePickerNgaySinh;
         private DevExpress.XtraEditors.TextEdit textEditEmail;
@@ -833,12 +819,11 @@
         private DevExpress.XtraGrid.Columns.GridColumn ID_TD;
         private DevExpress.XtraGrid.Columns.GridColumn TENTD;
         private DevExpress.XtraGrid.Columns.GridColumn NGAYSINH;
-        private RadioButton radioButtonNam;
-        private RadioButton radioButtonNu;
         private ComboBox comboBoxTrinhDo;
         private ComboBox comboBoxChucVu;
         private ComboBox comboBoxBoPhan;
         private ComboBox comboBoxPhongBan;
         private DevExpress.XtraEditors.SimpleButton simpleButtonHinhAnh;
+        private CheckBox checkBoxGioiTinh;
     }
 }

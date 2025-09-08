@@ -98,11 +98,18 @@ namespace Qly_NVien
 
         private void btnLuu_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            saveData();
-            loadData();
-            _them = false;
-            showHide(true);
-            splitContainerControl1.PanelVisibility = DevExpress.XtraEditors.SplitPanelVisibility.Panel2;    //CHỈ HIỆN THỊ PANEL 2
+            if (textEditTen.Text == "" || textEditDiaChi.Text == "" || textEditEmail.Text == "" || textEditSoDienThoai.Text == "")
+            {
+                MessageBox.Show("Bạn chưa nhập đủ thông tin!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                saveData();
+                loadData();
+                _them = false;
+                showHide(true);
+                splitContainerControl1.PanelVisibility = DevExpress.XtraEditors.SplitPanelVisibility.Panel2;    //CHỈ HIỆN THỊ PANEL 2
+            }
 
         }
 
