@@ -95,6 +95,7 @@
           <Property Name="ID_CV" Type="int" />
           <Property Name="ID_TD" Type="int" />
           <Property Name="ID_CTY" Type="int" />
+          <Property Name="HINHANH" Type="varbinary(max)" />
         </EntityType>
         <EntityType Name="PHONGBAN">
           <Key>
@@ -474,6 +475,7 @@
           <Property Name="ID_CV" Type="Int32" />
           <Property Name="ID_TD" Type="Int32" />
           <Property Name="ID_CTY" Type="Int32" />
+          <Property Name="HINHANH" Type="Binary" MaxLength="Max" FixedLength="false" />
           <NavigationProperty Name="BANGCONGs" Relationship="Qly_NvienModel.FK_BANGCONG_NHANVIEN" FromRole="NHANVIEN" ToRole="BANGCONG" />
           <NavigationProperty Name="BOPHAN" Relationship="Qly_NvienModel.FK_NHANVIEN_BOPHAN1" FromRole="NHANVIEN" ToRole="BOPHAN" />
           <NavigationProperty Name="CHUCVU" Relationship="Qly_NvienModel.FK_NHANVIEN_CHUCVU" FromRole="NHANVIEN" ToRole="CHUCVU" />
@@ -736,6 +738,7 @@
           <EntitySetMapping Name="NHANVIENs">
             <EntityTypeMapping TypeName="Qly_NvienModel.NHANVIEN">
               <MappingFragment StoreEntitySet="NHANVIEN">
+                <ScalarProperty Name="HINHANH" ColumnName="HINHANH" />
                 <ScalarProperty Name="ID_CTY" ColumnName="ID_CTY" />
                 <ScalarProperty Name="ID_TD" ColumnName="ID_TD" />
                 <ScalarProperty Name="ID_CV" ColumnName="ID_CV" />

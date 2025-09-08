@@ -228,12 +228,12 @@
             // 
             // textEditTen
             // 
-            textEditTen.Location = new Point(91, 40);
+            textEditTen.Location = new Point(162, 40);
             textEditTen.MenuManager = barManager1;
             textEditTen.Name = "textEditTen";
             textEditTen.Properties.Appearance.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             textEditTen.Properties.Appearance.Options.UseFont = true;
-            textEditTen.Size = new Size(260, 30);
+            textEditTen.Size = new Size(272, 30);
             textEditTen.TabIndex = 1;
             // 
             // labelControl1
@@ -242,9 +242,9 @@
             labelControl1.Appearance.Options.UseFont = true;
             labelControl1.Location = new Point(48, 43);
             labelControl1.Name = "labelControl1";
-            labelControl1.Size = new Size(37, 23);
+            labelControl1.Size = new Size(108, 23);
             labelControl1.TabIndex = 0;
-            labelControl1.Text = "Tên:";
+            labelControl1.Text = "Tên trình độ:";
             // 
             // gcDanhSach
             // 
@@ -282,7 +282,7 @@
             // 
             TENTD.AppearanceHeader.Font = new Font("Times New Roman", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             TENTD.AppearanceHeader.Options.UseFont = true;
-            TENTD.Caption = "TÊN TRÌNH ĐỘ";
+            TENTD.Caption = "TRÌNH ĐỘ";
             TENTD.FieldName = "TENTD";
             TENTD.MaxWidth = 300;
             TENTD.MinWidth = 300;

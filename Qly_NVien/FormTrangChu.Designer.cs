@@ -136,6 +136,7 @@
             btNhanVien.ImageOptions.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("btNhanVien.ImageOptions.SvgImage");
             btNhanVien.Name = "btNhanVien";
             btNhanVien.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            btNhanVien.ItemClick += btNhanVien_ItemClick;
             // 
             // btDieuChuyen
             // 

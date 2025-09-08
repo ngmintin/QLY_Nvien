@@ -177,15 +177,17 @@
             barDockControlTop.Dock = DockStyle.Top;
             barDockControlTop.Location = new Point(0, 0);
             barDockControlTop.Manager = barManager1;
-            barDockControlTop.Size = new Size(989, 28);
+            barDockControlTop.Margin = new Padding(4, 4, 4, 4);
+            barDockControlTop.Size = new Size(1272, 28);
             // 
             // barDockControlBottom
             // 
             barDockControlBottom.CausesValidation = false;
             barDockControlBottom.Dock = DockStyle.Bottom;
-            barDockControlBottom.Location = new Point(0, 558);
+            barDockControlBottom.Location = new Point(0, 712);
             barDockControlBottom.Manager = barManager1;
-            barDockControlBottom.Size = new Size(989, 20);
+            barDockControlBottom.Margin = new Padding(4, 4, 4, 4);
+            barDockControlBottom.Size = new Size(1272, 20);
             // 
             // barDockControlLeft
             // 
@@ -193,15 +195,17 @@
             barDockControlLeft.Dock = DockStyle.Left;
             barDockControlLeft.Location = new Point(0, 28);
             barDockControlLeft.Manager = barManager1;
-            barDockControlLeft.Size = new Size(0, 530);
+            barDockControlLeft.Margin = new Padding(4, 4, 4, 4);
+            barDockControlLeft.Size = new Size(0, 684);
             // 
             // barDockControlRight
             // 
             barDockControlRight.CausesValidation = false;
             barDockControlRight.Dock = DockStyle.Right;
-            barDockControlRight.Location = new Point(989, 28);
+            barDockControlRight.Location = new Point(1272, 28);
             barDockControlRight.Manager = barManager1;
-            barDockControlRight.Size = new Size(0, 530);
+            barDockControlRight.Margin = new Padding(4, 4, 4, 4);
+            barDockControlRight.Size = new Size(0, 684);
             // 
             // btnDong
             // 
@@ -222,6 +226,7 @@
             splitContainerControl1.Dock = DockStyle.Fill;
             splitContainerControl1.Horizontal = false;
             splitContainerControl1.Location = new Point(0, 28);
+            splitContainerControl1.Margin = new Padding(4, 4, 4, 4);
             splitContainerControl1.Name = "splitContainerControl1";
             // 
             // splitContainerControl1.Panel1
@@ -240,24 +245,26 @@
             // 
             splitContainerControl1.Panel2.Controls.Add(gcDanhSach);
             splitContainerControl1.Panel2.Text = "Panel2";
-            splitContainerControl1.Size = new Size(989, 530);
-            splitContainerControl1.SplitterPosition = 126;
+            splitContainerControl1.Size = new Size(1272, 684);
+            splitContainerControl1.SplitterPosition = 160;
             splitContainerControl1.TabIndex = 5;
             // 
             // textEditDiaChi
             // 
-            textEditDiaChi.Location = new Point(523, 79);
+            textEditDiaChi.Location = new Point(697, 96);
+            textEditDiaChi.Margin = new Padding(4, 4, 4, 4);
             textEditDiaChi.Name = "textEditDiaChi";
             textEditDiaChi.Properties.Appearance.Font = new Font("Times New Roman", 12F);
             textEditDiaChi.Properties.Appearance.Options.UseFont = true;
-            textEditDiaChi.Size = new Size(260, 26);
+            textEditDiaChi.Size = new Size(334, 26);
             textEditDiaChi.TabIndex = 1;
             // 
             // labelControl4
             // 
             labelControl4.Appearance.Font = new Font("Times New Roman", 14.25F);
             labelControl4.Appearance.Options.UseFont = true;
-            labelControl4.Location = new Point(458, 81);
+            labelControl4.Location = new Point(630, 101);
+            labelControl4.Margin = new Padding(4, 4, 4, 4);
             labelControl4.Name = "labelControl4";
             labelControl4.Size = new Size(59, 21);
             labelControl4.TabIndex = 0;
@@ -265,18 +272,20 @@
             // 
             // textEditSoDienThoai
             // 
-            textEditSoDienThoai.Location = new Point(523, 28);
+            textEditSoDienThoai.Location = new Point(697, 34);
+            textEditSoDienThoai.Margin = new Padding(4, 4, 4, 4);
             textEditSoDienThoai.Name = "textEditSoDienThoai";
             textEditSoDienThoai.Properties.Appearance.Font = new Font("Times New Roman", 12F);
             textEditSoDienThoai.Properties.Appearance.Options.UseFont = true;
-            textEditSoDienThoai.Size = new Size(260, 26);
+            textEditSoDienThoai.Size = new Size(334, 26);
             textEditSoDienThoai.TabIndex = 1;
             // 
             // labelControl3
             // 
             labelControl3.Appearance.Font = new Font("Times New Roman", 14.25F);
             labelControl3.Appearance.Options.UseFont = true;
-            labelControl3.Location = new Point(415, 30);
+            labelControl3.Location = new Point(587, 37);
+            labelControl3.Margin = new Padding(4, 4, 4, 4);
             labelControl3.Name = "labelControl3";
             labelControl3.Size = new Size(102, 21);
             labelControl3.TabIndex = 0;
@@ -284,38 +293,42 @@
             // 
             // textEditTen
             // 
-            textEditTen.Location = new Point(95, 28);
+            textEditTen.Location = new Point(161, 37);
+            textEditTen.Margin = new Padding(4, 4, 4, 4);
             textEditTen.Name = "textEditTen";
             textEditTen.Properties.Appearance.Font = new Font("Times New Roman", 12F);
             textEditTen.Properties.Appearance.Options.UseFont = true;
-            textEditTen.Size = new Size(260, 26);
+            textEditTen.Size = new Size(334, 26);
             textEditTen.TabIndex = 1;
             // 
             // labelControl2
             // 
             labelControl2.Appearance.Font = new Font("Times New Roman", 14.25F);
             labelControl2.Appearance.Options.UseFont = true;
-            labelControl2.Location = new Point(56, 30);
+            labelControl2.Location = new Point(59, 40);
+            labelControl2.Margin = new Padding(4, 4, 4, 4);
             labelControl2.Name = "labelControl2";
-            labelControl2.Size = new Size(33, 21);
+            labelControl2.Size = new Size(94, 21);
             labelControl2.TabIndex = 0;
-            labelControl2.Text = "Tên:";
+            labelControl2.Text = "Tên công ty:";
             // 
             // textEditEmail
             // 
-            textEditEmail.Location = new Point(95, 79);
+            textEditEmail.Location = new Point(161, 99);
+            textEditEmail.Margin = new Padding(4, 4, 4, 4);
             textEditEmail.MenuManager = barManager1;
             textEditEmail.Name = "textEditEmail";
             textEditEmail.Properties.Appearance.Font = new Font("Times New Roman", 12F);
             textEditEmail.Properties.Appearance.Options.UseFont = true;
-            textEditEmail.Size = new Size(260, 26);
+            textEditEmail.Size = new Size(334, 26);
             textEditEmail.TabIndex = 1;
             // 
             // labelControl1
             // 
             labelControl1.Appearance.Font = new Font("Times New Roman", 14.25F);
             labelControl1.Appearance.Options.UseFont = true;
-            labelControl1.Location = new Point(46, 81);
+            labelControl1.Location = new Point(108, 101);
+            labelControl1.Margin = new Padding(4, 4, 4, 4);
             labelControl1.Name = "labelControl1";
             labelControl1.Size = new Size(45, 21);
             labelControl1.TabIndex = 0;
@@ -324,19 +337,23 @@
             // gcDanhSach
             // 
             gcDanhSach.Dock = DockStyle.Fill;
+            gcDanhSach.EmbeddedNavigator.Margin = new Padding(4, 4, 4, 4);
             gcDanhSach.Location = new Point(0, 0);
             gcDanhSach.MainView = gvDanhSach;
+            gcDanhSach.Margin = new Padding(4, 4, 4, 4);
             gcDanhSach.MenuManager = barManager1;
             gcDanhSach.Name = "gcDanhSach";
-            gcDanhSach.Size = new Size(989, 394);
+            gcDanhSach.Size = new Size(1272, 514);
             gcDanhSach.TabIndex = 0;
             gcDanhSach.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] { gvDanhSach });
             // 
             // gvDanhSach
             // 
             gvDanhSach.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] { ID_CTY, TENCTY, EMAIL, SĐT, DIACHI });
+            gvDanhSach.DetailHeight = 443;
             gvDanhSach.GridControl = gcDanhSach;
             gvDanhSach.Name = "gvDanhSach";
+            gvDanhSach.OptionsEditForm.PopupEditFormWidth = 1029;
             gvDanhSach.OptionsView.ShowGroupPanel = false;
             gvDanhSach.Click += gvDanhSach_Click;
             // 
@@ -346,25 +363,25 @@
             ID_CTY.AppearanceHeader.Options.UseFont = true;
             ID_CTY.Caption = "ID";
             ID_CTY.FieldName = "ID_CTY";
-            ID_CTY.MaxWidth = 50;
-            ID_CTY.MinWidth = 50;
+            ID_CTY.MaxWidth = 64;
+            ID_CTY.MinWidth = 64;
             ID_CTY.Name = "ID_CTY";
             ID_CTY.Visible = true;
             ID_CTY.VisibleIndex = 0;
-            ID_CTY.Width = 50;
+            ID_CTY.Width = 64;
             // 
             // TENCTY
             // 
             TENCTY.AppearanceHeader.Font = new Font("Times New Roman", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             TENCTY.AppearanceHeader.Options.UseFont = true;
-            TENCTY.Caption = "TÊN CÔNG TY";
+            TENCTY.Caption = "CÔNG TY";
             TENCTY.FieldName = "TENCTY";
-            TENCTY.MaxWidth = 200;
-            TENCTY.MinWidth = 200;
+            TENCTY.MaxWidth = 257;
+            TENCTY.MinWidth = 257;
             TENCTY.Name = "TENCTY";
             TENCTY.Visible = true;
             TENCTY.VisibleIndex = 1;
-            TENCTY.Width = 200;
+            TENCTY.Width = 257;
             // 
             // EMAIL
             // 
@@ -372,12 +389,12 @@
             EMAIL.AppearanceHeader.Options.UseFont = true;
             EMAIL.Caption = "EMAIL";
             EMAIL.FieldName = "EMAIL";
-            EMAIL.MaxWidth = 200;
-            EMAIL.MinWidth = 200;
+            EMAIL.MaxWidth = 257;
+            EMAIL.MinWidth = 257;
             EMAIL.Name = "EMAIL";
             EMAIL.Visible = true;
             EMAIL.VisibleIndex = 2;
-            EMAIL.Width = 200;
+            EMAIL.Width = 257;
             // 
             // SĐT
             // 
@@ -385,12 +402,12 @@
             SĐT.AppearanceHeader.Options.UseFont = true;
             SĐT.Caption = "SĐT";
             SĐT.FieldName = "SĐT";
-            SĐT.MaxWidth = 130;
-            SĐT.MinWidth = 130;
+            SĐT.MaxWidth = 167;
+            SĐT.MinWidth = 167;
             SĐT.Name = "SĐT";
             SĐT.Visible = true;
             SĐT.VisibleIndex = 3;
-            SĐT.Width = 130;
+            SĐT.Width = 167;
             // 
             // DIACHI
             // 
@@ -398,23 +415,25 @@
             DIACHI.AppearanceHeader.Options.UseFont = true;
             DIACHI.Caption = "ĐỊA CHỈ";
             DIACHI.FieldName = "DIACHI";
-            DIACHI.MaxWidth = 300;
-            DIACHI.MinWidth = 300;
+            DIACHI.MaxWidth = 386;
+            DIACHI.MinWidth = 386;
             DIACHI.Name = "DIACHI";
             DIACHI.Visible = true;
             DIACHI.VisibleIndex = 4;
-            DIACHI.Width = 300;
+            DIACHI.Width = 386;
             // 
             // FormCongTy
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(9F, 19F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(989, 578);
+            ClientSize = new Size(1272, 732);
             Controls.Add(splitContainerControl1);
             Controls.Add(barDockControlLeft);
             Controls.Add(barDockControlRight);
             Controls.Add(barDockControlBottom);
             Controls.Add(barDockControlTop);
+            Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Margin = new Padding(4, 4, 4, 4);
             Name = "FormCongTy";
             Text = "CÔNG TY";
             Load += FormCongTy_Load;

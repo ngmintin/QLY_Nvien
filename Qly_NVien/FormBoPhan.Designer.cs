@@ -165,15 +165,17 @@
             barDockControlTop.Dock = DockStyle.Top;
             barDockControlTop.Location = new Point(0, 0);
             barDockControlTop.Manager = barManager1;
-            barDockControlTop.Size = new Size(989, 28);
+            barDockControlTop.Margin = new Padding(4);
+            barDockControlTop.Size = new Size(1272, 28);
             // 
             // barDockControlBottom
             // 
             barDockControlBottom.CausesValidation = false;
             barDockControlBottom.Dock = DockStyle.Bottom;
-            barDockControlBottom.Location = new Point(0, 592);
+            barDockControlBottom.Location = new Point(0, 755);
             barDockControlBottom.Manager = barManager1;
-            barDockControlBottom.Size = new Size(989, 20);
+            barDockControlBottom.Margin = new Padding(4);
+            barDockControlBottom.Size = new Size(1272, 20);
             // 
             // barDockControlLeft
             // 
@@ -181,15 +183,17 @@
             barDockControlLeft.Dock = DockStyle.Left;
             barDockControlLeft.Location = new Point(0, 28);
             barDockControlLeft.Manager = barManager1;
-            barDockControlLeft.Size = new Size(0, 564);
+            barDockControlLeft.Margin = new Padding(4);
+            barDockControlLeft.Size = new Size(0, 727);
             // 
             // barDockControlRight
             // 
             barDockControlRight.CausesValidation = false;
             barDockControlRight.Dock = DockStyle.Right;
-            barDockControlRight.Location = new Point(989, 28);
+            barDockControlRight.Location = new Point(1272, 28);
             barDockControlRight.Manager = barManager1;
-            barDockControlRight.Size = new Size(0, 564);
+            barDockControlRight.Margin = new Padding(4);
+            barDockControlRight.Size = new Size(0, 727);
             // 
             // btnDong
             // 
@@ -210,6 +214,7 @@
             splitContainerControl1.Dock = DockStyle.Fill;
             splitContainerControl1.Horizontal = false;
             splitContainerControl1.Location = new Point(0, 28);
+            splitContainerControl1.Margin = new Padding(4);
             splitContainerControl1.Name = "splitContainerControl1";
             // 
             // splitContainerControl1.Panel1
@@ -222,46 +227,52 @@
             // 
             splitContainerControl1.Panel2.Controls.Add(gcDanhSach);
             splitContainerControl1.Panel2.Text = "Panel2";
-            splitContainerControl1.Size = new Size(989, 564);
-            splitContainerControl1.SplitterPosition = 118;
+            splitContainerControl1.Size = new Size(1272, 727);
+            splitContainerControl1.SplitterPosition = 149;
             splitContainerControl1.TabIndex = 5;
             // 
             // textEditTen
             // 
-            textEditTen.Location = new Point(91, 40);
+            textEditTen.Location = new Point(162, 51);
+            textEditTen.Margin = new Padding(4);
             textEditTen.MenuManager = barManager1;
             textEditTen.Name = "textEditTen";
             textEditTen.Properties.Appearance.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             textEditTen.Properties.Appearance.Options.UseFont = true;
-            textEditTen.Size = new Size(260, 30);
+            textEditTen.Size = new Size(354, 30);
             textEditTen.TabIndex = 1;
             // 
             // labelControl1
             // 
             labelControl1.Appearance.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             labelControl1.Appearance.Options.UseFont = true;
-            labelControl1.Location = new Point(48, 43);
+            labelControl1.Location = new Point(47, 54);
+            labelControl1.Margin = new Padding(4);
             labelControl1.Name = "labelControl1";
-            labelControl1.Size = new Size(37, 23);
+            labelControl1.Size = new Size(107, 23);
             labelControl1.TabIndex = 0;
-            labelControl1.Text = "Tên:";
+            labelControl1.Text = "Tên bộ phận:";
             // 
             // gcDanhSach
             // 
             gcDanhSach.Dock = DockStyle.Fill;
+            gcDanhSach.EmbeddedNavigator.Margin = new Padding(4);
             gcDanhSach.Location = new Point(0, 0);
             gcDanhSach.MainView = gvDanhSach;
+            gcDanhSach.Margin = new Padding(4);
             gcDanhSach.MenuManager = barManager1;
             gcDanhSach.Name = "gcDanhSach";
-            gcDanhSach.Size = new Size(989, 436);
+            gcDanhSach.Size = new Size(1272, 568);
             gcDanhSach.TabIndex = 0;
             gcDanhSach.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] { gvDanhSach });
             // 
             // gvDanhSach
             // 
             gvDanhSach.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] { ID_BP, TENBP });
+            gvDanhSach.DetailHeight = 443;
             gvDanhSach.GridControl = gcDanhSach;
             gvDanhSach.Name = "gvDanhSach";
+            gvDanhSach.OptionsEditForm.PopupEditFormWidth = 1029;
             gvDanhSach.OptionsView.ShowGroupPanel = false;
             gvDanhSach.Click += gvDanhSach_Click;
             // 
@@ -271,36 +282,38 @@
             ID_BP.AppearanceHeader.Options.UseFont = true;
             ID_BP.Caption = "ID";
             ID_BP.FieldName = "ID_BP";
-            ID_BP.MaxWidth = 50;
-            ID_BP.MinWidth = 50;
+            ID_BP.MaxWidth = 64;
+            ID_BP.MinWidth = 64;
             ID_BP.Name = "ID_BP";
             ID_BP.Visible = true;
             ID_BP.VisibleIndex = 0;
-            ID_BP.Width = 50;
+            ID_BP.Width = 64;
             // 
             // TENBP
             // 
             TENBP.AppearanceHeader.Font = new Font("Times New Roman", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             TENBP.AppearanceHeader.Options.UseFont = true;
-            TENBP.Caption = "TÊN BỘ PHẬN";
+            TENBP.Caption = "BỘ PHẬN";
             TENBP.FieldName = "TENBP";
-            TENBP.MaxWidth = 300;
-            TENBP.MinWidth = 300;
+            TENBP.MaxWidth = 386;
+            TENBP.MinWidth = 386;
             TENBP.Name = "TENBP";
             TENBP.Visible = true;
             TENBP.VisibleIndex = 1;
-            TENBP.Width = 300;
+            TENBP.Width = 386;
             // 
             // FormBoPhan
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(9F, 19F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(989, 612);
+            ClientSize = new Size(1272, 775);
             Controls.Add(splitContainerControl1);
             Controls.Add(barDockControlLeft);
             Controls.Add(barDockControlRight);
             Controls.Add(barDockControlBottom);
             Controls.Add(barDockControlTop);
+            Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Margin = new Padding(4);
             Name = "FormBoPhan";
             Text = "BỘ PHẬN";
             Load += FormBoPhan_Load;
