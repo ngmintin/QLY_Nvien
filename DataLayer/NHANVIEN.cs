@@ -35,12 +35,13 @@ namespace DataLayer
         public Nullable<int> ID_TD { get; set; }
         public Nullable<int> ID_CTY { get; set; }
         public byte[] HINHANH { get; set; }
+        public Nullable<bool> DATHOIVIEC { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<BANGCONG> BANGCONGs { get; set; }
         public virtual BOPHAN BOPHAN { get; set; }
-        public virtual CHUCVU CHUCVU { get; set; }
         public virtual CONGTY CONGTY { get; set; }
+        public virtual CHUCVU CHUCVU { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<KHENTHUONGKYLUAT> KHENTHUONGKYLUATs { get; set; }
         public virtual PHONGBAN PHONGBAN { get; set; }

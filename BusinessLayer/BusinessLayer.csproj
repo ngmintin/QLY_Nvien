@@ -57,6 +57,7 @@
     <Compile Include="CONGTY_bs.cs" />
     <Compile Include="DTO_bs\NHANVIEN_dto.cs" />
     <Compile Include="NHANVIEN_bs.cs" />
+    <Compile Include="NHANVIEN_THOIVIEC_bs.cs" />
     <Compile Include="PHONGBAN_bs.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TRINHDOs.cs" />

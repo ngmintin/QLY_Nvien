@@ -26,5 +26,6 @@ namespace BusinessLayer.DTO_bs
         public string TENTD { get; set; }
         public Nullable<int> ID_CTY { get; set; }
         public byte[] HINHANH { get; set; }
+        public bool? DATHOIVIEC { get; set; }
     }
 }

@@ -11,6 +11,9 @@ using DataLayer;
 using BusinessLayer;
 using System.IO;
 using DevExpress.XtraNavBar.ViewInfo;
+using Qly_NVien.Reports;
+using BusinessLayer.DTO_bs;
+using DevExpress.XtraReports.UI;
 
 namespace Qly_NVien
 {
@@ -29,6 +32,7 @@ namespace Qly_NVien
         CHUCVU_bs _chucvu;
         PHONGBAN_bs _phongban;
         TRINHDOs _trinhdo;
+        List<NHANVIEN_dto> _lsnvdto;
 
         private void FormNhanVien_Load(object sender, EventArgs e)
         {
@@ -98,6 +102,7 @@ namespace Qly_NVien
         {
             gcDanhSach.DataSource = _nhanvien.getListFull();
             gvDanhSach.OptionsBehavior.Editable = false;
+            _lsnvdto = _nhanvien.getListFull();
         }
 
         void loadComBo()
@@ -169,7 +174,8 @@ namespace Qly_NVien
 
         private void btIn_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-
+            rpDANH_SACH_NHANVIEN rp = new rpDANH_SACH_NHANVIEN(_lsnvdto);
+            rp.ShowRibbonPreview();
         }
 
         private void btDong_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)

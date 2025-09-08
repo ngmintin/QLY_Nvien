@@ -39,6 +39,8 @@ namespace BusinessLayer
                 _nvdto.SDT = item.SDT;
                 _nvdto.DIACHI = item.DIACHI;
                 _nvdto.EMAIL = item.EMAIL;
+                _nvdto.HINHANH = item.HINHANH;
+                _nvdto.DATHOIVIEC = item.DATHOIVIEC;
                 _nvdto.ID_PB = item.ID_PB;
                 var pb = db.PHONGBANs.FirstOrDefault(x => x.ID_PB == item.ID_PB);
                 _nvdto.TENPB = pb.TENPB;
@@ -55,7 +57,6 @@ namespace BusinessLayer
                 var td = db.TRINHDOes.FirstOrDefault(x => x.ID_TD == item.ID_TD);
                 _nvdto.TENTD = td.TENTD;
 
-                _nvdto.HINHANH = item.HINHANH;
                 lsnvdto.Add(_nvdto);
             }    
             return lsnvdto;
@@ -89,12 +90,14 @@ namespace BusinessLayer
                 _nv.SDT = nv.SDT;
                 _nv.DIACHI = nv.DIACHI;
                 _nv.EMAIL = nv.EMAIL;
+                _nv.HINHANH = nv.HINHANH;
+                _nv.DATHOIVIEC = nv.DATHOIVIEC;
                 _nv.ID_PB = nv.ID_PB;
                 _nv.ID_BP = nv.ID_BP;
                 _nv.ID_CV = nv.ID_CV;
                 _nv.ID_TD = nv.ID_TD;
                 _nv.ID_CTY = nv.ID_CTY;
-                _nv.HINHANH = nv.HINHANH;
+         
                 db.SaveChanges();
                 return nv;
             }
