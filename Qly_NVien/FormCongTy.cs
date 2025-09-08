@@ -43,6 +43,7 @@ namespace Qly_NVien
             _congty = new CONGTY_bs();
             showHide(true);
             loadData();
+            splitContainerControl1.PanelVisibility = DevExpress.XtraEditors.SplitPanelVisibility.Panel2;    //CHỈ HIỆN THỊ PANEL 2
         }
 
         //ẨN NÚT LƯU VÀ HỦY KHI THAO TÁC
@@ -76,12 +77,14 @@ namespace Qly_NVien
             textEditSoDienThoai.Text = string.Empty;
             textEditEmail.Text = string.Empty;
             textEditDiaChi.Text = string.Empty;
+            splitContainerControl1.PanelVisibility = DevExpress.XtraEditors.SplitPanelVisibility.Both; //HIỆN THỊ CẢ 2 PANEL
         }
 
         private void btnSua_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             _them = false;
             showHide(false);
+            splitContainerControl1.PanelVisibility = DevExpress.XtraEditors.SplitPanelVisibility.Both; //HIỆN THỊ CẢ 2 PANEL
         }
 
         private void btnXoa_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -99,6 +102,7 @@ namespace Qly_NVien
             loadData();
             _them = false;
             showHide(true);
+            splitContainerControl1.PanelVisibility = DevExpress.XtraEditors.SplitPanelVisibility.Panel2;    //CHỈ HIỆN THỊ PANEL 2
 
         }
 
@@ -106,6 +110,7 @@ namespace Qly_NVien
         {
             _them = false;
             showHide(true);
+            splitContainerControl1.PanelVisibility = DevExpress.XtraEditors.SplitPanelVisibility.Panel2;    //CHỈ HIỆN THỊ PANEL 2
         }
 
         private void btIn_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)

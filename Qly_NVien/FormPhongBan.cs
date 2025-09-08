@@ -43,6 +43,7 @@ namespace Qly_NVien
             _phongban = new PHONGBAN_bs();
             showHide(true);
             loadData();
+            splitContainerControl1.PanelVisibility = DevExpress.XtraEditors.SplitPanelVisibility.Panel2;    //CHỈ HIỆN THỊ PANEL 2
         }
 
         //ẨN NÚT LƯU VÀ HỦY KHI THAO TÁC
@@ -70,12 +71,14 @@ namespace Qly_NVien
             showHide(false);
             _them = true;
             textEditTen.Text = string.Empty;
+            splitContainerControl1.PanelVisibility = DevExpress.XtraEditors.SplitPanelVisibility.Both; //HIỆN THỊ CẢ 2 PANEL
         }
 
         private void btnSua_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             _them = false;
             showHide(false);
+            splitContainerControl1.PanelVisibility = DevExpress.XtraEditors.SplitPanelVisibility.Both; //HIỆN THỊ CẢ 2 PANEL
         }
 
         private void btnXoa_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -89,16 +92,25 @@ namespace Qly_NVien
 
         private void btnLuu_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            saveData();
-            loadData();
-            _them = false;
-            showHide(true);
+            if (textEditTen.Text == "")
+            {
+                MessageBox.Show("Bạn chưa nhập tên phòng ban!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                saveData();
+                loadData();
+                _them = false;
+                showHide(true);
+                splitContainerControl1.PanelVisibility = DevExpress.XtraEditors.SplitPanelVisibility.Panel2;    //CHỈ HIỆN THỊ PANEL 2
+            }
         }
 
         private void btnHuy_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             _them = false;
             showHide(true);
+            splitContainerControl1.PanelVisibility = DevExpress.XtraEditors.SplitPanelVisibility.Panel2;    //CHỈ HIỆN THỊ PANEL 2
         }
 
         private void btIn_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
