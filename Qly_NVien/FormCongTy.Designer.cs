@@ -357,7 +357,7 @@
             // 
             TENCTY.AppearanceHeader.Font = new Font("Times New Roman", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             TENCTY.AppearanceHeader.Options.UseFont = true;
-            TENCTY.Caption = "TÊN";
+            TENCTY.Caption = "TÊN CÔNG TY";
             TENCTY.FieldName = "TENCTY";
             TENCTY.MaxWidth = 200;
             TENCTY.MinWidth = 200;

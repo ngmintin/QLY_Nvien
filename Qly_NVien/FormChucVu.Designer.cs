@@ -1,6 +1,6 @@
 ﻿namespace Qly_NVien
 {
-    partial class FormBoPhan
+    partial class FormChucVu
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormBoPhan));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormChucVu));
             barManager1 = new DevExpress.XtraBars.BarManager(components);
             bar2 = new DevExpress.XtraBars.Bar();
             btnThem = new DevExpress.XtraBars.BarButtonItem();
@@ -51,8 +51,8 @@
             labelControl1 = new DevExpress.XtraEditors.LabelControl();
             gcDanhSach = new DevExpress.XtraGrid.GridControl();
             gvDanhSach = new DevExpress.XtraGrid.Views.Grid.GridView();
-            ID_BP = new DevExpress.XtraGrid.Columns.GridColumn();
-            TENBP = new DevExpress.XtraGrid.Columns.GridColumn();
+            ID_CV = new DevExpress.XtraGrid.Columns.GridColumn();
+            TENCV = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)barManager1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)splitContainerControl1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)splitContainerControl1.Panel1).BeginInit();
@@ -165,15 +165,15 @@
             barDockControlTop.Dock = DockStyle.Top;
             barDockControlTop.Location = new Point(0, 0);
             barDockControlTop.Manager = barManager1;
-            barDockControlTop.Size = new Size(989, 28);
+            barDockControlTop.Size = new Size(830, 28);
             // 
             // barDockControlBottom
             // 
             barDockControlBottom.CausesValidation = false;
             barDockControlBottom.Dock = DockStyle.Bottom;
-            barDockControlBottom.Location = new Point(0, 592);
+            barDockControlBottom.Location = new Point(0, 539);
             barDockControlBottom.Manager = barManager1;
-            barDockControlBottom.Size = new Size(989, 20);
+            barDockControlBottom.Size = new Size(830, 20);
             // 
             // barDockControlLeft
             // 
@@ -181,15 +181,15 @@
             barDockControlLeft.Dock = DockStyle.Left;
             barDockControlLeft.Location = new Point(0, 28);
             barDockControlLeft.Manager = barManager1;
-            barDockControlLeft.Size = new Size(0, 564);
+            barDockControlLeft.Size = new Size(0, 511);
             // 
             // barDockControlRight
             // 
             barDockControlRight.CausesValidation = false;
             barDockControlRight.Dock = DockStyle.Right;
-            barDockControlRight.Location = new Point(989, 28);
+            barDockControlRight.Location = new Point(830, 28);
             barDockControlRight.Manager = barManager1;
-            barDockControlRight.Size = new Size(0, 564);
+            barDockControlRight.Size = new Size(0, 511);
             // 
             // btnDong
             // 
@@ -222,7 +222,7 @@
             // 
             splitContainerControl1.Panel2.Controls.Add(gcDanhSach);
             splitContainerControl1.Panel2.Text = "Panel2";
-            splitContainerControl1.Size = new Size(989, 564);
+            splitContainerControl1.Size = new Size(830, 511);
             splitContainerControl1.SplitterPosition = 118;
             splitContainerControl1.TabIndex = 5;
             // 
@@ -253,57 +253,57 @@
             gcDanhSach.MainView = gvDanhSach;
             gcDanhSach.MenuManager = barManager1;
             gcDanhSach.Name = "gcDanhSach";
-            gcDanhSach.Size = new Size(989, 436);
+            gcDanhSach.Size = new Size(830, 383);
             gcDanhSach.TabIndex = 0;
             gcDanhSach.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] { gvDanhSach });
             // 
             // gvDanhSach
             // 
-            gvDanhSach.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] { ID_BP, TENBP });
+            gvDanhSach.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] { ID_CV, TENCV });
             gvDanhSach.GridControl = gcDanhSach;
             gvDanhSach.Name = "gvDanhSach";
             gvDanhSach.OptionsView.ShowGroupPanel = false;
             gvDanhSach.Click += gvDanhSach_Click;
             // 
-            // ID_BP
+            // ID_CV
             // 
-            ID_BP.AppearanceHeader.Font = new Font("Times New Roman", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            ID_BP.AppearanceHeader.Options.UseFont = true;
-            ID_BP.Caption = "ID";
-            ID_BP.FieldName = "ID_BP";
-            ID_BP.MaxWidth = 50;
-            ID_BP.MinWidth = 50;
-            ID_BP.Name = "ID_BP";
-            ID_BP.Visible = true;
-            ID_BP.VisibleIndex = 0;
-            ID_BP.Width = 50;
+            ID_CV.AppearanceHeader.Font = new Font("Times New Roman", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            ID_CV.AppearanceHeader.Options.UseFont = true;
+            ID_CV.Caption = "ID";
+            ID_CV.FieldName = "ID_CV";
+            ID_CV.MaxWidth = 50;
+            ID_CV.MinWidth = 50;
+            ID_CV.Name = "ID_CV";
+            ID_CV.Visible = true;
+            ID_CV.VisibleIndex = 0;
+            ID_CV.Width = 50;
             // 
-            // TENBP
+            // TENCV
             // 
-            TENBP.AppearanceHeader.Font = new Font("Times New Roman", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            TENBP.AppearanceHeader.Options.UseFont = true;
-            TENBP.Caption = "TÊN BỘ PHẬN";
-            TENBP.FieldName = "TENBP";
-            TENBP.MaxWidth = 300;
-            TENBP.MinWidth = 300;
-            TENBP.Name = "TENBP";
-            TENBP.Visible = true;
-            TENBP.VisibleIndex = 1;
-            TENBP.Width = 300;
+            TENCV.AppearanceHeader.Font = new Font("Times New Roman", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            TENCV.AppearanceHeader.Options.UseFont = true;
+            TENCV.Caption = "TÊN CHỨC VỤ";
+            TENCV.FieldName = "TENCV";
+            TENCV.MaxWidth = 300;
+            TENCV.MinWidth = 300;
+            TENCV.Name = "TENCV";
+            TENCV.Visible = true;
+            TENCV.VisibleIndex = 1;
+            TENCV.Width = 300;
             // 
-            // FormBoPhan
+            // FormChucVu
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(989, 612);
+            ClientSize = new Size(830, 559);
             Controls.Add(splitContainerControl1);
             Controls.Add(barDockControlLeft);
             Controls.Add(barDockControlRight);
             Controls.Add(barDockControlBottom);
             Controls.Add(barDockControlTop);
-            Name = "FormBoPhan";
-            Text = "BỘ PHẬN";
-            Load += FormBoPhan_Load;
+            Name = "FormChucVu";
+            Text = "CHỨC VỤ";
+            Load += FormChucVu_Load;
             ((System.ComponentModel.ISupportInitialize)barManager1).EndInit();
             ((System.ComponentModel.ISupportInitialize)splitContainerControl1.Panel1).EndInit();
             splitContainerControl1.Panel1.ResumeLayout(false);
@@ -342,7 +342,7 @@
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraGrid.GridControl gcDanhSach;
         private DevExpress.XtraGrid.Views.Grid.GridView gvDanhSach;
-        private DevExpress.XtraGrid.Columns.GridColumn ID_BP;
-        private DevExpress.XtraGrid.Columns.GridColumn TENBP;
+        private DevExpress.XtraGrid.Columns.GridColumn ID_CV;
+        private DevExpress.XtraGrid.Columns.GridColumn TENCV;
     }
 }

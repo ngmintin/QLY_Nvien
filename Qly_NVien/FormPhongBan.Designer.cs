@@ -228,7 +228,7 @@
             // 
             // textEditTen
             // 
-            textEditTen.Location = new Point(95, 40);
+            textEditTen.Location = new Point(86, 40);
             textEditTen.MenuManager = barManager1;
             textEditTen.Name = "textEditTen";
             textEditTen.Properties.Appearance.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -240,7 +240,7 @@
             // 
             labelControl1.Appearance.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             labelControl1.Appearance.Options.UseFont = true;
-            labelControl1.Location = new Point(52, 43);
+            labelControl1.Location = new Point(43, 43);
             labelControl1.Name = "labelControl1";
             labelControl1.Size = new Size(37, 23);
             labelControl1.TabIndex = 0;
@@ -282,7 +282,7 @@
             // 
             TENPB.AppearanceHeader.Font = new Font("Times New Roman", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             TENPB.AppearanceHeader.Options.UseFont = true;
-            TENPB.Caption = "TÊN";
+            TENPB.Caption = "TÊN PHÒNG BAN";
             TENPB.FieldName = "TENPB";
             TENPB.MaxWidth = 300;
             TENPB.MinWidth = 300;

@@ -12,19 +12,19 @@ using BusinessLayer;
 
 namespace Qly_NVien
 {
-    public partial class FormPhongBan : Form
+    public partial class FormChucVu : Form
     {
-        public FormPhongBan()
+        public FormChucVu()
         {
             InitializeComponent();
         }
 
         //BIẾN
-        PHONGBAN_bs _phongban;
+        CHUCVU_bs _chucvu;
         bool _them;
-        int _idpb;
+        int _idcv;
 
-        private void FormPhongBan_Load(object sender, EventArgs e)
+        private void FormChucVu_Load(object sender, EventArgs e)
         {
             //CHIỀU CAO DÒNG
             gvDanhSach.RowHeight = 30;
@@ -40,7 +40,7 @@ namespace Qly_NVien
 
             //THAO TÁC
             _them = false;
-            _phongban = new PHONGBAN_bs();
+            _chucvu = new CHUCVU_bs();
             showHide(true);
             loadData();
         }
@@ -61,7 +61,7 @@ namespace Qly_NVien
 
         void loadData()
         {
-            gcDanhSach.DataSource = _phongban.getList();
+            gcDanhSach.DataSource = _chucvu.getList();
             gvDanhSach.OptionsBehavior.Editable = false;
         }
 
@@ -82,7 +82,7 @@ namespace Qly_NVien
         {
             if (MessageBox.Show("Bạn có chắc chắn muốn xóa không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
-                _phongban.Delete(_idpb);
+                _chucvu.Delete(_idcv);
                 loadData();
             }
         }
@@ -116,15 +116,15 @@ namespace Qly_NVien
         {
             if (_them)
             {
-                PHONGBAN pb = new PHONGBAN();
-                pb.TENPB = textEditTen.Text;
-                _phongban.Add(pb);
+                CHUCVU cv = new CHUCVU();
+                cv.TENCV = textEditTen.Text;
+                _chucvu.Add(cv);
             }
             else
             {
-                var pb = _phongban.getItem(_idpb);
-                pb.TENPB = textEditTen.Text;
-                _phongban.Update(pb);
+                var cv = _chucvu.getItem(_idcv);
+                cv.TENCV = textEditTen.Text;
+                _chucvu.Update(cv);
             }
         }
 
@@ -132,8 +132,8 @@ namespace Qly_NVien
         {
             if (gvDanhSach.RowCount > 0)
             {
-                _idpb = int.Parse(gvDanhSach.GetFocusedRowCellValue("ID_PB").ToString());
-                textEditTen.Text = gvDanhSach.GetFocusedRowCellValue("TENPB").ToString();
+                _idcv = int.Parse(gvDanhSach.GetFocusedRowCellValue("ID_CV").ToString());
+                textEditTen.Text = gvDanhSach.GetFocusedRowCellValue("TENCV").ToString();
             }
         }
     }

@@ -282,7 +282,7 @@
             // 
             TENTD.AppearanceHeader.Font = new Font("Times New Roman", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             TENTD.AppearanceHeader.Options.UseFont = true;
-            TENTD.Caption = "TÊN";
+            TENTD.Caption = "TÊN TRÌNH ĐỘ";
             TENTD.FieldName = "TENTD";
             TENTD.MaxWidth = 300;
             TENTD.MinWidth = 300;

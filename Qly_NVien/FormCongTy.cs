@@ -26,6 +26,19 @@ namespace Qly_NVien
 
         private void FormCongTy_Load(object sender, EventArgs e)
         {
+            //CHIỀU CAO DÒNG
+            gvDanhSach.RowHeight = 30;
+            gvDanhSach.ColumnPanelRowHeight = 40;
+            //TIÊU ĐỀ CỘT
+            gvDanhSach.Appearance.HeaderPanel.Font = new Font("Times New Roman", 15F, FontStyle.Bold);
+            gvDanhSach.Appearance.HeaderPanel.Options.UseFont = true;
+            //Ô DỮ LIỆU
+            gvDanhSach.Appearance.Row.Font = new Font("Times New Roman", 15F);
+            gvDanhSach.Appearance.Row.Options.UseFont = true;
+            //TỤ ĐỘNG CO DÃN THEO NỘI DUNG
+            gvDanhSach.OptionsView.RowAutoHeight = true;
+
+            //THAO TÁC
             _them = false;
             _congty = new CONGTY_bs();
             showHide(true);
