@@ -21,6 +21,5 @@ namespace DataLayer
     
         public virtual CHAMCONG CHAMCONG { get; set; }
         public virtual LOAICONG LOAICONG { get; set; }
-        public virtual NHANVIEN NHANVIEN { get; set; }
     }
 }

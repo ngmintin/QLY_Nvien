@@ -17,9 +17,8 @@ namespace DataLayer
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public NHANVIEN()
         {
-            this.BANGCONGs = new HashSet<BANGCONG>();
+            this.HOPDONGs = new HashSet<HOPDONG>();
             this.KHENTHUONGKYLUATs = new HashSet<KHENTHUONGKYLUAT>();
-            this.TANGCAs = new HashSet<TANGCA>();
         }
     
         public int MANV { get; set; }
@@ -38,15 +37,8 @@ namespace DataLayer
         public Nullable<bool> DATHOIVIEC { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<BANGCONG> BANGCONGs { get; set; }
-        public virtual BOPHAN BOPHAN { get; set; }
-        public virtual CONGTY CONGTY { get; set; }
-        public virtual CHUCVU CHUCVU { get; set; }
+        public virtual ICollection<HOPDONG> HOPDONGs { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<KHENTHUONGKYLUAT> KHENTHUONGKYLUATs { get; set; }
-        public virtual PHONGBAN PHONGBAN { get; set; }
-        public virtual TRINHDO TRINHDO { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<TANGCA> TANGCAs { get; set; }
     }
 }

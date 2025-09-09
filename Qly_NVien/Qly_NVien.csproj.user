@@ -16,6 +16,9 @@
     <Compile Update="FormDangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="FormHopDongLaoDong.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="FormLayMatKhau.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -41,9 +44,6 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="FormTrinhDo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="NHANVIEN_THOIVIEC.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Reports\rpDANH_SACH_NHANVIEN.cs">

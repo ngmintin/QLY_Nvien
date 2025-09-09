@@ -14,19 +14,10 @@ namespace DataLayer
     
     public partial class CONGTY
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public CONGTY()
-        {
-            this.NHANVIENs = new HashSet<NHANVIEN>();
-        }
-    
         public int ID_CTY { get; set; }
         public string TENCTY { get; set; }
         public string SĐT { get; set; }
         public string EMAIL { get; set; }
         public string DIACHI { get; set; }
-    
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<NHANVIEN> NHANVIENs { get; set; }
     }
 }

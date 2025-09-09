@@ -30,6 +30,7 @@ namespace DataLayer
         public virtual DbSet<CONGTY> CONGTies { get; set; }
         public virtual DbSet<CHAMCONG> CHAMCONGs { get; set; }
         public virtual DbSet<CHUCVU> CHUCVUs { get; set; }
+        public virtual DbSet<HOPDONG> HOPDONGs { get; set; }
         public virtual DbSet<KHENTHUONGKYLUAT> KHENTHUONGKYLUATs { get; set; }
         public virtual DbSet<LOAICA> LOAICAs { get; set; }
         public virtual DbSet<LOAICONG> LOAICONGs { get; set; }

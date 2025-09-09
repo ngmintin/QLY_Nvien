@@ -32,6 +32,7 @@ namespace Qly_NVien
         CHUCVU_bs _chucvu;
         PHONGBAN_bs _phongban;
         TRINHDOs _trinhdo;
+        private Image _hinh;
         List<NHANVIEN_dto> _lsnvdto;
 
         private void FormNhanVien_Load(object sender, EventArgs e)
@@ -137,6 +138,7 @@ namespace Qly_NVien
         {
             _them = false;
             showHide(false);
+            pictureBoxHinhAnh.Image = _hinh;
             splitContainerControl1.PanelVisibility = DevExpress.XtraEditors.SplitPanelVisibility.Both; //HIỆN THỊ CẢ 2 PANEL
         }
 

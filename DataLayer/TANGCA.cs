@@ -23,6 +23,5 @@ namespace DataLayer
         public Nullable<int> ID_LCA { get; set; }
     
         public virtual LOAICA LOAICA { get; set; }
-        public virtual NHANVIEN NHANVIEN { get; set; }
     }
 }
