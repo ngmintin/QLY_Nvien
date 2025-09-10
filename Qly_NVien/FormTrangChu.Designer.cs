@@ -375,7 +375,6 @@
             // 
             ribbonPageGroup4.ItemLinks.Add(btnHopDong, true);
             ribbonPageGroup4.ItemLinks.Add(btDieuChuyen, true);
-            ribbonPageGroup4.ItemLinks.Add(btGopYKhieuNai, true);
             ribbonPageGroup4.ItemLinks.Add(btThoiViec, true);
             ribbonPageGroup4.Name = "ribbonPageGroup4";
             ribbonPageGroup4.Text = "NGHIỆP VỤ";
@@ -383,14 +382,12 @@
             // ribbonPageGroup6
             // 
             ribbonPageGroup6.ItemLinks.Add(btThongBao);
-            ribbonPageGroup6.ItemLinks.Add(btSuKien, true);
             ribbonPageGroup6.ItemLinks.Add(btKhenThuongKyLuat, true);
             ribbonPageGroup6.Name = "ribbonPageGroup6";
             ribbonPageGroup6.Text = "TIN TỨC";
             // 
             // ribbonPageGroup8
             // 
-            ribbonPageGroup8.ItemLinks.Add(btBaoLoi);
             ribbonPageGroup8.ItemLinks.Add(btmThoat, true);
             ribbonPageGroup8.Name = "ribbonPageGroup8";
             ribbonPageGroup8.Text = "HỆ THỐNG";
@@ -411,7 +408,6 @@
             // ribbonPageGroup7
             // 
             ribbonPageGroup7.ItemLinks.Add(btmCa);
-            ribbonPageGroup7.ItemLinks.Add(btmCapBac);
             ribbonPageGroup7.Name = "ribbonPageGroup7";
             ribbonPageGroup7.Text = "ĐĂNG KÝ";
             // 
@@ -424,15 +420,15 @@
             // ribbonPageGroup3
             // 
             ribbonPageGroup3.ItemLinks.Add(btCaLam);
-            ribbonPageGroup3.ItemLinks.Add(btTangCa);
+            ribbonPageGroup3.ItemLinks.Add(btTangCa, true);
             ribbonPageGroup3.Name = "ribbonPageGroup3";
             ribbonPageGroup3.Text = "Điểm danh";
             // 
             // ribbonPageGroup5
             // 
             ribbonPageGroup5.ItemLinks.Add(btBangCong);
-            ribbonPageGroup5.ItemLinks.Add(btLoaiCong);
-            ribbonPageGroup5.ItemLinks.Add(btBangLuong);
+            ribbonPageGroup5.ItemLinks.Add(btLoaiCong, true);
+            ribbonPageGroup5.ItemLinks.Add(btBangLuong, true);
             ribbonPageGroup5.Name = "ribbonPageGroup5";
             ribbonPageGroup5.Text = "Quản lý chấm công";
             // 

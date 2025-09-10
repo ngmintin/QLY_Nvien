@@ -52,5 +52,8 @@
     <Compile Update="Reports\rpDANH_SACH_NHANVIEN.cs">
       <SubType>XtraReport</SubType>
     </Compile>
+    <Compile Update="TEST.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 </Project>
