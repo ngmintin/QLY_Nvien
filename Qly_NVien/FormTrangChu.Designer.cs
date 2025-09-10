@@ -62,6 +62,7 @@
             btnChucVu = new DevExpress.XtraBars.BarButtonItem();
             barButtonItem5 = new DevExpress.XtraBars.BarButtonItem();
             barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
+            btnHopDong = new DevExpress.XtraBars.BarButtonItem();
             ribbonPageHeThong = new DevExpress.XtraBars.Ribbon.RibbonPage();
             ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -76,7 +77,6 @@
             ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             documentManager1 = new DevExpress.XtraBars.Docking2010.DocumentManager(components);
             tabbedView1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView(components);
-            btnHopDong = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)ribbon).BeginInit();
             ((System.ComponentModel.ISupportInitialize)documentManager1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)tabbedView1).BeginInit();
@@ -154,6 +154,7 @@
             btKhenThuongKyLuat.ImageOptions.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("btKhenThuongKyLuat.ImageOptions.SvgImage");
             btKhenThuongKyLuat.Name = "btKhenThuongKyLuat";
             btKhenThuongKyLuat.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            btKhenThuongKyLuat.ItemClick += btKhenThuongKyLuat_ItemClick;
             // 
             // btBaoLoi
             // 
@@ -344,6 +345,15 @@
             barButtonItem4.Id = 32;
             barButtonItem4.Name = "barButtonItem4";
             // 
+            // btnHopDong
+            // 
+            btnHopDong.Caption = "Hợp đồng";
+            btnHopDong.Id = 33;
+            btnHopDong.ImageOptions.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("btnHopDong.ImageOptions.SvgImage");
+            btnHopDong.Name = "btnHopDong";
+            btnHopDong.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            btnHopDong.ItemClick += btnHopDong_ItemClick;
+            // 
             // ribbonPageHeThong
             // 
             ribbonPageHeThong.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] { ribbonPageGroup1, ribbonPageGroup4, ribbonPageGroup6, ribbonPageGroup8 });
@@ -440,15 +450,6 @@
             documentManager1.MenuManager = ribbon;
             documentManager1.View = tabbedView1;
             documentManager1.ViewCollection.AddRange(new DevExpress.XtraBars.Docking2010.Views.BaseView[] { tabbedView1 });
-            // 
-            // btnHopDong
-            // 
-            btnHopDong.Caption = "Hợp đồng";
-            btnHopDong.Id = 33;
-            btnHopDong.ImageOptions.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("btnHopDong.ImageOptions.SvgImage");
-            btnHopDong.Name = "btnHopDong";
-            btnHopDong.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
-            btnHopDong.ItemClick += btnHopDong_ItemClick;
             // 
             // FormTrangChu
             // 

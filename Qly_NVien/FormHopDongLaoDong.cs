@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BusinessLayer;
+using BusinessLayer.DTO_bs;
 
 namespace Qly_NVien
 {
@@ -25,6 +26,7 @@ namespace Qly_NVien
         bool _them;
         string _sohd;
         string _maxSoHD;
+        List<HOPDONGLAODONG_dto> _lsthddto;
 
         private void FormHopDongLaoDong_Load(object sender, EventArgs e)
         {
@@ -68,6 +70,7 @@ namespace Qly_NVien
             dateTimePickerNgayKy.Value = DateTime.Now;
             spinEditLanKy.Text = "1";
             spinEditHeSoLuong.Text = "1";
+            richEditControlNoiDung.Text = string.Empty;
 
         } 
 

@@ -75,9 +75,9 @@
         </EntityType>
         <EntityType Name="KHENTHUONGKYLUAT">
           <Key>
-            <PropertyRef Name="SOKTKL" />
+            <PropertyRef Name="SOQUYETDINH" />
           </Key>
-          <Property Name="SOKTKL" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="SOQUYETDINH" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="LYDO" Type="nvarchar(max)" />
           <Property Name="NOIDUNG" Type="nvarchar(max)" />
           <Property Name="NGAY" Type="datetime" />
@@ -276,7 +276,6 @@
           <EntitySet Name="CHAMCONGs" EntityType="Qly_NvienModel.CHAMCONG" />
           <EntitySet Name="CHUCVUs" EntityType="Qly_NvienModel.CHUCVU" />
           <EntitySet Name="HOPDONGs" EntityType="Qly_NvienModel.HOPDONG" />
-          <EntitySet Name="KHENTHUONGKYLUATs" EntityType="Qly_NvienModel.KHENTHUONGKYLUAT" />
           <EntitySet Name="LOAICAs" EntityType="Qly_NvienModel.LOAICA" />
           <EntitySet Name="LOAICONGs" EntityType="Qly_NvienModel.LOAICONG" />
           <EntitySet Name="NHANVIENs" EntityType="Qly_NvienModel.NHANVIEN" />
@@ -296,13 +295,14 @@
             <End Role="NHANVIEN" EntitySet="NHANVIENs" />
             <End Role="HOPDONG" EntitySet="HOPDONGs" />
           </AssociationSet>
-          <AssociationSet Name="FK_KHENTHUONGKYLUAT_NHANVIEN" Association="Qly_NvienModel.FK_KHENTHUONGKYLUAT_NHANVIEN">
-            <End Role="NHANVIEN" EntitySet="NHANVIENs" />
-            <End Role="KHENTHUONGKYLUAT" EntitySet="KHENTHUONGKYLUATs" />
-          </AssociationSet>
           <AssociationSet Name="FK_TANGCA_LOAICA" Association="Qly_NvienModel.FK_TANGCA_LOAICA">
             <End Role="LOAICA" EntitySet="LOAICAs" />
             <End Role="TANGCA" EntitySet="TANGCAs" />
+          </AssociationSet>
+          <EntitySet Name="KHENTHUONGKYLUATs" EntityType="Qly_NvienModel.KHENTHUONGKYLUAT" />
+          <AssociationSet Name="FK_KHENTHUONGKYLUAT_NHANVIEN" Association="Qly_NvienModel.FK_KHENTHUONGKYLUAT_NHANVIEN">
+            <End Role="NHANVIEN" EntitySet="NHANVIENs" />
+            <End Role="KHENTHUONGKYLUAT" EntitySet="KHENTHUONGKYLUATs" />
           </AssociationSet>
         </EntityContainer>
         <EntityType Name="BANGCONG">
@@ -376,26 +376,6 @@
           <Property Name="CREATED_BY" Type="Int32" />
           <Property Name="CREATED_DATE" Type="DateTime" Precision="3" />
           <NavigationProperty Name="NHANVIEN" Relationship="Qly_NvienModel.FK_HOPDONG_NHANVIEN" FromRole="HOPDONG" ToRole="NHANVIEN" />
-        </EntityType>
-        <EntityType Name="KHENTHUONGKYLUAT">
-          <Key>
-            <PropertyRef Name="SOKTKL" />
-          </Key>
-          <Property Name="SOKTKL" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="LYDO" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="NOIDUNG" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="NGAY" Type="DateTime" Precision="3" />
-          <Property Name="MANV" Type="Int32" />
-          <Property Name="LOAI" Type="Int32" />
-          <Property Name="TUNGAY" Type="DateTime" Precision="3" />
-          <Property Name="DENNGAY" Type="DateTime" Precision="3" />
-          <Property Name="CREATED_BY" Type="Int32" />
-          <Property Name="CREATED_DATE" Type="DateTime" Precision="3" />
-          <Property Name="DELETED_BY" Type="Int32" />
-          <Property Name="DELETED_DATE" Type="DateTime" Precision="3" />
-          <Property Name="UPDATED_BY" Type="Int32" />
-          <Property Name="UPDATED_DATE" Type="DateTime" Precision="3" />
-          <NavigationProperty Name="NHANVIEN" Relationship="Qly_NvienModel.FK_KHENTHUONGKYLUAT_NHANVIEN" FromRole="KHENTHUONGKYLUAT" ToRole="NHANVIEN" />
         </EntityType>
         <EntityType Name="LOAICA">
           <Key>
@@ -515,18 +495,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_KHENTHUONGKYLUAT_NHANVIEN">
-          <End Type="Qly_NvienModel.NHANVIEN" Role="NHANVIEN" Multiplicity="0..1" />
-          <End Type="Qly_NvienModel.KHENTHUONGKYLUAT" Role="KHENTHUONGKYLUAT" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="NHANVIEN">
-              <PropertyRef Name="MANV" />
-            </Principal>
-            <Dependent Role="KHENTHUONGKYLUAT">
-              <PropertyRef Name="MANV" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_TANGCA_LOAICA">
           <End Type="Qly_NvienModel.LOAICA" Role="LOAICA" Multiplicity="0..1" />
           <End Type="Qly_NvienModel.TANGCA" Role="TANGCA" Multiplicity="*" />
@@ -536,6 +504,38 @@
             </Principal>
             <Dependent Role="TANGCA">
               <PropertyRef Name="ID_LCA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="KHENTHUONGKYLUAT">
+          <Key>
+            <PropertyRef Name="SOQUYETDINH" />
+          </Key>
+          <Property Name="SOQUYETDINH" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LYDO" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="NOIDUNG" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="NGAY" Type="DateTime" Precision="3" />
+          <Property Name="MANV" Type="Int32" />
+          <Property Name="LOAI" Type="Int32" />
+          <Property Name="TUNGAY" Type="DateTime" Precision="3" />
+          <Property Name="DENNGAY" Type="DateTime" Precision="3" />
+          <Property Name="CREATED_BY" Type="Int32" />
+          <Property Name="CREATED_DATE" Type="DateTime" Precision="3" />
+          <Property Name="DELETED_BY" Type="Int32" />
+          <Property Name="DELETED_DATE" Type="DateTime" Precision="3" />
+          <Property Name="UPDATED_BY" Type="Int32" />
+          <Property Name="UPDATED_DATE" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="NHANVIEN" Relationship="Qly_NvienModel.FK_KHENTHUONGKYLUAT_NHANVIEN" FromRole="KHENTHUONGKYLUAT" ToRole="NHANVIEN" />
+        </EntityType>
+        <Association Name="FK_KHENTHUONGKYLUAT_NHANVIEN">
+          <End Type="Qly_NvienModel.NHANVIEN" Role="NHANVIEN" Multiplicity="0..1" />
+          <End Type="Qly_NvienModel.KHENTHUONGKYLUAT" Role="KHENTHUONGKYLUAT" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NHANVIEN">
+              <PropertyRef Name="MANV" />
+            </Principal>
+            <Dependent Role="KHENTHUONGKYLUAT">
+              <PropertyRef Name="MANV" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -616,26 +616,6 @@
                 <ScalarProperty Name="NGAYKTHUC" ColumnName="NGAYKTHUC" />
                 <ScalarProperty Name="NGAYBDAU" ColumnName="NGAYBDAU" />
                 <ScalarProperty Name="SOHD" ColumnName="SOHD" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="KHENTHUONGKYLUATs">
-            <EntityTypeMapping TypeName="Qly_NvienModel.KHENTHUONGKYLUAT">
-              <MappingFragment StoreEntitySet="KHENTHUONGKYLUAT">
-                <ScalarProperty Name="UPDATED_DATE" ColumnName="UPDATED_DATE" />
-                <ScalarProperty Name="UPDATED_BY" ColumnName="UPDATED_BY" />
-                <ScalarProperty Name="DELETED_DATE" ColumnName="DELETED_DATE" />
-                <ScalarProperty Name="DELETED_BY" ColumnName="DELETED_BY" />
-                <ScalarProperty Name="CREATED_DATE" ColumnName="CREATED_DATE" />
-                <ScalarProperty Name="CREATED_BY" ColumnName="CREATED_BY" />
-                <ScalarProperty Name="DENNGAY" ColumnName="DENNGAY" />
-                <ScalarProperty Name="TUNGAY" ColumnName="TUNGAY" />
-                <ScalarProperty Name="LOAI" ColumnName="LOAI" />
-                <ScalarProperty Name="MANV" ColumnName="MANV" />
-                <ScalarProperty Name="NGAY" ColumnName="NGAY" />
-                <ScalarProperty Name="NOIDUNG" ColumnName="NOIDUNG" />
-                <ScalarProperty Name="LYDO" ColumnName="LYDO" />
-                <ScalarProperty Name="SOKTKL" ColumnName="SOKTKL" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -720,6 +700,26 @@
               <MappingFragment StoreEntitySet="TRINHDO">
                 <ScalarProperty Name="TENTD" ColumnName="TENTD" />
                 <ScalarProperty Name="ID_TD" ColumnName="ID_TD" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="KHENTHUONGKYLUATs">
+            <EntityTypeMapping TypeName="Qly_NvienModel.KHENTHUONGKYLUAT">
+              <MappingFragment StoreEntitySet="KHENTHUONGKYLUAT">
+                <ScalarProperty Name="UPDATED_DATE" ColumnName="UPDATED_DATE" />
+                <ScalarProperty Name="UPDATED_BY" ColumnName="UPDATED_BY" />
+                <ScalarProperty Name="DELETED_DATE" ColumnName="DELETED_DATE" />
+                <ScalarProperty Name="DELETED_BY" ColumnName="DELETED_BY" />
+                <ScalarProperty Name="CREATED_DATE" ColumnName="CREATED_DATE" />
+                <ScalarProperty Name="CREATED_BY" ColumnName="CREATED_BY" />
+                <ScalarProperty Name="DENNGAY" ColumnName="DENNGAY" />
+                <ScalarProperty Name="TUNGAY" ColumnName="TUNGAY" />
+                <ScalarProperty Name="LOAI" ColumnName="LOAI" />
+                <ScalarProperty Name="MANV" ColumnName="MANV" />
+                <ScalarProperty Name="NGAY" ColumnName="NGAY" />
+                <ScalarProperty Name="NOIDUNG" ColumnName="NOIDUNG" />
+                <ScalarProperty Name="LYDO" ColumnName="LYDO" />
+                <ScalarProperty Name="SOQUYETDINH" ColumnName="SOQUYETDINH" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

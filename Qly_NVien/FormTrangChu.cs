@@ -78,5 +78,10 @@ namespace Qly_NVien
         {
             openForm(typeof(FormHopDongLaoDong));
         }
+
+        private void btKhenThuongKyLuat_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            openForm(typeof(FormKhenThuongKyLuat));
+        }
     }
 }

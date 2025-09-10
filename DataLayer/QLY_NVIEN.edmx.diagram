@@ -11,7 +11,6 @@
         <EntityTypeShape EntityType="Qly_NvienModel.CHAMCONG" Width="1.5" PointX="5.75" PointY="1" />
         <EntityTypeShape EntityType="Qly_NvienModel.CHUCVU" Width="1.5" PointX="9.75" PointY="8.75" />
         <EntityTypeShape EntityType="Qly_NvienModel.HOPDONG" Width="1.5" PointX="3" PointY="5.875" />
-        <EntityTypeShape EntityType="Qly_NvienModel.KHENTHUONGKYLUAT" Width="1.5" PointX="3" PointY="1.25" />
         <EntityTypeShape EntityType="Qly_NvienModel.LOAICA" Width="1.5" PointX="7.75" PointY="5.375" />
         <EntityTypeShape EntityType="Qly_NvienModel.LOAICONG" Width="1.5" PointX="5.75" PointY="5.5" />
         <EntityTypeShape EntityType="Qly_NvienModel.NHANVIEN" Width="1.5" PointX="0.75" PointY="3.75" />
@@ -22,8 +21,9 @@
         <AssociationConnector Association="Qly_NvienModel.FK_BANGCONG_CHAMCONG" />
         <AssociationConnector Association="Qly_NvienModel.FK_BANGCONG_LOAICONG" />
         <AssociationConnector Association="Qly_NvienModel.FK_HOPDONG_NHANVIEN" />
-        <AssociationConnector Association="Qly_NvienModel.FK_KHENTHUONGKYLUAT_NHANVIEN" />
         <AssociationConnector Association="Qly_NvienModel.FK_TANGCA_LOAICA" />
+        <EntityTypeShape EntityType="Qly_NvienModel.KHENTHUONGKYLUAT" Width="1.5" PointX="3" PointY="0.875" />
+        <AssociationConnector Association="Qly_NvienModel.FK_KHENTHUONGKYLUAT_NHANVIEN" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -14,7 +14,7 @@ namespace DataLayer
     
     public partial class KHENTHUONGKYLUAT
     {
-        public string SOKTKL { get; set; }
+        public string SOQUYETDINH { get; set; }
         public string LYDO { get; set; }
         public string NOIDUNG { get; set; }
         public Nullable<System.DateTime> NGAY { get; set; }
