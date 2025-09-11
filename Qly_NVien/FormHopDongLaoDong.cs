@@ -58,6 +58,7 @@ namespace Qly_NVien
             spinEditLanKy.Enabled = !kt;
             spinEditHeSoLuong.Enabled = !kt;
             searchLookUpEditNhanVien.Enabled = !kt;
+            richEditControlNoiDung.Enabled = !kt;
 
         }
 
@@ -101,6 +102,7 @@ namespace Qly_NVien
             _them = false;
             showHide(false);
             splitContainerControl1.PanelVisibility = DevExpress.XtraEditors.SplitPanelVisibility.Both; //HIỆN THỊ CẢ 2 PANEL
+            gcDanhSach.Enabled = true;
         }
 
         private void btnXoa_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -147,7 +149,7 @@ namespace Qly_NVien
                 int so = int.Parse(maxSoHD.Substring(0, 5)) + 1;
 
                 HOPDONG hd = new HOPDONG();
-                hd.SOHD = so.ToString("00000") + @"/2021/HĐLĐ";
+                hd.SOHD = so.ToString("00000") + @"/" + DateTime.Now.Year.ToString() + @"/HDLD";
                 hd.NGAYBDAU = dateTimePickerNgayBD.Value;
                 hd.NGAYKTHUC = dateTimePickerNgayKT.Value;
                 hd.NGAYKY = dateTimePickerNgayKy.Value;
@@ -192,6 +194,7 @@ namespace Qly_NVien
             spinEditLanKy.Text = hd.LANKY.ToString();
             searchLookUpEditNhanVien.EditValue = hd.MANV;
             richEditControlNoiDung.RtfText = hd.NOIDUNG;
+            _lsthddto = _hdld.getListFull();
 
         }
         

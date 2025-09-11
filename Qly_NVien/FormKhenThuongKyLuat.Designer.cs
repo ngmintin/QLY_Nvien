@@ -47,33 +47,27 @@
             btnDong = new DevExpress.XtraBars.BarButtonItem();
             btnIn = new DevExpress.XtraBars.BarButtonItem();
             splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
-            comboBoxThoiHan = new ComboBox();
+            dateTimePickerNgay = new DateTimePicker();
             searchLookUpEditNhanVien = new DevExpress.XtraEditors.SearchLookUpEdit();
             searchLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
             gridColumnMANV = new DevExpress.XtraGrid.Columns.GridColumn();
             gridColumnHOTEN = new DevExpress.XtraGrid.Columns.GridColumn();
-            spinEditHeSoLuong = new DevExpress.XtraEditors.SpinEdit();
-            spinEditLanKy = new DevExpress.XtraEditors.SpinEdit();
-            dateTimePickerNgayKy = new DateTimePicker();
-            dateTimePickerNgayKT = new DateTimePicker();
-            dateTimePickerNgayBD = new DateTimePicker();
-            textEditSoHD = new DevExpress.XtraEditors.TextEdit();
-            labelControl7 = new DevExpress.XtraEditors.LabelControl();
-            labelControl6 = new DevExpress.XtraEditors.LabelControl();
+            textEditNoiDung = new DevExpress.XtraEditors.TextEdit();
+            textEditLyDo = new DevExpress.XtraEditors.TextEdit();
+            textEditSoQD = new DevExpress.XtraEditors.TextEdit();
             labelControl5 = new DevExpress.XtraEditors.LabelControl();
-            labelControl9 = new DevExpress.XtraEditors.LabelControl();
-            labelControl4 = new DevExpress.XtraEditors.LabelControl();
             labelControl3 = new DevExpress.XtraEditors.LabelControl();
             labelControl2 = new DevExpress.XtraEditors.LabelControl();
+            labelControl4 = new DevExpress.XtraEditors.LabelControl();
             labelControl1 = new DevExpress.XtraEditors.LabelControl();
             gcDanhSach = new DevExpress.XtraGrid.GridControl();
             gvDanhSach = new DevExpress.XtraGrid.Views.Grid.GridView();
-            SOHD = new DevExpress.XtraGrid.Columns.GridColumn();
-            NGAYBDAU = new DevExpress.XtraGrid.Columns.GridColumn();
+            SOQUYETDINH = new DevExpress.XtraGrid.Columns.GridColumn();
+            NGAY = new DevExpress.XtraGrid.Columns.GridColumn();
             NGAYKTHUC = new DevExpress.XtraGrid.Columns.GridColumn();
             THOIHAN = new DevExpress.XtraGrid.Columns.GridColumn();
-            HESOLUONG = new DevExpress.XtraGrid.Columns.GridColumn();
-            LANKY = new DevExpress.XtraGrid.Columns.GridColumn();
+            LYDO = new DevExpress.XtraGrid.Columns.GridColumn();
+            NOIDUNG = new DevExpress.XtraGrid.Columns.GridColumn();
             NGAYKY = new DevExpress.XtraGrid.Columns.GridColumn();
             MANV = new DevExpress.XtraGrid.Columns.GridColumn();
             HOTEN = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -86,9 +80,9 @@
             splitContainerControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)searchLookUpEditNhanVien.Properties).BeginInit();
             ((System.ComponentModel.ISupportInitialize)searchLookUpEdit1View).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)spinEditHeSoLuong.Properties).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)spinEditLanKy.Properties).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)textEditSoHD.Properties).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)textEditNoiDung.Properties).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)textEditLyDo.Properties).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)textEditSoQD.Properties).BeginInit();
             ((System.ComponentModel.ISupportInitialize)gcDanhSach).BeginInit();
             ((System.ComponentModel.ISupportInitialize)gvDanhSach).BeginInit();
             SuspendLayout();
@@ -247,21 +241,15 @@
             // 
             // splitContainerControl1.Panel1
             // 
-            splitContainerControl1.Panel1.Controls.Add(comboBoxThoiHan);
+            splitContainerControl1.Panel1.Controls.Add(dateTimePickerNgay);
             splitContainerControl1.Panel1.Controls.Add(searchLookUpEditNhanVien);
-            splitContainerControl1.Panel1.Controls.Add(spinEditHeSoLuong);
-            splitContainerControl1.Panel1.Controls.Add(spinEditLanKy);
-            splitContainerControl1.Panel1.Controls.Add(dateTimePickerNgayKy);
-            splitContainerControl1.Panel1.Controls.Add(dateTimePickerNgayKT);
-            splitContainerControl1.Panel1.Controls.Add(dateTimePickerNgayBD);
-            splitContainerControl1.Panel1.Controls.Add(textEditSoHD);
-            splitContainerControl1.Panel1.Controls.Add(labelControl7);
-            splitContainerControl1.Panel1.Controls.Add(labelControl6);
+            splitContainerControl1.Panel1.Controls.Add(textEditNoiDung);
+            splitContainerControl1.Panel1.Controls.Add(textEditLyDo);
+            splitContainerControl1.Panel1.Controls.Add(textEditSoQD);
             splitContainerControl1.Panel1.Controls.Add(labelControl5);
-            splitContainerControl1.Panel1.Controls.Add(labelControl9);
-            splitContainerControl1.Panel1.Controls.Add(labelControl4);
             splitContainerControl1.Panel1.Controls.Add(labelControl3);
             splitContainerControl1.Panel1.Controls.Add(labelControl2);
+            splitContainerControl1.Panel1.Controls.Add(labelControl4);
             splitContainerControl1.Panel1.Controls.Add(labelControl1);
             splitContainerControl1.Panel1.Text = "Panel1";
             // 
@@ -270,23 +258,22 @@
             splitContainerControl1.Panel2.Controls.Add(gcDanhSach);
             splitContainerControl1.Panel2.Text = "Panel2";
             splitContainerControl1.Size = new Size(1029, 522);
-            splitContainerControl1.SplitterPosition = 442;
+            splitContainerControl1.SplitterPosition = 191;
             splitContainerControl1.TabIndex = 7;
             // 
-            // comboBoxThoiHan
+            // dateTimePickerNgay
             // 
-            comboBoxThoiHan.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBoxThoiHan.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            comboBoxThoiHan.FormattingEnabled = true;
-            comboBoxThoiHan.Items.AddRange(new object[] { "3 tháng", "6 tháng", "12 tháng" });
-            comboBoxThoiHan.Location = new Point(650, 29);
-            comboBoxThoiHan.Name = "comboBoxThoiHan";
-            comboBoxThoiHan.Size = new Size(130, 27);
-            comboBoxThoiHan.TabIndex = 6;
+            dateTimePickerNgay.CustomFormat = "dd/MM/yyyy";
+            dateTimePickerNgay.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dateTimePickerNgay.Format = DateTimePickerFormat.Custom;
+            dateTimePickerNgay.Location = new Point(348, 34);
+            dateTimePickerNgay.Name = "dateTimePickerNgay";
+            dateTimePickerNgay.Size = new Size(120, 26);
+            dateTimePickerNgay.TabIndex = 5;
             // 
             // searchLookUpEditNhanVien
             // 
-            searchLookUpEditNhanVien.Location = new Point(650, 66);
+            searchLookUpEditNhanVien.Location = new Point(579, 31);
             searchLookUpEditNhanVien.MenuManager = barManager1;
             searchLookUpEditNhanVien.Name = "searchLookUpEditNhanVien";
             searchLookUpEditNhanVien.Properties.Appearance.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -330,139 +317,74 @@
             gridColumnHOTEN.VisibleIndex = 1;
             gridColumnHOTEN.Width = 250;
             // 
-            // spinEditHeSoLuong
+            // textEditNoiDung
             // 
-            spinEditHeSoLuong.EditValue = new decimal(new int[] { 0, 0, 0, 0 });
-            spinEditHeSoLuong.Location = new Point(407, 103);
-            spinEditHeSoLuong.Name = "spinEditHeSoLuong";
-            spinEditHeSoLuong.Properties.Appearance.Font = new Font("Times New Roman", 12F);
-            spinEditHeSoLuong.Properties.Appearance.Options.UseFont = true;
-            spinEditHeSoLuong.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] { new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo) });
-            spinEditHeSoLuong.Size = new Size(100, 26);
-            spinEditHeSoLuong.TabIndex = 3;
+            textEditNoiDung.Location = new Point(159, 119);
+            textEditNoiDung.Name = "textEditNoiDung";
+            textEditNoiDung.Properties.Appearance.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            textEditNoiDung.Properties.Appearance.Options.UseFont = true;
+            textEditNoiDung.Size = new Size(662, 26);
+            textEditNoiDung.TabIndex = 1;
             // 
-            // spinEditLanKy
+            // textEditLyDo
             // 
-            spinEditLanKy.EditValue = new decimal(new int[] { 0, 0, 0, 0 });
-            spinEditLanKy.Location = new Point(407, 67);
-            spinEditLanKy.MenuManager = barManager1;
-            spinEditLanKy.Name = "spinEditLanKy";
-            spinEditLanKy.Properties.Appearance.Font = new Font("Times New Roman", 12F);
-            spinEditLanKy.Properties.Appearance.Options.UseFont = true;
-            spinEditLanKy.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] { new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo) });
-            spinEditLanKy.Size = new Size(100, 26);
-            spinEditLanKy.TabIndex = 3;
+            textEditLyDo.Location = new Point(159, 77);
+            textEditLyDo.Name = "textEditLyDo";
+            textEditLyDo.Properties.Appearance.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            textEditLyDo.Properties.Appearance.Options.UseFont = true;
+            textEditLyDo.Size = new Size(662, 26);
+            textEditLyDo.TabIndex = 1;
             // 
-            // dateTimePickerNgayKy
+            // textEditSoQD
             // 
-            dateTimePickerNgayKy.CustomFormat = "dd/MM/yyyy";
-            dateTimePickerNgayKy.Font = new Font("Times New Roman", 12F);
-            dateTimePickerNgayKy.Format = DateTimePickerFormat.Custom;
-            dateTimePickerNgayKy.Location = new Point(407, 31);
-            dateTimePickerNgayKy.Name = "dateTimePickerNgayKy";
-            dateTimePickerNgayKy.Size = new Size(120, 26);
-            dateTimePickerNgayKy.TabIndex = 2;
-            // 
-            // dateTimePickerNgayKT
-            // 
-            dateTimePickerNgayKT.CustomFormat = "dd/MM/yyyy";
-            dateTimePickerNgayKT.Font = new Font("Times New Roman", 12F);
-            dateTimePickerNgayKT.Format = DateTimePickerFormat.Custom;
-            dateTimePickerNgayKT.Location = new Point(159, 106);
-            dateTimePickerNgayKT.Name = "dateTimePickerNgayKT";
-            dateTimePickerNgayKT.Size = new Size(120, 26);
-            dateTimePickerNgayKT.TabIndex = 2;
-            // 
-            // dateTimePickerNgayBD
-            // 
-            dateTimePickerNgayBD.CustomFormat = "dd/MM/yyyy";
-            dateTimePickerNgayBD.Font = new Font("Times New Roman", 12F);
-            dateTimePickerNgayBD.Format = DateTimePickerFormat.Custom;
-            dateTimePickerNgayBD.Location = new Point(159, 70);
-            dateTimePickerNgayBD.Name = "dateTimePickerNgayBD";
-            dateTimePickerNgayBD.Size = new Size(120, 26);
-            dateTimePickerNgayBD.TabIndex = 2;
-            // 
-            // textEditSoHD
-            // 
-            textEditSoHD.Location = new Point(159, 34);
-            textEditSoHD.MenuManager = barManager1;
-            textEditSoHD.Name = "textEditSoHD";
-            textEditSoHD.Properties.Appearance.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textEditSoHD.Properties.Appearance.Options.UseFont = true;
-            textEditSoHD.Properties.ReadOnly = true;
-            textEditSoHD.Size = new Size(120, 26);
-            textEditSoHD.TabIndex = 1;
-            // 
-            // labelControl7
-            // 
-            labelControl7.Appearance.Font = new Font("Times New Roman", 14.25F);
-            labelControl7.Appearance.Options.UseFont = true;
-            labelControl7.Location = new Point(346, 70);
-            labelControl7.Name = "labelControl7";
-            labelControl7.Size = new Size(55, 21);
-            labelControl7.TabIndex = 0;
-            labelControl7.Text = "Lần ký:";
-            // 
-            // labelControl6
-            // 
-            labelControl6.Appearance.Font = new Font("Times New Roman", 14.25F);
-            labelControl6.Appearance.Options.UseFont = true;
-            labelControl6.Location = new Point(306, 105);
-            labelControl6.Name = "labelControl6";
-            labelControl6.Size = new Size(95, 21);
-            labelControl6.TabIndex = 0;
-            labelControl6.Text = "Hệ số lương:";
+            textEditSoQD.Location = new Point(159, 34);
+            textEditSoQD.MenuManager = barManager1;
+            textEditSoQD.Name = "textEditSoQD";
+            textEditSoQD.Properties.Appearance.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            textEditSoQD.Properties.Appearance.Options.UseFont = true;
+            textEditSoQD.Properties.ReadOnly = true;
+            textEditSoQD.Size = new Size(120, 26);
+            textEditSoQD.TabIndex = 1;
             // 
             // labelControl5
             // 
             labelControl5.Appearance.Font = new Font("Times New Roman", 14.25F);
             labelControl5.Appearance.Options.UseFont = true;
-            labelControl5.Location = new Point(566, 69);
+            labelControl5.Location = new Point(495, 34);
             labelControl5.Name = "labelControl5";
             labelControl5.Size = new Size(78, 21);
             labelControl5.TabIndex = 0;
             labelControl5.Text = "Nhân viên:";
             // 
-            // labelControl9
-            // 
-            labelControl9.Appearance.Font = new Font("Times New Roman", 14.25F);
-            labelControl9.Appearance.Options.UseFont = true;
-            labelControl9.Location = new Point(574, 31);
-            labelControl9.Name = "labelControl9";
-            labelControl9.Size = new Size(70, 21);
-            labelControl9.TabIndex = 0;
-            labelControl9.Text = "Thời hạn:";
-            // 
-            // labelControl4
-            // 
-            labelControl4.Appearance.Font = new Font("Times New Roman", 14.25F);
-            labelControl4.Appearance.Options.UseFont = true;
-            labelControl4.Location = new Point(335, 31);
-            labelControl4.Name = "labelControl4";
-            labelControl4.Size = new Size(66, 21);
-            labelControl4.TabIndex = 0;
-            labelControl4.Text = "Ngày ký:";
-            // 
             // labelControl3
             // 
             labelControl3.Appearance.Font = new Font("Times New Roman", 14.25F);
             labelControl3.Appearance.Options.UseFont = true;
-            labelControl3.Location = new Point(46, 111);
+            labelControl3.Location = new Point(80, 124);
             labelControl3.Name = "labelControl3";
-            labelControl3.Size = new Size(107, 21);
+            labelControl3.Size = new Size(73, 21);
             labelControl3.TabIndex = 0;
-            labelControl3.Text = "Ngày kết thúc:";
+            labelControl3.Text = "Nội dung:";
             // 
             // labelControl2
             // 
             labelControl2.Appearance.Font = new Font("Times New Roman", 14.25F);
             labelControl2.Appearance.Options.UseFont = true;
-            labelControl2.Location = new Point(51, 75);
+            labelControl2.Location = new Point(104, 80);
             labelControl2.Name = "labelControl2";
-            labelControl2.Size = new Size(103, 21);
+            labelControl2.Size = new Size(49, 21);
             labelControl2.TabIndex = 0;
-            labelControl2.Text = "Ngày bắt đầu:";
+            labelControl2.Text = "Lý do:";
+            // 
+            // labelControl4
+            // 
+            labelControl4.Appearance.Font = new Font("Times New Roman", 14.25F);
+            labelControl4.Appearance.Options.UseFont = true;
+            labelControl4.Location = new Point(299, 36);
+            labelControl4.Name = "labelControl4";
+            labelControl4.Size = new Size(43, 21);
+            labelControl4.TabIndex = 0;
+            labelControl4.Text = "Ngày:";
             // 
             // labelControl1
             // 
@@ -484,44 +406,45 @@
             gcDanhSach.Margin = new Padding(4);
             gcDanhSach.MenuManager = barManager1;
             gcDanhSach.Name = "gcDanhSach";
-            gcDanhSach.Size = new Size(1029, 70);
+            gcDanhSach.Size = new Size(1029, 321);
             gcDanhSach.TabIndex = 0;
             gcDanhSach.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] { gvDanhSach });
             // 
             // gvDanhSach
             // 
-            gvDanhSach.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] { SOHD, NGAYBDAU, NGAYKTHUC, THOIHAN, HESOLUONG, LANKY, NGAYKY, MANV, HOTEN });
+            gvDanhSach.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] { SOQUYETDINH, NGAY, NGAYKTHUC, THOIHAN, LYDO, NOIDUNG, NGAYKY, MANV, HOTEN });
             gvDanhSach.DetailHeight = 443;
             gvDanhSach.GridControl = gcDanhSach;
             gvDanhSach.Name = "gvDanhSach";
             gvDanhSach.OptionsEditForm.PopupEditFormWidth = 1029;
             gvDanhSach.OptionsView.ShowGroupPanel = false;
+            gvDanhSach.Click += gvDanhSach_Click;
             // 
-            // SOHD
+            // SOQUYETDINH
             // 
-            SOHD.AppearanceHeader.Font = new Font("Times New Roman", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            SOHD.AppearanceHeader.Options.UseFont = true;
-            SOHD.Caption = "SỐ HỢP ĐỒNG";
-            SOHD.FieldName = "SOHD";
-            SOHD.MaxWidth = 50;
-            SOHD.MinWidth = 50;
-            SOHD.Name = "SOHD";
-            SOHD.Visible = true;
-            SOHD.VisibleIndex = 0;
-            SOHD.Width = 50;
+            SOQUYETDINH.AppearanceHeader.Font = new Font("Times New Roman", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            SOQUYETDINH.AppearanceHeader.Options.UseFont = true;
+            SOQUYETDINH.Caption = "SỐ QUYẾT ĐỊNH";
+            SOQUYETDINH.FieldName = "SOQUYETDINH";
+            SOQUYETDINH.MaxWidth = 100;
+            SOQUYETDINH.MinWidth = 100;
+            SOQUYETDINH.Name = "SOQUYETDINH";
+            SOQUYETDINH.Visible = true;
+            SOQUYETDINH.VisibleIndex = 0;
+            SOQUYETDINH.Width = 100;
             // 
-            // NGAYBDAU
+            // NGAY
             // 
-            NGAYBDAU.AppearanceHeader.Font = new Font("Times New Roman", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            NGAYBDAU.AppearanceHeader.Options.UseFont = true;
-            NGAYBDAU.Caption = "NGÀY BẮT ĐẦU";
-            NGAYBDAU.FieldName = "NGAYBDAU";
-            NGAYBDAU.MaxWidth = 100;
-            NGAYBDAU.MinWidth = 100;
-            NGAYBDAU.Name = "NGAYBDAU";
-            NGAYBDAU.Visible = true;
-            NGAYBDAU.VisibleIndex = 1;
-            NGAYBDAU.Width = 100;
+            NGAY.AppearanceHeader.Font = new Font("Times New Roman", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            NGAY.AppearanceHeader.Options.UseFont = true;
+            NGAY.Caption = "NGÀY";
+            NGAY.FieldName = "NGAY";
+            NGAY.MaxWidth = 100;
+            NGAY.MinWidth = 100;
+            NGAY.Name = "NGAY";
+            NGAY.Visible = true;
+            NGAY.VisibleIndex = 1;
+            NGAY.Width = 100;
             // 
             // NGAYKTHUC
             // 
@@ -532,8 +455,6 @@
             NGAYKTHUC.MaxWidth = 100;
             NGAYKTHUC.MinWidth = 100;
             NGAYKTHUC.Name = "NGAYKTHUC";
-            NGAYKTHUC.Visible = true;
-            NGAYKTHUC.VisibleIndex = 2;
             NGAYKTHUC.Width = 100;
             // 
             // THOIHAN
@@ -545,35 +466,33 @@
             THOIHAN.MaxWidth = 100;
             THOIHAN.MinWidth = 100;
             THOIHAN.Name = "THOIHAN";
-            THOIHAN.Visible = true;
-            THOIHAN.VisibleIndex = 3;
             THOIHAN.Width = 100;
             // 
-            // HESOLUONG
+            // LYDO
             // 
-            HESOLUONG.AppearanceHeader.Font = new Font("Times New Roman", 9.75F, FontStyle.Bold);
-            HESOLUONG.AppearanceHeader.Options.UseFont = true;
-            HESOLUONG.Caption = "HỆ SỐ LƯƠNG";
-            HESOLUONG.FieldName = "HESOLUONG";
-            HESOLUONG.MaxWidth = 150;
-            HESOLUONG.MinWidth = 150;
-            HESOLUONG.Name = "HESOLUONG";
-            HESOLUONG.Visible = true;
-            HESOLUONG.VisibleIndex = 4;
-            HESOLUONG.Width = 150;
+            LYDO.AppearanceHeader.Font = new Font("Times New Roman", 9.75F, FontStyle.Bold);
+            LYDO.AppearanceHeader.Options.UseFont = true;
+            LYDO.Caption = "LÝ DO ";
+            LYDO.FieldName = "LYDO";
+            LYDO.MaxWidth = 250;
+            LYDO.MinWidth = 250;
+            LYDO.Name = "LYDO";
+            LYDO.Visible = true;
+            LYDO.VisibleIndex = 2;
+            LYDO.Width = 250;
             // 
-            // LANKY
+            // NOIDUNG
             // 
-            LANKY.AppearanceHeader.Font = new Font("Times New Roman", 9.75F, FontStyle.Bold);
-            LANKY.AppearanceHeader.Options.UseFont = true;
-            LANKY.Caption = "LẦN KÝ";
-            LANKY.FieldName = "LANKY";
-            LANKY.MaxWidth = 50;
-            LANKY.MinWidth = 50;
-            LANKY.Name = "LANKY";
-            LANKY.Visible = true;
-            LANKY.VisibleIndex = 5;
-            LANKY.Width = 50;
+            NOIDUNG.AppearanceHeader.Font = new Font("Times New Roman", 9.75F, FontStyle.Bold);
+            NOIDUNG.AppearanceHeader.Options.UseFont = true;
+            NOIDUNG.Caption = "NỘI DUNG";
+            NOIDUNG.FieldName = "NOIDUNG";
+            NOIDUNG.MaxWidth = 300;
+            NOIDUNG.MinWidth = 300;
+            NOIDUNG.Name = "NOIDUNG";
+            NOIDUNG.Visible = true;
+            NOIDUNG.VisibleIndex = 3;
+            NOIDUNG.Width = 300;
             // 
             // NGAYKY
             // 
@@ -584,8 +503,6 @@
             NGAYKY.MaxWidth = 100;
             NGAYKY.MinWidth = 100;
             NGAYKY.Name = "NGAYKY";
-            NGAYKY.Visible = true;
-            NGAYKY.VisibleIndex = 6;
             NGAYKY.Width = 100;
             // 
             // MANV
@@ -605,12 +522,12 @@
             HOTEN.AppearanceHeader.Options.UseFont = true;
             HOTEN.Caption = "NHÂN VIÊN";
             HOTEN.FieldName = "HOTEN";
-            HOTEN.MaxWidth = 250;
-            HOTEN.MinWidth = 250;
+            HOTEN.MaxWidth = 200;
+            HOTEN.MinWidth = 200;
             HOTEN.Name = "HOTEN";
             HOTEN.Visible = true;
-            HOTEN.VisibleIndex = 7;
-            HOTEN.Width = 250;
+            HOTEN.VisibleIndex = 4;
+            HOTEN.Width = 200;
             // 
             // FormKhenThuongKyLuat
             // 
@@ -623,7 +540,7 @@
             Controls.Add(barDockControlBottom);
             Controls.Add(barDockControlTop);
             Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            Margin = new Padding(4, 4, 4, 4);
+            Margin = new Padding(4);
             Name = "FormKhenThuongKyLuat";
             Text = "KHEN THƯỞNG KỶ LUẬT";
             Load += FormKhenThuongKyLuat_Load;
@@ -637,9 +554,9 @@
             splitContainerControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)searchLookUpEditNhanVien.Properties).EndInit();
             ((System.ComponentModel.ISupportInitialize)searchLookUpEdit1View).EndInit();
-            ((System.ComponentModel.ISupportInitialize)spinEditHeSoLuong.Properties).EndInit();
-            ((System.ComponentModel.ISupportInitialize)spinEditLanKy.Properties).EndInit();
-            ((System.ComponentModel.ISupportInitialize)textEditSoHD.Properties).EndInit();
+            ((System.ComponentModel.ISupportInitialize)textEditNoiDung.Properties).EndInit();
+            ((System.ComponentModel.ISupportInitialize)textEditLyDo.Properties).EndInit();
+            ((System.ComponentModel.ISupportInitialize)textEditSoQD.Properties).EndInit();
             ((System.ComponentModel.ISupportInitialize)gcDanhSach).EndInit();
             ((System.ComponentModel.ISupportInitialize)gvDanhSach).EndInit();
             ResumeLayout(false);
@@ -665,35 +582,29 @@
         private DevExpress.XtraBars.BarButtonItem btnDong;
         private DevExpress.XtraBars.BarButtonItem btnIn;
         private DevExpress.XtraEditors.SplitContainerControl splitContainerControl1;
-        private ComboBox comboBoxThoiHan;
         private DevExpress.XtraEditors.SearchLookUpEdit searchLookUpEditNhanVien;
         private DevExpress.XtraGrid.Views.Grid.GridView searchLookUpEdit1View;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumnMANV;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumnHOTEN;
-        private DevExpress.XtraEditors.SpinEdit spinEditHeSoLuong;
-        private DevExpress.XtraEditors.SpinEdit spinEditLanKy;
-        private DateTimePicker dateTimePickerNgayKy;
-        private DateTimePicker dateTimePickerNgayKT;
-        private DateTimePicker dateTimePickerNgayBD;
-        private DevExpress.XtraEditors.TextEdit textEditSoHD;
-        private DevExpress.XtraEditors.LabelControl labelControl7;
-        private DevExpress.XtraEditors.LabelControl labelControl6;
+        private DevExpress.XtraEditors.TextEdit textEditSoQD;
         private DevExpress.XtraEditors.LabelControl labelControl5;
-        private DevExpress.XtraEditors.LabelControl labelControl9;
-        private DevExpress.XtraEditors.LabelControl labelControl4;
-        private DevExpress.XtraEditors.LabelControl labelControl3;
-        private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraGrid.GridControl gcDanhSach;
         private DevExpress.XtraGrid.Views.Grid.GridView gvDanhSach;
-        private DevExpress.XtraGrid.Columns.GridColumn SOHD;
-        private DevExpress.XtraGrid.Columns.GridColumn NGAYBDAU;
+        private DevExpress.XtraGrid.Columns.GridColumn SOQUYETDINH;
+        private DevExpress.XtraGrid.Columns.GridColumn NGAY;
         private DevExpress.XtraGrid.Columns.GridColumn NGAYKTHUC;
         private DevExpress.XtraGrid.Columns.GridColumn THOIHAN;
-        private DevExpress.XtraGrid.Columns.GridColumn HESOLUONG;
-        private DevExpress.XtraGrid.Columns.GridColumn LANKY;
+        private DevExpress.XtraGrid.Columns.GridColumn LYDO;
+        private DevExpress.XtraGrid.Columns.GridColumn NOIDUNG;
         private DevExpress.XtraGrid.Columns.GridColumn NGAYKY;
         private DevExpress.XtraGrid.Columns.GridColumn MANV;
         private DevExpress.XtraGrid.Columns.GridColumn HOTEN;
+        private DevExpress.XtraEditors.TextEdit textEditLyDo;
+        private DevExpress.XtraEditors.LabelControl labelControl2;
+        private DevExpress.XtraEditors.TextEdit textEditNoiDung;
+        private DevExpress.XtraEditors.LabelControl labelControl3;
+        private DateTimePicker dateTimePickerNgay;
+        private DevExpress.XtraEditors.LabelControl labelControl4;
     }
 }

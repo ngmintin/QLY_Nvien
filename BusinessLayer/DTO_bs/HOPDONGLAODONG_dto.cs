@@ -17,7 +17,7 @@ namespace BusinessLayer.DTO_bs
         public string THOIHAN { get; set; }
         public Nullable<double> HESOLUONG { get; set; }
         public Nullable<int> MANV { get; set; }
-        public string HOTEN { get; set; }
+        public string HOTEN { set; get; }
         public Nullable<int> ID_CTY { get; set; }
         public Nullable<int> DELETED_BY { get; set; }
         public Nullable<System.DateTime> DELETED_DATE { get; set; }

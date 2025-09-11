@@ -56,10 +56,13 @@
     <Compile Include="CHUCVU_bs.cs" />
     <Compile Include="CONGTY_bs.cs" />
     <Compile Include="DTO_bs\HOPDONGLAODONG_dto.cs" />
+    <Compile Include="DTO_bs\KHENTHUONGKYLUAT_dto.cs" />
+    <Compile Include="DTO_bs\NHANVIEN_DIEUCHUYEN_dto.cs" />
     <Compile Include="DTO_bs\NHANVIEN_dto.cs" />
     <Compile Include="HOPDONGLAODONG_bs.cs" />
     <Compile Include="KHENTHUONGKYLUAT_bs.cs" />
     <Compile Include="NHANVIEN_bs.cs" />
+    <Compile Include="NHANVIEN_DIEUCHUYEN_bs.cs" />
     <Compile Include="NHANVIEN_THOIVIEC_bs.cs" />
     <Compile Include="PHONGBAN_bs.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

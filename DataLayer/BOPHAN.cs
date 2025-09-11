@@ -14,7 +14,16 @@ namespace DataLayer
     
     public partial class BOPHAN
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public BOPHAN()
+        {
+            this.NHANVIENs = new HashSet<NHANVIEN>();
+        }
+    
         public int ID_BP { get; set; }
         public string TENBP { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<NHANVIEN> NHANVIENs { get; set; }
     }
 }

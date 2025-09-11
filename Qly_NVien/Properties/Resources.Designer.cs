@@ -83,6 +83,16 @@ namespace Qly_NVien.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap letterx {
+            get {
+                object obj = ResourceManager.GetObject("letterx", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap LOGO2024_FULL_CL {
             get {
                 object obj = ResourceManager.GetObject("LOGO2024_FULL_CL", resourceCulture);

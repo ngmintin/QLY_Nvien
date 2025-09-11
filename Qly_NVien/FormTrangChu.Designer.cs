@@ -146,6 +146,7 @@
             btDieuChuyen.ImageOptions.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("btDieuChuyen.ImageOptions.SvgImage");
             btDieuChuyen.Name = "btDieuChuyen";
             btDieuChuyen.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            btDieuChuyen.ItemClick += btDieuChuyen_ItemClick;
             // 
             // btKhenThuongKyLuat
             // 

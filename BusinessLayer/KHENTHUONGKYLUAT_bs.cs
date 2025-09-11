@@ -24,42 +24,33 @@ namespace BusinessLayer
             return db.KHENTHUONGKYLUATs.Where(x=>x.LOAI == loai).ToList();
         }
 
-        public List<NHANVIEN_dto> getListFull()
+        public List<KHENTHUONGKYLUAT_dto> getListFull(int loai)
         {
-            var lsnv = db.NHANVIENs.ToList();
-            List<NHANVIEN_dto> lsnvdto = new List<NHANVIEN_dto>();
-            NHANVIEN_dto _nvdto;
-            foreach (var item in lsnv)
+            List<KHENTHUONGKYLUAT> lsktkl = db.KHENTHUONGKYLUATs.Where(x=>x.LOAI==loai).ToList();
+            List<KHENTHUONGKYLUAT_dto> lsktkldto = new List<KHENTHUONGKYLUAT_dto>();
+            KHENTHUONGKYLUAT_dto ktkldto;
+            foreach (var item in lsktkl)
             {
-                _nvdto = new NHANVIEN_dto();
-                _nvdto.MANV = item.MANV;
-                _nvdto.HOTEN = item.HOTEN;
-                _nvdto.GIOITINH = item.GIOITINH;
-                _nvdto.NGAYSINH = item.NGAYSINH;
-                _nvdto.SDT = item.SDT;
-                _nvdto.DIACHI = item.DIACHI;
-                _nvdto.EMAIL = item.EMAIL;
-                _nvdto.HINHANH = item.HINHANH;
-                _nvdto.DATHOIVIEC = item.DATHOIVIEC;
-                _nvdto.ID_PB = item.ID_PB;
-                var pb = db.PHONGBANs.FirstOrDefault(x => x.ID_PB == item.ID_PB);
-                _nvdto.TENPB = pb.TENPB;
-
-                _nvdto.ID_BP = item.ID_BP;
-                var bp = db.BOPHANs.FirstOrDefault(x => x.ID_BP == item.ID_BP);
-                _nvdto.TENBP = bp.TENBP;
-
-                _nvdto.ID_CV = item.ID_CV;
-                var cv = db.CHUCVUs.FirstOrDefault(x => x.ID_CV == item.ID_CV);
-                _nvdto.TENCV = cv.TENCV;
-
-                _nvdto.ID_TD = item.ID_TD;
-                var td = db.TRINHDOes.FirstOrDefault(x => x.ID_TD == item.ID_TD);
-                _nvdto.TENTD = td.TENTD;
-
-                lsnvdto.Add(_nvdto);
+                ktkldto = new KHENTHUONGKYLUAT_dto();
+                ktkldto.SOQUYETDINH = item.SOQUYETDINH;
+                ktkldto.TUNGAY = item.TUNGAY;
+                ktkldto.DENNGAY = item.DENNGAY;
+                ktkldto.NOIDUNG = item.NOIDUNG;
+                ktkldto.LOAI = item.LOAI;
+                ktkldto.NGAY = item.NGAY;
+                ktkldto.LYDO = item.LYDO;
+                ktkldto.MANV = item.MANV;
+                var nv = db.NHANVIENs.FirstOrDefault(x => x.MANV == item.MANV);
+                ktkldto.HOTEN = nv.HOTEN;
+                ktkldto.CREATED_BY = item.CREATED_BY;
+                ktkldto.CREATED_DATE = item.CREATED_DATE;
+                ktkldto.UPDATED_BY = item.UPDATED_BY;
+                ktkldto.UPDATED_DATE = item.UPDATED_DATE;
+                ktkldto.DELETED_BY = item.DELETED_BY;
+                ktkldto.DELETED_DATE = item.DELETED_DATE;
+                lsktkldto.Add(ktkldto);
             }
-            return lsnvdto;
+            return lsktkldto;
         }
 
         //THÊM
@@ -102,14 +93,14 @@ namespace BusinessLayer
         }
 
         //XÓA
-        public void Delete(string soqd) 
+        public void Delete(string soqd, int manv) 
         {
             try
             {
                 
                 KHENTHUONGKYLUAT _ktkl = db.KHENTHUONGKYLUATs.FirstOrDefault(x => x.SOQUYETDINH == soqd);
-                _ktkl.DELETED_BY = _ktkl.DELETED_BY;
-                _ktkl.DELETED_DATE = _ktkl.DELETED_DATE;
+                _ktkl.DELETED_BY = manv;
+                _ktkl.DELETED_DATE = DateTime.Now;
                 db.SaveChanges();
             }
             catch (Exception ex)
@@ -118,5 +109,17 @@ namespace BusinessLayer
             }
         }
 
+        public string maxSoQD(int loai)
+        {
+            var _hd = db.KHENTHUONGKYLUATs.Where(x=>x.LOAI==loai).OrderByDescending(x => x.CREATED_DATE).FirstOrDefault();
+            if (_hd != null)
+            {
+                return _hd.SOQUYETDINH;
+            }
+            else
+            {
+                return "00000";
+            }
+        }
     }
 }
