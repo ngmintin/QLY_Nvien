@@ -39,6 +39,6 @@ namespace DataLayer
         public virtual DbSet<PHONGBAN> PHONGBANs { get; set; }
         public virtual DbSet<TANGCA> TANGCAs { get; set; }
         public virtual DbSet<TRINHDO> TRINHDOes { get; set; }
-        public virtual DbSet<NHANVIEN_DIEUCHUYEN> NHANVIEN_DIEUCHUYEN { get; set; }
+        public virtual DbSet<NHANVIEN_NANGLUONG> NHANVIEN_NANGLUONG { get; set; }
     }
 }

@@ -183,18 +183,21 @@ namespace Qly_NVien
 
         private void gvDanhSach_Click(object sender, EventArgs e)
         {
-            _sohd = gvDanhSach.GetFocusedRowCellValue("SOHD").ToString();
-            var hd = _hdld.getItem(_sohd);
-            textEditSoHD.Text = _sohd; 
-            dateTimePickerNgayBD.Value = hd.NGAYBDAU.Value;
-            dateTimePickerNgayKT.Value = hd.NGAYKTHUC.Value;
-            dateTimePickerNgayKy.Value = hd.NGAYKY.Value;
-            comboBoxThoiHan.Text = hd.THOIHAN;
-            spinEditHeSoLuong.Text = hd.HESOLUONG.ToString();
-            spinEditLanKy.Text = hd.LANKY.ToString();
-            searchLookUpEditNhanVien.EditValue = hd.MANV;
-            richEditControlNoiDung.RtfText = hd.NOIDUNG;
-            _lsthddto = _hdld.getListFull();
+            if (gvDanhSach.RowCount > 0)
+            {
+                _sohd = gvDanhSach.GetFocusedRowCellValue("SOHD").ToString();
+                var hd = _hdld.getItem(_sohd);
+                textEditSoHD.Text = _sohd;
+                dateTimePickerNgayBD.Value = hd.NGAYBDAU.Value;
+                dateTimePickerNgayKT.Value = hd.NGAYKTHUC.Value;
+                dateTimePickerNgayKy.Value = hd.NGAYKY.Value;
+                comboBoxThoiHan.Text = hd.THOIHAN;
+                spinEditHeSoLuong.Text = hd.HESOLUONG.ToString();
+                spinEditLanKy.Text = hd.LANKY.ToString();
+                searchLookUpEditNhanVien.EditValue = hd.MANV;
+                richEditControlNoiDung.RtfText = hd.NOIDUNG;
+                _lsthddto = _hdld.getItemFull(_sohd);
+            }
 
         }
         

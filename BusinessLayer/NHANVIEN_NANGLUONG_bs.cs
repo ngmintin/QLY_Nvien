@@ -1,25 +1,25 @@
-﻿using System;
+﻿using BusinessLayer.DTO_bs;
+using DataLayer;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using BusinessLayer.DTO_bs;
-using DataLayer;
 
 namespace BusinessLayer
 {
-    public class NHANVIEN_THOIVIEC_bs
+    public class NHANVIEN_NANGLUONG_bs
     {
         Qly_NvienEntities1 db = new Qly_NvienEntities1();
-        
-        public NHANVIEN_THOIVIEC getItem(string soqd)
+
+        public NHANVIEN_NANGLUONG getItem(string soqd)
         {
-            return db.NHANVIEN_THOIVIEC.FirstOrDefault(x => x.SOQD == soqd);
+            return db.NHANVIEN_NANGLUONG.FirstOrDefault(x => x.SOQD == soqd);
         }
 
-        public List<NHANVIEN_THOIVIEC> getList()
+        public List<NHANVIEN_NANGLUONG> getList()
         {
-            return db.NHANVIEN_THOIVIEC.ToList();
+            return db.NHANVIEN_NANGLUONG.ToList();
         }
 
         public List<NHANVIEN_THOIVIEC_dto> getListFull()
@@ -50,13 +50,13 @@ namespace BusinessLayer
         }
 
         //THÊM
-        public NHANVIEN_THOIVIEC Add(NHANVIEN_THOIVIEC tv)
+        public NHANVIEN_NANGLUONG Add(NHANVIEN_NANGLUONG nl)
         {
             try
             {
-                db.NHANVIEN_THOIVIEC.Add(tv);
+                db.NHANVIEN_NANGLUONG.Add(nl);
                 db.SaveChanges();
-                return tv;
+                return nl;
             }
             catch (Exception ex)
             {
@@ -65,20 +65,22 @@ namespace BusinessLayer
         }
 
         //SỬA
-        public NHANVIEN_THOIVIEC Update(NHANVIEN_THOIVIEC tv)
+        public NHANVIEN_NANGLUONG Update(NHANVIEN_NANGLUONG nl)
         {
             try
             {
-                var _tv = db.NHANVIEN_THOIVIEC.FirstOrDefault(x => x.SOQD == tv.SOQD);
-                _tv.NGAYNOPDON = tv.NGAYNOPDON;
-                _tv.NGAYNGHI = tv.NGAYNGHI;
-                _tv.MANV = tv.MANV;
-                _tv.LYDO = tv.LYDO;
-                _tv.GHICHU = tv.GHICHU;
-                _tv.UPDATE_BY = tv.UPDATE_BY;
-                _tv.UPDATE_DATE = tv.UPDATE_DATE;
+                var _nl = db.NHANVIEN_NANGLUONG.FirstOrDefault(x => x.SOQD == nl.SOQD);
+                _nl.SOQD = nl.SOQD;
+                _nl.MANV = nl.MANV;
+                _nl.HESOLUONGHIENTAI = nl.HESOLUONGHIENTAI;
+                _nl.HESOLUONGMOI = nl.HESOLUONGMOI;
+                _nl.NGAYKY = nl.NGAYKY;
+                _nl.NGAYLENLUONG = nl.NGAYLENLUONG;
+                _nl.GHICHU = nl.GHICHU;
+                _nl.UPDATED_BY = nl.UPDATED_BY;
+                _nl.UPDATED_DATE = nl.UPDATED_DATE;
                 db.SaveChanges();
-                return tv;
+                return nl;
             }
             catch (Exception ex)
             {
@@ -87,13 +89,13 @@ namespace BusinessLayer
         }
 
         //XÓA
-        public void Delete(string soqd, int iduser)
+        public void Delete(string soqd, int uid)
         {
             try
             {
-                var _tv = db.NHANVIEN_THOIVIEC.FirstOrDefault(x => x.SOQD == soqd);
-                _tv.DELETED_BY = iduser;
-                _tv.DELETED_DATE = DateTime.Now;
+                var _nl = db.NHANVIEN_NANGLUONG.FirstOrDefault(x => x.SOQD == soqd);
+                _nl.DELETED_BY = uid;
+                _nl.DELETED_DATE = DateTime.Now;
                 db.SaveChanges();
             }
             catch (Exception ex)
@@ -104,14 +106,14 @@ namespace BusinessLayer
 
         public string maxSoQD()
         {
-            var soqd = db.NHANVIEN_THOIVIEC.OrderByDescending(x=>x.CREATED_DATE).FirstOrDefault();
-            if (soqd != null)
-            { 
-                return soqd.SOQD;
-            }     
+            var _hd = db.NHANVIEN_NANGLUONG.OrderByDescending(x => x.CREATED_DATE).FirstOrDefault();
+            if (_hd != null)
+            {
+                return _hd.SOQD;
+            }
             else
             {
-                return "00000"; 
+                return "00000";
             }
         }
     }

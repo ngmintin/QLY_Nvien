@@ -84,7 +84,7 @@
     <Compile Include="NHANVIEN.cs">
       <DependentUpon>QLY_NVIEN.tt</DependentUpon>
     </Compile>
-    <Compile Include="NHANVIEN_DIEUCHUYEN.cs">
+    <Compile Include="NHANVIEN_NANGLUONG.cs">
       <DependentUpon>QLY_NVIEN.tt</DependentUpon>
     </Compile>
     <Compile Include="NHANVIEN_THOIVIEC.cs">

@@ -96,5 +96,15 @@ namespace Qly_NVien
                 return;
             }
         }
+
+        private void btThoiViec_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            openForm(typeof(FormNhanVien_ThoiViec));
+        }
+
+        private void barButtonItemQuanLyLuong_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            openForm(typeof(FormQuanLyLuong));
+        }
     }
 }

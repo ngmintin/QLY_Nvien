@@ -35,6 +35,8 @@ namespace DataLayer
         public Nullable<int> ID_CTY { get; set; }
         public byte[] HINHANH { get; set; }
         public Nullable<bool> DATHOIVIEC { get; set; }
+        public string TAIKHOAN { get; set; }
+        public string MATKHAU { get; set; }
     
         public virtual BOPHAN BOPHAN { get; set; }
         public virtual CONGTY CONGTY { get; set; }

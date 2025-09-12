@@ -1,4 +1,6 @@
 ﻿using BusinessLayer;
+using DataLayer;
+using DevExpress.XtraMap.Drawing;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -8,13 +10,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using DataLayer;
 
 namespace Qly_NVien
 {
-    public partial class FormKhenThuongKyLuat : Form
+    public partial class FormNhanVien_ThoiViec : Form
     {
-        public FormKhenThuongKyLuat()
+        public FormNhanVien_ThoiViec()
         {
             InitializeComponent();
         }
@@ -22,19 +23,19 @@ namespace Qly_NVien
         //BIẾN TOÀN CỤC
         bool _them;
         string _soqd;
-        KHENTHUONGKYLUAT_bs _ktkl;
-        NHANVIEN_bs _nv = new NHANVIEN_bs();
+        NHANVIEN_THOIVIEC_bs _nvtv;
+        NHANVIEN_bs _nv;
 
-        private void FormKhenThuongKyLuat_Load(object sender, EventArgs e)
+
+        private void FormNhanVien_ThoiViec_Load(object sender, EventArgs e)
         {
-            _ktkl = new KHENTHUONGKYLUAT_bs();
+            _nvtv = new NHANVIEN_THOIVIEC_bs();
             _nv = new NHANVIEN_bs();
             _them = false;
             showHide(true);
             loadNhanVien();
             loadData();
             splitContainerControl1.PanelVisibility = DevExpress.XtraEditors.SplitPanelVisibility.Panel2;    //CHỈ HIỆN THỊ PANEL 2
-
         }
 
         //ẨN NÚT LƯU VÀ HỦY KHI THAO TÁC
@@ -49,23 +50,21 @@ namespace Qly_NVien
             btIn.Enabled = kt;
             gcDanhSach.Enabled = kt;
             textEditSoQD.Enabled = !kt;
-            //dateTimePickerNgayBD.Enabled = !kt;
-            //dateTimePickerNgayKT.Enabled = !kt;
             textEditLyDo.Enabled = !kt;
-            textEditNoiDung.Enabled = !kt;
-            dateTimePickerNgay.Enabled = !kt;
+            textEditGhiChu.Enabled = !kt;
             searchLookUpEditNhanVien.Enabled = !kt;
-
+            dateTimePickerNgayNopDon.Enabled = !kt;
+            dateTimePickerNgayNghi.Enabled = !kt;
         }
 
         //HÀM RESET
         void _reset()
         {
             textEditSoQD.Text = string.Empty;
-            //dateTimePickerNgayBD.Value = DateTime.Now;
-            //dateTimePickerNgayBD.Value = dateTimePickerNgayBD.Value.AddMonths(6);
+            dateTimePickerNgayNopDon.Value = DateTime.Now;
+            dateTimePickerNgayNghi.Value = dateTimePickerNgayNopDon.Value.AddDays(30);
             textEditLyDo.Text = string.Empty;
-            textEditNoiDung.Text = string.Empty;
+            textEditGhiChu.Text = string.Empty;
 
         }
 
@@ -79,7 +78,7 @@ namespace Qly_NVien
         //CẬP NHẬT DL
         void loadData()
         {
-            gcDanhSach.DataSource = _ktkl.getListFull(1);
+            gcDanhSach.DataSource = _nvtv.getListFull();
             gvDanhSach.OptionsBehavior.Editable = false;
         }
 
@@ -102,7 +101,7 @@ namespace Qly_NVien
         {
             if (MessageBox.Show("Bạn có chắc chắn muốn xóa không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
-                _ktkl.Delete(_soqd,1);
+                _nvtv.Delete(_soqd, 1);
                 loadData();
             }
         }
@@ -121,12 +120,6 @@ namespace Qly_NVien
             _them = false;
             showHide(true);
             splitContainerControl1.PanelVisibility = DevExpress.XtraEditors.SplitPanelVisibility.Panel2; //CHỈ HIỆN THỊ PANEL 2
-
-        }
-
-        private void btIn_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-
         }
 
         private void btDong_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -135,54 +128,69 @@ namespace Qly_NVien
         }
         void saveData()
         {
+            NHANVIEN_THOIVIEC tv = new NHANVIEN_THOIVIEC();
             if (_them)
             {
                 //SỐ HD CÓ DẠNG: 00001/2025/HDLD
-                var maxSoQD = _ktkl.maxSoQD(1);
+                var maxSoQD = _nvtv.maxSoQD();
                 int so = int.Parse(maxSoQD.Substring(0, 5)) + 1;
 
-                KHENTHUONGKYLUAT ktkl = new KHENTHUONGKYLUAT();
-                ktkl.SOQUYETDINH = so.ToString("00000") + @"/" + DateTime.Now.Year.ToString() + @"/QDKTKL";
-                //hd.NGAYBDAU = dateTimePickerNgayBD.Value;
-                //hd.NGAYKTHUC = dateTimePickerNgayKT.Value;
-                ktkl.LYDO = textEditLyDo.Text;
-                ktkl.NOIDUNG = textEditNoiDung.Text;
-                ktkl.NGAY = dateTimePickerNgay.Value;
-                ktkl.MANV = int.Parse(searchLookUpEditNhanVien.EditValue.ToString());
-                ktkl.LOAI = 1; //1: KHEN THƯỞNG, 2: KỶ LUẬT
-                ktkl.CREATED_BY = 1;
-                ktkl.CREATED_DATE = DateTime.Now;
-                _ktkl.Add(ktkl);
+                tv = new NHANVIEN_THOIVIEC();
+                tv.SOQD = so.ToString("00000") + @"/" + DateTime.Now.Year.ToString() + @"/QDTV";
+                tv.LYDO = textEditLyDo.Text;
+                tv.GHICHU = textEditGhiChu.Text;
+                tv.NGAYNOPDON = dateTimePickerNgayNopDon.Value;
+                tv.NGAYNGHI = dateTimePickerNgayNghi.Value;
+                tv.MANV = int.Parse(searchLookUpEditNhanVien.EditValue.ToString());
+                tv.CREATED_BY = 1;
+                tv.CREATED_DATE = DateTime.Now;
+                _nvtv.Add(tv);
             }
             else
             {
-                var ktkl = _ktkl.getItem(_soqd);
-                //hd.NGAYBDAU = dateTimePickerNgayBD.Value;
-                //hd.NGAYKTHUC = dateTimePickerNgayKT.Value;
-                ktkl.MANV = int.Parse(searchLookUpEditNhanVien.EditValue.ToString());
-                ktkl.LYDO = textEditLyDo.Text;
-                ktkl.NOIDUNG = textEditNoiDung.Text;
-                ktkl.NGAY = dateTimePickerNgay.Value;
-                ktkl.UPDATED_BY = 1;
-                ktkl.UPDATED_DATE = DateTime.Now;
-                _ktkl.Update(ktkl);
+                tv = _nvtv.getItem(_soqd);
+                tv.LYDO = textEditLyDo.Text;
+                tv.GHICHU = textEditGhiChu.Text;
+                tv.NGAYNOPDON = dateTimePickerNgayNopDon.Value;
+                tv.NGAYNGHI = dateTimePickerNgayNghi.Value;
+                tv.MANV = int.Parse(searchLookUpEditNhanVien.EditValue.ToString());
+                tv.UPDATE_BY = 1;
+                tv.UPDATE_DATE = DateTime.Now;
+                _nvtv.Update(tv);
             }
+            var nv = _nv.getItem(tv.MANV.Value);
+            nv.DATHOIVIEC = true;
+            _nv.Update(nv);
         }
 
         private void gvDanhSach_Click(object sender, EventArgs e)
-        {   
+        {
             if (gvDanhSach.RowCount > 0)
             {
-                _soqd = gvDanhSach.GetFocusedRowCellValue("SOQUYETDINH").ToString();
-                var ktkl = _ktkl.getItem(_soqd);
+                _soqd = gvDanhSach.GetFocusedRowCellValue("SOQD").ToString();
+                var tv = _nvtv.getItem(_soqd);
                 textEditSoQD.Text = _soqd;
-                //dateTimePickerNgayBD.Value = hd.NGAYBDAU.Value;
-                //dateTimePickerNgayKT.Value = hd.NGAYKTHUC.Value;
-                searchLookUpEditNhanVien.EditValue = ktkl.MANV;
-                textEditLyDo.Text = ktkl.LYDO;
-                textEditNoiDung.Text = ktkl.NOIDUNG;
-                dateTimePickerNgay.Value = ktkl.NGAY.Value;
+                dateTimePickerNgayNopDon.Value = tv.NGAYNOPDON.Value;
+                dateTimePickerNgayNghi.Value = tv.NGAYNGHI.Value;
+                searchLookUpEditNhanVien.EditValue = tv.MANV;
+                textEditLyDo.Text = tv.LYDO;
+                textEditGhiChu.Text = tv.GHICHU;
             }
+        }
+
+        private void gvDanhSach_CustomDrawCell(object sender, DevExpress.XtraGrid.Views.Base.RowCellCustomDrawEventArgs e)
+        {
+            if (e.Column.Name == "DELETED_BY" && e.CellValue != null)
+            {
+                Image image = Properties.Resources.letterx;
+                e.Graphics.DrawImage(image, e.Bounds.X, e.Bounds.Y);
+                e.Handled = true;
+            }
+        }
+
+        private void dateTimePickerNgayNopDon_ValueChanged(object sender, EventArgs e)
+        {
+            dateTimePickerNgayNghi.Value = dateTimePickerNgayNopDon.Value.AddDays(30);
         }
     }
 }

@@ -17,6 +17,37 @@ namespace BusinessLayer
             return db.HOPDONGs.FirstOrDefault(x => x.SOHD == sohd);
         }
 
+        public List<HOPDONGLAODONG_dto> getItemFull(string sohd)
+        {
+            List<HOPDONG> lshd = db.HOPDONGs.Where(x => x.SOHD == sohd).ToList();
+            List<HOPDONGLAODONG_dto> lshddto = new List<HOPDONGLAODONG_dto>();
+            HOPDONGLAODONG_dto hddto;
+            foreach (var item in lshd)
+            {
+                hddto = new HOPDONGLAODONG_dto();
+                hddto.SOHD = item.SOHD;
+                hddto.NGAYBDAU = item.NGAYBDAU;
+                hddto.NGAYKTHUC = item.NGAYKTHUC;
+                hddto.NGAYKY = item.NGAYKY;
+                hddto.NOIDUNG = item.NOIDUNG;
+                hddto.LANKY = item.LANKY;
+                hddto.HESOLUONG = item.HESOLUONG;
+                hddto.THOIHAN = item.THOIHAN;
+                hddto.MANV = item.MANV;
+                var nv = db.NHANVIENs.FirstOrDefault(x => x.MANV == item.MANV);
+                hddto.HOTEN = nv.HOTEN;
+                hddto.ID_CTY = item.ID_CTY;
+                hddto.CREATED_BY = item.CREATED_BY;
+                hddto.CREATED_DATE = item.CREATED_DATE;
+                hddto.UPDATED_BY = item.UPDATED_BY;
+                hddto.UPDATED_DATE = item.UPDATED_DATE;
+                hddto.DELETED_BY = item.DELETED_BY;
+                hddto.DELETED_DATE = item.DELETED_DATE;
+                lshddto.Add(hddto);
+            }
+            return lshddto;
+        }
+
         public List<HOPDONG> getList()
         {
             return db.HOPDONGs.ToList();

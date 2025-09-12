@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DataLayer;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -25,5 +26,6 @@ namespace BusinessLayer.DTO_bs
         public Nullable<System.DateTime> UPDATED_DATE { get; set; }
         public Nullable<int> CREATED_BY { get; set; }
         public Nullable<System.DateTime> CREATED_DATE { get; set; }
+        public virtual NHANVIEN NHANVIEN { get; set; }
     }
 }
