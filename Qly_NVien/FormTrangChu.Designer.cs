@@ -30,6 +30,11 @@
         {
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormTrangChu));
+            DevExpress.XtraEditors.TableLayout.ItemTemplateBase itemTemplateBase1 = new DevExpress.XtraEditors.TableLayout.ItemTemplateBase();
+            DevExpress.XtraEditors.TableLayout.TableColumnDefinition tableColumnDefinition1 = new DevExpress.XtraEditors.TableLayout.TableColumnDefinition();
+            DevExpress.XtraEditors.TableLayout.TemplatedItemElement templatedItemElement1 = new DevExpress.XtraEditors.TableLayout.TemplatedItemElement();
+            DevExpress.XtraEditors.TableLayout.TemplatedItemElement templatedItemElement2 = new DevExpress.XtraEditors.TableLayout.TemplatedItemElement();
+            DevExpress.XtraEditors.TableLayout.TableRowDefinition tableRowDefinition1 = new DevExpress.XtraEditors.TableLayout.TableRowDefinition();
             ribbon = new DevExpress.XtraBars.Ribbon.RibbonControl();
             btThongBao = new DevExpress.XtraBars.BarButtonItem();
             btSuKien = new DevExpress.XtraBars.BarButtonItem();
@@ -63,6 +68,7 @@
             barButtonItem5 = new DevExpress.XtraBars.BarButtonItem();
             barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
             btnHopDong = new DevExpress.XtraBars.BarButtonItem();
+            barButtonItemQuanLyLuong = new DevExpress.XtraBars.BarButtonItem();
             ribbonPageHeThong = new DevExpress.XtraBars.Ribbon.RibbonPage();
             ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -77,20 +83,31 @@
             ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             documentManager1 = new DevExpress.XtraBars.Docking2010.DocumentManager(components);
             tabbedView1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView(components);
-            barButtonItemQuanLyLuong = new DevExpress.XtraBars.BarButtonItem();
+            dockManager1 = new DevExpress.XtraBars.Docking.DockManager(components);
+            dockPanel1 = new DevExpress.XtraBars.Docking.DockPanel();
+            dockPanel1_Container = new DevExpress.XtraBars.Docking.ControlContainer();
+            groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            listBoxControlSinhNhat = new DevExpress.XtraEditors.ListBoxControl();
+            barButtonItemLoaiCa = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)ribbon).BeginInit();
             ((System.ComponentModel.ISupportInitialize)documentManager1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)tabbedView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dockManager1).BeginInit();
+            dockPanel1.SuspendLayout();
+            dockPanel1_Container.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)groupControl1).BeginInit();
+            groupControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)listBoxControlSinhNhat).BeginInit();
             SuspendLayout();
             // 
             // ribbon
             // 
             ribbon.EmptyAreaImageOptions.ImagePadding = new Padding(45, 44, 45, 44);
             ribbon.ExpandCollapseItem.Id = 0;
-            ribbon.Items.AddRange(new DevExpress.XtraBars.BarItem[] { ribbon.ExpandCollapseItem, btThongBao, btSuKien, btCa, btTrinhDo, btNhanVien, btDieuChuyen, btKhenThuongKyLuat, btBaoLoi, btThoiViec, btHoSo, btDoiMatKhau, btThoat, btCaLam, btTangCa, btBangCong, btLoaiCong, btBangLuong, barButtonItem1, barButtonItem2, barButtonItem3, btmThoat, btmCa, btmCapBac, btGopYKhieuNai, btmTrinhDo, btnPhongBan, btnCongTy, btnBoPhan, btnChucVu, barButtonItem5, barButtonItem4, btnHopDong, barButtonItemQuanLyLuong });
+            ribbon.Items.AddRange(new DevExpress.XtraBars.BarItem[] { ribbon.ExpandCollapseItem, btThongBao, btSuKien, btCa, btTrinhDo, btNhanVien, btDieuChuyen, btKhenThuongKyLuat, btBaoLoi, btThoiViec, btHoSo, btDoiMatKhau, btThoat, btCaLam, btTangCa, btBangCong, btLoaiCong, btBangLuong, barButtonItem1, barButtonItem2, barButtonItem3, btmThoat, btmCa, btmCapBac, btGopYKhieuNai, btmTrinhDo, btnPhongBan, btnCongTy, btnBoPhan, btnChucVu, barButtonItem5, barButtonItem4, btnHopDong, barButtonItemQuanLyLuong, barButtonItemLoaiCa });
             ribbon.Location = new Point(0, 0);
             ribbon.Margin = new Padding(4);
-            ribbon.MaxItemId = 36;
+            ribbon.MaxItemId = 37;
             ribbon.Name = "ribbon";
             ribbon.OptionsMenuMinWidth = 495;
             ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] { ribbonPageHeThong, ribbonPageHoSo, ribbonPageChamCong });
@@ -354,6 +371,15 @@
             btnHopDong.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             btnHopDong.ItemClick += btnHopDong_ItemClick;
             // 
+            // barButtonItemQuanLyLuong
+            // 
+            barButtonItemQuanLyLuong.Caption = "Quản lý lương";
+            barButtonItemQuanLyLuong.Id = 35;
+            barButtonItemQuanLyLuong.ImageOptions.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("barButtonItemQuanLyLuong.ImageOptions.SvgImage");
+            barButtonItemQuanLyLuong.Name = "barButtonItemQuanLyLuong";
+            barButtonItemQuanLyLuong.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            barButtonItemQuanLyLuong.ItemClick += barButtonItemQuanLyLuong_ItemClick;
+            // 
             // ribbonPageHeThong
             // 
             ribbonPageHeThong.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] { ribbonPageGroup1, ribbonPageGroup4, ribbonPageGroup6, ribbonPageGroup8 });
@@ -428,6 +454,7 @@
             // 
             ribbonPageGroup5.ItemLinks.Add(btBangCong);
             ribbonPageGroup5.ItemLinks.Add(btLoaiCong, true);
+            ribbonPageGroup5.ItemLinks.Add(barButtonItemLoaiCa, true);
             ribbonPageGroup5.ItemLinks.Add(btBangLuong, true);
             ribbonPageGroup5.Name = "ribbonPageGroup5";
             ribbonPageGroup5.Text = "Quản lý chấm công";
@@ -447,14 +474,83 @@
             documentManager1.View = tabbedView1;
             documentManager1.ViewCollection.AddRange(new DevExpress.XtraBars.Docking2010.Views.BaseView[] { tabbedView1 });
             // 
-            // barButtonItemQuanLyLuong
+            // dockManager1
             // 
-            barButtonItemQuanLyLuong.Caption = "Quản lý lương";
-            barButtonItemQuanLyLuong.Id = 35;
-            barButtonItemQuanLyLuong.ImageOptions.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("barButtonItem6.ImageOptions.SvgImage");
-            barButtonItemQuanLyLuong.Name = "barButtonItemQuanLyLuong";
-            barButtonItemQuanLyLuong.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
-            barButtonItemQuanLyLuong.ItemClick += barButtonItemQuanLyLuong_ItemClick;
+            dockManager1.Form = this;
+            dockManager1.RootPanels.AddRange(new DevExpress.XtraBars.Docking.DockPanel[] { dockPanel1 });
+            dockManager1.TopZIndexControls.AddRange(new string[] { "DevExpress.XtraBars.BarDockControl", "DevExpress.XtraBars.StandaloneBarDockControl", "System.Windows.Forms.MenuStrip", "System.Windows.Forms.StatusStrip", "System.Windows.Forms.StatusBar", "DevExpress.XtraBars.Ribbon.RibbonStatusBar", "DevExpress.XtraBars.Ribbon.RibbonControl", "DevExpress.XtraBars.Navigation.OfficeNavigationBar", "DevExpress.XtraBars.Navigation.TileNavPane", "DevExpress.XtraBars.TabFormControl", "DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl", "DevExpress.XtraBars.ToolbarForm.ToolbarFormControl" });
+            // 
+            // dockPanel1
+            // 
+            dockPanel1.Controls.Add(dockPanel1_Container);
+            dockPanel1.Dock = DevExpress.XtraBars.Docking.DockingStyle.Right;
+            dockPanel1.ID = new Guid("409f8ade-61ba-4e1e-a140-2013415ebc7e");
+            dockPanel1.Location = new Point(1232, 158);
+            dockPanel1.Name = "dockPanel1";
+            dockPanel1.OriginalSize = new Size(200, 200);
+            dockPanel1.Size = new Size(200, 700);
+            dockPanel1.Text = "TIN TỨC";
+            // 
+            // dockPanel1_Container
+            // 
+            dockPanel1_Container.Controls.Add(groupControl1);
+            dockPanel1_Container.Location = new Point(4, 26);
+            dockPanel1_Container.Name = "dockPanel1_Container";
+            dockPanel1_Container.Size = new Size(193, 671);
+            dockPanel1_Container.TabIndex = 0;
+            dockPanel1_Container.Tag = "";
+            // 
+            // groupControl1
+            // 
+            groupControl1.Appearance.BackColor = Color.White;
+            groupControl1.Appearance.Options.UseBackColor = true;
+            groupControl1.Controls.Add(listBoxControlSinhNhat);
+            groupControl1.Dock = DockStyle.Top;
+            groupControl1.Location = new Point(0, 0);
+            groupControl1.Name = "groupControl1";
+            groupControl1.Size = new Size(193, 344);
+            groupControl1.TabIndex = 0;
+            groupControl1.Text = "SINH NHẬT TRONG THÁNG";
+            // 
+            // listBoxControlSinhNhat
+            // 
+            listBoxControlSinhNhat.Appearance.Font = new Font("Times New Roman", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            listBoxControlSinhNhat.Appearance.Options.UseFont = true;
+            listBoxControlSinhNhat.Dock = DockStyle.Fill;
+            listBoxControlSinhNhat.ItemHeight = 120;
+            listBoxControlSinhNhat.Location = new Point(2, 23);
+            listBoxControlSinhNhat.Name = "listBoxControlSinhNhat";
+            listBoxControlSinhNhat.Size = new Size(189, 319);
+            listBoxControlSinhNhat.TabIndex = 0;
+            itemTemplateBase1.Columns.Add(tableColumnDefinition1);
+            templatedItemElement1.FieldName = "HOTEN";
+            templatedItemElement1.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
+            templatedItemElement1.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomInside;
+            templatedItemElement1.Text = "HOTEN";
+            templatedItemElement1.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft;
+            templatedItemElement2.AnchorElementIndex = 0;
+            templatedItemElement2.FieldName = "NGAYSINH";
+            templatedItemElement2.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
+            templatedItemElement2.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomInside;
+            templatedItemElement2.Text = "NGAYSINH";
+            templatedItemElement2.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft;
+            itemTemplateBase1.Elements.Add(templatedItemElement1);
+            itemTemplateBase1.Elements.Add(templatedItemElement2);
+            itemTemplateBase1.Name = "sinhnhat_nv";
+            tableRowDefinition1.AutoHeight = true;
+            tableRowDefinition1.Length.Type = DevExpress.XtraEditors.TableLayout.TableDefinitionLengthType.Pixel;
+            tableRowDefinition1.Length.Value = 50D;
+            itemTemplateBase1.Rows.Add(tableRowDefinition1);
+            listBoxControlSinhNhat.Templates.Add(itemTemplateBase1);
+            listBoxControlSinhNhat.CustomizeItem += listBoxControlSinhNhat_CustomizeItem;
+            // 
+            // barButtonItemLoaiCa
+            // 
+            barButtonItemLoaiCa.Caption = "Loại ca";
+            barButtonItemLoaiCa.Id = 36;
+            barButtonItemLoaiCa.ImageOptions.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("barButtonItem6.ImageOptions.SvgImage");
+            barButtonItemLoaiCa.Name = "barButtonItemLoaiCa";
+            barButtonItemLoaiCa.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             // 
             // FormTrangChu
             // 
@@ -462,6 +558,7 @@
             AutoScaleDimensions = new SizeF(9F, 19F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1432, 882);
+            Controls.Add(dockPanel1);
             Controls.Add(ribbonStatusBar);
             Controls.Add(ribbon);
             Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -473,9 +570,16 @@
             StatusBar = ribbonStatusBar;
             Text = "Trang Chủ";
             WindowState = FormWindowState.Maximized;
+            Load += FormTrangChu_Load;
             ((System.ComponentModel.ISupportInitialize)ribbon).EndInit();
             ((System.ComponentModel.ISupportInitialize)documentManager1).EndInit();
             ((System.ComponentModel.ISupportInitialize)tabbedView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dockManager1).EndInit();
+            dockPanel1.ResumeLayout(false);
+            dockPanel1_Container.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)groupControl1).EndInit();
+            groupControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)listBoxControlSinhNhat).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -530,5 +634,11 @@
         private DevExpress.XtraBars.BarButtonItem barButtonItem4;
         private DevExpress.XtraBars.BarButtonItem btnHopDong;
         private DevExpress.XtraBars.BarButtonItem barButtonItemQuanLyLuong;
+        private DevExpress.XtraBars.Docking.DockPanel dockPanel1;
+        private DevExpress.XtraBars.Docking.ControlContainer dockPanel1_Container;
+        private DevExpress.XtraBars.Docking.DockManager dockManager1;
+        private DevExpress.XtraEditors.GroupControl groupControl1;
+        private DevExpress.XtraEditors.ListBoxControl listBoxControlSinhNhat;
+        private DevExpress.XtraBars.BarButtonItem barButtonItemLoaiCa;
     }
 }

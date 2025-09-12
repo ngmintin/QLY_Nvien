@@ -35,10 +35,10 @@ namespace DataLayer
         public virtual DbSet<LOAICA> LOAICAs { get; set; }
         public virtual DbSet<LOAICONG> LOAICONGs { get; set; }
         public virtual DbSet<NHANVIEN> NHANVIENs { get; set; }
+        public virtual DbSet<NHANVIEN_NANGLUONG> NHANVIEN_NANGLUONG { get; set; }
         public virtual DbSet<NHANVIEN_THOIVIEC> NHANVIEN_THOIVIEC { get; set; }
         public virtual DbSet<PHONGBAN> PHONGBANs { get; set; }
         public virtual DbSet<TANGCA> TANGCAs { get; set; }
         public virtual DbSet<TRINHDO> TRINHDOes { get; set; }
-        public virtual DbSet<NHANVIEN_NANGLUONG> NHANVIEN_NANGLUONG { get; set; }
     }
 }

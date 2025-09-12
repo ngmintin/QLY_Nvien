@@ -67,7 +67,7 @@ namespace Qly_NVien
 
         void loadHopDong()
         {
-            searchLookUpEditHopDong.Properties.DataSource = _hd.getList();
+            searchLookUpEditHopDong.Properties.DataSource = _hd.getListFull();
             searchLookUpEditHopDong.Properties.ValueMember = "SOHD";
             searchLookUpEditHopDong.Properties.DisplayMember = "SOHD";
         }
@@ -75,7 +75,7 @@ namespace Qly_NVien
         //CẬP NHẬT DL
         void loadData()
         {
-            gcDanhSach.DataSource = _nvnl.getList();
+            gcDanhSach.DataSource = _nvnl.getListFull();
             gvDanhSach.OptionsBehavior.Editable = false;
         }
 
@@ -100,6 +100,9 @@ namespace Qly_NVien
             if (MessageBox.Show("Bạn có chắc chắn muốn xóa không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
                 _nvnl.Delete(_soqd, 1);
+                var hd = _hd.getItem(searchLookUpEditHopDong.EditValue.ToString());
+                hd.HESOLUONG = double.Parse(spinEditHSLHienTai.EditValue.ToString());
+                _hd.Update(hd);
                 loadData();
             }
         }
@@ -126,38 +129,46 @@ namespace Qly_NVien
         }
         void saveData()
         {
+            NHANVIEN_NANGLUONG nl;
             if (_them)
             {
-                NHANVIEN_NANGLUONG nl;
+                
                 //SỐ HD CÓ DẠNG: 00001/2025/HDLD
                 var maxSoQD = _nvnl.maxSoQD();
                 int so = int.Parse(maxSoQD.Substring(0, 5)) + 1;
 
                 nl = new NHANVIEN_NANGLUONG();
                 nl.SOQD = so.ToString("00000") + @"/" + DateTime.Now.Year.ToString() + @"/QDNL";
+                nl.SOHD = searchLookUpEditHopDong.EditValue.ToString();
                 nl.GHICHU = textEditGhiChu.Text;
                 nl.NGAYKY = dateTimePickerNgayKy.Value;
                 nl.NGAYLENLUONG = dateTimePickerNgayLenLuong.Value;
-                nl.MANV = int.Parse(searchLookUpEditNhanVien.EditValue.ToString());
+                nl.MANV = _hd.getItem(searchLookUpEditHopDong.EditValue.ToString()).MANV;
+                nl.GHICHU = textEditGhiChu.Text;
+                nl.HESOLUONGHIENTAI = _hd.getItem(searchLookUpEditHopDong.EditValue.ToString()).HESOLUONG;
+                nl.HESOLUONGMOI = double.Parse(spinEditHSLMoi.EditValue.ToString());
                 nl.CREATED_BY = 1;
                 nl.CREATED_DATE = DateTime.Now;
-                _nvtv.Add(tv);
+                _nvnl.Add(nl);
             }
             else
             {
-                tv = _nvtv.getItem(_soqd);
-                tv.LYDO = textEditLyDo.Text;
-                tv.GHICHU = textEditGhiChu.Text;
-                tv.NGAYNOPDON = dateTimePickerNgayNopDon.Value;
-                tv.NGAYNGHI = dateTimePickerNgayNghi.Value;
-                tv.MANV = int.Parse(searchLookUpEditNhanVien.EditValue.ToString());
-                tv.UPDATE_BY = 1;
-                tv.UPDATE_DATE = DateTime.Now;
-                _nvtv.Update(tv);
+                nl= _nvnl.getItem(_soqd);
+                nl.SOHD= searchLookUpEditHopDong.EditValue.ToString();
+                nl.GHICHU = textEditGhiChu.Text;
+                nl.NGAYKY = dateTimePickerNgayKy.Value;
+                nl.NGAYLENLUONG = dateTimePickerNgayLenLuong.Value;
+                nl.MANV = _hd.getItem(searchLookUpEditHopDong.EditValue.ToString()).MANV;
+                nl.GHICHU = textEditGhiChu.Text;
+                nl.HESOLUONGHIENTAI = _hd.getItem(searchLookUpEditHopDong.EditValue.ToString()).HESOLUONG;
+                nl.HESOLUONGMOI = double.Parse(spinEditHSLMoi.EditValue.ToString());
+                nl.UPDATED_BY = 1;
+                nl.UPDATED_DATE = DateTime.Now;
+                _nvnl.Update(nl);
             }
-            var nv = _nv.getItem(tv.MANV.Value);
-            nv.DATHOIVIEC = true;
-            _nv.Update(nv);
+            var hd = _hd.getItem(searchLookUpEditHopDong.EditValue.ToString());
+            hd.HESOLUONG = double.Parse(spinEditHSLMoi.EditValue.ToString());
+            _hd.Update(hd);
         }
 
         private void gvDanhSach_Click(object sender, EventArgs e)
@@ -165,13 +176,16 @@ namespace Qly_NVien
             if (gvDanhSach.RowCount > 0)
             {
                 _soqd = gvDanhSach.GetFocusedRowCellValue("SOQD").ToString();
-                var tv = _nvtv.getItem(_soqd);
-                textEditSoQD.Text = _soqd;
-                dateTimePickerNgayNopDon.Value = tv.NGAYNOPDON.Value;
-                dateTimePickerNgayNghi.Value = tv.NGAYNGHI.Value;
-                searchLookUpEditNhanVien.EditValue = tv.MANV;
-                textEditLyDo.Text = tv.LYDO;
-                textEditGhiChu.Text = tv.GHICHU;
+                var nl = _nvnl.getItem(_soqd);
+                textEditSoQD.Text = nl.SOQD;
+                dateTimePickerNgayKy.Value = nl.NGAYKY.Value;
+                dateTimePickerNgayLenLuong.Value = nl.NGAYLENLUONG.Value;
+                textEditGhiChu.Text = nl.GHICHU;
+                searchLookUpEditHopDong.EditValue = nl.SOHD;
+                spinEditHSLMoi.EditValue = nl.HESOLUONGMOI;
+                spinEditHSLHienTai.EditValue = nl.HESOLUONGHIENTAI;
+                textEditNhanVien.Text = gvDanhSach.GetFocusedRowCellValue("HOTEN").ToString();
+
             }
         }
 
@@ -191,6 +205,7 @@ namespace Qly_NVien
             if (hd.Count != 0)
             {
                 textEditNhanVien.Text = hd[0].MANV + " - " + hd[0].HOTEN;
+                spinEditHSLHienTai.EditValue = hd[0].HESOLUONG;
             }
         }
     }

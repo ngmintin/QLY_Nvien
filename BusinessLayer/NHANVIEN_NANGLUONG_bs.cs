@@ -22,31 +22,33 @@ namespace BusinessLayer
             return db.NHANVIEN_NANGLUONG.ToList();
         }
 
-        public List<NHANVIEN_THOIVIEC_dto> getListFull()
+        public List<NHANVIEN_NANGLUONG_dto> getListFull()
         {
-            var lstv = db.NHANVIEN_THOIVIEC.ToList();
-            List<NHANVIEN_THOIVIEC_dto> lstvdto = new List<NHANVIEN_THOIVIEC_dto>();
-            NHANVIEN_THOIVIEC_dto _tvdto;
-            foreach (var item in lstv)
+            var lsnl = db.NHANVIEN_NANGLUONG.ToList();
+            List<NHANVIEN_NANGLUONG_dto> lsnldto = new List<NHANVIEN_NANGLUONG_dto>();
+            NHANVIEN_NANGLUONG_dto nldto;
+            foreach (var item in lsnl)
             {
-                _tvdto = new NHANVIEN_THOIVIEC_dto();
-                _tvdto.SOQD = item.SOQD;
-                _tvdto.MANV = item.MANV;
+                nldto = new NHANVIEN_NANGLUONG_dto();
+                nldto.SOQD = item.SOQD;
+                nldto.SOHD = item.SOHD;
+                nldto.HESOLUONGHIENTAI = item.HESOLUONGHIENTAI;
+                nldto.HESOLUONGMOI = item.HESOLUONGMOI;
+                nldto.MANV = item.MANV;
                 var nv = db.NHANVIENs.FirstOrDefault(x => x.MANV == item.MANV);
-                _tvdto.HOTEN = nv.HOTEN;
-                _tvdto.NGAYNOPDON = item.NGAYNOPDON;
-                _tvdto.NGAYNGHI = item.NGAYNGHI;
-                _tvdto.LYDO = item.LYDO;
-                _tvdto.GHICHU = item.GHICHU;
-                _tvdto.CREATED_BY = item.CREATED_BY;
-                _tvdto.CREATED_DATE = item.CREATED_DATE;
-                _tvdto.UPDATE_BY = item.UPDATE_BY;
-                _tvdto.UPDATE_DATE = item.UPDATE_DATE;
-                _tvdto.DELETED_BY = item.DELETED_BY;
-                _tvdto.DELETED_DATE = item.DELETED_DATE;
-                lstvdto.Add(_tvdto);
+                nldto.HOTEN = nv.HOTEN;
+                nldto.NGAYKY = item.NGAYKY;
+                nldto.NGAYLENLUONG = item.NGAYLENLUONG;
+                nldto.GHICHU = item.GHICHU;
+                nldto.CREATED_BY = item.CREATED_BY;
+                nldto.CREATED_DATE = item.CREATED_DATE;
+                nldto.UPDATED_BY = item.UPDATED_BY;
+                nldto.UPDATED_DATE = item.UPDATED_DATE;
+                nldto.DELETED_BY = item.DELETED_BY;
+                nldto.DELETED_DATE = item.DELETED_DATE;
+                lsnldto.Add(nldto);
             }
-            return lstvdto;
+            return lsnldto;
         }
 
         //THÊM

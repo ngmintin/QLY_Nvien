@@ -121,5 +121,11 @@ namespace BusinessLayer
                 throw new Exception("Lỗi: " + ex.Message);
             }
         }
+
+        //HÀM LẤY NHÂN VIÊN SINH NHẬT TRONG THÁNG
+        public List<NHANVIEN> getSinhNhat()
+        {
+            return db.NHANVIENs.Where(x => x.NGAYSINH.Value.Month == DateTime.Now.Month).ToList();
+        }
     }
 }

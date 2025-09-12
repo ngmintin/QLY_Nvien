@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BusinessLayer;
 
 namespace Qly_NVien
 {
@@ -33,6 +34,9 @@ namespace Qly_NVien
             f.MdiParent = this;
             f.Show();
         }
+
+        //BIẾN TOÀN CỤC
+        NHANVIEN_bs _nhanvien;
 
         private void btThongBao_ItemClick(object sender, ItemClickEventArgs e)
         {
@@ -105,6 +109,28 @@ namespace Qly_NVien
         private void barButtonItemQuanLyLuong_ItemClick(object sender, ItemClickEventArgs e)
         {
             openForm(typeof(FormQuanLyLuong));
+        }
+
+        private void FormTrangChu_Load(object sender, EventArgs e)
+        {
+            _nhanvien = new NHANVIEN_bs();
+            loadSinhNhat();
+        }
+
+        //HÀM SNHAT
+        void loadSinhNhat()
+        {
+            listBoxControlSinhNhat.DataSource = _nhanvien.getSinhNhat();
+            listBoxControlSinhNhat.DisplayMember = "HOTEN";
+            listBoxControlSinhNhat.ValueMember = "MANV";
+        }
+
+        private void listBoxControlSinhNhat_CustomizeItem(object sender, DevExpress.XtraEditors.CustomizeTemplatedItemEventArgs e)
+        {
+            if (e.TemplatedItem.Elements[1].Text.Substring(0,2)==DateTime.Now.Day.ToString())
+            {
+                e.TemplatedItem.Appearance.ForeColor = Color.Red;
+            }    
         }
     }
 }

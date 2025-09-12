@@ -53,8 +53,10 @@
             dateTimePickerNgayKy = new DateTimePicker();
             searchLookUpEditHopDong = new DevExpress.XtraEditors.SearchLookUpEdit();
             searchLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
+            SOHD = new DevExpress.XtraGrid.Columns.GridColumn();
             gridColumnMANV = new DevExpress.XtraGrid.Columns.GridColumn();
             gridColumnHOTEN = new DevExpress.XtraGrid.Columns.GridColumn();
+            gridColumnHESOLUONG = new DevExpress.XtraGrid.Columns.GridColumn();
             textEditNhanVien = new DevExpress.XtraEditors.TextEdit();
             textEditGhiChu = new DevExpress.XtraEditors.TextEdit();
             textEditSoQD = new DevExpress.XtraEditors.TextEdit();
@@ -334,23 +336,36 @@
             // 
             // searchLookUpEdit1View
             // 
-            searchLookUpEdit1View.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] { gridColumnMANV, gridColumnHOTEN });
+            searchLookUpEdit1View.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] { SOHD, gridColumnMANV, gridColumnHOTEN, gridColumnHESOLUONG });
             searchLookUpEdit1View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
             searchLookUpEdit1View.Name = "searchLookUpEdit1View";
             searchLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
             searchLookUpEdit1View.OptionsView.ShowGroupPanel = false;
             // 
+            // SOHD
+            // 
+            SOHD.AppearanceHeader.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            SOHD.AppearanceHeader.Options.UseFont = true;
+            SOHD.Caption = "SỐ HỢP ĐỒNG";
+            SOHD.FieldName = "SOHD";
+            SOHD.MaxWidth = 150;
+            SOHD.MinWidth = 150;
+            SOHD.Name = "SOHD";
+            SOHD.Visible = true;
+            SOHD.VisibleIndex = 0;
+            SOHD.Width = 150;
+            // 
             // gridColumnMANV
             // 
-            gridColumnMANV.AppearanceHeader.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            gridColumnMANV.AppearanceHeader.Font = new Font("Times New Roman", 12F, FontStyle.Bold);
             gridColumnMANV.AppearanceHeader.Options.UseFont = true;
-            gridColumnMANV.Caption = "MÃ NHÂN VIÊN";
+            gridColumnMANV.Caption = "MANV";
             gridColumnMANV.FieldName = "MANV";
             gridColumnMANV.MaxWidth = 50;
             gridColumnMANV.MinWidth = 50;
             gridColumnMANV.Name = "gridColumnMANV";
             gridColumnMANV.Visible = true;
-            gridColumnMANV.VisibleIndex = 0;
+            gridColumnMANV.VisibleIndex = 1;
             gridColumnMANV.Width = 50;
             // 
             // gridColumnHOTEN
@@ -363,8 +378,21 @@
             gridColumnHOTEN.MinWidth = 250;
             gridColumnHOTEN.Name = "gridColumnHOTEN";
             gridColumnHOTEN.Visible = true;
-            gridColumnHOTEN.VisibleIndex = 1;
+            gridColumnHOTEN.VisibleIndex = 2;
             gridColumnHOTEN.Width = 250;
+            // 
+            // gridColumnHESOLUONG
+            // 
+            gridColumnHESOLUONG.AppearanceHeader.Font = new Font("Times New Roman", 12F, FontStyle.Bold);
+            gridColumnHESOLUONG.AppearanceHeader.Options.UseFont = true;
+            gridColumnHESOLUONG.Caption = "HỆ SỐ LƯƠNG";
+            gridColumnHESOLUONG.FieldName = "HESOLUONG";
+            gridColumnHESOLUONG.MaxWidth = 50;
+            gridColumnHESOLUONG.MinWidth = 50;
+            gridColumnHESOLUONG.Name = "gridColumnHESOLUONG";
+            gridColumnHESOLUONG.Visible = true;
+            gridColumnHESOLUONG.VisibleIndex = 3;
+            gridColumnHESOLUONG.Width = 50;
             // 
             // textEditNhanVien
             // 
@@ -665,7 +693,7 @@
         private DateTimePicker dateTimePickerNgayKy;
         private DevExpress.XtraEditors.SearchLookUpEdit searchLookUpEditHopDong;
         private DevExpress.XtraGrid.Views.Grid.GridView searchLookUpEdit1View;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumnMANV;
+        private DevExpress.XtraGrid.Columns.GridColumn SOHD;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumnHOTEN;
         private DevExpress.XtraEditors.TextEdit textEditGhiChu;
         private DevExpress.XtraEditors.TextEdit textEditSoQD;
@@ -691,5 +719,7 @@
         private DevExpress.XtraEditors.LabelControl labelControl7;
         private DevExpress.XtraEditors.LabelControl labelControl8;
         private DevExpress.XtraGrid.Columns.GridColumn HESOLUONGHIENTAI;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumnMANV;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumnHESOLUONG;
     }
 }
