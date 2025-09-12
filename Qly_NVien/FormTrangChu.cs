@@ -84,9 +84,17 @@ namespace Qly_NVien
             openForm(typeof(FormKhenThuongKyLuat));
         }
 
-        private void btDieuChuyen_ItemClick(object sender, ItemClickEventArgs e)
+        private void btmThoat_ItemClick(object sender, ItemClickEventArgs e)
         {
-            openForm(typeof(FormNhanVIen_DieuChuyen));
+
+            if (MessageBox.Show("Bạn có chắc chắn muốn thoát không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
+                this.Close();
+            }
+            else
+            {
+                return;
+            }
         }
     }
 }

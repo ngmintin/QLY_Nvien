@@ -28,9 +28,6 @@
     <Compile Update="FormNhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="FormNhanVIen_DieuChuyen.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="FormPhongBan.cs">
       <SubType>Form</SubType>
     </Compile>

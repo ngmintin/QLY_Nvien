@@ -89,7 +89,7 @@
             ribbon.Items.AddRange(new DevExpress.XtraBars.BarItem[] { ribbon.ExpandCollapseItem, btThongBao, btSuKien, btCa, btTrinhDo, btNhanVien, btDieuChuyen, btKhenThuongKyLuat, btBaoLoi, btThoiViec, btHoSo, btDoiMatKhau, btThoat, btCaLam, btTangCa, btBangCong, btLoaiCong, btBangLuong, barButtonItem1, barButtonItem2, barButtonItem3, btmThoat, btmCa, btmCapBac, btGopYKhieuNai, btmTrinhDo, btnPhongBan, btnCongTy, btnBoPhan, btnChucVu, barButtonItem5, barButtonItem4, btnHopDong });
             ribbon.Location = new Point(0, 0);
             ribbon.Margin = new Padding(4);
-            ribbon.MaxItemId = 34;
+            ribbon.MaxItemId = 35;
             ribbon.Name = "ribbon";
             ribbon.OptionsMenuMinWidth = 495;
             ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] { ribbonPageHeThong, ribbonPageHoSo, ribbonPageChamCong });
@@ -141,12 +141,8 @@
             // 
             // btDieuChuyen
             // 
-            btDieuChuyen.Caption = "Điều chuyển";
-            btDieuChuyen.Id = 6;
-            btDieuChuyen.ImageOptions.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("btDieuChuyen.ImageOptions.SvgImage");
+            btDieuChuyen.Id = 34;
             btDieuChuyen.Name = "btDieuChuyen";
-            btDieuChuyen.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
-            btDieuChuyen.ItemClick += btDieuChuyen_ItemClick;
             // 
             // btKhenThuongKyLuat
             // 
@@ -264,6 +260,7 @@
             btmThoat.ImageOptions.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("btmThoat.ImageOptions.SvgImage");
             btmThoat.Name = "btmThoat";
             btmThoat.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            btmThoat.ItemClick += btmThoat_ItemClick;
             // 
             // btmCa
             // 
@@ -375,7 +372,6 @@
             // ribbonPageGroup4
             // 
             ribbonPageGroup4.ItemLinks.Add(btnHopDong, true);
-            ribbonPageGroup4.ItemLinks.Add(btDieuChuyen, true);
             ribbonPageGroup4.ItemLinks.Add(btThoiViec, true);
             ribbonPageGroup4.Name = "ribbonPageGroup4";
             ribbonPageGroup4.Text = "NGHIỆP VỤ";
