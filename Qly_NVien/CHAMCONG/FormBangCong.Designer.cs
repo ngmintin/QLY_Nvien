@@ -1,6 +1,6 @@
 ﻿namespace Qly_NVien.CHAMCONG
 {
-    partial class FormLoaiCa
+    partial class FormBangCong
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormLoaiCa));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormBangCong));
             barManager1 = new DevExpress.XtraBars.BarManager(components);
             bar2 = new DevExpress.XtraBars.Bar();
             btnThem = new DevExpress.XtraBars.BarButtonItem();
@@ -47,16 +47,24 @@
             btnIn = new DevExpress.XtraBars.BarButtonItem();
             btIn = new DevExpress.XtraBars.BarButtonItem();
             splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
-            spinEditHeSo = new DevExpress.XtraEditors.SpinEdit();
-            textEditLoaiCa = new DevExpress.XtraEditors.TextEdit();
+            checkBoxKhoa = new CheckBox();
+            checkBoxTrangThai = new CheckBox();
+            comboBoxThang = new ComboBox();
+            comboBoxNam = new ComboBox();
             labelControl2 = new DevExpress.XtraEditors.LabelControl();
             labelControl1 = new DevExpress.XtraEditors.LabelControl();
             gcDanhSach = new DevExpress.XtraGrid.GridControl();
             gvDanhSach = new DevExpress.XtraGrid.Views.Grid.GridView();
-            ID_LCA = new DevExpress.XtraGrid.Columns.GridColumn();
-            TENLCA = new DevExpress.XtraGrid.Columns.GridColumn();
-            HESO = new DevExpress.XtraGrid.Columns.GridColumn();
             DELETED_BY = new DevExpress.XtraGrid.Columns.GridColumn();
+            ID = new DevExpress.XtraGrid.Columns.GridColumn();
+            MAKYCONG = new DevExpress.XtraGrid.Columns.GridColumn();
+            NAM = new DevExpress.XtraGrid.Columns.GridColumn();
+            KHOA = new DevExpress.XtraGrid.Columns.GridColumn();
+            NGAYTINHCONG = new DevExpress.XtraGrid.Columns.GridColumn();
+            NGAYCONGTRONGTHANG = new DevExpress.XtraGrid.Columns.GridColumn();
+            MACTY = new DevExpress.XtraGrid.Columns.GridColumn();
+            TRANGTHAI = new DevExpress.XtraGrid.Columns.GridColumn();
+            barButtonItemXemBangCong = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)barManager1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)splitContainerControl1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)splitContainerControl1.Panel1).BeginInit();
@@ -64,8 +72,6 @@
             ((System.ComponentModel.ISupportInitialize)splitContainerControl1.Panel2).BeginInit();
             splitContainerControl1.Panel2.SuspendLayout();
             splitContainerControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)spinEditHeSo.Properties).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)textEditLoaiCa.Properties).BeginInit();
             ((System.ComponentModel.ISupportInitialize)gcDanhSach).BeginInit();
             ((System.ComponentModel.ISupportInitialize)gvDanhSach).BeginInit();
             SuspendLayout();
@@ -78,9 +84,9 @@
             barManager1.DockControls.Add(barDockControlLeft);
             barManager1.DockControls.Add(barDockControlRight);
             barManager1.Form = this;
-            barManager1.Items.AddRange(new DevExpress.XtraBars.BarItem[] { btnThem, btnSua, btnXoa, btnLuu, btnHuy, btnDong, btnIn, btIn, btDong });
+            barManager1.Items.AddRange(new DevExpress.XtraBars.BarItem[] { btnThem, btnSua, btnXoa, btnLuu, btnHuy, btnDong, btnIn, btIn, btDong, barButtonItemXemBangCong });
             barManager1.MainMenu = bar2;
-            barManager1.MaxItemId = 9;
+            barManager1.MaxItemId = 10;
             barManager1.StatusBar = bar3;
             // 
             // bar2
@@ -91,7 +97,7 @@
             bar2.DockCol = 0;
             bar2.DockRow = 0;
             bar2.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
-            bar2.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] { new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, btnThem, "", true, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph), new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, btnSua, "", true, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph), new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, btnXoa, "", true, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph), new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, btnLuu, "", true, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph), new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, btnHuy, "", true, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph), new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, btDong, "", true, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph) });
+            bar2.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] { new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, btnThem, "", true, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph), new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, btnSua, "", true, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph), new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, btnXoa, "", true, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph), new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, btnLuu, "", true, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph), new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, btnHuy, "", true, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph), new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, barButtonItemXemBangCong, "", true, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph), new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, btDong, "", true, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph) });
             bar2.OptionsBar.MultiLine = true;
             bar2.OptionsBar.UseWholeRow = true;
             bar2.Text = "Main menu";
@@ -223,8 +229,10 @@
             // 
             // splitContainerControl1.Panel1
             // 
-            splitContainerControl1.Panel1.Controls.Add(spinEditHeSo);
-            splitContainerControl1.Panel1.Controls.Add(textEditLoaiCa);
+            splitContainerControl1.Panel1.Controls.Add(checkBoxKhoa);
+            splitContainerControl1.Panel1.Controls.Add(checkBoxTrangThai);
+            splitContainerControl1.Panel1.Controls.Add(comboBoxThang);
+            splitContainerControl1.Panel1.Controls.Add(comboBoxNam);
             splitContainerControl1.Panel1.Controls.Add(labelControl2);
             splitContainerControl1.Panel1.Controls.Add(labelControl1);
             splitContainerControl1.Panel1.Text = "Panel1";
@@ -235,52 +243,71 @@
             splitContainerControl1.Panel2.Text = "Panel2";
             splitContainerControl1.Size = new Size(1029, 522);
             splitContainerControl1.SplitterPosition = 145;
-            splitContainerControl1.TabIndex = 6;
+            splitContainerControl1.TabIndex = 13;
             // 
-            // spinEditHeSo
+            // checkBoxKhoa
             // 
-            spinEditHeSo.EditValue = new decimal(new int[] { 0, 0, 0, 0 });
-            spinEditHeSo.Location = new Point(158, 74);
-            spinEditHeSo.MenuManager = barManager1;
-            spinEditHeSo.Name = "spinEditHeSo";
-            spinEditHeSo.Properties.Appearance.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            spinEditHeSo.Properties.Appearance.Options.UseFont = true;
-            spinEditHeSo.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] { new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo) });
-            spinEditHeSo.Size = new Size(100, 26);
-            spinEditHeSo.TabIndex = 2;
+            checkBoxKhoa.AutoSize = true;
+            checkBoxKhoa.Font = new Font("Times New Roman", 15.75F);
+            checkBoxKhoa.Location = new Point(378, 83);
+            checkBoxKhoa.Name = "checkBoxKhoa";
+            checkBoxKhoa.Size = new Size(74, 27);
+            checkBoxKhoa.TabIndex = 2;
+            checkBoxKhoa.Text = "Khóa";
+            checkBoxKhoa.UseVisualStyleBackColor = true;
             // 
-            // textEditLoaiCa
+            // checkBoxTrangThai
             // 
-            textEditLoaiCa.Location = new Point(158, 27);
-            textEditLoaiCa.Margin = new Padding(4);
-            textEditLoaiCa.MenuManager = barManager1;
-            textEditLoaiCa.Name = "textEditLoaiCa";
-            textEditLoaiCa.Properties.Appearance.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textEditLoaiCa.Properties.Appearance.Options.UseFont = true;
-            textEditLoaiCa.Size = new Size(186, 30);
-            textEditLoaiCa.TabIndex = 1;
+            checkBoxTrangThai.AutoSize = true;
+            checkBoxTrangThai.Font = new Font("Times New Roman", 15.75F);
+            checkBoxTrangThai.Location = new Point(378, 30);
+            checkBoxTrangThai.Name = "checkBoxTrangThai";
+            checkBoxTrangThai.Size = new Size(112, 27);
+            checkBoxTrangThai.TabIndex = 2;
+            checkBoxTrangThai.Text = "Trạng thái";
+            checkBoxTrangThai.UseVisualStyleBackColor = true;
+            // 
+            // comboBoxThang
+            // 
+            comboBoxThang.Font = new Font("Tahoma", 15.75F);
+            comboBoxThang.FormattingEnabled = true;
+            comboBoxThang.Items.AddRange(new object[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12" });
+            comboBoxThang.Location = new Point(114, 81);
+            comboBoxThang.Name = "comboBoxThang";
+            comboBoxThang.Size = new Size(191, 33);
+            comboBoxThang.TabIndex = 1;
+            // 
+            // comboBoxNam
+            // 
+            comboBoxNam.Font = new Font("Tahoma", 15.75F);
+            comboBoxNam.FormattingEnabled = true;
+            comboBoxNam.Items.AddRange(new object[] { "2022", "2023", "2024", "2025", "2026", "2027", "2028", "2029", "2030" });
+            comboBoxNam.Location = new Point(114, 26);
+            comboBoxNam.Name = "comboBoxNam";
+            comboBoxNam.Size = new Size(191, 33);
+            comboBoxNam.TabIndex = 1;
             // 
             // labelControl2
             // 
-            labelControl2.Appearance.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            labelControl2.Appearance.Font = new Font("Times New Roman", 15.75F);
             labelControl2.Appearance.Options.UseFont = true;
-            labelControl2.Location = new Point(97, 77);
+            labelControl2.Location = new Point(50, 87);
             labelControl2.Margin = new Padding(4);
             labelControl2.Name = "labelControl2";
-            labelControl2.Size = new Size(54, 23);
+            labelControl2.Size = new Size(57, 23);
             labelControl2.TabIndex = 0;
-            labelControl2.Text = "Hệ số:";
+            labelControl2.Text = "Tháng:";
             // 
             // labelControl1
             // 
-            labelControl1.Appearance.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            labelControl1.Appearance.Font = new Font("Times New Roman", 15.75F);
             labelControl1.Appearance.Options.UseFont = true;
-            labelControl1.Location = new Point(83, 30);
+            labelControl1.Location = new Point(61, 31);
             labelControl1.Margin = new Padding(4);
             labelControl1.Name = "labelControl1";
-            labelControl1.Size = new Size(67, 23);
+            labelControl1.Size = new Size(46, 23);
             labelControl1.TabIndex = 0;
-            labelControl1.Text = "Loại ca:";
+            labelControl1.Text = "Năm:";
             // 
             // gcDanhSach
             // 
@@ -297,7 +324,7 @@
             // 
             // gvDanhSach
             // 
-            gvDanhSach.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] { DELETED_BY, ID_LCA, TENLCA, HESO });
+            gvDanhSach.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] { DELETED_BY, ID, MAKYCONG, NAM, KHOA, NGAYTINHCONG, NGAYCONGTRONGTHANG, MACTY, TRANGTHAI });
             gvDanhSach.DetailHeight = 443;
             gvDanhSach.GridControl = gcDanhSach;
             gvDanhSach.Name = "gvDanhSach";
@@ -305,45 +332,6 @@
             gvDanhSach.OptionsView.ShowGroupPanel = false;
             gvDanhSach.CustomDrawCell += gvDanhSach_CustomDrawCell;
             gvDanhSach.Click += gvDanhSach_Click;
-            // 
-            // ID_LCA
-            // 
-            ID_LCA.AppearanceHeader.Font = new Font("Times New Roman", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            ID_LCA.AppearanceHeader.Options.UseFont = true;
-            ID_LCA.Caption = "ID";
-            ID_LCA.FieldName = "ID_LCA";
-            ID_LCA.MaxWidth = 80;
-            ID_LCA.MinWidth = 80;
-            ID_LCA.Name = "ID_LCA";
-            ID_LCA.Visible = true;
-            ID_LCA.VisibleIndex = 1;
-            ID_LCA.Width = 80;
-            // 
-            // TENLCA
-            // 
-            TENLCA.AppearanceHeader.Font = new Font("Times New Roman", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            TENLCA.AppearanceHeader.Options.UseFont = true;
-            TENLCA.Caption = "LOẠI CA";
-            TENLCA.FieldName = "TENLCA";
-            TENLCA.MaxWidth = 200;
-            TENLCA.MinWidth = 200;
-            TENLCA.Name = "TENLCA";
-            TENLCA.Visible = true;
-            TENLCA.VisibleIndex = 2;
-            TENLCA.Width = 200;
-            // 
-            // HESO
-            // 
-            HESO.AppearanceHeader.Font = new Font("Times New Roman", 9.75F, FontStyle.Bold);
-            HESO.AppearanceHeader.Options.UseFont = true;
-            HESO.Caption = "HỆ SỐ";
-            HESO.FieldName = "HESO";
-            HESO.MaxWidth = 100;
-            HESO.MinWidth = 100;
-            HESO.Name = "HESO";
-            HESO.Visible = true;
-            HESO.VisibleIndex = 3;
-            HESO.Width = 100;
             // 
             // DELETED_BY
             // 
@@ -355,7 +343,116 @@
             DELETED_BY.VisibleIndex = 0;
             DELETED_BY.Width = 50;
             // 
-            // FormLoaiCa
+            // ID
+            // 
+            ID.AppearanceHeader.Font = new Font("Times New Roman", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            ID.AppearanceHeader.Options.UseFont = true;
+            ID.Caption = "ID";
+            ID.FieldName = "ID";
+            ID.MaxWidth = 80;
+            ID.MinWidth = 80;
+            ID.Name = "ID";
+            ID.Visible = true;
+            ID.VisibleIndex = 1;
+            ID.Width = 80;
+            // 
+            // MAKYCONG
+            // 
+            MAKYCONG.AppearanceHeader.Font = new Font("Times New Roman", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            MAKYCONG.AppearanceHeader.Options.UseFont = true;
+            MAKYCONG.Caption = "MÃ KỲ CÔNG";
+            MAKYCONG.FieldName = "MAKYCONG";
+            MAKYCONG.MaxWidth = 100;
+            MAKYCONG.MinWidth = 100;
+            MAKYCONG.Name = "MAKYCONG";
+            MAKYCONG.Visible = true;
+            MAKYCONG.VisibleIndex = 2;
+            MAKYCONG.Width = 100;
+            // 
+            // NAM
+            // 
+            NAM.AppearanceHeader.Font = new Font("Times New Roman", 9.75F, FontStyle.Bold);
+            NAM.AppearanceHeader.Options.UseFont = true;
+            NAM.Caption = "NĂM";
+            NAM.FieldName = "NAM";
+            NAM.MaxWidth = 80;
+            NAM.MinWidth = 80;
+            NAM.Name = "NAM";
+            NAM.Visible = true;
+            NAM.VisibleIndex = 3;
+            NAM.Width = 80;
+            // 
+            // KHOA
+            // 
+            KHOA.AppearanceHeader.Font = new Font("Times New Roman", 9.75F, FontStyle.Bold);
+            KHOA.AppearanceHeader.Options.UseFont = true;
+            KHOA.Caption = "KHÓA";
+            KHOA.FieldName = "KHOA";
+            KHOA.MaxWidth = 50;
+            KHOA.MinWidth = 50;
+            KHOA.Name = "KHOA";
+            KHOA.Visible = true;
+            KHOA.VisibleIndex = 4;
+            KHOA.Width = 50;
+            // 
+            // NGAYTINHCONG
+            // 
+            NGAYTINHCONG.AppearanceHeader.Font = new Font("Times New Roman", 9.75F, FontStyle.Bold);
+            NGAYTINHCONG.AppearanceHeader.Options.UseFont = true;
+            NGAYTINHCONG.Caption = "NGÀY TÍNH CÔNG";
+            NGAYTINHCONG.FieldName = "NGAYTINHCONG";
+            NGAYTINHCONG.MaxWidth = 150;
+            NGAYTINHCONG.MinWidth = 150;
+            NGAYTINHCONG.Name = "NGAYTINHCONG";
+            NGAYTINHCONG.Visible = true;
+            NGAYTINHCONG.VisibleIndex = 5;
+            NGAYTINHCONG.Width = 150;
+            // 
+            // NGAYCONGTRONGTHANG
+            // 
+            NGAYCONGTRONGTHANG.AppearanceHeader.Font = new Font("Times New Roman", 9.75F, FontStyle.Bold);
+            NGAYCONGTRONGTHANG.AppearanceHeader.Options.UseFont = true;
+            NGAYCONGTRONGTHANG.Caption = "NGÀY CÔNG TRONG THÁNG";
+            NGAYCONGTRONGTHANG.FieldName = "NGAYCONGTRONGTHANG";
+            NGAYCONGTRONGTHANG.MaxWidth = 50;
+            NGAYCONGTRONGTHANG.MinWidth = 50;
+            NGAYCONGTRONGTHANG.Name = "NGAYCONGTRONGTHANG";
+            NGAYCONGTRONGTHANG.Visible = true;
+            NGAYCONGTRONGTHANG.VisibleIndex = 6;
+            NGAYCONGTRONGTHANG.Width = 50;
+            // 
+            // MACTY
+            // 
+            MACTY.AppearanceHeader.Font = new Font("Times New Roman", 9.75F, FontStyle.Bold);
+            MACTY.AppearanceHeader.Options.UseFont = true;
+            MACTY.Caption = "MACTY";
+            MACTY.FieldName = "MACTY";
+            MACTY.MaxWidth = 50;
+            MACTY.MinWidth = 50;
+            MACTY.Name = "MACTY";
+            MACTY.Width = 50;
+            // 
+            // TRANGTHAI
+            // 
+            TRANGTHAI.AppearanceHeader.Font = new Font("Times New Roman", 9.75F, FontStyle.Bold);
+            TRANGTHAI.AppearanceHeader.Options.UseFont = true;
+            TRANGTHAI.Caption = "TRẠNG THÁI";
+            TRANGTHAI.FieldName = "TRANGTHAI";
+            TRANGTHAI.MaxWidth = 200;
+            TRANGTHAI.MinWidth = 200;
+            TRANGTHAI.Name = "TRANGTHAI";
+            TRANGTHAI.Visible = true;
+            TRANGTHAI.VisibleIndex = 7;
+            TRANGTHAI.Width = 200;
+            // 
+            // barButtonItemXemBangCong
+            // 
+            barButtonItemXemBangCong.Caption = "Xem bảng công";
+            barButtonItemXemBangCong.Id = 9;
+            barButtonItemXemBangCong.ImageOptions.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("barButtonItem1.ImageOptions.SvgImage");
+            barButtonItemXemBangCong.Name = "barButtonItemXemBangCong";
+            // 
+            // FormBangCong
             // 
             AutoScaleDimensions = new SizeF(9F, 19F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -367,9 +464,9 @@
             Controls.Add(barDockControlTop);
             Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Margin = new Padding(4);
-            Name = "FormLoaiCa";
-            Text = "LOẠI CA";
-            Load += FormLoaiCa_Load;
+            Name = "FormBangCong";
+            Text = "BẢNG CÔNG";
+            Load += FormBangCong_Load;
             ((System.ComponentModel.ISupportInitialize)barManager1).EndInit();
             ((System.ComponentModel.ISupportInitialize)splitContainerControl1.Panel1).EndInit();
             splitContainerControl1.Panel1.ResumeLayout(false);
@@ -378,8 +475,6 @@
             splitContainerControl1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)splitContainerControl1).EndInit();
             splitContainerControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)spinEditHeSo.Properties).EndInit();
-            ((System.ComponentModel.ISupportInitialize)textEditLoaiCa.Properties).EndInit();
             ((System.ComponentModel.ISupportInitialize)gcDanhSach).EndInit();
             ((System.ComponentModel.ISupportInitialize)gvDanhSach).EndInit();
             ResumeLayout(false);
@@ -395,7 +490,6 @@
         private DevExpress.XtraBars.BarButtonItem btnXoa;
         private DevExpress.XtraBars.BarButtonItem btnLuu;
         private DevExpress.XtraBars.BarButtonItem btnHuy;
-        private DevExpress.XtraBars.BarButtonItem btIn;
         private DevExpress.XtraBars.BarButtonItem btDong;
         private DevExpress.XtraBars.Bar bar3;
         private DevExpress.XtraBars.BarDockControl barDockControlTop;
@@ -404,16 +498,25 @@
         private DevExpress.XtraBars.BarDockControl barDockControlRight;
         private DevExpress.XtraBars.BarButtonItem btnDong;
         private DevExpress.XtraBars.BarButtonItem btnIn;
+        private DevExpress.XtraBars.BarButtonItem btIn;
         private DevExpress.XtraEditors.SplitContainerControl splitContainerControl1;
-        private DevExpress.XtraEditors.SpinEdit spinEditHeSo;
-        private DevExpress.XtraEditors.TextEdit textEditLoaiCa;
+        private CheckBox checkBoxTrangThai;
+        private ComboBox comboBoxThang;
+        private ComboBox comboBoxNam;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraGrid.GridControl gcDanhSach;
         private DevExpress.XtraGrid.Views.Grid.GridView gvDanhSach;
-        private DevExpress.XtraGrid.Columns.GridColumn ID_LCA;
-        private DevExpress.XtraGrid.Columns.GridColumn TENLCA;
-        private DevExpress.XtraGrid.Columns.GridColumn HESO;
         private DevExpress.XtraGrid.Columns.GridColumn DELETED_BY;
+        private DevExpress.XtraGrid.Columns.GridColumn ID;
+        private DevExpress.XtraGrid.Columns.GridColumn MAKYCONG;
+        private DevExpress.XtraGrid.Columns.GridColumn NAM;
+        private DevExpress.XtraGrid.Columns.GridColumn KHOA;
+        private DevExpress.XtraGrid.Columns.GridColumn NGAYTINHCONG;
+        private DevExpress.XtraGrid.Columns.GridColumn NGAYCONGTRONGTHANG;
+        private DevExpress.XtraGrid.Columns.GridColumn MACTY;
+        private DevExpress.XtraGrid.Columns.GridColumn TRANGTHAI;
+        private CheckBox checkBoxKhoa;
+        private DevExpress.XtraBars.BarButtonItem barButtonItemXemBangCong;
     }
 }

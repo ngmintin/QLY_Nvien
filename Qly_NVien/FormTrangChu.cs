@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BusinessLayer;
+using Qly_NVien.CHAMCONG;
 
 namespace Qly_NVien
 {
@@ -127,10 +128,25 @@ namespace Qly_NVien
 
         private void listBoxControlSinhNhat_CustomizeItem(object sender, DevExpress.XtraEditors.CustomizeTemplatedItemEventArgs e)
         {
-            if (e.TemplatedItem.Elements[1].Text.Substring(0,2)==DateTime.Now.Day.ToString())
+            if (e.TemplatedItem.Elements[1].Text.Substring(0, 2) == DateTime.Now.Day.ToString())
             {
                 e.TemplatedItem.Appearance.ForeColor = Color.Red;
-            }    
+            }
+        }
+
+        private void barButtonItemLoaiCa_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            openForm(typeof(FormLoaiCa));
+        }
+
+        private void btLoaiCong_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            openForm(typeof(FormLoaiCong));
+        }
+
+        private void btBangCong_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            openForm(typeof(FormBangCong));
         }
     }
 }

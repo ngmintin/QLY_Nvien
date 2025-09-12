@@ -69,6 +69,7 @@
             barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
             btnHopDong = new DevExpress.XtraBars.BarButtonItem();
             barButtonItemQuanLyLuong = new DevExpress.XtraBars.BarButtonItem();
+            barButtonItemLoaiCa = new DevExpress.XtraBars.BarButtonItem();
             ribbonPageHeThong = new DevExpress.XtraBars.Ribbon.RibbonPage();
             ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -88,7 +89,6 @@
             dockPanel1_Container = new DevExpress.XtraBars.Docking.ControlContainer();
             groupControl1 = new DevExpress.XtraEditors.GroupControl();
             listBoxControlSinhNhat = new DevExpress.XtraEditors.ListBoxControl();
-            barButtonItemLoaiCa = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)ribbon).BeginInit();
             ((System.ComponentModel.ISupportInitialize)documentManager1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)tabbedView1).BeginInit();
@@ -235,6 +235,7 @@
             btBangCong.ImageOptions.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("btBangCong.ImageOptions.SvgImage");
             btBangCong.Name = "btBangCong";
             btBangCong.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            btBangCong.ItemClick += btBangCong_ItemClick;
             // 
             // btLoaiCong
             // 
@@ -243,6 +244,7 @@
             btLoaiCong.ImageOptions.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("btLoaiCong.ImageOptions.SvgImage");
             btLoaiCong.Name = "btLoaiCong";
             btLoaiCong.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            btLoaiCong.ItemClick += btLoaiCong_ItemClick;
             // 
             // btBangLuong
             // 
@@ -379,6 +381,15 @@
             barButtonItemQuanLyLuong.Name = "barButtonItemQuanLyLuong";
             barButtonItemQuanLyLuong.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             barButtonItemQuanLyLuong.ItemClick += barButtonItemQuanLyLuong_ItemClick;
+            // 
+            // barButtonItemLoaiCa
+            // 
+            barButtonItemLoaiCa.Caption = "Loại ca";
+            barButtonItemLoaiCa.Id = 36;
+            barButtonItemLoaiCa.ImageOptions.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("barButtonItemLoaiCa.ImageOptions.SvgImage");
+            barButtonItemLoaiCa.Name = "barButtonItemLoaiCa";
+            barButtonItemLoaiCa.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            barButtonItemLoaiCa.ItemClick += barButtonItemLoaiCa_ItemClick;
             // 
             // ribbonPageHeThong
             // 
@@ -543,14 +554,6 @@
             itemTemplateBase1.Rows.Add(tableRowDefinition1);
             listBoxControlSinhNhat.Templates.Add(itemTemplateBase1);
             listBoxControlSinhNhat.CustomizeItem += listBoxControlSinhNhat_CustomizeItem;
-            // 
-            // barButtonItemLoaiCa
-            // 
-            barButtonItemLoaiCa.Caption = "Loại ca";
-            barButtonItemLoaiCa.Id = 36;
-            barButtonItemLoaiCa.ImageOptions.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("barButtonItem6.ImageOptions.SvgImage");
-            barButtonItemLoaiCa.Name = "barButtonItemLoaiCa";
-            barButtonItemLoaiCa.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             // 
             // FormTrangChu
             // 

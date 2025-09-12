@@ -12,23 +12,24 @@ using System.Windows.Forms;
 
 namespace Qly_NVien.CHAMCONG
 {
-    public partial class FormLoaiCa : Form
+    public partial class FormLoaiCong : Form
     {
-        public FormLoaiCa()
+
+        public FormLoaiCong()
         {
             InitializeComponent();
         }
 
         //BIẾN
-        LOAICA_bs _loaica;
+        LOAICONG_bs _loaicong;
         bool _them;
-        int _idlc;
+        int _id;
 
-        private void FormLoaiCa_Load(object sender, EventArgs e)
+        private void FormLoaiCong_Load(object sender, EventArgs e)
         {
             //THAO TÁC
             _them = false;
-            _loaica = new LOAICA_bs();
+            _loaicong = new LOAICONG_bs();
             showHide(true);
             loadData();
             splitContainerControl1.PanelVisibility = DevExpress.XtraEditors.SplitPanelVisibility.Panel2;    //CHỈ HIỆN THỊ PANEL 2
@@ -44,14 +45,14 @@ namespace Qly_NVien.CHAMCONG
             btnXoa.Enabled = kt;
             btDong.Enabled = kt;
             btIn.Enabled = kt;
-            textEditLoaiCa.Enabled = !kt;
+            textEditLoaiCong.Enabled = !kt;
             spinEditHeSo.Enabled = !kt;
 
         }
 
         void loadData()
         {
-            gcDanhSach.DataSource = _loaica.getList();
+            gcDanhSach.DataSource = _loaicong.getList();
             gvDanhSach.OptionsBehavior.Editable = false;
         }
 
@@ -59,7 +60,7 @@ namespace Qly_NVien.CHAMCONG
         {
             showHide(false);
             _them = true;
-            textEditLoaiCa.Text = string.Empty;
+            textEditLoaiCong.Text = string.Empty;
             spinEditHeSo.EditValue = 1;
             splitContainerControl1.PanelVisibility = DevExpress.XtraEditors.SplitPanelVisibility.Both; //HIỆN THỊ CẢ 2 PANEL
         }
@@ -75,19 +76,18 @@ namespace Qly_NVien.CHAMCONG
         {
             if (MessageBox.Show("Bạn có chắc chắn muốn xóa không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
-                _loaica.Delete(_idlc, 1);
+                _loaicong.Delete(_id, 1);
                 loadData();
             }
         }
 
         private void btnLuu_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-                saveData();
-                loadData();
-                _them = false;
-                showHide(true);
-                splitContainerControl1.PanelVisibility = DevExpress.XtraEditors.SplitPanelVisibility.Panel2;    //CHỈ HIỆN THỊ PANEL 2
-        
+            saveData();
+            loadData();
+            _them = false;
+            showHide(true);
+            splitContainerControl1.PanelVisibility = DevExpress.XtraEditors.SplitPanelVisibility.Panel2;    //CHỈ HIỆN THỊ PANEL 2
         }
 
         private void btnHuy_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -107,21 +107,21 @@ namespace Qly_NVien.CHAMCONG
         {
             if (_them)
             {
-                LOAICA lc = new LOAICA();
-                lc.TENLCA = textEditLoaiCa.Text;
+                LOAICONG lc = new LOAICONG();
+                lc.TENLC = textEditLoaiCong.Text;
                 lc.HESO = double.Parse(spinEditHeSo.EditValue.ToString());
                 lc.CREATED_BY = 1;
                 lc.CREATED_DATE = DateTime.Now;
-                _loaica.Add(lc);
+                _loaicong.Add(lc);
             }
             else
             {
-                var lc = _loaica.getItem(_idlc);
-                lc.TENLCA = textEditLoaiCa.Text;
+                var lc = _loaicong.getItem(_id);
+                lc.TENLC = textEditLoaiCong.Text;
                 lc.HESO = double.Parse(spinEditHeSo.EditValue.ToString());
                 lc.UPDATED_BY = 1;
                 lc.UPDATED_DATE = DateTime.Now;
-                _loaica.Update(lc);
+                _loaicong.Update(lc);
             }
         }
 
@@ -129,20 +129,20 @@ namespace Qly_NVien.CHAMCONG
         {
             if (gvDanhSach.RowCount > 0)
             {
-                _idlc = int.Parse(gvDanhSach.GetFocusedRowCellValue("ID_LCA").ToString());
-                textEditLoaiCa.Text = gvDanhSach.GetFocusedRowCellValue("TENLCA").ToString();
+                _id = int.Parse(gvDanhSach.GetFocusedRowCellValue("ID_LC").ToString());
+                textEditLoaiCong.Text = gvDanhSach.GetFocusedRowCellValue("TENLC").ToString();
                 spinEditHeSo.EditValue = gvDanhSach.GetFocusedRowCellValue("HESO").ToString();
             }
         }
 
         private void gvDanhSach_CustomDrawCell(object sender, DevExpress.XtraGrid.Views.Base.RowCellCustomDrawEventArgs e)
         {
-            if(e.Column.Name=="DELETED_BY" && e.CellValue != null)
+            if (e.Column.Name == "DELETED_BY" && e.CellValue != null)
             {
                 Image img = Properties.Resources.letterx;
                 e.Graphics.DrawImage(img, e.Bounds.X, e.Bounds.Y);
                 e.Handled = true;
-            }    
+            }
         }
     }
 }

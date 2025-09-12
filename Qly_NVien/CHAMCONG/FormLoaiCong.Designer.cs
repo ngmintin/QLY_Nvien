@@ -1,6 +1,6 @@
 ﻿namespace Qly_NVien.CHAMCONG
 {
-    partial class FormLoaiCa
+    partial class FormLoaiCong
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormLoaiCa));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormLoaiCong));
             barManager1 = new DevExpress.XtraBars.BarManager(components);
             bar2 = new DevExpress.XtraBars.Bar();
             btnThem = new DevExpress.XtraBars.BarButtonItem();
@@ -48,15 +48,15 @@
             btIn = new DevExpress.XtraBars.BarButtonItem();
             splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
             spinEditHeSo = new DevExpress.XtraEditors.SpinEdit();
-            textEditLoaiCa = new DevExpress.XtraEditors.TextEdit();
+            textEditLoaiCong = new DevExpress.XtraEditors.TextEdit();
             labelControl2 = new DevExpress.XtraEditors.LabelControl();
             labelControl1 = new DevExpress.XtraEditors.LabelControl();
             gcDanhSach = new DevExpress.XtraGrid.GridControl();
             gvDanhSach = new DevExpress.XtraGrid.Views.Grid.GridView();
-            ID_LCA = new DevExpress.XtraGrid.Columns.GridColumn();
-            TENLCA = new DevExpress.XtraGrid.Columns.GridColumn();
-            HESO = new DevExpress.XtraGrid.Columns.GridColumn();
             DELETED_BY = new DevExpress.XtraGrid.Columns.GridColumn();
+            ID_LC = new DevExpress.XtraGrid.Columns.GridColumn();
+            TENLC = new DevExpress.XtraGrid.Columns.GridColumn();
+            HESO = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)barManager1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)splitContainerControl1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)splitContainerControl1.Panel1).BeginInit();
@@ -65,7 +65,7 @@
             splitContainerControl1.Panel2.SuspendLayout();
             splitContainerControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)spinEditHeSo.Properties).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)textEditLoaiCa.Properties).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)textEditLoaiCong.Properties).BeginInit();
             ((System.ComponentModel.ISupportInitialize)gcDanhSach).BeginInit();
             ((System.ComponentModel.ISupportInitialize)gvDanhSach).BeginInit();
             SuspendLayout();
@@ -224,7 +224,7 @@
             // splitContainerControl1.Panel1
             // 
             splitContainerControl1.Panel1.Controls.Add(spinEditHeSo);
-            splitContainerControl1.Panel1.Controls.Add(textEditLoaiCa);
+            splitContainerControl1.Panel1.Controls.Add(textEditLoaiCong);
             splitContainerControl1.Panel1.Controls.Add(labelControl2);
             splitContainerControl1.Panel1.Controls.Add(labelControl1);
             splitContainerControl1.Panel1.Text = "Panel1";
@@ -235,7 +235,7 @@
             splitContainerControl1.Panel2.Text = "Panel2";
             splitContainerControl1.Size = new Size(1029, 522);
             splitContainerControl1.SplitterPosition = 145;
-            splitContainerControl1.TabIndex = 6;
+            splitContainerControl1.TabIndex = 7;
             // 
             // spinEditHeSo
             // 
@@ -249,16 +249,16 @@
             spinEditHeSo.Size = new Size(100, 26);
             spinEditHeSo.TabIndex = 2;
             // 
-            // textEditLoaiCa
+            // textEditLoaiCong
             // 
-            textEditLoaiCa.Location = new Point(158, 27);
-            textEditLoaiCa.Margin = new Padding(4);
-            textEditLoaiCa.MenuManager = barManager1;
-            textEditLoaiCa.Name = "textEditLoaiCa";
-            textEditLoaiCa.Properties.Appearance.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textEditLoaiCa.Properties.Appearance.Options.UseFont = true;
-            textEditLoaiCa.Size = new Size(186, 30);
-            textEditLoaiCa.TabIndex = 1;
+            textEditLoaiCong.Location = new Point(158, 27);
+            textEditLoaiCong.Margin = new Padding(4);
+            textEditLoaiCong.MenuManager = barManager1;
+            textEditLoaiCong.Name = "textEditLoaiCong";
+            textEditLoaiCong.Properties.Appearance.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            textEditLoaiCong.Properties.Appearance.Options.UseFont = true;
+            textEditLoaiCong.Size = new Size(186, 30);
+            textEditLoaiCong.TabIndex = 1;
             // 
             // labelControl2
             // 
@@ -275,12 +275,12 @@
             // 
             labelControl1.Appearance.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             labelControl1.Appearance.Options.UseFont = true;
-            labelControl1.Location = new Point(83, 30);
+            labelControl1.Location = new Point(62, 30);
             labelControl1.Margin = new Padding(4);
             labelControl1.Name = "labelControl1";
-            labelControl1.Size = new Size(67, 23);
+            labelControl1.Size = new Size(89, 23);
             labelControl1.TabIndex = 0;
-            labelControl1.Text = "Loại ca:";
+            labelControl1.Text = "Loại công:";
             // 
             // gcDanhSach
             // 
@@ -297,7 +297,7 @@
             // 
             // gvDanhSach
             // 
-            gvDanhSach.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] { DELETED_BY, ID_LCA, TENLCA, HESO });
+            gvDanhSach.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] { DELETED_BY, ID_LC, TENLC, HESO });
             gvDanhSach.DetailHeight = 443;
             gvDanhSach.GridControl = gcDanhSach;
             gvDanhSach.Name = "gvDanhSach";
@@ -306,31 +306,41 @@
             gvDanhSach.CustomDrawCell += gvDanhSach_CustomDrawCell;
             gvDanhSach.Click += gvDanhSach_Click;
             // 
-            // ID_LCA
+            // DELETED_BY
             // 
-            ID_LCA.AppearanceHeader.Font = new Font("Times New Roman", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            ID_LCA.AppearanceHeader.Options.UseFont = true;
-            ID_LCA.Caption = "ID";
-            ID_LCA.FieldName = "ID_LCA";
-            ID_LCA.MaxWidth = 80;
-            ID_LCA.MinWidth = 80;
-            ID_LCA.Name = "ID_LCA";
-            ID_LCA.Visible = true;
-            ID_LCA.VisibleIndex = 1;
-            ID_LCA.Width = 80;
+            DELETED_BY.FieldName = "DELETED_BY";
+            DELETED_BY.MaxWidth = 50;
+            DELETED_BY.MinWidth = 50;
+            DELETED_BY.Name = "DELETED_BY";
+            DELETED_BY.Visible = true;
+            DELETED_BY.VisibleIndex = 0;
+            DELETED_BY.Width = 50;
             // 
-            // TENLCA
+            // ID_LC
             // 
-            TENLCA.AppearanceHeader.Font = new Font("Times New Roman", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            TENLCA.AppearanceHeader.Options.UseFont = true;
-            TENLCA.Caption = "LOẠI CA";
-            TENLCA.FieldName = "TENLCA";
-            TENLCA.MaxWidth = 200;
-            TENLCA.MinWidth = 200;
-            TENLCA.Name = "TENLCA";
-            TENLCA.Visible = true;
-            TENLCA.VisibleIndex = 2;
-            TENLCA.Width = 200;
+            ID_LC.AppearanceHeader.Font = new Font("Times New Roman", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            ID_LC.AppearanceHeader.Options.UseFont = true;
+            ID_LC.Caption = "ID";
+            ID_LC.FieldName = "ID_LC";
+            ID_LC.MaxWidth = 80;
+            ID_LC.MinWidth = 80;
+            ID_LC.Name = "ID_LC";
+            ID_LC.Visible = true;
+            ID_LC.VisibleIndex = 1;
+            ID_LC.Width = 80;
+            // 
+            // TENLC
+            // 
+            TENLC.AppearanceHeader.Font = new Font("Times New Roman", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            TENLC.AppearanceHeader.Options.UseFont = true;
+            TENLC.Caption = "LOẠI CÔNG";
+            TENLC.FieldName = "TENLC";
+            TENLC.MaxWidth = 200;
+            TENLC.MinWidth = 200;
+            TENLC.Name = "TENLC";
+            TENLC.Visible = true;
+            TENLC.VisibleIndex = 2;
+            TENLC.Width = 200;
             // 
             // HESO
             // 
@@ -345,17 +355,7 @@
             HESO.VisibleIndex = 3;
             HESO.Width = 100;
             // 
-            // DELETED_BY
-            // 
-            DELETED_BY.FieldName = "DELETED_BY";
-            DELETED_BY.MaxWidth = 50;
-            DELETED_BY.MinWidth = 50;
-            DELETED_BY.Name = "DELETED_BY";
-            DELETED_BY.Visible = true;
-            DELETED_BY.VisibleIndex = 0;
-            DELETED_BY.Width = 50;
-            // 
-            // FormLoaiCa
+            // FormLoaiCong
             // 
             AutoScaleDimensions = new SizeF(9F, 19F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -367,9 +367,9 @@
             Controls.Add(barDockControlTop);
             Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Margin = new Padding(4);
-            Name = "FormLoaiCa";
-            Text = "LOẠI CA";
-            Load += FormLoaiCa_Load;
+            Name = "FormLoaiCong";
+            Text = "LOẠI CÔNG";
+            Load += FormLoaiCong_Load;
             ((System.ComponentModel.ISupportInitialize)barManager1).EndInit();
             ((System.ComponentModel.ISupportInitialize)splitContainerControl1.Panel1).EndInit();
             splitContainerControl1.Panel1.ResumeLayout(false);
@@ -379,7 +379,7 @@
             ((System.ComponentModel.ISupportInitialize)splitContainerControl1).EndInit();
             splitContainerControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)spinEditHeSo.Properties).EndInit();
-            ((System.ComponentModel.ISupportInitialize)textEditLoaiCa.Properties).EndInit();
+            ((System.ComponentModel.ISupportInitialize)textEditLoaiCong.Properties).EndInit();
             ((System.ComponentModel.ISupportInitialize)gcDanhSach).EndInit();
             ((System.ComponentModel.ISupportInitialize)gvDanhSach).EndInit();
             ResumeLayout(false);
@@ -395,7 +395,6 @@
         private DevExpress.XtraBars.BarButtonItem btnXoa;
         private DevExpress.XtraBars.BarButtonItem btnLuu;
         private DevExpress.XtraBars.BarButtonItem btnHuy;
-        private DevExpress.XtraBars.BarButtonItem btIn;
         private DevExpress.XtraBars.BarButtonItem btDong;
         private DevExpress.XtraBars.Bar bar3;
         private DevExpress.XtraBars.BarDockControl barDockControlTop;
@@ -404,16 +403,17 @@
         private DevExpress.XtraBars.BarDockControl barDockControlRight;
         private DevExpress.XtraBars.BarButtonItem btnDong;
         private DevExpress.XtraBars.BarButtonItem btnIn;
+        private DevExpress.XtraBars.BarButtonItem btIn;
         private DevExpress.XtraEditors.SplitContainerControl splitContainerControl1;
-        private DevExpress.XtraEditors.SpinEdit spinEditHeSo;
-        private DevExpress.XtraEditors.TextEdit textEditLoaiCa;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraGrid.GridControl gcDanhSach;
         private DevExpress.XtraGrid.Views.Grid.GridView gvDanhSach;
-        private DevExpress.XtraGrid.Columns.GridColumn ID_LCA;
-        private DevExpress.XtraGrid.Columns.GridColumn TENLCA;
-        private DevExpress.XtraGrid.Columns.GridColumn HESO;
         private DevExpress.XtraGrid.Columns.GridColumn DELETED_BY;
+        private DevExpress.XtraGrid.Columns.GridColumn ID_LC;
+        private DevExpress.XtraGrid.Columns.GridColumn TENLC;
+        private DevExpress.XtraGrid.Columns.GridColumn HESO;
+        private DevExpress.XtraEditors.SpinEdit spinEditHeSo;
+        private DevExpress.XtraEditors.TextEdit textEditLoaiCong;
     }
 }

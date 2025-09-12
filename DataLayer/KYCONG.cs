@@ -12,25 +12,22 @@ namespace DataLayer
     using System;
     using System.Collections.Generic;
     
-    public partial class LOAICONG
+    public partial class KYCONG
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public LOAICONG()
-        {
-            this.BANGCONGs = new HashSet<BANGCONG>();
-        }
-    
-        public int ID_LC { get; set; }
-        public string TENLC { get; set; }
-        public Nullable<double> HESO { get; set; }
+        public int ID { get; set; }
+        public int MAKYCONG { get; set; }
+        public Nullable<int> THANG { get; set; }
+        public Nullable<int> NAM { get; set; }
+        public Nullable<bool> KHOA { get; set; }
+        public Nullable<System.DateTime> NGAYTINHCONG { get; set; }
+        public Nullable<double> NGAYCONGTRONGTHANG { get; set; }
+        public string MACTY { get; set; }
+        public Nullable<bool> TRANGTHAI { get; set; }
         public Nullable<int> CREATED_BY { get; set; }
         public Nullable<System.DateTime> CREATED_DATE { get; set; }
         public Nullable<int> DELETED_BY { get; set; }
         public Nullable<System.DateTime> DELETED_DATE { get; set; }
         public Nullable<int> UPDATED_BY { get; set; }
         public Nullable<System.DateTime> UPDATED_DATE { get; set; }
-    
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<BANGCONG> BANGCONGs { get; set; }
     }
 }

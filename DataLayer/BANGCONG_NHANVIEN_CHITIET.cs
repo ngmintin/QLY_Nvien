@@ -12,25 +12,25 @@ namespace DataLayer
     using System;
     using System.Collections.Generic;
     
-    public partial class LOAICONG
+    public partial class BANGCONG_NHANVIEN_CHITIET
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public LOAICONG()
-        {
-            this.BANGCONGs = new HashSet<BANGCONG>();
-        }
-    
-        public int ID_LC { get; set; }
-        public string TENLC { get; set; }
-        public Nullable<double> HESO { get; set; }
+        public int ID { get; set; }
+        public Nullable<int> MAKYCONG { get; set; }
+        public string MACTY { get; set; }
+        public string MANV { get; set; }
+        public string HOTEN { get; set; }
+        public Nullable<System.DateTime> NGAY { get; set; }
+        public string THU { get; set; }
+        public string GIOVAO { get; set; }
+        public string GIORA { get; set; }
+        public Nullable<double> NGAYPHEP { get; set; }
+        public Nullable<double> CONGNGAYLE { get; set; }
+        public Nullable<double> CONGCHUNHAT { get; set; }
+        public string KYHIEU { get; set; }
+        public string GHICHU { get; set; }
         public Nullable<int> CREATED_BY { get; set; }
         public Nullable<System.DateTime> CREATED_DATE { get; set; }
-        public Nullable<int> DELETED_BY { get; set; }
-        public Nullable<System.DateTime> DELETED_DATE { get; set; }
         public Nullable<int> UPDATED_BY { get; set; }
         public Nullable<System.DateTime> UPDATED_DATE { get; set; }
-    
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<BANGCONG> BANGCONGs { get; set; }
     }
 }
