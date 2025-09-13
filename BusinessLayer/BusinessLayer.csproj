@@ -52,6 +52,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BAOCAO_bs.cs" />
     <Compile Include="BOPHAN_bs.cs" />
     <Compile Include="CHUCVU_bs.cs" />
     <Compile Include="CONGTY_bs.cs" />

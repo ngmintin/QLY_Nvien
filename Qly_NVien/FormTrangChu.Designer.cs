@@ -70,6 +70,7 @@
             btnHopDong = new DevExpress.XtraBars.BarButtonItem();
             barButtonItemQuanLyLuong = new DevExpress.XtraBars.BarButtonItem();
             barButtonItemLoaiCa = new DevExpress.XtraBars.BarButtonItem();
+            btnBaoCao = new DevExpress.XtraBars.BarButtonItem();
             ribbonPageHeThong = new DevExpress.XtraBars.Ribbon.RibbonPage();
             ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -104,10 +105,10 @@
             // 
             ribbon.EmptyAreaImageOptions.ImagePadding = new Padding(45, 44, 45, 44);
             ribbon.ExpandCollapseItem.Id = 0;
-            ribbon.Items.AddRange(new DevExpress.XtraBars.BarItem[] { ribbon.ExpandCollapseItem, btThongBao, btSuKien, btCa, btTrinhDo, btNhanVien, btDieuChuyen, btKhenThuongKyLuat, btBaoLoi, btThoiViec, btHoSo, btDoiMatKhau, btThoat, btCaLam, btTangCa, btBangCong, btLoaiCong, btBangLuong, barButtonItem1, barButtonItem2, barButtonItem3, btmThoat, btmCa, btmCapBac, btGopYKhieuNai, btmTrinhDo, btnPhongBan, btnCongTy, btnBoPhan, btnChucVu, barButtonItem5, barButtonItem4, btnHopDong, barButtonItemQuanLyLuong, barButtonItemLoaiCa });
+            ribbon.Items.AddRange(new DevExpress.XtraBars.BarItem[] { ribbon.ExpandCollapseItem, btThongBao, btSuKien, btCa, btTrinhDo, btNhanVien, btDieuChuyen, btKhenThuongKyLuat, btBaoLoi, btThoiViec, btHoSo, btDoiMatKhau, btThoat, btCaLam, btTangCa, btBangCong, btLoaiCong, btBangLuong, barButtonItem1, barButtonItem2, barButtonItem3, btmThoat, btmCa, btmCapBac, btGopYKhieuNai, btmTrinhDo, btnPhongBan, btnCongTy, btnBoPhan, btnChucVu, barButtonItem5, barButtonItem4, btnHopDong, barButtonItemQuanLyLuong, barButtonItemLoaiCa, btnBaoCao });
             ribbon.Location = new Point(0, 0);
             ribbon.Margin = new Padding(4);
-            ribbon.MaxItemId = 37;
+            ribbon.MaxItemId = 38;
             ribbon.Name = "ribbon";
             ribbon.OptionsMenuMinWidth = 495;
             ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] { ribbonPageHeThong, ribbonPageHoSo, ribbonPageChamCong });
@@ -391,6 +392,15 @@
             barButtonItemLoaiCa.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             barButtonItemLoaiCa.ItemClick += barButtonItemLoaiCa_ItemClick;
             // 
+            // btnBaoCao
+            // 
+            btnBaoCao.Caption = "Báo cáo";
+            btnBaoCao.Id = 37;
+            btnBaoCao.ImageOptions.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("barButtonItem6.ImageOptions.SvgImage");
+            btnBaoCao.Name = "btnBaoCao";
+            btnBaoCao.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            btnBaoCao.ItemClick += btnBaoCao_ItemClick;
+            // 
             // ribbonPageHeThong
             // 
             ribbonPageHeThong.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] { ribbonPageGroup1, ribbonPageGroup4, ribbonPageGroup6, ribbonPageGroup8 });
@@ -466,6 +476,7 @@
             ribbonPageGroup5.ItemLinks.Add(btBangCong);
             ribbonPageGroup5.ItemLinks.Add(btLoaiCong, true);
             ribbonPageGroup5.ItemLinks.Add(barButtonItemLoaiCa, true);
+            ribbonPageGroup5.ItemLinks.Add(btnBaoCao, true);
             ribbonPageGroup5.ItemLinks.Add(btBangLuong, true);
             ribbonPageGroup5.Name = "ribbonPageGroup5";
             ribbonPageGroup5.Text = "Quản lý chấm công";
@@ -643,5 +654,6 @@
         private DevExpress.XtraEditors.GroupControl groupControl1;
         private DevExpress.XtraEditors.ListBoxControl listBoxControlSinhNhat;
         private DevExpress.XtraBars.BarButtonItem barButtonItemLoaiCa;
+        private DevExpress.XtraBars.BarButtonItem btnBaoCao;
     }
 }

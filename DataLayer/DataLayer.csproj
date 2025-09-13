@@ -60,6 +60,9 @@
     <Compile Include="BANGCONG_NHANVIEN_CHITIET.cs">
       <DependentUpon>QLY_NVIEN.tt</DependentUpon>
     </Compile>
+    <Compile Include="BAOCAO.cs">
+      <DependentUpon>QLY_NVIEN.tt</DependentUpon>
+    </Compile>
     <Compile Include="BOPHAN.cs">
       <DependentUpon>QLY_NVIEN.tt</DependentUpon>
     </Compile>
@@ -91,6 +94,9 @@
       <DependentUpon>QLY_NVIEN.tt</DependentUpon>
     </Compile>
     <Compile Include="NHANVIEN.cs">
+      <DependentUpon>QLY_NVIEN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NHANVIEN_BAOCAO.cs">
       <DependentUpon>QLY_NVIEN.tt</DependentUpon>
     </Compile>
     <Compile Include="NHANVIEN_NANGLUONG.cs">

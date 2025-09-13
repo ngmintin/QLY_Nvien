@@ -27,6 +27,7 @@ namespace DataLayer
     
         public virtual DbSet<BANGCONG> BANGCONGs { get; set; }
         public virtual DbSet<BANGCONG_NHANVIEN_CHITIET> BANGCONG_NHANVIEN_CHITIET { get; set; }
+        public virtual DbSet<BAOCAO> BAOCAOs { get; set; }
         public virtual DbSet<BOPHAN> BOPHANs { get; set; }
         public virtual DbSet<CONGTY> CONGTies { get; set; }
         public virtual DbSet<CHAMCONG> CHAMCONGs { get; set; }
@@ -38,6 +39,7 @@ namespace DataLayer
         public virtual DbSet<LOAICA> LOAICAs { get; set; }
         public virtual DbSet<LOAICONG> LOAICONGs { get; set; }
         public virtual DbSet<NHANVIEN> NHANVIENs { get; set; }
+        public virtual DbSet<NHANVIEN_BAOCAO> NHANVIEN_BAOCAO { get; set; }
         public virtual DbSet<NHANVIEN_NANGLUONG> NHANVIEN_NANGLUONG { get; set; }
         public virtual DbSet<NHANVIEN_THOIVIEC> NHANVIEN_THOIVIEC { get; set; }
         public virtual DbSet<PHONGBAN> PHONGBANs { get; set; }

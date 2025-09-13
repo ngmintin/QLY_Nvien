@@ -6,31 +6,35 @@
     <edmx:Diagrams>
       <Diagram DiagramId="ddc2d464b038417dafe388f6c961ca3c" Name="Diagram1">
         <EntityTypeShape EntityType="Qly_NvienModel.BANGCONG" Width="1.5" PointX="10" PointY="1.375" />
-        <EntityTypeShape EntityType="Qly_NvienModel.BANGCONG_NHANVIEN_CHITIET" Width="1.5" PointX="2.75" PointY="11.75" />
-        <EntityTypeShape EntityType="Qly_NvienModel.BOPHAN" Width="1.5" PointX="0.75" PointY="10.125" />
-        <EntityTypeShape EntityType="Qly_NvienModel.CONGTY" Width="1.5" PointX="0.75" PointY="4.625" />
-        <EntityTypeShape EntityType="Qly_NvienModel.CHAMCONG" Width="1.5" PointX="7.75" PointY="1" />
-        <EntityTypeShape EntityType="Qly_NvienModel.CHUCVU" Width="1.5" PointX="0.75" PointY="7.75" />
-        <EntityTypeShape EntityType="Qly_NvienModel.HOPDONG" Width="1.5" PointX="5.25" PointY="1.25" />
-        <EntityTypeShape EntityType="Qly_NvienModel.KYCONG" Width="1.5" PointX="4.75" PointY="11.75" />
-        <EntityTypeShape EntityType="Qly_NvienModel.KYCONGCHITIET" Width="1.5" PointX="12.75" PointY="0.75" />
-        <EntityTypeShape EntityType="Qly_NvienModel.KHENTHUONGKYLUAT" Width="1.5" PointX="5.25" PointY="6.25" />
-        <EntityTypeShape EntityType="Qly_NvienModel.LOAICA" Width="1.5" PointX="7.75" PointY="9" />
-        <EntityTypeShape EntityType="Qly_NvienModel.LOAICONG" Width="1.5" PointX="7.75" PointY="5" />
-        <EntityTypeShape EntityType="Qly_NvienModel.NHANVIEN" Width="1.5" PointX="3" PointY="3" />
-        <EntityTypeShape EntityType="Qly_NvienModel.NHANVIEN_NANGLUONG" Width="1.5" PointX="6.75" PointY="12.75" />
-        <EntityTypeShape EntityType="Qly_NvienModel.NHANVIEN_THOIVIEC" Width="1.5" PointX="9.75" PointY="4.75" />
-        <EntityTypeShape EntityType="Qly_NvienModel.PHONGBAN" Width="1.5" PointX="0.75" PointY="12.5" />
-        <EntityTypeShape EntityType="Qly_NvienModel.TANGCA" Width="1.5" PointX="10" PointY="9.125" />
-        <EntityTypeShape EntityType="Qly_NvienModel.TRINHDO" Width="1.5" PointX="0.75" PointY="1.375" />
+        <EntityTypeShape EntityType="Qly_NvienModel.BANGCONG_NHANVIEN_CHITIET" Width="1.5" PointX="10.75" PointY="8.75" />
+        <EntityTypeShape EntityType="Qly_NvienModel.BAOCAO" Width="1.5" PointX="6" PointY="9.25" />
+        <EntityTypeShape EntityType="Qly_NvienModel.BOPHAN" Width="1.5" PointX="0.75" PointY="15.25" />
+        <EntityTypeShape EntityType="Qly_NvienModel.CONGTY" Width="1.5" PointX="0.75" PointY="3.625" />
+        <EntityTypeShape EntityType="Qly_NvienModel.CHAMCONG" Width="1.5" PointX="7.75" PointY="12" />
+        <EntityTypeShape EntityType="Qly_NvienModel.CHUCVU" Width="1.5" PointX="0.75" PointY="7.375" />
+        <EntityTypeShape EntityType="Qly_NvienModel.HOPDONG" Width="1.5" PointX="5.25" PointY="3.75" />
+        <EntityTypeShape EntityType="Qly_NvienModel.KYCONG" Width="1.5" PointX="12.75" PointY="8.75" />
+        <EntityTypeShape EntityType="Qly_NvienModel.KYCONGCHITIET" Width="1.5" PointX="12.75" PointY="13.75" />
+        <EntityTypeShape EntityType="Qly_NvienModel.KHENTHUONGKYLUAT" Width="1.5" PointX="5.25" PointY="13.25" />
+        <EntityTypeShape EntityType="Qly_NvienModel.LOAICA" Width="1.5" PointX="10.75" PointY="5" />
+        <EntityTypeShape EntityType="Qly_NvienModel.LOAICONG" Width="1.5" PointX="7.75" PointY="1" />
+        <EntityTypeShape EntityType="Qly_NvienModel.NHANVIEN" Width="1.5" PointX="3" PointY="5.375" />
+        <EntityTypeShape EntityType="Qly_NvienModel.NHANVIEN_BAOCAO" Width="1.5" PointX="8.25" PointY="6.375" />
+        <EntityTypeShape EntityType="Qly_NvienModel.NHANVIEN_NANGLUONG" Width="1.5" PointX="14.75" PointY="8.75" />
+        <EntityTypeShape EntityType="Qly_NvienModel.NHANVIEN_THOIVIEC" Width="1.5" PointX="12.75" PointY="0.75" />
+        <EntityTypeShape EntityType="Qly_NvienModel.PHONGBAN" Width="1.5" PointX="0.75" PointY="10.5" />
+        <EntityTypeShape EntityType="Qly_NvienModel.TANGCA" Width="1.5" PointX="13" PointY="5.125" />
+        <EntityTypeShape EntityType="Qly_NvienModel.TRINHDO" Width="1.5" PointX="0.75" PointY="12.875" />
         <AssociationConnector Association="Qly_NvienModel.FK_BANGCONG_CHAMCONG" />
         <AssociationConnector Association="Qly_NvienModel.FK_BANGCONG_LOAICONG" />
+        <AssociationConnector Association="Qly_NvienModel.FK_NHANVIEN_BAOCAO_BAOCAO" />
         <AssociationConnector Association="Qly_NvienModel.FK_NHANVIEN_BOPHAN" />
         <AssociationConnector Association="Qly_NvienModel.FK_NHANVIEN_CONGTY" />
         <AssociationConnector Association="Qly_NvienModel.FK_NHANVIEN_CHUCVU" />
         <AssociationConnector Association="Qly_NvienModel.FK_HOPDONG_NHANVIEN" />
         <AssociationConnector Association="Qly_NvienModel.FK_KHENTHUONGKYLUAT_NHANVIEN" />
         <AssociationConnector Association="Qly_NvienModel.FK_TANGCA_LOAICA" />
+        <AssociationConnector Association="Qly_NvienModel.FK_NHANVIEN_BAOCAO_NHANVIEN" />
         <AssociationConnector Association="Qly_NvienModel.FK_NHANVIEN_PHONGBAN" />
         <AssociationConnector Association="Qly_NvienModel.FK_NHANVIEN_TRINHDO" />
       </Diagram>

@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BusinessLayer;
 using Qly_NVien.CHAMCONG;
+using Qly_NVien.TINHLUONG;
 
 namespace Qly_NVien
 {
@@ -147,6 +148,11 @@ namespace Qly_NVien
         private void btBangCong_ItemClick(object sender, ItemClickEventArgs e)
         {
             openForm(typeof(FormBangCong));
+        }
+
+        private void btnBaoCao_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            openForm(typeof(FormBaoCao));
         }
     }
 }
