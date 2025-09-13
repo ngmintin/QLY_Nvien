@@ -396,7 +396,7 @@
             // 
             btnBaoCao.Caption = "Báo cáo";
             btnBaoCao.Id = 37;
-            btnBaoCao.ImageOptions.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("barButtonItem6.ImageOptions.SvgImage");
+            btnBaoCao.ImageOptions.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("btnBaoCao.ImageOptions.SvgImage");
             btnBaoCao.Name = "btnBaoCao";
             btnBaoCao.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             btnBaoCao.ItemClick += btnBaoCao_ItemClick;
@@ -530,7 +530,7 @@
             groupControl1.Dock = DockStyle.Top;
             groupControl1.Location = new Point(0, 0);
             groupControl1.Name = "groupControl1";
-            groupControl1.Size = new Size(193, 344);
+            groupControl1.Size = new Size(193, 393);
             groupControl1.TabIndex = 0;
             groupControl1.Text = "SINH NHẬT TRONG THÁNG";
             // 
@@ -542,7 +542,7 @@
             listBoxControlSinhNhat.ItemHeight = 120;
             listBoxControlSinhNhat.Location = new Point(2, 23);
             listBoxControlSinhNhat.Name = "listBoxControlSinhNhat";
-            listBoxControlSinhNhat.Size = new Size(189, 319);
+            listBoxControlSinhNhat.Size = new Size(189, 368);
             listBoxControlSinhNhat.TabIndex = 0;
             itemTemplateBase1.Columns.Add(tableColumnDefinition1);
             templatedItemElement1.FieldName = "HOTEN";
@@ -568,9 +568,13 @@
             // 
             // FormTrangChu
             // 
+            Appearance.BackColor = Color.White;
+            Appearance.Options.UseBackColor = true;
             Appearance.Options.UseFont = true;
             AutoScaleDimensions = new SizeF(9F, 19F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImageLayoutStore = ImageLayout.Zoom;
+            BackgroundImageStore = (Image)resources.GetObject("$this.BackgroundImageStore");
             ClientSize = new Size(1432, 882);
             Controls.Add(dockPanel1);
             Controls.Add(ribbonStatusBar);

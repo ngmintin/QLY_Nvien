@@ -22,7 +22,7 @@ namespace Qly_NVien.CHAMCONG
         //BIẾN
         KYCONG_bs _kycong;
         bool _them;
-        int _id;
+        int _makycong;
 
         private void FormBangCong_Load(object sender, EventArgs e)
         {
@@ -76,7 +76,7 @@ namespace Qly_NVien.CHAMCONG
         {
             if (MessageBox.Show("Bạn có chắc chắn muốn xóa không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
-                _kycong.Delete(_id, 1);
+                _kycong.Delete(_makycong, 1);
                 loadData();
             }
         }
@@ -112,6 +112,7 @@ namespace Qly_NVien.CHAMCONG
                 kc.NAM = int.Parse(comboBoxNam.Text);
                 kc.THANG = int.Parse(comboBoxThang.Text);
                 kc.KHOA = checkBoxKhoa.Checked;
+                kc.MACTY = 1;
                 kc.TRANGTHAI = checkBoxTrangThai.Checked;
                 kc.NGAYCONGTRONGTHANG = Functions.demSoNgayLamViecTrongThang(int.Parse(comboBoxThang.Text), int.Parse(comboBoxNam.Text));
                 kc.NGAYTINHCONG = DateTime.Now;
@@ -121,8 +122,8 @@ namespace Qly_NVien.CHAMCONG
             }
             else
             {
-                var kc = _kycong.getItem(_id);
-                kc.MAKYCONG = int.Parse(comboBoxNam.Text) * 100 + int.Parse(comboBoxThang.Text); //Mã KC 202501
+                var kc = _kycong.getItem(_makycong);
+                //kc.MAKYCONG = int.Parse(comboBoxNam.Text) * 100 + int.Parse(comboBoxThang.Text); //Mã KC 202501
                 kc.NAM = int.Parse(comboBoxNam.Text);
                 kc.THANG = int.Parse(comboBoxThang.Text);
                 kc.KHOA = checkBoxKhoa.Checked;
@@ -139,7 +140,7 @@ namespace Qly_NVien.CHAMCONG
         {
             if (gvDanhSach.RowCount > 0)
             {
-                _id = int.Parse(gvDanhSach.GetFocusedRowCellValue("ID").ToString());
+                _makycong = int.Parse(gvDanhSach.GetFocusedRowCellValue("MAKYCONG").ToString());
                 comboBoxNam.Text = gvDanhSach.GetFocusedRowCellValue("NAM").ToString();
                 comboBoxThang.Text = gvDanhSach.GetFocusedRowCellValue("THANG").ToString();
                 checkBoxKhoa.Checked = bool.Parse(gvDanhSach.GetFocusedRowCellValue("KHOA").ToString());
@@ -156,6 +157,17 @@ namespace Qly_NVien.CHAMCONG
                 e.Graphics.DrawImage(img, e.Bounds.X, e.Bounds.Y);
                 e.Handled = true;
             }
+        }
+
+        //HIỂN THỊ BẢNG CÔNG CHI TIẾT
+        private void barButtonItemXemBangCong_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            FormBangCongChiTiet ct = new FormBangCongChiTiet();
+            ct._makycong = _makycong;
+            ct._thang = int.Parse(comboBoxThang.Text);
+            ct._nam = int.Parse(comboBoxNam.Text);
+            ct._macty = 1;
+            ct.ShowDialog();
         }
     }
 }

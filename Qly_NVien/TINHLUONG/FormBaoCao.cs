@@ -35,8 +35,20 @@ namespace Qly_NVien.TINHLUONG
             loadNhanVien();
             loadBaoCao();
             loadData();
+            comboBoxBaoCao.SelectedIndexChanged += CboBaoCao_SelectedIndexChanged;
             splitContainerControl1.PanelVisibility = DevExpress.XtraEditors.SplitPanelVisibility.Panel2;    //CHỈ HIỆN THỊ PANEL 2
         }
+
+        //HIỆN THỊ SỐ TIỀN THEO BÁO CÁO
+        private void CboBaoCao_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var bc = _baocao.getItemBC(int.Parse(comboBoxBaoCao.SelectedValue.ToString()));
+            if(bc != null)
+            {
+                spinEditSoTien.EditValue = bc.SOTIEN;
+            }    
+        }
+
 
         //ẨN NÚT LƯU VÀ HỦY KHI THAO TÁC
         void showHide(bool kt)
@@ -58,7 +70,7 @@ namespace Qly_NVien.TINHLUONG
         //HÀM NVIEN
         void loadNhanVien()
         {
-            searchLookUpEditNhanVien.Properties.DataSource = _nhanvien.getList();
+            searchLookUpEditNhanVien.Properties.DataSource = _nhanvien.getListFull();
             searchLookUpEditNhanVien.Properties.DisplayMember = "HOTEN";
             searchLookUpEditNhanVien.Properties.ValueMember = "MANV";
         }
@@ -74,7 +86,7 @@ namespace Qly_NVien.TINHLUONG
 
         void loadData()
         {
-            gcDanhSach.DataSource = _baocao.getList();
+            gcDanhSach.DataSource = _baocao.getListFull();
             gvDanhSach.OptionsBehavior.Editable = false;
         }
 

@@ -11,9 +11,9 @@ namespace BusinessLayer
     {
         Qly_NvienEntities1 db = new Qly_NvienEntities1();
 
-        public KYCONG getItem(int id)
+        public KYCONG getItem(int makycong)
         {
-            return db.KYCONGs.FirstOrDefault(x => x.ID == id);
+            return db.KYCONGs.FirstOrDefault(x => x.MAKYCONG == makycong);
         }
 
         public List<KYCONG> getList()
@@ -41,7 +41,7 @@ namespace BusinessLayer
         {
             try
             {
-                var _kc = db.KYCONGs.FirstOrDefault(x => x.ID == kc.ID);
+                var _kc = db.KYCONGs.FirstOrDefault(x => x.MAKYCONG == kc.MAKYCONG);
                 _kc.MAKYCONG = kc.MAKYCONG;
                 _kc.NAM = kc.NAM;
                 _kc.THANG = kc.THANG;
@@ -61,11 +61,11 @@ namespace BusinessLayer
         }
 
         //XÓA
-        public void Delete(int id, int iduser)
+        public void Delete(int makycong, int iduser)
         {
             try
             {
-                var _kc = db.KYCONGs.FirstOrDefault(x => x.ID == id);
+                var _kc = db.KYCONGs.FirstOrDefault(x => x.MAKYCONG == makycong);
                 _kc.DELETED_BY = iduser;
                 _kc.DELETED_DATE = DateTime.Now;
                 db.SaveChanges();

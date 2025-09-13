@@ -18,6 +18,37 @@ namespace BusinessLayer
             return db.NHANVIENs.FirstOrDefault(x => x.MANV == idnv);
         }
 
+        public NHANVIEN_dto getItemFull(int id)
+        {
+            var item = db.NHANVIENs.FirstOrDefault(x=>x.MANV==id);
+            NHANVIEN_dto _nvdto = new NHANVIEN_dto();
+                _nvdto.MANV = item.MANV;
+                _nvdto.HOTEN = item.HOTEN;
+                _nvdto.GIOITINH = item.GIOITINH;
+                _nvdto.NGAYSINH = item.NGAYSINH;
+                _nvdto.SDT = item.SDT;
+                _nvdto.DIACHI = item.DIACHI;
+                _nvdto.EMAIL = item.EMAIL;
+                _nvdto.HINHANH = item.HINHANH;
+                _nvdto.DATHOIVIEC = item.DATHOIVIEC;
+                _nvdto.ID_PB = item.ID_PB;
+                var pb = db.PHONGBANs.FirstOrDefault(x => x.ID_PB == item.ID_PB);
+                _nvdto.TENPB = pb.TENPB;
+
+                _nvdto.ID_BP = item.ID_BP;
+                var bp = db.BOPHANs.FirstOrDefault(x => x.ID_BP == item.ID_BP);
+                _nvdto.TENBP = bp.TENBP;
+
+                _nvdto.ID_CV = item.ID_CV;
+                var cv = db.CHUCVUs.FirstOrDefault(x => x.ID_CV == item.ID_CV);
+                _nvdto.TENCV = cv.TENCV;
+
+                _nvdto.ID_TD = item.ID_TD;
+                var td = db.TRINHDOes.FirstOrDefault(x => x.ID_TD == item.ID_TD);
+                _nvdto.TENTD = td.TENTD;
+                return _nvdto;
+        }
+
         //LẤY VỀ DANH SÁCH
         public List<NHANVIEN> getList()
         {

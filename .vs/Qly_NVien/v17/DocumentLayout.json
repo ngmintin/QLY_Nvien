@@ -3,32 +3,48 @@
   "WorkspaceRootPath": "D:\\QLYNV\\Project\\Qly_NVien\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2015EEA1-8402-4860-B80E-501460727CE8}|Qly_NVien\\Qly_NVien.csproj|d:\\qlynv\\project\\qly_nvien\\qly_nvien\\test.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{2015EEA1-8402-4860-B80E-501460727CE8}|Qly_NVien\\Qly_NVien.csproj|solutionrelative:qly_nvien\\test.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{2015EEA1-8402-4860-B80E-501460727CE8}|Qly_NVien\\Qly_NVien.csproj|d:\\qlynv\\project\\qly_nvien\\qly_nvien\\chamcong\\formbangcongchitiet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2015EEA1-8402-4860-B80E-501460727CE8}|Qly_NVien\\Qly_NVien.csproj|solutionrelative:qly_nvien\\chamcong\\formbangcongchitiet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2015EEA1-8402-4860-B80E-501460727CE8}|Qly_NVien\\Qly_NVien.csproj|D:\\QLYNV\\Project\\Qly_NVien\\qly_nvien\\tinhluong\\formbaocao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{2015EEA1-8402-4860-B80E-501460727CE8}|Qly_NVien\\Qly_NVien.csproj|solutionrelative:qly_nvien\\tinhluong\\formbaocao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{2015EEA1-8402-4860-B80E-501460727CE8}|Qly_NVien\\Qly_NVien.csproj|d:\\qlynv\\project\\qly_nvien\\qly_nvien\\chamcong\\formbangcongchitiet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2015EEA1-8402-4860-B80E-501460727CE8}|Qly_NVien\\Qly_NVien.csproj|solutionrelative:qly_nvien\\chamcong\\formbangcongchitiet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2015EEA1-8402-4860-B80E-501460727CE8}|Qly_NVien\\Qly_NVien.csproj|d:\\qlynv\\project\\qly_nvien\\qly_nvien\\tinhluong\\formbaocao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2015EEA1-8402-4860-B80E-501460727CE8}|Qly_NVien\\Qly_NVien.csproj|solutionrelative:qly_nvien\\tinhluong\\formbaocao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{850A8F48-50DC-4F85-8A52-FDDEF15DBBCA}|BusinessLayer\\BusinessLayer.csproj|d:\\qlynv\\project\\qly_nvien\\businesslayer\\kycongchitiet_bs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{850A8F48-50DC-4F85-8A52-FDDEF15DBBCA}|BusinessLayer\\BusinessLayer.csproj|solutionrelative:businesslayer\\kycongchitiet_bs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{850A8F48-50DC-4F85-8A52-FDDEF15DBBCA}|BusinessLayer\\BusinessLayer.csproj|d:\\qlynv\\project\\qly_nvien\\businesslayer\\kycong_bs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{850A8F48-50DC-4F85-8A52-FDDEF15DBBCA}|BusinessLayer\\BusinessLayer.csproj|solutionrelative:businesslayer\\kycong_bs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2015EEA1-8402-4860-B80E-501460727CE8}|Qly_NVien\\Qly_NVien.csproj|d:\\qlynv\\project\\qly_nvien\\qly_nvien\\chamcong\\formbangcong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2015EEA1-8402-4860-B80E-501460727CE8}|Qly_NVien\\Qly_NVien.csproj|solutionrelative:qly_nvien\\chamcong\\formbangcong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2015EEA1-8402-4860-B80E-501460727CE8}|Qly_NVien\\Qly_NVien.csproj|d:\\qlynv\\project\\qly_nvien\\qly_nvien\\chamcong\\formbangcong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2015EEA1-8402-4860-B80E-501460727CE8}|Qly_NVien\\Qly_NVien.csproj|solutionrelative:qly_nvien\\chamcong\\formbangcong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0B72FF65-5B44-4C4E-A2E1-71BABBFA1610}|DataLayer\\DataLayer.csproj|d:\\qlynv\\project\\qly_nvien\\datalayer\\qly_nvien.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|",
       "RelativeMoniker": "D:0:0:{0B72FF65-5B44-4C4E-A2E1-71BABBFA1610}|DataLayer\\DataLayer.csproj|solutionrelative:datalayer\\qly_nvien.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{850A8F48-50DC-4F85-8A52-FDDEF15DBBCA}|BusinessLayer\\BusinessLayer.csproj|d:\\qlynv\\project\\qly_nvien\\businesslayer\\baocao_bs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{850A8F48-50DC-4F85-8A52-FDDEF15DBBCA}|BusinessLayer\\BusinessLayer.csproj|solutionrelative:businesslayer\\baocao_bs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2015EEA1-8402-4860-B80E-501460727CE8}|Qly_NVien\\Qly_NVien.csproj|d:\\qlynv\\project\\qly_nvien\\qly_nvien\\formtrangchu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2015EEA1-8402-4860-B80E-501460727CE8}|Qly_NVien\\Qly_NVien.csproj|solutionrelative:qly_nvien\\formtrangchu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0B72FF65-5B44-4C4E-A2E1-71BABBFA1610}|DataLayer\\DataLayer.csproj|d:\\qlynv\\project\\qly_nvien\\datalayer\\nhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0B72FF65-5B44-4C4E-A2E1-71BABBFA1610}|DataLayer\\DataLayer.csproj|solutionrelative:datalayer\\nhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2015EEA1-8402-4860-B80E-501460727CE8}|Qly_NVien\\Qly_NVien.csproj|d:\\qlynv\\project\\qly_nvien\\qly_nvien\\formtrangchu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2015EEA1-8402-4860-B80E-501460727CE8}|Qly_NVien\\Qly_NVien.csproj|solutionrelative:qly_nvien\\formtrangchu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2015EEA1-8402-4860-B80E-501460727CE8}|Qly_NVien\\Qly_NVien.csproj|d:\\qlynv\\project\\qly_nvien\\qly_nvien\\chamcong\\formloaicong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2015EEA1-8402-4860-B80E-501460727CE8}|Qly_NVien\\Qly_NVien.csproj|solutionrelative:qly_nvien\\chamcong\\formloaicong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2015EEA1-8402-4860-B80E-501460727CE8}|Qly_NVien\\Qly_NVien.csproj|D:\\QLYNV\\Project\\Qly_NVien\\qly_nvien\\chamcong\\formloaicong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{2015EEA1-8402-4860-B80E-501460727CE8}|Qly_NVien\\Qly_NVien.csproj|solutionrelative:qly_nvien\\chamcong\\formloaicong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,7 +54,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -46,90 +62,142 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "TEST.cs [Design]",
-              "DocumentMoniker": "D:\\QLYNV\\Project\\Qly_NVien\\Qly_NVien\\TEST.cs",
-              "RelativeDocumentMoniker": "Qly_NVien\\TEST.cs",
-              "ToolTip": "D:\\QLYNV\\Project\\Qly_NVien\\Qly_NVien\\TEST.cs [Design]",
-              "RelativeToolTip": "Qly_NVien\\TEST.cs [Design]",
+              "DocumentIndex": 1,
+              "Title": "FormBangCongChiTiet.cs",
+              "DocumentMoniker": "D:\\QLYNV\\Project\\Qly_NVien\\Qly_NVien\\CHAMCONG\\FormBangCongChiTiet.cs",
+              "RelativeDocumentMoniker": "Qly_NVien\\CHAMCONG\\FormBangCongChiTiet.cs",
+              "ToolTip": "D:\\QLYNV\\Project\\Qly_NVien\\Qly_NVien\\CHAMCONG\\FormBangCongChiTiet.cs",
+              "RelativeToolTip": "Qly_NVien\\CHAMCONG\\FormBangCongChiTiet.cs",
+              "ViewState": "AgIAAEoAAAAAAAAAAAAAwFwAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-13T05:24:56.871Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "FormLoaiCong.cs",
-              "DocumentMoniker": "D:\\QLYNV\\Project\\Qly_NVien\\Qly_NVien\\CHAMCONG\\FormLoaiCong.cs",
-              "RelativeDocumentMoniker": "Qly_NVien\\CHAMCONG\\FormLoaiCong.cs",
-              "ToolTip": "D:\\QLYNV\\Project\\Qly_NVien\\Qly_NVien\\CHAMCONG\\FormLoaiCong.cs",
-              "RelativeToolTip": "Qly_NVien\\CHAMCONG\\FormLoaiCong.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAA5wIsAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-13T04:19:38.616Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "FormBaoCao.cs",
-              "DocumentMoniker": "D:\\QLYNV\\Project\\Qly_NVien\\Qly_NVien\\TINHLUONG\\FormBaoCao.cs",
-              "RelativeDocumentMoniker": "Qly_NVien\\TINHLUONG\\FormBaoCao.cs",
-              "ToolTip": "D:\\QLYNV\\Project\\Qly_NVien\\Qly_NVien\\TINHLUONG\\FormBaoCao.cs",
-              "RelativeToolTip": "Qly_NVien\\TINHLUONG\\FormBaoCao.cs",
-              "ViewState": "AgIAAE4AAAAAAAAAAAAmwFcAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-13T04:19:32.918Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "BAOCAO_bs.cs",
-              "DocumentMoniker": "D:\\QLYNV\\Project\\Qly_NVien\\BusinessLayer\\BAOCAO_bs.cs",
-              "RelativeDocumentMoniker": "BusinessLayer\\BAOCAO_bs.cs",
-              "ToolTip": "D:\\QLYNV\\Project\\Qly_NVien\\BusinessLayer\\BAOCAO_bs.cs",
-              "RelativeToolTip": "BusinessLayer\\BAOCAO_bs.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABQAAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-13T04:07:58.017Z",
+              "WhenOpened": "2025-09-13T14:44:11.953Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "KYCONG_bs.cs",
+              "DocumentMoniker": "D:\\QLYNV\\Project\\Qly_NVien\\BusinessLayer\\KYCONG_bs.cs",
+              "RelativeDocumentMoniker": "BusinessLayer\\KYCONG_bs.cs",
+              "ToolTip": "D:\\QLYNV\\Project\\Qly_NVien\\BusinessLayer\\KYCONG_bs.cs",
+              "RelativeToolTip": "BusinessLayer\\KYCONG_bs.cs",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAIwDkAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-13T14:49:11.81Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "FormBangCong.cs",
+              "DocumentMoniker": "D:\\QLYNV\\Project\\Qly_NVien\\Qly_NVien\\CHAMCONG\\FormBangCong.cs",
+              "RelativeDocumentMoniker": "Qly_NVien\\CHAMCONG\\FormBangCong.cs",
+              "ToolTip": "D:\\QLYNV\\Project\\Qly_NVien\\Qly_NVien\\CHAMCONG\\FormBangCong.cs",
+              "RelativeToolTip": "Qly_NVien\\CHAMCONG\\FormBangCong.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAApwCwAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-13T14:45:09.709Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "KYCONGCHITIET_bs.cs",
+              "DocumentMoniker": "D:\\QLYNV\\Project\\Qly_NVien\\BusinessLayer\\KYCONGCHITIET_bs.cs",
+              "RelativeDocumentMoniker": "BusinessLayer\\KYCONGCHITIET_bs.cs",
+              "ToolTip": "D:\\QLYNV\\Project\\Qly_NVien\\BusinessLayer\\KYCONGCHITIET_bs.cs",
+              "RelativeToolTip": "BusinessLayer\\KYCONGCHITIET_bs.cs",
+              "ViewState": "AgIAAHYAAAAAAAAAAAAAAGsAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-13T14:48:52.231Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FormBangCongChiTiet.cs [Design]",
+              "DocumentMoniker": "D:\\QLYNV\\Project\\Qly_NVien\\Qly_NVien\\CHAMCONG\\FormBangCongChiTiet.cs",
+              "RelativeDocumentMoniker": "Qly_NVien\\CHAMCONG\\FormBangCongChiTiet.cs",
+              "ToolTip": "D:\\QLYNV\\Project\\Qly_NVien\\Qly_NVien\\CHAMCONG\\FormBangCongChiTiet.cs [Design]",
+              "RelativeToolTip": "Qly_NVien\\CHAMCONG\\FormBangCongChiTiet.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-13T14:42:06.569Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "FormBangCong.cs [Design]",
+              "DocumentMoniker": "D:\\QLYNV\\Project\\Qly_NVien\\Qly_NVien\\CHAMCONG\\FormBangCong.cs",
+              "RelativeDocumentMoniker": "Qly_NVien\\CHAMCONG\\FormBangCong.cs",
+              "ToolTip": "D:\\QLYNV\\Project\\Qly_NVien\\Qly_NVien\\CHAMCONG\\FormBangCong.cs [Design]",
+              "RelativeToolTip": "Qly_NVien\\CHAMCONG\\FormBangCong.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-13T14:45:03.396Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "QLY_NVIEN.edmx [Diagram1]",
               "DocumentMoniker": "D:\\QLYNV\\Project\\Qly_NVien\\DataLayer\\QLY_NVIEN.edmx",
               "RelativeDocumentMoniker": "DataLayer\\QLY_NVIEN.edmx",
               "ToolTip": "D:\\QLYNV\\Project\\Qly_NVien\\DataLayer\\QLY_NVIEN.edmx [Diagram1]",
               "RelativeToolTip": "DataLayer\\QLY_NVIEN.edmx [Diagram1]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001116|",
-              "WhenOpened": "2025-09-13T04:06:25.606Z",
+              "WhenOpened": "2025-09-13T15:29:19.718Z",
               "EditorCaption": " [Diagram1]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "FormBaoCao.cs [Design]",
-              "DocumentMoniker": "D:\\QLYNV\\Project\\Qly_NVien\\Qly_NVien\\TINHLUONG\\FormBaoCao.cs",
-              "RelativeDocumentMoniker": "Qly_NVien\\TINHLUONG\\FormBaoCao.cs",
-              "ToolTip": "D:\\QLYNV\\Project\\Qly_NVien\\Qly_NVien\\TINHLUONG\\FormBaoCao.cs [Design]",
-              "RelativeToolTip": "Qly_NVien\\TINHLUONG\\FormBaoCao.cs [Design]",
+              "DocumentIndex": 7,
+              "Title": "FormTrangChu.cs [Design]",
+              "DocumentMoniker": "D:\\QLYNV\\Project\\Qly_NVien\\Qly_NVien\\FormTrangChu.cs",
+              "RelativeDocumentMoniker": "Qly_NVien\\FormTrangChu.cs",
+              "ToolTip": "D:\\QLYNV\\Project\\Qly_NVien\\Qly_NVien\\FormTrangChu.cs [Design]",
+              "RelativeToolTip": "Qly_NVien\\FormTrangChu.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-13T03:44:34.227Z",
+              "WhenOpened": "2025-09-13T15:02:28.64Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "FormLoaiCong.cs [Design]",
+              "DocumentIndex": 8,
+              "Title": "NHANVIEN.cs",
+              "DocumentMoniker": "D:\\QLYNV\\Project\\Qly_NVien\\DataLayer\\NHANVIEN.cs",
+              "RelativeDocumentMoniker": "DataLayer\\NHANVIEN.cs",
+              "ToolTip": "D:\\QLYNV\\Project\\Qly_NVien\\DataLayer\\NHANVIEN.cs",
+              "RelativeToolTip": "DataLayer\\NHANVIEN.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAMwB0AAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-13T14:52:27.459Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "FormTrangChu.cs",
+              "DocumentMoniker": "D:\\QLYNV\\Project\\Qly_NVien\\Qly_NVien\\FormTrangChu.cs",
+              "RelativeDocumentMoniker": "Qly_NVien\\FormTrangChu.cs",
+              "ToolTip": "D:\\QLYNV\\Project\\Qly_NVien\\Qly_NVien\\FormTrangChu.cs",
+              "RelativeToolTip": "Qly_NVien\\FormTrangChu.cs",
+              "ViewState": "AgIAAHEAAAAAAAAAAAAqwIMAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-13T14:39:49.129Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "FormLoaiCong.cs",
               "DocumentMoniker": "D:\\QLYNV\\Project\\Qly_NVien\\Qly_NVien\\CHAMCONG\\FormLoaiCong.cs",
               "RelativeDocumentMoniker": "Qly_NVien\\CHAMCONG\\FormLoaiCong.cs",
-              "ToolTip": "D:\\QLYNV\\Project\\Qly_NVien\\Qly_NVien\\CHAMCONG\\FormLoaiCong.cs [Design]",
-              "RelativeToolTip": "Qly_NVien\\CHAMCONG\\FormLoaiCong.cs [Design]",
+              "ToolTip": "D:\\QLYNV\\Project\\Qly_NVien\\Qly_NVien\\CHAMCONG\\FormLoaiCong.cs",
+              "RelativeToolTip": "Qly_NVien\\CHAMCONG\\FormLoaiCong.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAgwIsAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-13T03:44:53.308Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-09-13T04:19:38.616Z",
+              "EditorCaption": ""
             }
           ]
         }

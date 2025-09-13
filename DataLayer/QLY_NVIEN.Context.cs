@@ -33,7 +33,6 @@ namespace DataLayer
         public virtual DbSet<CHAMCONG> CHAMCONGs { get; set; }
         public virtual DbSet<CHUCVU> CHUCVUs { get; set; }
         public virtual DbSet<HOPDONG> HOPDONGs { get; set; }
-        public virtual DbSet<KYCONG> KYCONGs { get; set; }
         public virtual DbSet<KYCONGCHITIET> KYCONGCHITIETs { get; set; }
         public virtual DbSet<KHENTHUONGKYLUAT> KHENTHUONGKYLUATs { get; set; }
         public virtual DbSet<LOAICA> LOAICAs { get; set; }
@@ -45,5 +44,6 @@ namespace DataLayer
         public virtual DbSet<PHONGBAN> PHONGBANs { get; set; }
         public virtual DbSet<TANGCA> TANGCAs { get; set; }
         public virtual DbSet<TRINHDO> TRINHDOes { get; set; }
+        public virtual DbSet<KYCONG> KYCONGs { get; set; }
     }
 }

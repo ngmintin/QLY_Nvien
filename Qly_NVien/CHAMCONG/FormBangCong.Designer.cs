@@ -37,6 +37,7 @@
             btnXoa = new DevExpress.XtraBars.BarButtonItem();
             btnLuu = new DevExpress.XtraBars.BarButtonItem();
             btnHuy = new DevExpress.XtraBars.BarButtonItem();
+            barButtonItemXemBangCong = new DevExpress.XtraBars.BarButtonItem();
             btDong = new DevExpress.XtraBars.BarButtonItem();
             bar3 = new DevExpress.XtraBars.Bar();
             barDockControlTop = new DevExpress.XtraBars.BarDockControl();
@@ -56,7 +57,6 @@
             gcDanhSach = new DevExpress.XtraGrid.GridControl();
             gvDanhSach = new DevExpress.XtraGrid.Views.Grid.GridView();
             DELETED_BY = new DevExpress.XtraGrid.Columns.GridColumn();
-            ID = new DevExpress.XtraGrid.Columns.GridColumn();
             MAKYCONG = new DevExpress.XtraGrid.Columns.GridColumn();
             NAM = new DevExpress.XtraGrid.Columns.GridColumn();
             KHOA = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -64,7 +64,6 @@
             NGAYCONGTRONGTHANG = new DevExpress.XtraGrid.Columns.GridColumn();
             MACTY = new DevExpress.XtraGrid.Columns.GridColumn();
             TRANGTHAI = new DevExpress.XtraGrid.Columns.GridColumn();
-            barButtonItemXemBangCong = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)barManager1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)splitContainerControl1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)splitContainerControl1.Panel1).BeginInit();
@@ -141,6 +140,14 @@
             btnHuy.ImageOptions.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("btnHuy.ImageOptions.SvgImage");
             btnHuy.Name = "btnHuy";
             btnHuy.ItemClick += btnHuy_ItemClick;
+            // 
+            // barButtonItemXemBangCong
+            // 
+            barButtonItemXemBangCong.Caption = "Xem bảng công";
+            barButtonItemXemBangCong.Id = 9;
+            barButtonItemXemBangCong.ImageOptions.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("barButtonItemXemBangCong.ImageOptions.SvgImage");
+            barButtonItemXemBangCong.Name = "barButtonItemXemBangCong";
+            barButtonItemXemBangCong.ItemClick += barButtonItemXemBangCong_ItemClick;
             // 
             // btDong
             // 
@@ -324,7 +331,7 @@
             // 
             // gvDanhSach
             // 
-            gvDanhSach.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] { DELETED_BY, ID, MAKYCONG, NAM, KHOA, NGAYTINHCONG, NGAYCONGTRONGTHANG, MACTY, TRANGTHAI });
+            gvDanhSach.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] { DELETED_BY, MAKYCONG, NAM, KHOA, NGAYTINHCONG, NGAYCONGTRONGTHANG, MACTY, TRANGTHAI });
             gvDanhSach.DetailHeight = 443;
             gvDanhSach.GridControl = gcDanhSach;
             gvDanhSach.Name = "gvDanhSach";
@@ -343,19 +350,6 @@
             DELETED_BY.VisibleIndex = 0;
             DELETED_BY.Width = 50;
             // 
-            // ID
-            // 
-            ID.AppearanceHeader.Font = new Font("Times New Roman", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            ID.AppearanceHeader.Options.UseFont = true;
-            ID.Caption = "ID";
-            ID.FieldName = "ID";
-            ID.MaxWidth = 80;
-            ID.MinWidth = 80;
-            ID.Name = "ID";
-            ID.Visible = true;
-            ID.VisibleIndex = 1;
-            ID.Width = 80;
-            // 
             // MAKYCONG
             // 
             MAKYCONG.AppearanceHeader.Font = new Font("Times New Roman", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
@@ -366,7 +360,7 @@
             MAKYCONG.MinWidth = 100;
             MAKYCONG.Name = "MAKYCONG";
             MAKYCONG.Visible = true;
-            MAKYCONG.VisibleIndex = 2;
+            MAKYCONG.VisibleIndex = 1;
             MAKYCONG.Width = 100;
             // 
             // NAM
@@ -379,7 +373,7 @@
             NAM.MinWidth = 80;
             NAM.Name = "NAM";
             NAM.Visible = true;
-            NAM.VisibleIndex = 3;
+            NAM.VisibleIndex = 2;
             NAM.Width = 80;
             // 
             // KHOA
@@ -392,7 +386,7 @@
             KHOA.MinWidth = 50;
             KHOA.Name = "KHOA";
             KHOA.Visible = true;
-            KHOA.VisibleIndex = 4;
+            KHOA.VisibleIndex = 3;
             KHOA.Width = 50;
             // 
             // NGAYTINHCONG
@@ -405,7 +399,7 @@
             NGAYTINHCONG.MinWidth = 150;
             NGAYTINHCONG.Name = "NGAYTINHCONG";
             NGAYTINHCONG.Visible = true;
-            NGAYTINHCONG.VisibleIndex = 5;
+            NGAYTINHCONG.VisibleIndex = 4;
             NGAYTINHCONG.Width = 150;
             // 
             // NGAYCONGTRONGTHANG
@@ -418,7 +412,7 @@
             NGAYCONGTRONGTHANG.MinWidth = 50;
             NGAYCONGTRONGTHANG.Name = "NGAYCONGTRONGTHANG";
             NGAYCONGTRONGTHANG.Visible = true;
-            NGAYCONGTRONGTHANG.VisibleIndex = 6;
+            NGAYCONGTRONGTHANG.VisibleIndex = 5;
             NGAYCONGTRONGTHANG.Width = 50;
             // 
             // MACTY
@@ -442,15 +436,8 @@
             TRANGTHAI.MinWidth = 200;
             TRANGTHAI.Name = "TRANGTHAI";
             TRANGTHAI.Visible = true;
-            TRANGTHAI.VisibleIndex = 7;
+            TRANGTHAI.VisibleIndex = 6;
             TRANGTHAI.Width = 200;
-            // 
-            // barButtonItemXemBangCong
-            // 
-            barButtonItemXemBangCong.Caption = "Xem bảng công";
-            barButtonItemXemBangCong.Id = 9;
-            barButtonItemXemBangCong.ImageOptions.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("barButtonItem1.ImageOptions.SvgImage");
-            barButtonItemXemBangCong.Name = "barButtonItemXemBangCong";
             // 
             // FormBangCong
             // 
@@ -508,7 +495,6 @@
         private DevExpress.XtraGrid.GridControl gcDanhSach;
         private DevExpress.XtraGrid.Views.Grid.GridView gvDanhSach;
         private DevExpress.XtraGrid.Columns.GridColumn DELETED_BY;
-        private DevExpress.XtraGrid.Columns.GridColumn ID;
         private DevExpress.XtraGrid.Columns.GridColumn MAKYCONG;
         private DevExpress.XtraGrid.Columns.GridColumn NAM;
         private DevExpress.XtraGrid.Columns.GridColumn KHOA;

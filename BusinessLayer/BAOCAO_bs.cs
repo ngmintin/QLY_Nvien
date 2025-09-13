@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BusinessLayer.DTO_bs;
 using DataLayer;
 
 namespace BusinessLayer
@@ -16,9 +17,41 @@ namespace BusinessLayer
             return db.NHANVIEN_BAOCAO.FirstOrDefault(x => x.ID == id);
         }
 
-        public List<NHANVIEN_BAOCAO> getList()
+        public List<NHANVIEN_BAOCAO_dto> getListFull()
         {
-            return db.NHANVIEN_BAOCAO.ToList();
+            var lstNVBC = db.NHANVIEN_BAOCAO.ToList();
+            List<NHANVIEN_BAOCAO_dto> lstdto = new List<NHANVIEN_BAOCAO_dto>();
+            NHANVIEN_BAOCAO_dto nvbcdto;
+            NHANVIEN_bs _nhanvien = new NHANVIEN_bs();
+            foreach(var item in lstNVBC)
+            {
+                nvbcdto = new NHANVIEN_BAOCAO_dto();
+                nvbcdto.ID = item.ID;
+                nvbcdto.MANV = item.MANV;
+                var nv = _nhanvien.getItemFull(int.Parse(item.MANV.ToString()));
+                nvbcdto.HOTEN = nv.HOTEN;
+                nvbcdto.TENCV = nv.TENCV;
+                nvbcdto.ID_BC = item.ID_BC;
+                var bc = db.BAOCAOs.FirstOrDefault(x => x.ID_BC == item.ID_BC);
+                nvbcdto.TENBC = bc.TENBC;
+                nvbcdto.NOIDUNG = item.NOIDUNG;
+                nvbcdto.NGAY = item.NGAY;
+                nvbcdto.SOTIEN = item.SOTIEN;
+                nvbcdto.UPDATED_BY = item.UPDATED_BY;
+                nvbcdto.UPDATED_DATE = item.UPDATED_DATE;
+                nvbcdto.CREATED_BY = item.CREATED_BY;
+                nvbcdto.CREATED_DATE = item.CREATED_DATE;
+                nvbcdto.DELETED_BY = item.DELETED_BY;
+                nvbcdto.DELETED_DATE = item.DELETED_DATE;
+                lstdto.Add(nvbcdto);
+            }    
+
+            return lstdto;
+        }
+
+        public BAOCAO getItemBC(int id)
+        {
+            return db.BAOCAOs.FirstOrDefault(x=>x.ID_BC==id);
         }
 
         public List<BAOCAO> getListBC()

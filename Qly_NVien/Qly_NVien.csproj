@@ -10,6 +10,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Include="BangCong_Layput.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="DevExpress.Win.Design" Version="25.1.4" />
     <PackageReference Include="EntityFramework" Version="6.5.1" />
   </ItemGroup>

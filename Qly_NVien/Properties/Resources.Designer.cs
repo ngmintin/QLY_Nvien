@@ -63,6 +63,26 @@ namespace Qly_NVien.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _532045587_1215566020597463_7311381528141733821_n {
+            get {
+                object obj = ResourceManager.GetObject("532045587_1215566020597463_7311381528141733821_n", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ball4 {
+            get {
+                object obj = ResourceManager.GetObject("ball4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap dribble {
             get {
                 object obj = ResourceManager.GetObject("dribble", resourceCulture);

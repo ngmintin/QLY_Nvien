@@ -53,6 +53,7 @@
             searchLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
             MANV = new DevExpress.XtraGrid.Columns.GridColumn();
             HOTEN = new DevExpress.XtraGrid.Columns.GridColumn();
+            TENCV = new DevExpress.XtraGrid.Columns.GridColumn();
             spinEditSoTien = new DevExpress.XtraEditors.SpinEdit();
             labelControl3 = new DevExpress.XtraEditors.LabelControl();
             labelControl2 = new DevExpress.XtraEditors.LabelControl();
@@ -61,9 +62,13 @@
             gcDanhSach = new DevExpress.XtraGrid.GridControl();
             gvDanhSach = new DevExpress.XtraGrid.Views.Grid.GridView();
             DELETED_BY = new DevExpress.XtraGrid.Columns.GridColumn();
-            ID_LC = new DevExpress.XtraGrid.Columns.GridColumn();
-            TENLC = new DevExpress.XtraGrid.Columns.GridColumn();
-            HESO = new DevExpress.XtraGrid.Columns.GridColumn();
+            ID = new DevExpress.XtraGrid.Columns.GridColumn();
+            clHOTEN = new DevExpress.XtraGrid.Columns.GridColumn();
+            TENBC = new DevExpress.XtraGrid.Columns.GridColumn();
+            SOTIEN = new DevExpress.XtraGrid.Columns.GridColumn();
+            NOIDUNG = new DevExpress.XtraGrid.Columns.GridColumn();
+            IDNV = new DevExpress.XtraGrid.Columns.GridColumn();
+            ID_BC = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)barManager1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)splitContainerControl1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)splitContainerControl1.Panel1).BeginInit();
@@ -280,7 +285,7 @@
             // 
             // searchLookUpEdit1View
             // 
-            searchLookUpEdit1View.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] { MANV, HOTEN });
+            searchLookUpEdit1View.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] { MANV, HOTEN, TENCV });
             searchLookUpEdit1View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
             searchLookUpEdit1View.Name = "searchLookUpEdit1View";
             searchLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
@@ -311,6 +316,19 @@
             HOTEN.Visible = true;
             HOTEN.VisibleIndex = 1;
             HOTEN.Width = 200;
+            // 
+            // TENCV
+            // 
+            TENCV.AppearanceHeader.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            TENCV.AppearanceHeader.Options.UseFont = true;
+            TENCV.Caption = "CHỨC VỤ";
+            TENCV.FieldName = "TENCV";
+            TENCV.MaxWidth = 100;
+            TENCV.MinWidth = 100;
+            TENCV.Name = "TENCV";
+            TENCV.Visible = true;
+            TENCV.VisibleIndex = 2;
+            TENCV.Width = 100;
             // 
             // spinEditSoTien
             // 
@@ -383,7 +401,7 @@
             // 
             // gvDanhSach
             // 
-            gvDanhSach.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] { DELETED_BY, ID_LC, TENLC, HESO });
+            gvDanhSach.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] { DELETED_BY, ID, clHOTEN, TENBC, SOTIEN, NOIDUNG, IDNV, ID_BC });
             gvDanhSach.DetailHeight = 443;
             gvDanhSach.GridControl = gcDanhSach;
             gvDanhSach.Name = "gvDanhSach";
@@ -402,44 +420,86 @@
             DELETED_BY.VisibleIndex = 0;
             DELETED_BY.Width = 50;
             // 
-            // ID_LC
+            // ID
             // 
-            ID_LC.AppearanceHeader.Font = new Font("Times New Roman", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            ID_LC.AppearanceHeader.Options.UseFont = true;
-            ID_LC.Caption = "ID";
-            ID_LC.FieldName = "ID_LC";
-            ID_LC.MaxWidth = 80;
-            ID_LC.MinWidth = 80;
-            ID_LC.Name = "ID_LC";
-            ID_LC.Visible = true;
-            ID_LC.VisibleIndex = 1;
-            ID_LC.Width = 80;
+            ID.AppearanceHeader.Font = new Font("Times New Roman", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            ID.AppearanceHeader.Options.UseFont = true;
+            ID.Caption = "ID";
+            ID.FieldName = "ID";
+            ID.MaxWidth = 80;
+            ID.MinWidth = 80;
+            ID.Name = "ID";
+            ID.Width = 80;
             // 
-            // TENLC
+            // clHOTEN
             // 
-            TENLC.AppearanceHeader.Font = new Font("Times New Roman", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            TENLC.AppearanceHeader.Options.UseFont = true;
-            TENLC.Caption = "LOẠI CÔNG";
-            TENLC.FieldName = "TENLC";
-            TENLC.MaxWidth = 200;
-            TENLC.MinWidth = 200;
-            TENLC.Name = "TENLC";
-            TENLC.Visible = true;
-            TENLC.VisibleIndex = 2;
-            TENLC.Width = 200;
+            clHOTEN.AppearanceHeader.Font = new Font("Times New Roman", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            clHOTEN.AppearanceHeader.Options.UseFont = true;
+            clHOTEN.Caption = "HỌ TÊN ";
+            clHOTEN.FieldName = "HOTEN";
+            clHOTEN.MaxWidth = 200;
+            clHOTEN.MinWidth = 200;
+            clHOTEN.Name = "clHOTEN";
+            clHOTEN.Visible = true;
+            clHOTEN.VisibleIndex = 1;
+            clHOTEN.Width = 200;
             // 
-            // HESO
+            // TENBC
             // 
-            HESO.AppearanceHeader.Font = new Font("Times New Roman", 9.75F, FontStyle.Bold);
-            HESO.AppearanceHeader.Options.UseFont = true;
-            HESO.Caption = "HỆ SỐ";
-            HESO.FieldName = "HESO";
-            HESO.MaxWidth = 100;
-            HESO.MinWidth = 100;
-            HESO.Name = "HESO";
-            HESO.Visible = true;
-            HESO.VisibleIndex = 3;
-            HESO.Width = 100;
+            TENBC.AppearanceHeader.Font = new Font("Times New Roman", 9.75F, FontStyle.Bold);
+            TENBC.AppearanceHeader.Options.UseFont = true;
+            TENBC.Caption = "LOẠI BÁO CÁO";
+            TENBC.FieldName = "TENBC";
+            TENBC.MaxWidth = 100;
+            TENBC.MinWidth = 100;
+            TENBC.Name = "TENBC";
+            TENBC.Visible = true;
+            TENBC.VisibleIndex = 2;
+            TENBC.Width = 100;
+            // 
+            // SOTIEN
+            // 
+            SOTIEN.AppearanceHeader.Font = new Font("Times New Roman", 9.75F, FontStyle.Bold);
+            SOTIEN.AppearanceHeader.Options.UseFont = true;
+            SOTIEN.Caption = "SỐ TIỀN";
+            SOTIEN.FieldName = "SOTIEN";
+            SOTIEN.MaxWidth = 100;
+            SOTIEN.MinWidth = 100;
+            SOTIEN.Name = "SOTIEN";
+            SOTIEN.Visible = true;
+            SOTIEN.VisibleIndex = 3;
+            SOTIEN.Width = 100;
+            // 
+            // NOIDUNG
+            // 
+            NOIDUNG.AppearanceHeader.Font = new Font("Times New Roman", 9.75F, FontStyle.Bold);
+            NOIDUNG.AppearanceHeader.Options.UseFont = true;
+            NOIDUNG.Caption = "NỘI DUNG";
+            NOIDUNG.FieldName = "NOIDUNG";
+            NOIDUNG.MaxWidth = 300;
+            NOIDUNG.MinWidth = 300;
+            NOIDUNG.Name = "NOIDUNG";
+            NOIDUNG.Visible = true;
+            NOIDUNG.VisibleIndex = 4;
+            NOIDUNG.Width = 300;
+            // 
+            // IDNV
+            // 
+            IDNV.Caption = "MANV";
+            IDNV.FieldName = "IDNV";
+            IDNV.MaxWidth = 50;
+            IDNV.MinWidth = 50;
+            IDNV.Name = "IDNV";
+            IDNV.Width = 50;
+            // 
+            // ID_BC
+            // 
+            ID_BC.Caption = "ID_BC";
+            ID_BC.FieldName = "ID_BC";
+            ID_BC.MaxWidth = 50;
+            ID_BC.MinWidth = 50;
+            ID_BC.Name = "ID_BC";
+            ID_BC.Width = 50;
             // 
             // FormBaoCao
             // 
@@ -498,9 +558,9 @@
         private DevExpress.XtraGrid.GridControl gcDanhSach;
         private DevExpress.XtraGrid.Views.Grid.GridView gvDanhSach;
         private DevExpress.XtraGrid.Columns.GridColumn DELETED_BY;
-        private DevExpress.XtraGrid.Columns.GridColumn ID_LC;
-        private DevExpress.XtraGrid.Columns.GridColumn TENLC;
-        private DevExpress.XtraGrid.Columns.GridColumn HESO;
+        private DevExpress.XtraGrid.Columns.GridColumn ID;
+        private DevExpress.XtraGrid.Columns.GridColumn clHOTEN;
+        private DevExpress.XtraGrid.Columns.GridColumn TENBC;
         private ComboBox comboBoxBaoCao;
         private DevExpress.XtraEditors.SearchLookUpEdit searchLookUpEditNhanVien;
         private DevExpress.XtraGrid.Views.Grid.GridView searchLookUpEdit1View;
@@ -509,5 +569,10 @@
         private DevExpress.XtraEditors.LabelControl labelControl4;
         private DevExpress.XtraGrid.Columns.GridColumn MANV;
         private DevExpress.XtraGrid.Columns.GridColumn HOTEN;
+        private DevExpress.XtraGrid.Columns.GridColumn TENCV;
+        private DevExpress.XtraGrid.Columns.GridColumn SOTIEN;
+        private DevExpress.XtraGrid.Columns.GridColumn NOIDUNG;
+        private DevExpress.XtraGrid.Columns.GridColumn IDNV;
+        private DevExpress.XtraGrid.Columns.GridColumn ID_BC;
     }
 }
