@@ -57,8 +57,10 @@
             labelControl1 = new DevExpress.XtraEditors.LabelControl();
             gcBangCongChiTiet = new DevExpress.XtraGrid.GridControl();
             gvBangCongChiTiet = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridView();
+            THONGTINNHANVIEN = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             colMaNV = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             colHoTen = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            NGAYCONGCT = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             colD1 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             colD2 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             colD3 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
@@ -96,8 +98,6 @@
             CONGNGAYLE = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             CONGCHUNHAT = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             TONGNGAYCONG = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
-            THONGTINNHANVIEN = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
-            NGAYCONGCT = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             ((System.ComponentModel.ISupportInitialize)barManager1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)splitContainerControl1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)splitContainerControl1.Panel1).BeginInit();
@@ -407,6 +407,21 @@
             gvBangCongChiTiet.RowHeight = 28;
             gvBangCongChiTiet.VertScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Always;
             // 
+            // THONGTINNHANVIEN
+            // 
+            THONGTINNHANVIEN.AppearanceHeader.BackColor = Color.FromArgb(192, 255, 255);
+            THONGTINNHANVIEN.AppearanceHeader.Font = new Font("Times New Roman", 9.75F, FontStyle.Bold);
+            THONGTINNHANVIEN.AppearanceHeader.Options.UseBackColor = true;
+            THONGTINNHANVIEN.AppearanceHeader.Options.UseFont = true;
+            THONGTINNHANVIEN.Caption = "THÔNG TIN NHÂN VIÊN";
+            THONGTINNHANVIEN.Columns.Add(colMaNV);
+            THONGTINNHANVIEN.Columns.Add(colHoTen);
+            THONGTINNHANVIEN.Fixed = DevExpress.XtraGrid.Columns.FixedStyle.Left;
+            THONGTINNHANVIEN.Name = "THONGTINNHANVIEN";
+            THONGTINNHANVIEN.RowCount = 2;
+            THONGTINNHANVIEN.VisibleIndex = 0;
+            THONGTINNHANVIEN.Width = 274;
+            // 
             // colMaNV
             // 
             colMaNV.Caption = "MANV";
@@ -427,6 +442,55 @@
             colHoTen.OptionsColumn.FixedWidth = true;
             colHoTen.Visible = true;
             colHoTen.Width = 200;
+            // 
+            // NGAYCONGCT
+            // 
+            NGAYCONGCT.AppearanceHeader.BackColor = Color.FromArgb(192, 255, 255);
+            NGAYCONGCT.AppearanceHeader.Font = new Font("Times New Roman", 9.75F, FontStyle.Bold);
+            NGAYCONGCT.AppearanceHeader.Options.UseBackColor = true;
+            NGAYCONGCT.AppearanceHeader.Options.UseFont = true;
+            NGAYCONGCT.Caption = "NGÀY CÔNG";
+            NGAYCONGCT.Columns.Add(colD1);
+            NGAYCONGCT.Columns.Add(colD2);
+            NGAYCONGCT.Columns.Add(colD3);
+            NGAYCONGCT.Columns.Add(colD4);
+            NGAYCONGCT.Columns.Add(colD5);
+            NGAYCONGCT.Columns.Add(colD6);
+            NGAYCONGCT.Columns.Add(colD7);
+            NGAYCONGCT.Columns.Add(colD8);
+            NGAYCONGCT.Columns.Add(colD9);
+            NGAYCONGCT.Columns.Add(colD10);
+            NGAYCONGCT.Columns.Add(colD11);
+            NGAYCONGCT.Columns.Add(colD12);
+            NGAYCONGCT.Columns.Add(colD13);
+            NGAYCONGCT.Columns.Add(colD14);
+            NGAYCONGCT.Columns.Add(colD15);
+            NGAYCONGCT.Columns.Add(colD16);
+            NGAYCONGCT.Columns.Add(colD17);
+            NGAYCONGCT.Columns.Add(colD18);
+            NGAYCONGCT.Columns.Add(colD19);
+            NGAYCONGCT.Columns.Add(colD20);
+            NGAYCONGCT.Columns.Add(colD21);
+            NGAYCONGCT.Columns.Add(colD22);
+            NGAYCONGCT.Columns.Add(colD23);
+            NGAYCONGCT.Columns.Add(colD24);
+            NGAYCONGCT.Columns.Add(colD25);
+            NGAYCONGCT.Columns.Add(colD26);
+            NGAYCONGCT.Columns.Add(colD27);
+            NGAYCONGCT.Columns.Add(colD28);
+            NGAYCONGCT.Columns.Add(colD29);
+            NGAYCONGCT.Columns.Add(colD30);
+            NGAYCONGCT.Columns.Add(colD31);
+            NGAYCONGCT.Columns.Add(NGAYCONG);
+            NGAYCONGCT.Columns.Add(NGHIKHONGPHEP);
+            NGAYCONGCT.Columns.Add(NGAYPHEP);
+            NGAYCONGCT.Columns.Add(CONGNGAYLE);
+            NGAYCONGCT.Columns.Add(CONGCHUNHAT);
+            NGAYCONGCT.Columns.Add(TONGNGAYCONG);
+            NGAYCONGCT.Name = "NGAYCONGCT";
+            NGAYCONGCT.RowCount = 2;
+            NGAYCONGCT.VisibleIndex = 1;
+            NGAYCONGCT.Width = 2810;
             // 
             // colD1
             // 
@@ -927,70 +991,6 @@
             TONGNGAYCONG.Name = "TONGNGAYCONG";
             TONGNGAYCONG.Visible = true;
             TONGNGAYCONG.Width = 140;
-            // 
-            // THONGTINNHANVIEN
-            // 
-            THONGTINNHANVIEN.AppearanceHeader.BackColor = Color.FromArgb(192, 255, 255);
-            THONGTINNHANVIEN.AppearanceHeader.Font = new Font("Times New Roman", 9.75F, FontStyle.Bold);
-            THONGTINNHANVIEN.AppearanceHeader.Options.UseBackColor = true;
-            THONGTINNHANVIEN.AppearanceHeader.Options.UseFont = true;
-            THONGTINNHANVIEN.Caption = "THÔNG TIN NHÂN VIÊN";
-            THONGTINNHANVIEN.Columns.Add(colMaNV);
-            THONGTINNHANVIEN.Columns.Add(colHoTen);
-            THONGTINNHANVIEN.Fixed = DevExpress.XtraGrid.Columns.FixedStyle.Left;
-            THONGTINNHANVIEN.Name = "THONGTINNHANVIEN";
-            THONGTINNHANVIEN.RowCount = 2;
-            THONGTINNHANVIEN.VisibleIndex = 0;
-            THONGTINNHANVIEN.Width = 274;
-            // 
-            // NGAYCONGCT
-            // 
-            NGAYCONGCT.AppearanceHeader.BackColor = Color.FromArgb(192, 255, 255);
-            NGAYCONGCT.AppearanceHeader.Font = new Font("Times New Roman", 9.75F, FontStyle.Bold);
-            NGAYCONGCT.AppearanceHeader.Options.UseBackColor = true;
-            NGAYCONGCT.AppearanceHeader.Options.UseFont = true;
-            NGAYCONGCT.Caption = "NGÀY CÔNG";
-            NGAYCONGCT.Columns.Add(colD1);
-            NGAYCONGCT.Columns.Add(colD2);
-            NGAYCONGCT.Columns.Add(colD3);
-            NGAYCONGCT.Columns.Add(colD4);
-            NGAYCONGCT.Columns.Add(colD5);
-            NGAYCONGCT.Columns.Add(colD6);
-            NGAYCONGCT.Columns.Add(colD7);
-            NGAYCONGCT.Columns.Add(colD8);
-            NGAYCONGCT.Columns.Add(colD9);
-            NGAYCONGCT.Columns.Add(colD10);
-            NGAYCONGCT.Columns.Add(colD11);
-            NGAYCONGCT.Columns.Add(colD12);
-            NGAYCONGCT.Columns.Add(colD13);
-            NGAYCONGCT.Columns.Add(colD14);
-            NGAYCONGCT.Columns.Add(colD15);
-            NGAYCONGCT.Columns.Add(colD16);
-            NGAYCONGCT.Columns.Add(colD17);
-            NGAYCONGCT.Columns.Add(colD18);
-            NGAYCONGCT.Columns.Add(colD19);
-            NGAYCONGCT.Columns.Add(colD20);
-            NGAYCONGCT.Columns.Add(colD21);
-            NGAYCONGCT.Columns.Add(colD22);
-            NGAYCONGCT.Columns.Add(colD23);
-            NGAYCONGCT.Columns.Add(colD24);
-            NGAYCONGCT.Columns.Add(colD25);
-            NGAYCONGCT.Columns.Add(colD26);
-            NGAYCONGCT.Columns.Add(colD27);
-            NGAYCONGCT.Columns.Add(colD28);
-            NGAYCONGCT.Columns.Add(colD29);
-            NGAYCONGCT.Columns.Add(colD30);
-            NGAYCONGCT.Columns.Add(colD31);
-            NGAYCONGCT.Columns.Add(NGAYCONG);
-            NGAYCONGCT.Columns.Add(NGHIKHONGPHEP);
-            NGAYCONGCT.Columns.Add(NGAYPHEP);
-            NGAYCONGCT.Columns.Add(CONGNGAYLE);
-            NGAYCONGCT.Columns.Add(CONGCHUNHAT);
-            NGAYCONGCT.Columns.Add(TONGNGAYCONG);
-            NGAYCONGCT.Name = "NGAYCONGCT";
-            NGAYCONGCT.RowCount = 2;
-            NGAYCONGCT.VisibleIndex = 1;
-            NGAYCONGCT.Width = 2810;
             // 
             // FormBangCongChiTiet
             // 
