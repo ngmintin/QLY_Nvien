@@ -7,6 +7,12 @@
     <Compile Update="CHAMCONG\FormBangCongChiTiet.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="CHAMCONG\FormBangLuong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="CHAMCONG\FormCapNhatNgayCong.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="CHAMCONG\FormLoaiCa.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -36,6 +42,12 @@
     </Compile>
     <Compile Update="FormLayMatKhau.cs">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormLoading.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormLoading.Designer.cs">
+      <SubType>Code</SubType>
     </Compile>
     <Compile Update="FormNhanVien.cs">
       <SubType>Form</SubType>
@@ -76,5 +88,10 @@
     <Compile Update="TINHLUONG\FormBaoCao.cs">
       <SubType>Form</SubType>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="FormLoading.resx">
+      <SubType>Code</SubType>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>

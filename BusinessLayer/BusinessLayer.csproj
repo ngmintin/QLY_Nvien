@@ -54,6 +54,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BANGLUONG_bs.cs" />
     <Compile Include="BAOCAO_bs.cs" />
     <Compile Include="BOPHAN_bs.cs" />
     <Compile Include="CHUCVU_bs.cs" />
@@ -70,6 +71,7 @@
     <Compile Include="KYCONG_bs.cs" />
     <Compile Include="LOAICA_bs.cs" />
     <Compile Include="LOAICONG_bs.cs" />
+    <Compile Include="MyFunctions_bs.cs" />
     <Compile Include="NHANVIEN_bs.cs" />
     <Compile Include="NHANVIEN_NANGLUONG_bs.cs" />
     <Compile Include="NHANVIEN_THOIVIEC_bs.cs" />

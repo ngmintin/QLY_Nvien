@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Qly_NVien
+namespace BusinessLayer
 {
-    public class Functions
+    public class MyFunctions_bs
     {
         //ĐẾM SỐ NGÀY LÀM VIỆC TRONG THÁNG
         public static int demSoNgayLamViecTrongThang(int thang, int nam)
@@ -14,15 +14,15 @@ namespace Qly_NVien
             int dem = 0;
             DateTime f = new DateTime(nam, thang, 01);
             int x = f.Month + 1;
-            while(f.Month<x)
+            while (f.Month < x)
             {
                 dem = dem + 1;
-                if(f.DayOfWeek== DayOfWeek.Sunday)
+                if (f.DayOfWeek == DayOfWeek.Sunday)
                 {
                     dem = dem - 1;
                 }
                 f = f.AddDays(1);
-            }    
+            }
             return dem;
         }
         public static int laySoNgayCuaThang(int thang, int nam)
@@ -34,7 +34,7 @@ namespace Qly_NVien
         {
             string thu = "";
             DateTime newDate = new DateTime(tuan, thang, ngay);
-            switch(newDate.DayOfWeek.ToString())
+            switch (newDate.DayOfWeek.ToString())
             {
                 case "Monday":
                     thu = "Thứ Hai";

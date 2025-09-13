@@ -56,6 +56,8 @@
             labelControl2 = new DevExpress.XtraEditors.LabelControl();
             labelControl1 = new DevExpress.XtraEditors.LabelControl();
             gcBangCongChiTiet = new DevExpress.XtraGrid.GridControl();
+            contextMenuStrip1 = new ContextMenuStrip(components);
+            mnCapNhatNgayCong = new ToolStripMenuItem();
             gvBangCongChiTiet = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridView();
             THONGTINNHANVIEN = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             colMaNV = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
@@ -106,6 +108,7 @@
             splitContainerControl1.Panel2.SuspendLayout();
             splitContainerControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)gcBangCongChiTiet).BeginInit();
+            contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)gvBangCongChiTiet).BeginInit();
             SuspendLayout();
             // 
@@ -357,6 +360,7 @@
             // gcBangCongChiTiet
             // 
             gcBangCongChiTiet.Dock = DockStyle.Fill;
+            gcBangCongChiTiet.EmbeddedNavigator.ContextMenuStrip = contextMenuStrip1;
             gcBangCongChiTiet.EmbeddedNavigator.Margin = new Padding(4);
             gcBangCongChiTiet.Location = new Point(0, 0);
             gcBangCongChiTiet.MainView = gvBangCongChiTiet;
@@ -366,6 +370,20 @@
             gcBangCongChiTiet.Size = new Size(1029, 367);
             gcBangCongChiTiet.TabIndex = 0;
             gcBangCongChiTiet.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] { gvBangCongChiTiet });
+            // 
+            // contextMenuStrip1
+            // 
+            contextMenuStrip1.Items.AddRange(new ToolStripItem[] { mnCapNhatNgayCong });
+            contextMenuStrip1.Name = "contextMenuStrip1";
+            contextMenuStrip1.Size = new Size(193, 26);
+            // 
+            // mnCapNhatNgayCong
+            // 
+            mnCapNhatNgayCong.Font = new Font("Times New Roman", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            mnCapNhatNgayCong.Name = "mnCapNhatNgayCong";
+            mnCapNhatNgayCong.Size = new Size(192, 22);
+            mnCapNhatNgayCong.Text = "Cập nhật ngày công";
+            mnCapNhatNgayCong.Click += mnCapNhatNgayCong_Click;
             // 
             // gvBangCongChiTiet
             // 
@@ -1017,6 +1035,7 @@
             ((System.ComponentModel.ISupportInitialize)splitContainerControl1).EndInit();
             splitContainerControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)gcBangCongChiTiet).EndInit();
+            contextMenuStrip1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)gvBangCongChiTiet).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -1092,5 +1111,7 @@
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn TONGNGAYCONG;
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand THONGTINNHANVIEN;
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand NGAYCONGCT;
+        private ContextMenuStrip contextMenuStrip1;
+        private ToolStripMenuItem mnCapNhatNgayCong;
     }
 }

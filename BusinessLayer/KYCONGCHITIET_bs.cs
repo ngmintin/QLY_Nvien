@@ -34,9 +34,9 @@ namespace BusinessLayer
                         case "Sunday":
                             listDay.Add("CN");
                             break;
-                        case "Saturday":
-                            listDay.Add("T7");
-                            break;
+                        //case "Saturday":
+                        //    listDay.Add("T7");
+                        //    break;
                         default:
                             listDay.Add("X");
                             break;
@@ -96,7 +96,8 @@ namespace BusinessLayer
                 kycongchitiet.D29 = listDay[28];
                 kycongchitiet.D30 = listDay[29];
                 kycongchitiet.D31 = listDay[30];
-
+                kycongchitiet.NGAYCONG = MyFunctions_bs.demSoNgayLamViecTrongThang(thang, nam);
+                kycongchitiet.TONGNGAYCONG = MyFunctions_bs.demSoNgayLamViecTrongThang(thang, nam);
                 db.KYCONGCHITIETs.Add(kycongchitiet);
                 db.SaveChanges();
             }

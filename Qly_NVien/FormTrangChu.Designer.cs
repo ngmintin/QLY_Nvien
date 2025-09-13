@@ -254,6 +254,7 @@
             btBangLuong.ImageOptions.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("btBangLuong.ImageOptions.SvgImage");
             btBangLuong.Name = "btBangLuong";
             btBangLuong.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            btBangLuong.ItemClick += btBangLuong_ItemClick;
             // 
             // barButtonItem1
             // 

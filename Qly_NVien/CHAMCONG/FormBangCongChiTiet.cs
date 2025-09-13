@@ -2,7 +2,11 @@
 using DevExpress.XtraEditors.Mask;
 using DevExpress.XtraEditors.Repository;
 using DevExpress.XtraGrid.Columns;
+using DevExpress.XtraSplashScreen;
 using System;
+using System.IO;
+using System.Drawing;
+using System.Windows.Forms;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,6 +14,8 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
+
 
 
 namespace Qly_NVien.CHAMCONG
@@ -21,11 +27,13 @@ namespace Qly_NVien.CHAMCONG
             InitializeComponent();
         }
         //BIẾN
+        KYCONG_bs _kycong;
         KYCONGCHITIET_bs _kcct;
         public int _makycong, _macty, _thang, _nam;
 
         private void FormBangCongChiTiet_Load(object sender, EventArgs e)
         {
+            _kycong = new KYCONG_bs();
             _kcct = new KYCONGCHITIET_bs();
             gcBangCongChiTiet.DataSource = _kcct.getList(_makycong);
             CustomView(_thang, _nam);
@@ -37,11 +45,23 @@ namespace Qly_NVien.CHAMCONG
         {
             gcBangCongChiTiet.DataSource = _kcct.getList(int.Parse(comboBoxNam.Text) * 100 + int.Parse(comboBoxThang.Text));
             CustomView(int.Parse(comboBoxThang.Text), int.Parse(comboBoxNam.Text));
+            gvBangCongChiTiet.OptionsBehavior.Editable = false;
         }
 
         private void btnPhatSinh_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            SplashScreenManager.ShowForm(typeof(FormLoading), true, true);
+            if (_kycong.kiemTraPhatSinhKyCong(int.Parse(comboBoxNam.Text) * 100 + int.Parse(comboBoxThang.Text)))
+            {
+                MessageBox.Show("Kỳ công đã được phát sinh.", "Thông báo");
+                SplashScreenManager.CloseForm();
+                return;
+            }
             _kcct.phatSinhKyCongChiTiet(_macty, int.Parse(comboBoxThang.Text), int.Parse(comboBoxNam.Text));
+            var kc = _kycong.getItem(int.Parse(comboBoxNam.Text) * 100 + int.Parse(comboBoxThang.Text));
+            kc.TRANGTHAI = true;
+            _kycong.Update(kc);
+            SplashScreenManager.CloseForm();
             loadBangCong();
         }
 
@@ -74,7 +94,7 @@ namespace Qly_NVien.CHAMCONG
                 // LOAD LAYOUT
                 gvBangCongChiTiet.RestoreLayoutFromXml(filePath);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show("Lỗi load layout: " + ex.Message);
             }
@@ -233,6 +253,16 @@ namespace Qly_NVien.CHAMCONG
             }
 
             return dayNumber;
+        }
+
+        private void mnCapNhatNgayCong_Click(object sender, EventArgs e)
+        {
+            FormCapNhatNgayCong cn = new FormCapNhatNgayCong();
+            cn._makycong = _makycong;
+            cn._manv = int.Parse(gvBangCongChiTiet.GetFocusedRowCellValue("MANV").ToString());
+            cn._hoten = gvBangCongChiTiet.GetFocusedRowCellValue("HOTEN").ToString();
+            cn._ngay = gvBangCongChiTiet.FocusedColumn.FieldName.ToString();
+            cn.ShowDialog();
         }
     }
 }
