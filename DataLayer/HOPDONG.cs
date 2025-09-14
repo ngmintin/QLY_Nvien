@@ -22,6 +22,7 @@ namespace DataLayer
         public Nullable<int> LANKY { get; set; }
         public string THOIHAN { get; set; }
         public Nullable<double> HESOLUONG { get; set; }
+        public Nullable<int> LUONGCOBAN { get; set; }
         public Nullable<int> MANV { get; set; }
         public Nullable<int> ID_CTY { get; set; }
         public Nullable<int> DELETED_BY { get; set; }

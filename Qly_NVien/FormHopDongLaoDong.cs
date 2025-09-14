@@ -37,7 +37,7 @@ namespace Qly_NVien
             loadData();
             loadNhanVien();
             splitContainerControl1.PanelVisibility = DevExpress.XtraEditors.SplitPanelVisibility.Panel2; //CHỈ HIỆN THỊ PANEL 2
-            
+
         }
 
         //ẨN NÚT LƯU VÀ HỦY KHI THAO TÁC
@@ -73,7 +73,7 @@ namespace Qly_NVien
             spinEditHeSoLuong.Text = "1";
             richEditControlNoiDung.Text = string.Empty;
 
-        } 
+        }
 
         void loadNhanVien()
         {
@@ -116,12 +116,12 @@ namespace Qly_NVien
 
         private void btnLuu_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-                saveData();
-                loadData();
-                _them = false;
-                showHide(true);
-                splitContainerControl1.PanelVisibility = DevExpress.XtraEditors.SplitPanelVisibility.Panel2;    //CHỈ HIỆN THỊ PANEL 2
-        
+            saveData();
+            loadData();
+            _them = false;
+            showHide(true);
+            splitContainerControl1.PanelVisibility = DevExpress.XtraEditors.SplitPanelVisibility.Panel2;    //CHỈ HIỆN THỊ PANEL 2
+
         }
 
         private void btnHuy_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -155,6 +155,7 @@ namespace Qly_NVien
                 hd.NGAYKY = dateTimePickerNgayKy.Value;
                 hd.THOIHAN = comboBoxThoiHan.Text;
                 hd.HESOLUONG = double.Parse(spinEditHeSoLuong.Value.ToString());
+                hd.LUONGCOBAN = int.Parse(spinEditLuongCoBan.Value.ToString());
                 hd.LANKY = int.Parse(spinEditLanKy.Value.ToString());
                 hd.MANV = int.Parse(searchLookUpEditNhanVien.EditValue.ToString());
                 hd.NOIDUNG = richEditControlNoiDung.RtfText;
@@ -171,6 +172,7 @@ namespace Qly_NVien
                 hd.NGAYKY = dateTimePickerNgayKy.Value;
                 hd.THOIHAN = comboBoxThoiHan.Text;
                 hd.HESOLUONG = double.Parse(spinEditHeSoLuong.Value.ToString());
+                hd.LUONGCOBAN = int.Parse(spinEditLuongCoBan.Value.ToString());
                 hd.LANKY = int.Parse(spinEditLanKy.Value.ToString());
                 hd.MANV = int.Parse(searchLookUpEditNhanVien.EditValue.ToString());
                 hd.NOIDUNG = richEditControlNoiDung.RtfText;
@@ -192,7 +194,8 @@ namespace Qly_NVien
                 dateTimePickerNgayKT.Value = hd.NGAYKTHUC.Value;
                 dateTimePickerNgayKy.Value = hd.NGAYKY.Value;
                 comboBoxThoiHan.Text = hd.THOIHAN;
-                spinEditHeSoLuong.Text = hd.HESOLUONG.ToString();
+                spinEditHeSoLuong.EditValue = hd.HESOLUONG;
+                spinEditLuongCoBan.EditValue = hd.HESOLUONG;
                 spinEditLanKy.Text = hd.LANKY.ToString();
                 searchLookUpEditNhanVien.EditValue = hd.MANV;
                 richEditControlNoiDung.RtfText = hd.NOIDUNG;
@@ -200,6 +203,15 @@ namespace Qly_NVien
             }
 
         }
-        
+
+        private void gvDanhSach_CustomDrawCell(object sender, DevExpress.XtraGrid.Views.Base.RowCellCustomDrawEventArgs e)
+        {
+            if(e.Column.Name=="DELETED_BY"&&e.CellValue!=null)
+            {
+                Image img = Properties.Resources.letterx;
+                e.Graphics.DrawImage(img, e.Bounds.X, e.Bounds.Y);
+                e.Handled = true;
+            }    
+        }
     }
 }

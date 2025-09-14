@@ -79,6 +79,9 @@
     <Compile Update="FormTrinhDo.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Reports\rpBangLuong.cs">
+      <SubType>XtraReport</SubType>
+    </Compile>
     <Compile Update="Reports\rpDANH_SACH_NHANVIEN.cs">
       <SubType>XtraReport</SubType>
     </Compile>

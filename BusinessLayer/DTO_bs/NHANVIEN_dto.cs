@@ -27,5 +27,7 @@ namespace BusinessLayer.DTO_bs
         public Nullable<int> ID_CTY { get; set; }
         public byte[] HINHANH { get; set; }
         public bool? DATHOIVIEC { get; set; }
+        public string TAIKHOAN { get; set; }
+        public string MATKHAU { get; set; }
     }
 }

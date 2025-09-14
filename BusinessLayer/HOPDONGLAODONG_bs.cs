@@ -32,6 +32,7 @@ namespace BusinessLayer
                 hddto.NOIDUNG = item.NOIDUNG;
                 hddto.LANKY = item.LANKY;
                 hddto.HESOLUONG = item.HESOLUONG;
+                hddto.LUONGCOBAN = item.LUONGCOBAN;
                 hddto.THOIHAN = item.THOIHAN;
                 hddto.MANV = item.MANV;
                 var nv = db.NHANVIENs.FirstOrDefault(x => x.MANV == item.MANV);
@@ -68,6 +69,7 @@ namespace BusinessLayer
                 hddto.NOIDUNG = item.NOIDUNG;
                 hddto.LANKY = item.LANKY;
                 hddto.HESOLUONG = item.HESOLUONG;
+                hddto.LUONGCOBAN = item.LUONGCOBAN;
                 hddto.THOIHAN = item.THOIHAN;
                 hddto.MANV = item.MANV;
                 var nv = db.NHANVIENs.FirstOrDefault(x => x.MANV == item.MANV);
@@ -112,6 +114,7 @@ namespace BusinessLayer
                 _hd.LANKY = hd.LANKY;
                 _hd.THOIHAN = hd.THOIHAN;
                 _hd.HESOLUONG = hd.HESOLUONG;
+                _hd.LUONGCOBAN = hd.LUONGCOBAN;
                 _hd.MANV = hd.MANV;
                 _hd.SOHD = hd.SOHD;
                 _hd.ID_CTY = hd.ID_CTY;
@@ -146,6 +149,37 @@ namespace BusinessLayer
             {
                 return "00000";
             }
+        }
+        public List<HOPDONGLAODONG_dto> getLenLuong()
+        {
+            List<HOPDONG> lshd = db.HOPDONGs.Where(x=>(x.NGAYBDAU.Value.Month-DateTime.Now.Month)==0&&(DateTime.Now.Year-x.NGAYBDAU.Value.Year)==1).ToList();
+            List<HOPDONGLAODONG_dto> lshddto = new List<HOPDONGLAODONG_dto>();
+            HOPDONGLAODONG_dto hddto;
+            foreach (var item in lshd)
+            {
+                hddto = new HOPDONGLAODONG_dto();
+                hddto.SOHD = item.SOHD;
+                hddto.NGAYBDAU = item.NGAYBDAU;
+                hddto.NGAYKTHUC = item.NGAYKTHUC;
+                hddto.NGAYKY = item.NGAYKY;
+                hddto.NOIDUNG = item.NOIDUNG;
+                hddto.LANKY = item.LANKY;
+                hddto.HESOLUONG = item.HESOLUONG;
+                hddto.LUONGCOBAN = item.LUONGCOBAN;
+                hddto.THOIHAN = item.THOIHAN;
+                hddto.MANV = item.MANV;
+                var nv = db.NHANVIENs.FirstOrDefault(x => x.MANV == item.MANV);
+                hddto.HOTEN = nv.HOTEN;
+                hddto.ID_CTY = item.ID_CTY;
+                hddto.CREATED_BY = item.CREATED_BY;
+                hddto.CREATED_DATE = item.CREATED_DATE;
+                hddto.UPDATED_BY = item.UPDATED_BY;
+                hddto.UPDATED_DATE = item.UPDATED_DATE;
+                hddto.DELETED_BY = item.DELETED_BY;
+                hddto.DELETED_DATE = item.DELETED_DATE;
+                lshddto.Add(hddto);
+            }
+            return lshddto;
         }
     }
 }

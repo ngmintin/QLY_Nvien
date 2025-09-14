@@ -24,6 +24,7 @@ namespace DataLayer
         public Nullable<double> NGAYLE { get; set; }
         public Nullable<double> NGAYCHUNHAT { get; set; }
         public Nullable<double> NGAYTHUONG { get; set; }
+        public Nullable<double> BAOCAO { get; set; }
         public Nullable<double> THUCLANH { get; set; }
         public Nullable<int> CREATED_BY { get; set; }
         public Nullable<System.DateTime> CREATED_DATE { get; set; }

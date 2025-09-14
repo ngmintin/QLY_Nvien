@@ -413,9 +413,9 @@
             ribbonPageGroup1.ItemLinks.Add(btnCongTy, true);
             ribbonPageGroup1.ItemLinks.Add(btnPhongBan, true);
             ribbonPageGroup1.ItemLinks.Add(btnBoPhan, true);
-            ribbonPageGroup1.ItemLinks.Add(btNhanVien, true);
-            ribbonPageGroup1.ItemLinks.Add(btmTrinhDo, true);
             ribbonPageGroup1.ItemLinks.Add(btnChucVu, true);
+            ribbonPageGroup1.ItemLinks.Add(btmTrinhDo, true);
+            ribbonPageGroup1.ItemLinks.Add(btNhanVien, true);
             ribbonPageGroup1.Name = "ribbonPageGroup1";
             ribbonPageGroup1.Text = "THÔNG TIN";
             // 

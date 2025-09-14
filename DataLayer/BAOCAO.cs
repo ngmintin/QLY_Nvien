@@ -22,7 +22,7 @@ namespace DataLayer
     
         public int ID_BC { get; set; }
         public string TENBC { get; set; }
-        public Nullable<double> SOTIEN { get; set; }
+        public Nullable<int> SOTIEN { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<NHANVIEN_BAOCAO> NHANVIEN_BAOCAO { get; set; }

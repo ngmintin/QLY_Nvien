@@ -33,6 +33,7 @@
             barManager1 = new DevExpress.XtraBars.BarManager(components);
             bar2 = new DevExpress.XtraBars.Bar();
             btnTinhLuong = new DevExpress.XtraBars.BarButtonItem();
+            barButtonItemIn = new DevExpress.XtraBars.BarButtonItem();
             btDong = new DevExpress.XtraBars.BarButtonItem();
             bar3 = new DevExpress.XtraBars.Bar();
             barDockControlTop = new DevExpress.XtraBars.BarDockControl();
@@ -62,6 +63,7 @@
             NGAYPHEP = new DevExpress.XtraGrid.Columns.GridColumn();
             NGAYCHUNHAT = new DevExpress.XtraGrid.Columns.GridColumn();
             NGAYTHUONG = new DevExpress.XtraGrid.Columns.GridColumn();
+            BAOCAO = new DevExpress.XtraGrid.Columns.GridColumn();
             THUCLANH = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)barManager1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)splitContainerControl1).BeginInit();
@@ -82,9 +84,9 @@
             barManager1.DockControls.Add(barDockControlLeft);
             barManager1.DockControls.Add(barDockControlRight);
             barManager1.Form = this;
-            barManager1.Items.AddRange(new DevExpress.XtraBars.BarItem[] { btnTinhLuong, btnSua, btnXoa, btnLuu, btnHuy, btnDong, btnIn, btIn, btDong });
+            barManager1.Items.AddRange(new DevExpress.XtraBars.BarItem[] { btnTinhLuong, btnSua, btnXoa, btnLuu, btnHuy, btnDong, btnIn, btIn, btDong, barButtonItemIn });
             barManager1.MainMenu = bar2;
-            barManager1.MaxItemId = 9;
+            barManager1.MaxItemId = 10;
             barManager1.StatusBar = bar3;
             // 
             // bar2
@@ -95,7 +97,7 @@
             bar2.DockCol = 0;
             bar2.DockRow = 0;
             bar2.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
-            bar2.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] { new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, btnTinhLuong, "", true, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph), new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, btDong, "", true, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph) });
+            bar2.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] { new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, btnTinhLuong, "", true, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph), new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, barButtonItemIn, "", true, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph), new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, btDong, "", true, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph) });
             bar2.OptionsBar.MultiLine = true;
             bar2.OptionsBar.UseWholeRow = true;
             bar2.Text = "Main menu";
@@ -106,6 +108,15 @@
             btnTinhLuong.Id = 0;
             btnTinhLuong.ImageOptions.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("btnTinhLuong.ImageOptions.SvgImage");
             btnTinhLuong.Name = "btnTinhLuong";
+            btnTinhLuong.ItemClick += btnTinhLuong_ItemClick;
+            // 
+            // barButtonItemIn
+            // 
+            barButtonItemIn.Caption = "In";
+            barButtonItemIn.Id = 9;
+            barButtonItemIn.ImageOptions.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("barButtonItem1.ImageOptions.SvgImage");
+            barButtonItemIn.Name = "barButtonItemIn";
+            barButtonItemIn.ItemClick += barButtonItemIn_ItemClick;
             // 
             // btDong
             // 
@@ -113,6 +124,7 @@
             btDong.Id = 8;
             btDong.ImageOptions.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("btDong.ImageOptions.SvgImage");
             btDong.Name = "btDong";
+            btDong.ItemClick += btDong_ItemClick;
             // 
             // bar3
             // 
@@ -246,11 +258,13 @@
             btnXemBangLuong.Size = new Size(132, 34);
             btnXemBangLuong.TabIndex = 2;
             btnXemBangLuong.Text = "Xem bảng lương";
+            btnXemBangLuong.Click += btnXemBangLuong_Click;
             // 
             // comboBoxThang
             // 
             comboBoxThang.Font = new Font("Times New Roman", 12F);
             comboBoxThang.FormattingEnabled = true;
+            comboBoxThang.Items.AddRange(new object[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12" });
             comboBoxThang.Location = new Point(158, 77);
             comboBoxThang.Name = "comboBoxThang";
             comboBoxThang.Size = new Size(160, 27);
@@ -260,6 +274,7 @@
             // 
             comboBoxNam.Font = new Font("Times New Roman", 12F);
             comboBoxNam.FormattingEnabled = true;
+            comboBoxNam.Items.AddRange(new object[] { "2022", "2023", "2024", "2025", "2026" });
             comboBoxNam.Location = new Point(158, 26);
             comboBoxNam.Name = "comboBoxNam";
             comboBoxNam.Size = new Size(160, 27);
@@ -302,7 +317,7 @@
             // 
             // gvDanhSach
             // 
-            gvDanhSach.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] { ID, MAKYCONG, HOTEN, NGAYCONGTRONGTHANG, IDNV, NGAYPHEP, NGAYCHUNHAT, NGAYTHUONG, THUCLANH });
+            gvDanhSach.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] { ID, MAKYCONG, HOTEN, NGAYCONGTRONGTHANG, IDNV, NGAYPHEP, NGAYCHUNHAT, NGAYTHUONG, BAOCAO, THUCLANH });
             gvDanhSach.DetailHeight = 443;
             gvDanhSach.GridControl = gcDanhSach;
             gvDanhSach.Name = "gvDanhSach";
@@ -374,12 +389,12 @@
             NGAYPHEP.AppearanceHeader.Options.UseFont = true;
             NGAYPHEP.Caption = "NGÀY PHÉP";
             NGAYPHEP.FieldName = "NGAYPHEP";
-            NGAYPHEP.MaxWidth = 50;
-            NGAYPHEP.MinWidth = 50;
+            NGAYPHEP.MaxWidth = 100;
+            NGAYPHEP.MinWidth = 100;
             NGAYPHEP.Name = "NGAYPHEP";
             NGAYPHEP.Visible = true;
             NGAYPHEP.VisibleIndex = 3;
-            NGAYPHEP.Width = 50;
+            NGAYPHEP.Width = 100;
             // 
             // NGAYCHUNHAT
             // 
@@ -387,12 +402,12 @@
             NGAYCHUNHAT.AppearanceHeader.Options.UseFont = true;
             NGAYCHUNHAT.Caption = "CHỦ NHẬT";
             NGAYCHUNHAT.FieldName = "NGAYCHUNHAT";
-            NGAYCHUNHAT.MaxWidth = 50;
-            NGAYCHUNHAT.MinWidth = 50;
+            NGAYCHUNHAT.MaxWidth = 100;
+            NGAYCHUNHAT.MinWidth = 100;
             NGAYCHUNHAT.Name = "NGAYCHUNHAT";
             NGAYCHUNHAT.Visible = true;
             NGAYCHUNHAT.VisibleIndex = 4;
-            NGAYCHUNHAT.Width = 50;
+            NGAYCHUNHAT.Width = 100;
             // 
             // NGAYTHUONG
             // 
@@ -400,24 +415,41 @@
             NGAYTHUONG.AppearanceHeader.Options.UseFont = true;
             NGAYTHUONG.Caption = "NGÀY THƯỜNG";
             NGAYTHUONG.FieldName = "NGAYTHUONG";
-            NGAYTHUONG.MaxWidth = 50;
-            NGAYTHUONG.MinWidth = 50;
+            NGAYTHUONG.MaxWidth = 100;
+            NGAYTHUONG.MinWidth = 100;
             NGAYTHUONG.Name = "NGAYTHUONG";
             NGAYTHUONG.Visible = true;
             NGAYTHUONG.VisibleIndex = 5;
-            NGAYTHUONG.Width = 50;
+            NGAYTHUONG.Width = 100;
+            // 
+            // BAOCAO
+            // 
+            BAOCAO.AppearanceHeader.Font = new Font("Times New Roman", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            BAOCAO.AppearanceHeader.Options.UseFont = true;
+            BAOCAO.Caption = "BÁO CÁO";
+            BAOCAO.DisplayFormat.FormatString = "n0";
+            BAOCAO.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            BAOCAO.FieldName = "BAOCAO";
+            BAOCAO.MaxWidth = 100;
+            BAOCAO.MinWidth = 100;
+            BAOCAO.Name = "BAOCAO";
+            BAOCAO.Visible = true;
+            BAOCAO.VisibleIndex = 6;
+            BAOCAO.Width = 100;
             // 
             // THUCLANH
             // 
             THUCLANH.AppearanceHeader.Font = new Font("Times New Roman", 9.75F, FontStyle.Bold);
             THUCLANH.AppearanceHeader.Options.UseFont = true;
             THUCLANH.Caption = "THỰC LĨNH";
+            THUCLANH.DisplayFormat.FormatString = "n0";
+            THUCLANH.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             THUCLANH.FieldName = "THUCLANH";
             THUCLANH.MaxWidth = 100;
             THUCLANH.MinWidth = 100;
             THUCLANH.Name = "THUCLANH";
             THUCLANH.Visible = true;
-            THUCLANH.VisibleIndex = 6;
+            THUCLANH.VisibleIndex = 7;
             THUCLANH.Width = 100;
             // 
             // FormBangLuong
@@ -483,5 +515,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn NGAYCHUNHAT;
         private DevExpress.XtraGrid.Columns.GridColumn NGAYTHUONG;
         private DevExpress.XtraGrid.Columns.GridColumn THUCLANH;
+        private DevExpress.XtraGrid.Columns.GridColumn BAOCAO;
+        private DevExpress.XtraBars.BarButtonItem barButtonItemIn;
     }
 }
