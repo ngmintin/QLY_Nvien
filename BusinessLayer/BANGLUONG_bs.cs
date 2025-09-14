@@ -9,28 +9,28 @@ namespace BusinessLayer
 {
     public class BANGLUONG_bs
     {
-        Qly_NvienEntities1 db = new Qly_NvienEntities1();
+        Qly_NvienEntities2 db = new Qly_NvienEntities2();
         public BANGLUONG getItem(int makycong, int manv)
         {
-            return db.BANGLUONGs.FirstOrDefault(x => x.MAKYCONG == makycong && x.MANV == manv);
+            return db.BANGLUONG.FirstOrDefault(x => x.MAKYCONG == makycong && x.MANV == manv);
         }
         public List<BANGLUONG> getList(int makycong)
         {
-            return db.BANGLUONGs.Where(x=>x.MAKYCONG==makycong).ToList();
+            return db.BANGLUONG.Where(x=>x.MAKYCONG==makycong).ToList();
         }
 
         //HÀM TÍNH LƯƠNG
         public void tinhLuongNhanVien(int makycong)
         {
             double luongngaythuong, luongphep, luongchunhat, luongngayle, baocao, hesoluong, thuclanh;
-            var lstnv = db.NHANVIENs.Where(x => x.DATHOIVIEC == null).ToList();
+            var lstnv = db.NHANVIEN.Where(x => x.DATHOIVIEC == null).ToList();
             foreach (var item in lstnv)
             {
-                var hd = db.HOPDONGs.FirstOrDefault(x=>x.MANV==item.MANV&&x.DELETED_BY==null);
+                var hd = db.HOPDONG.FirstOrDefault(x=>x.MANV==item.MANV&&x.DELETED_BY==null);
                 //KTRA NVIEN ĐÃ CÓ HỢP ĐỒNG CHƯA
                 if(hd!=null)
                 {
-                    var kcct = db.KYCONGCHITIETs.FirstOrDefault(x => x.MAKYCONG == makycong && x.MANV == item.MANV);
+                    var kcct = db.KYCONGCHITIET.FirstOrDefault(x => x.MAKYCONG == makycong && x.MANV == item.MANV);
                     var nangluong = db.NHANVIEN_NANGLUONG.OrderByDescending(x => x.NGAYKY).FirstOrDefault(x => x.SOHD == hd.SOHD&&x.MANV==item.MANV&&x.DELETED_BY==null);
                     if (nangluong != null)
                         hesoluong = Convert.ToDouble(nangluong.HESOLUONGMOI);
@@ -69,7 +69,7 @@ namespace BusinessLayer
         {
             try
             {
-                db.BANGLUONGs.Add(bl);
+                db.BANGLUONG.Add(bl);
                 db.SaveChanges();
                 return bl;
             }
@@ -82,7 +82,7 @@ namespace BusinessLayer
         {
             try
             {
-                BANGLUONG _bl = db.BANGLUONGs.FirstOrDefault(x => x.MAKYCONG == bl.MAKYCONG && x.MANV == bl.MANV);
+                BANGLUONG _bl = db.BANGLUONG.FirstOrDefault(x => x.MAKYCONG == bl.MAKYCONG && x.MANV == bl.MANV);
                 _bl.MANV = bl.MANV;
                 _bl.MAKYCONG = bl.MAKYCONG;
                 _bl.HOTEN = bl.HOTEN;

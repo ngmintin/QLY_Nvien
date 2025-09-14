@@ -37,7 +37,6 @@
             btnXoa = new DevExpress.XtraBars.BarButtonItem();
             btnLuu = new DevExpress.XtraBars.BarButtonItem();
             btnHuy = new DevExpress.XtraBars.BarButtonItem();
-            btIn = new DevExpress.XtraBars.BarButtonItem();
             btDong = new DevExpress.XtraBars.BarButtonItem();
             bar3 = new DevExpress.XtraBars.Bar();
             barDockControlTop = new DevExpress.XtraBars.BarDockControl();
@@ -46,6 +45,7 @@
             barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             btnDong = new DevExpress.XtraBars.BarButtonItem();
             btnIn = new DevExpress.XtraBars.BarButtonItem();
+            btIn = new DevExpress.XtraBars.BarButtonItem();
             splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
             comboBoxThoiHan = new ComboBox();
             richEditControlNoiDung = new DevExpress.XtraRichEdit.RichEditControl();
@@ -72,6 +72,8 @@
             labelControl1 = new DevExpress.XtraEditors.LabelControl();
             gcDanhSach = new DevExpress.XtraGrid.GridControl();
             gvDanhSach = new DevExpress.XtraGrid.Views.Grid.GridView();
+            DELETED_BY = new DevExpress.XtraGrid.Columns.GridColumn();
+            SOHD = new DevExpress.XtraGrid.Columns.GridColumn();
             NGAYBDAU = new DevExpress.XtraGrid.Columns.GridColumn();
             NGAYKTHUC = new DevExpress.XtraGrid.Columns.GridColumn();
             THOIHAN = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -81,8 +83,6 @@
             NGAYKY = new DevExpress.XtraGrid.Columns.GridColumn();
             MANV = new DevExpress.XtraGrid.Columns.GridColumn();
             HOTEN = new DevExpress.XtraGrid.Columns.GridColumn();
-            SOHD = new DevExpress.XtraGrid.Columns.GridColumn();
-            DELETED_BY = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)barManager1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)splitContainerControl1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)splitContainerControl1.Panel1).BeginInit();
@@ -110,7 +110,7 @@
             barManager1.Form = this;
             barManager1.Items.AddRange(new DevExpress.XtraBars.BarItem[] { btnThem, btnSua, btnXoa, btnLuu, btnHuy, btnDong, btnIn, btIn, btDong });
             barManager1.MainMenu = bar2;
-            barManager1.MaxItemId = 306;
+            barManager1.MaxItemId = 307;
             barManager1.StatusBar = bar3;
             // 
             // bar2
@@ -121,7 +121,7 @@
             bar2.DockCol = 0;
             bar2.DockRow = 0;
             bar2.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
-            bar2.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] { new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, btnThem, "", true, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph), new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, btnSua, "", true, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph), new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, btnXoa, "", true, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph), new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, btnLuu, "", true, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph), new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, btnHuy, "", true, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph), new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, btIn, "", true, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph), new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, btDong, "", true, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph) });
+            bar2.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] { new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, btnThem, "", true, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph), new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, btnSua, "", true, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph), new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, btnXoa, "", true, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph), new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, btnLuu, "", true, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph), new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, btnHuy, "", true, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph), new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, btDong, "", true, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph) });
             bar2.OptionsBar.MultiLine = true;
             bar2.OptionsBar.UseWholeRow = true;
             bar2.Text = "Main menu";
@@ -165,14 +165,6 @@
             btnHuy.ImageOptions.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("btnHuy.ImageOptions.SvgImage");
             btnHuy.Name = "btnHuy";
             btnHuy.ItemClick += btnHuy_ItemClick;
-            // 
-            // btIn
-            // 
-            btIn.Caption = "In";
-            btIn.Id = 7;
-            btIn.ImageOptions.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("btIn.ImageOptions.SvgImage");
-            btIn.Name = "btIn";
-            btIn.ItemClick += btIn_ItemClick;
             // 
             // btDong
             // 
@@ -243,6 +235,11 @@
             btnIn.Id = 6;
             btnIn.ImageOptions.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("btnIn.ImageOptions.SvgImage");
             btnIn.Name = "btnIn";
+            // 
+            // btIn
+            // 
+            btIn.Id = 306;
+            btIn.Name = "btIn";
             // 
             // splitContainerControl1
             // 
@@ -552,6 +549,29 @@
             gvDanhSach.CustomDrawCell += gvDanhSach_CustomDrawCell;
             gvDanhSach.Click += gvDanhSach_Click;
             // 
+            // DELETED_BY
+            // 
+            DELETED_BY.FieldName = "DELETED_BY";
+            DELETED_BY.MaxWidth = 30;
+            DELETED_BY.MinWidth = 30;
+            DELETED_BY.Name = "DELETED_BY";
+            DELETED_BY.Visible = true;
+            DELETED_BY.VisibleIndex = 0;
+            DELETED_BY.Width = 30;
+            // 
+            // SOHD
+            // 
+            SOHD.AppearanceHeader.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            SOHD.AppearanceHeader.Options.UseFont = true;
+            SOHD.Caption = "SỐ HỢP ĐỒNG";
+            SOHD.FieldName = "SOHD";
+            SOHD.MaxWidth = 80;
+            SOHD.MinWidth = 80;
+            SOHD.Name = "SOHD";
+            SOHD.Visible = true;
+            SOHD.VisibleIndex = 1;
+            SOHD.Width = 80;
+            // 
             // NGAYBDAU
             // 
             NGAYBDAU.AppearanceHeader.Font = new Font("Times New Roman", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
@@ -666,29 +686,6 @@
             HOTEN.Visible = true;
             HOTEN.VisibleIndex = 9;
             HOTEN.Width = 250;
-            // 
-            // SOHD
-            // 
-            SOHD.AppearanceHeader.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            SOHD.AppearanceHeader.Options.UseFont = true;
-            SOHD.Caption = "SỐ HỢP ĐỒNG";
-            SOHD.FieldName = "SOHD";
-            SOHD.MaxWidth = 80;
-            SOHD.MinWidth = 80;
-            SOHD.Name = "SOHD";
-            SOHD.Visible = true;
-            SOHD.VisibleIndex = 1;
-            SOHD.Width = 80;
-            // 
-            // DELETED_BY
-            // 
-            DELETED_BY.FieldName = "DELETED_BY";
-            DELETED_BY.MaxWidth = 30;
-            DELETED_BY.MinWidth = 30;
-            DELETED_BY.Name = "DELETED_BY";
-            DELETED_BY.Visible = true;
-            DELETED_BY.VisibleIndex = 0;
-            DELETED_BY.Width = 30;
             // 
             // FormHopDongLaoDong
             // 

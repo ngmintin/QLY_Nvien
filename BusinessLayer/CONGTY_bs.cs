@@ -9,18 +9,18 @@ namespace BusinessLayer
 {
     public class CONGTY_bs
     {
-        Qly_NvienEntities1 db = new Qly_NvienEntities1();
+        Qly_NvienEntities2 db = new Qly_NvienEntities2();
 
         //
         public CONGTY getItem(int idct)
         {
-            return db.CONGTies.FirstOrDefault(x => x.ID_CTY == idct);
+            return db.CONGTY.FirstOrDefault(x => x.ID_CTY == idct);
         }
 
         //LẤY VỀ DANH SÁCH
         public List<CONGTY> getList()
         {
-            return db.CONGTies.ToList();
+            return db.CONGTY.ToList();
         }
 
         //THÊM
@@ -28,7 +28,7 @@ namespace BusinessLayer
         {
             try
             {
-                db.CONGTies.Add(ct);
+                db.CONGTY.Add(ct);
                 db.SaveChanges();
                 return ct;
             }
@@ -43,7 +43,7 @@ namespace BusinessLayer
         {
             try
             {
-                var _ct = db.CONGTies.FirstOrDefault(x => x.ID_CTY == ct.ID_CTY);
+                var _ct = db.CONGTY.FirstOrDefault(x => x.ID_CTY == ct.ID_CTY);
                 _ct.TENCTY = ct.TENCTY;
                 _ct.SĐT = ct.SĐT;
                 _ct.EMAIL = ct.EMAIL;
@@ -62,8 +62,8 @@ namespace BusinessLayer
         {
             try
             {
-                var _ct = db.CONGTies.FirstOrDefault(x => x.ID_CTY == idct);
-                db.CONGTies.Remove(_ct);
+                var _ct = db.CONGTY.FirstOrDefault(x => x.ID_CTY == idct);
+                db.CONGTY.Remove(_ct);
                 db.SaveChanges();
             }
             catch (Exception ex)

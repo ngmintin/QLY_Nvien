@@ -9,18 +9,18 @@ namespace BusinessLayer
 {
     public class BOPHAN_bs
     {
-        Qly_NvienEntities1 db = new Qly_NvienEntities1();
+        Qly_NvienEntities2 db = new Qly_NvienEntities2();
 
         //
         public BOPHAN getItem(int idbp)
         {
-            return db.BOPHANs.FirstOrDefault(x => x.ID_BP == idbp);
+            return db.BOPHAN.FirstOrDefault(x => x.ID_BP == idbp);
         }
 
         //LẤY VỀ DANH SÁCH
         public List<BOPHAN> getList()
         {
-            return db.BOPHANs.ToList();
+            return db.BOPHAN.ToList();
         }
 
         //THÊM
@@ -28,7 +28,7 @@ namespace BusinessLayer
         {
             try
             {
-                db.BOPHANs.Add(bp);
+                db.BOPHAN.Add(bp);
                 db.SaveChanges();
                 return bp;
             }
@@ -43,7 +43,7 @@ namespace BusinessLayer
         {
             try
             {
-                var _bp = db.BOPHANs.FirstOrDefault(x => x.ID_BP == bp.ID_BP);
+                var _bp = db.BOPHAN.FirstOrDefault(x => x.ID_BP == bp.ID_BP);
                 _bp.TENBP = bp.TENBP;
                 db.SaveChanges();
                 return bp;
@@ -59,8 +59,8 @@ namespace BusinessLayer
         {
             try
             {
-                var _bp = db.BOPHANs.FirstOrDefault(x => x.ID_BP == idbp);
-                db.BOPHANs.Remove(_bp);
+                var _bp = db.BOPHAN.FirstOrDefault(x => x.ID_BP == idbp);
+                db.BOPHAN.Remove(_bp);
                 db.SaveChanges();
             }
             catch (Exception ex)

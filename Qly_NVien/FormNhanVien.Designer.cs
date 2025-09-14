@@ -55,6 +55,8 @@
             comboBoxPhongBan = new ComboBox();
             pictureBoxHinhAnh = new PictureBox();
             dateTimePickerNgaySinh = new DateTimePicker();
+            textEditMatKhau = new DevExpress.XtraEditors.TextEdit();
+            textEditTaiKhoan = new DevExpress.XtraEditors.TextEdit();
             textEditEmail = new DevExpress.XtraEditors.TextEdit();
             textEditDiaChi = new DevExpress.XtraEditors.TextEdit();
             textEditSDT = new DevExpress.XtraEditors.TextEdit();
@@ -64,7 +66,9 @@
             labelControl3 = new DevExpress.XtraEditors.LabelControl();
             labelControl4 = new DevExpress.XtraEditors.LabelControl();
             labelControl2 = new DevExpress.XtraEditors.LabelControl();
+            labelControl12 = new DevExpress.XtraEditors.LabelControl();
             labelControl10 = new DevExpress.XtraEditors.LabelControl();
+            labelControl11 = new DevExpress.XtraEditors.LabelControl();
             labelControl9 = new DevExpress.XtraEditors.LabelControl();
             labelControl8 = new DevExpress.XtraEditors.LabelControl();
             labelControl7 = new DevExpress.XtraEditors.LabelControl();
@@ -87,6 +91,8 @@
             TENCV = new DevExpress.XtraGrid.Columns.GridColumn();
             ID_TD = new DevExpress.XtraGrid.Columns.GridColumn();
             TENTD = new DevExpress.XtraGrid.Columns.GridColumn();
+            TAIKHOAN = new DevExpress.XtraGrid.Columns.GridColumn();
+            MATKHAU = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)barManager1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)splitContainerControl1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)splitContainerControl1.Panel1).BeginInit();
@@ -95,6 +101,8 @@
             splitContainerControl1.Panel2.SuspendLayout();
             splitContainerControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBoxHinhAnh).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)textEditMatKhau.Properties).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)textEditTaiKhoan.Properties).BeginInit();
             ((System.ComponentModel.ISupportInitialize)textEditEmail.Properties).BeginInit();
             ((System.ComponentModel.ISupportInitialize)textEditDiaChi.Properties).BeginInit();
             ((System.ComponentModel.ISupportInitialize)textEditSDT.Properties).BeginInit();
@@ -265,6 +273,8 @@
             splitContainerControl1.Panel1.Controls.Add(comboBoxPhongBan);
             splitContainerControl1.Panel1.Controls.Add(pictureBoxHinhAnh);
             splitContainerControl1.Panel1.Controls.Add(dateTimePickerNgaySinh);
+            splitContainerControl1.Panel1.Controls.Add(textEditMatKhau);
+            splitContainerControl1.Panel1.Controls.Add(textEditTaiKhoan);
             splitContainerControl1.Panel1.Controls.Add(textEditEmail);
             splitContainerControl1.Panel1.Controls.Add(textEditDiaChi);
             splitContainerControl1.Panel1.Controls.Add(textEditSDT);
@@ -274,7 +284,9 @@
             splitContainerControl1.Panel1.Controls.Add(labelControl3);
             splitContainerControl1.Panel1.Controls.Add(labelControl4);
             splitContainerControl1.Panel1.Controls.Add(labelControl2);
+            splitContainerControl1.Panel1.Controls.Add(labelControl12);
             splitContainerControl1.Panel1.Controls.Add(labelControl10);
+            splitContainerControl1.Panel1.Controls.Add(labelControl11);
             splitContainerControl1.Panel1.Controls.Add(labelControl9);
             splitContainerControl1.Panel1.Controls.Add(labelControl8);
             splitContainerControl1.Panel1.Controls.Add(labelControl7);
@@ -315,36 +327,36 @@
             // 
             comboBoxTrinhDo.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             comboBoxTrinhDo.FormattingEnabled = true;
-            comboBoxTrinhDo.Location = new Point(943, 182);
+            comboBoxTrinhDo.Location = new Point(892, 181);
             comboBoxTrinhDo.Name = "comboBoxTrinhDo";
-            comboBoxTrinhDo.Size = new Size(244, 27);
+            comboBoxTrinhDo.Size = new Size(157, 27);
             comboBoxTrinhDo.TabIndex = 11;
             // 
             // comboBoxChucVu
             // 
             comboBoxChucVu.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             comboBoxChucVu.FormattingEnabled = true;
-            comboBoxChucVu.Location = new Point(943, 136);
+            comboBoxChucVu.Location = new Point(892, 135);
             comboBoxChucVu.Name = "comboBoxChucVu";
-            comboBoxChucVu.Size = new Size(244, 27);
+            comboBoxChucVu.Size = new Size(157, 27);
             comboBoxChucVu.TabIndex = 11;
             // 
             // comboBoxBoPhan
             // 
             comboBoxBoPhan.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             comboBoxBoPhan.FormattingEnabled = true;
-            comboBoxBoPhan.Location = new Point(943, 90);
+            comboBoxBoPhan.Location = new Point(892, 89);
             comboBoxBoPhan.Name = "comboBoxBoPhan";
-            comboBoxBoPhan.Size = new Size(244, 27);
+            comboBoxBoPhan.Size = new Size(157, 27);
             comboBoxBoPhan.TabIndex = 11;
             // 
             // comboBoxPhongBan
             // 
             comboBoxPhongBan.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             comboBoxPhongBan.FormattingEnabled = true;
-            comboBoxPhongBan.Location = new Point(943, 43);
+            comboBoxPhongBan.Location = new Point(892, 42);
             comboBoxPhongBan.Name = "comboBoxPhongBan";
-            comboBoxPhongBan.Size = new Size(244, 27);
+            comboBoxPhongBan.Size = new Size(157, 27);
             comboBoxPhongBan.TabIndex = 11;
             // 
             // pictureBoxHinhAnh
@@ -369,6 +381,26 @@
             dateTimePickerNgaySinh.Size = new Size(291, 26);
             dateTimePickerNgaySinh.TabIndex = 2;
             // 
+            // textEditMatKhau
+            // 
+            textEditMatKhau.Location = new Point(1163, 265);
+            textEditMatKhau.Margin = new Padding(4);
+            textEditMatKhau.Name = "textEditMatKhau";
+            textEditMatKhau.Properties.Appearance.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            textEditMatKhau.Properties.Appearance.Options.UseFont = true;
+            textEditMatKhau.Size = new Size(157, 26);
+            textEditMatKhau.TabIndex = 4;
+            // 
+            // textEditTaiKhoan
+            // 
+            textEditTaiKhoan.Location = new Point(892, 268);
+            textEditTaiKhoan.Margin = new Padding(4);
+            textEditTaiKhoan.Name = "textEditTaiKhoan";
+            textEditTaiKhoan.Properties.Appearance.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            textEditTaiKhoan.Properties.Appearance.Options.UseFont = true;
+            textEditTaiKhoan.Size = new Size(157, 26);
+            textEditTaiKhoan.TabIndex = 4;
+            // 
             // textEditEmail
             // 
             textEditEmail.Location = new Point(471, 223);
@@ -386,7 +418,7 @@
             textEditDiaChi.Name = "textEditDiaChi";
             textEditDiaChi.Properties.Appearance.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             textEditDiaChi.Properties.Appearance.Options.UseFont = true;
-            textEditDiaChi.Size = new Size(716, 26);
+            textEditDiaChi.Size = new Size(292, 26);
             textEditDiaChi.TabIndex = 5;
             // 
             // textEditSDT
@@ -465,22 +497,44 @@
             labelControl2.TabIndex = 0;
             labelControl2.Text = "Giới tính:";
             // 
+            // labelControl12
+            // 
+            labelControl12.Appearance.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            labelControl12.Appearance.Options.UseFont = true;
+            labelControl12.Location = new Point(1094, 268);
+            labelControl12.Margin = new Padding(4);
+            labelControl12.Name = "labelControl12";
+            labelControl12.Size = new Size(61, 19);
+            labelControl12.TabIndex = 0;
+            labelControl12.Text = "Mật khẩu:";
+            // 
             // labelControl10
             // 
             labelControl10.Appearance.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             labelControl10.Appearance.Options.UseFont = true;
-            labelControl10.Location = new Point(882, 92);
+            labelControl10.Location = new Point(831, 91);
             labelControl10.Margin = new Padding(4);
             labelControl10.Name = "labelControl10";
             labelControl10.Size = new Size(54, 19);
             labelControl10.TabIndex = 0;
             labelControl10.Text = "Bộ phận:";
             // 
+            // labelControl11
+            // 
+            labelControl11.Appearance.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            labelControl11.Appearance.Options.UseFont = true;
+            labelControl11.Location = new Point(822, 271);
+            labelControl11.Margin = new Padding(4);
+            labelControl11.Name = "labelControl11";
+            labelControl11.Size = new Size(63, 19);
+            labelControl11.TabIndex = 0;
+            labelControl11.Text = "Tài khoản:";
+            // 
             // labelControl9
             // 
             labelControl9.Appearance.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             labelControl9.Appearance.Options.UseFont = true;
-            labelControl9.Location = new Point(869, 46);
+            labelControl9.Location = new Point(818, 45);
             labelControl9.Margin = new Padding(4);
             labelControl9.Name = "labelControl9";
             labelControl9.Size = new Size(67, 19);
@@ -491,7 +545,7 @@
             // 
             labelControl8.Appearance.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             labelControl8.Appearance.Options.UseFont = true;
-            labelControl8.Location = new Point(883, 185);
+            labelControl8.Location = new Point(832, 184);
             labelControl8.Margin = new Padding(4);
             labelControl8.Name = "labelControl8";
             labelControl8.Size = new Size(53, 19);
@@ -502,7 +556,7 @@
             // 
             labelControl7.Appearance.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             labelControl7.Appearance.Options.UseFont = true;
-            labelControl7.Location = new Point(881, 139);
+            labelControl7.Location = new Point(830, 138);
             labelControl7.Margin = new Padding(4);
             labelControl7.Name = "labelControl7";
             labelControl7.Size = new Size(55, 19);
@@ -536,7 +590,7 @@
             // 
             // gvDanhSach
             // 
-            gvDanhSach.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] { MANV, HOTEN, GIOITINH, NGAYSINH, SDT, DIACHI, EMAIL, HINHANH, ID_PB, TENPB, ID_BP, TENBP, ID_CV, TENCV, ID_TD, TENTD });
+            gvDanhSach.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] { MANV, HOTEN, GIOITINH, NGAYSINH, SDT, DIACHI, EMAIL, HINHANH, ID_PB, TENPB, ID_BP, TENBP, ID_CV, TENCV, ID_TD, TENTD, TAIKHOAN, MATKHAU });
             gvDanhSach.DetailHeight = 443;
             gvDanhSach.GridControl = gcDanhSach;
             gvDanhSach.Name = "gvDanhSach";
@@ -563,12 +617,12 @@
             HOTEN.AppearanceHeader.Options.UseFont = true;
             HOTEN.Caption = "HỌ VÀ TÊN";
             HOTEN.FieldName = "HOTEN";
-            HOTEN.MaxWidth = 201;
-            HOTEN.MinWidth = 201;
+            HOTEN.MaxWidth = 150;
+            HOTEN.MinWidth = 150;
             HOTEN.Name = "HOTEN";
             HOTEN.Visible = true;
             HOTEN.VisibleIndex = 1;
-            HOTEN.Width = 201;
+            HOTEN.Width = 150;
             // 
             // GIOITINH
             // 
@@ -615,12 +669,12 @@
             DIACHI.AppearanceHeader.Options.UseFont = true;
             DIACHI.Caption = "ĐỊA CHỈ";
             DIACHI.FieldName = "DIACHI";
-            DIACHI.MaxWidth = 249;
-            DIACHI.MinWidth = 249;
+            DIACHI.MaxWidth = 150;
+            DIACHI.MinWidth = 150;
             DIACHI.Name = "DIACHI";
             DIACHI.Visible = true;
             DIACHI.VisibleIndex = 5;
-            DIACHI.Width = 249;
+            DIACHI.Width = 150;
             // 
             // EMAIL
             // 
@@ -662,12 +716,12 @@
             TENPB.AppearanceHeader.Options.UseFont = true;
             TENPB.Caption = "PHÒNG BAN";
             TENPB.FieldName = "TENPB";
-            TENPB.MaxWidth = 150;
-            TENPB.MinWidth = 150;
+            TENPB.MaxWidth = 100;
+            TENPB.MinWidth = 100;
             TENPB.Name = "TENPB";
             TENPB.Visible = true;
             TENPB.VisibleIndex = 8;
-            TENPB.Width = 150;
+            TENPB.Width = 100;
             // 
             // ID_BP
             // 
@@ -704,12 +758,12 @@
             TENCV.AppearanceHeader.Options.UseFont = true;
             TENCV.Caption = "CHỨC VỤ";
             TENCV.FieldName = "TENCV";
-            TENCV.MaxWidth = 150;
-            TENCV.MinWidth = 150;
+            TENCV.MaxWidth = 100;
+            TENCV.MinWidth = 100;
             TENCV.Name = "TENCV";
             TENCV.Visible = true;
             TENCV.VisibleIndex = 10;
-            TENCV.Width = 150;
+            TENCV.Width = 100;
             // 
             // ID_TD
             // 
@@ -725,12 +779,38 @@
             TENTD.AppearanceHeader.Options.UseFont = true;
             TENTD.Caption = "TRÌNH ĐỘ";
             TENTD.FieldName = "TENTD";
-            TENTD.MaxWidth = 150;
-            TENTD.MinWidth = 150;
+            TENTD.MaxWidth = 100;
+            TENTD.MinWidth = 100;
             TENTD.Name = "TENTD";
             TENTD.Visible = true;
             TENTD.VisibleIndex = 11;
-            TENTD.Width = 150;
+            TENTD.Width = 100;
+            // 
+            // TAIKHOAN
+            // 
+            TAIKHOAN.AppearanceHeader.Font = new Font("Times New Roman", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            TAIKHOAN.AppearanceHeader.Options.UseFont = true;
+            TAIKHOAN.Caption = "TÀI KHOẢN";
+            TAIKHOAN.FieldName = "TAIKHOAN";
+            TAIKHOAN.MaxWidth = 100;
+            TAIKHOAN.MinWidth = 100;
+            TAIKHOAN.Name = "TAIKHOAN";
+            TAIKHOAN.Visible = true;
+            TAIKHOAN.VisibleIndex = 12;
+            TAIKHOAN.Width = 100;
+            // 
+            // MATKHAU
+            // 
+            MATKHAU.AppearanceHeader.Font = new Font("Times New Roman", 9.75F, FontStyle.Bold);
+            MATKHAU.AppearanceHeader.Options.UseFont = true;
+            MATKHAU.Caption = "MẬT KHẨU";
+            MATKHAU.FieldName = "MATKHAU";
+            MATKHAU.MaxWidth = 100;
+            MATKHAU.MinWidth = 100;
+            MATKHAU.Name = "MATKHAU";
+            MATKHAU.Visible = true;
+            MATKHAU.VisibleIndex = 13;
+            MATKHAU.Width = 100;
             // 
             // FormNhanVien
             // 
@@ -756,6 +836,8 @@
             ((System.ComponentModel.ISupportInitialize)splitContainerControl1).EndInit();
             splitContainerControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBoxHinhAnh).EndInit();
+            ((System.ComponentModel.ISupportInitialize)textEditMatKhau.Properties).EndInit();
+            ((System.ComponentModel.ISupportInitialize)textEditTaiKhoan.Properties).EndInit();
             ((System.ComponentModel.ISupportInitialize)textEditEmail.Properties).EndInit();
             ((System.ComponentModel.ISupportInitialize)textEditDiaChi.Properties).EndInit();
             ((System.ComponentModel.ISupportInitialize)textEditSDT.Properties).EndInit();
@@ -825,5 +907,11 @@
         private ComboBox comboBoxPhongBan;
         private DevExpress.XtraEditors.SimpleButton simpleButtonHinhAnh;
         private CheckBox checkBoxGioiTinh;
+        private DevExpress.XtraEditors.TextEdit textEditTaiKhoan;
+        private DevExpress.XtraEditors.LabelControl labelControl12;
+        private DevExpress.XtraEditors.LabelControl labelControl11;
+        private DevExpress.XtraEditors.TextEdit textEditMatKhau;
+        private DevExpress.XtraGrid.Columns.GridColumn TAIKHOAN;
+        private DevExpress.XtraGrid.Columns.GridColumn MATKHAU;
     }
 }

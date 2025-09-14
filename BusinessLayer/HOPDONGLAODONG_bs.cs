@@ -10,16 +10,16 @@ namespace BusinessLayer
 {
     public class HOPDONGLAODONG_bs
     {
-        Qly_NvienEntities1 db = new Qly_NvienEntities1();
+        Qly_NvienEntities2 db = new Qly_NvienEntities2();
 
         public HOPDONG getItem(string sohd)
         {
-            return db.HOPDONGs.FirstOrDefault(x => x.SOHD == sohd);
+            return db.HOPDONG.FirstOrDefault(x => x.SOHD == sohd);
         }
 
         public List<HOPDONGLAODONG_dto> getItemFull(string sohd)
         {
-            List<HOPDONG> lshd = db.HOPDONGs.Where(x => x.SOHD == sohd).ToList();
+            List<HOPDONG> lshd = db.HOPDONG.Where(x => x.SOHD == sohd).ToList();
             List<HOPDONGLAODONG_dto> lshddto = new List<HOPDONGLAODONG_dto>();
             HOPDONGLAODONG_dto hddto;
             foreach (var item in lshd)
@@ -35,7 +35,7 @@ namespace BusinessLayer
                 hddto.LUONGCOBAN = item.LUONGCOBAN;
                 hddto.THOIHAN = item.THOIHAN;
                 hddto.MANV = item.MANV;
-                var nv = db.NHANVIENs.FirstOrDefault(x => x.MANV == item.MANV);
+                var nv = db.NHANVIEN.FirstOrDefault(x => x.MANV == item.MANV);
                 hddto.HOTEN = nv.HOTEN;
                 hddto.ID_CTY = item.ID_CTY;
                 hddto.CREATED_BY = item.CREATED_BY;
@@ -51,12 +51,12 @@ namespace BusinessLayer
 
         public List<HOPDONG> getList()
         {
-            return db.HOPDONGs.ToList();
+            return db.HOPDONG.ToList();
         }
 
         public List<HOPDONGLAODONG_dto> getListFull()
         {
-            List<HOPDONG> lshd = db.HOPDONGs.ToList();
+            List<HOPDONG> lshd = db.HOPDONG.ToList();
             List<HOPDONGLAODONG_dto> lshddto = new List<HOPDONGLAODONG_dto>();
             HOPDONGLAODONG_dto hddto;
             foreach(var item in lshd)
@@ -72,7 +72,7 @@ namespace BusinessLayer
                 hddto.LUONGCOBAN = item.LUONGCOBAN;
                 hddto.THOIHAN = item.THOIHAN;
                 hddto.MANV = item.MANV;
-                var nv = db.NHANVIENs.FirstOrDefault(x => x.MANV == item.MANV);
+                var nv = db.NHANVIEN.FirstOrDefault(x => x.MANV == item.MANV);
                 hddto.HOTEN = nv.HOTEN;
                 hddto.ID_CTY = item.ID_CTY;
                 hddto.CREATED_BY = item.CREATED_BY;
@@ -91,7 +91,7 @@ namespace BusinessLayer
         {
             try
             {
-                db.HOPDONGs.Add(hd);
+                db.HOPDONG.Add(hd);
                 db.SaveChanges();
                 return hd;
             }
@@ -106,7 +106,7 @@ namespace BusinessLayer
         {
             try
             {
-                var _hd = db.HOPDONGs.FirstOrDefault(x => x.SOHD == hd.SOHD);
+                var _hd = db.HOPDONG.FirstOrDefault(x => x.SOHD == hd.SOHD);
                 _hd.NGAYBDAU = hd.NGAYBDAU;
                 _hd.NGAYKTHUC = hd.NGAYKTHUC;
                 _hd.NGAYKY = hd.NGAYKY;
@@ -132,7 +132,7 @@ namespace BusinessLayer
         //XÓA
         public void Delete(string idhd, int manv)
         {
-            var _hd = db.HOPDONGs.FirstOrDefault(x => x.SOHD == idhd);
+            var _hd = db.HOPDONG.FirstOrDefault(x => x.SOHD == idhd);
             _hd.DELETED_BY = manv;
             _hd.DELETED_DATE = DateTime.Now;
             db.SaveChanges();
@@ -140,7 +140,7 @@ namespace BusinessLayer
 
         public string maxSoHD()
         {
-            var _hd = db.HOPDONGs.OrderByDescending(x=>x.CREATED_DATE).FirstOrDefault();
+            var _hd = db.HOPDONG.OrderByDescending(x=>x.CREATED_DATE).FirstOrDefault();
             if (_hd != null)
             {
                 return _hd.SOHD;
@@ -152,7 +152,7 @@ namespace BusinessLayer
         }
         public List<HOPDONGLAODONG_dto> getLenLuong()
         {
-            List<HOPDONG> lshd = db.HOPDONGs.Where(x=>(x.NGAYBDAU.Value.Month-DateTime.Now.Month)==0&&(DateTime.Now.Year-x.NGAYBDAU.Value.Year)==1).ToList();
+            List<HOPDONG> lshd = db.HOPDONG.Where(x=>(x.NGAYBDAU.Value.Month-DateTime.Now.Month)==0&&(DateTime.Now.Year-x.NGAYBDAU.Value.Year)==1).ToList();
             List<HOPDONGLAODONG_dto> lshddto = new List<HOPDONGLAODONG_dto>();
             HOPDONGLAODONG_dto hddto;
             foreach (var item in lshd)
@@ -168,7 +168,7 @@ namespace BusinessLayer
                 hddto.LUONGCOBAN = item.LUONGCOBAN;
                 hddto.THOIHAN = item.THOIHAN;
                 hddto.MANV = item.MANV;
-                var nv = db.NHANVIENs.FirstOrDefault(x => x.MANV == item.MANV);
+                var nv = db.NHANVIEN.FirstOrDefault(x => x.MANV == item.MANV);
                 hddto.HOTEN = nv.HOTEN;
                 hddto.ID_CTY = item.ID_CTY;
                 hddto.CREATED_BY = item.CREATED_BY;

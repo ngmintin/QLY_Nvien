@@ -98,7 +98,7 @@
             bar2.DockCol = 0;
             bar2.DockRow = 0;
             bar2.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
-            bar2.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] { new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, btnThem, "", true, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph), new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, btnSua, "", true, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph), new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, btnXoa, "", true, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph), new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, btnLuu, "", true, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph), new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, btnHuy, "", true, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph), new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, btIn, "", true, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph), new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, btDong, "", true, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph) });
+            bar2.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] { new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, btnThem, "", true, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph), new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, btnSua, "", true, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph), new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, btnXoa, "", true, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph), new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, btnLuu, "", true, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph), new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, btnHuy, "", true, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph), new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, btDong, "", true, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph) });
             bar2.OptionsBar.MultiLine = true;
             bar2.OptionsBar.UseWholeRow = true;
             bar2.Text = "Main menu";
@@ -143,13 +143,7 @@
             btnHuy.Name = "btnHuy";
             btnHuy.ItemClick += btnHuy_ItemClick;
             // 
-            // btIn
-            // 
-            btIn.Caption = "In";
-            btIn.Id = 7;
-            btIn.ImageOptions.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("btIn.ImageOptions.SvgImage");
-            btIn.Name = "btIn";
-            btIn.ItemClick += btIn_ItemClick;
+
             // 
             // btDong
             // 
@@ -177,7 +171,7 @@
             barDockControlTop.Dock = DockStyle.Top;
             barDockControlTop.Location = new Point(0, 0);
             barDockControlTop.Manager = barManager1;
-            barDockControlTop.Margin = new Padding(4, 4, 4, 4);
+            barDockControlTop.Margin = new Padding(4);
             barDockControlTop.Size = new Size(1272, 28);
             // 
             // barDockControlBottom
@@ -186,7 +180,7 @@
             barDockControlBottom.Dock = DockStyle.Bottom;
             barDockControlBottom.Location = new Point(0, 712);
             barDockControlBottom.Manager = barManager1;
-            barDockControlBottom.Margin = new Padding(4, 4, 4, 4);
+            barDockControlBottom.Margin = new Padding(4);
             barDockControlBottom.Size = new Size(1272, 20);
             // 
             // barDockControlLeft
@@ -195,7 +189,7 @@
             barDockControlLeft.Dock = DockStyle.Left;
             barDockControlLeft.Location = new Point(0, 28);
             barDockControlLeft.Manager = barManager1;
-            barDockControlLeft.Margin = new Padding(4, 4, 4, 4);
+            barDockControlLeft.Margin = new Padding(4);
             barDockControlLeft.Size = new Size(0, 684);
             // 
             // barDockControlRight
@@ -204,7 +198,7 @@
             barDockControlRight.Dock = DockStyle.Right;
             barDockControlRight.Location = new Point(1272, 28);
             barDockControlRight.Manager = barManager1;
-            barDockControlRight.Margin = new Padding(4, 4, 4, 4);
+            barDockControlRight.Margin = new Padding(4);
             barDockControlRight.Size = new Size(0, 684);
             // 
             // btnDong
@@ -226,7 +220,7 @@
             splitContainerControl1.Dock = DockStyle.Fill;
             splitContainerControl1.Horizontal = false;
             splitContainerControl1.Location = new Point(0, 28);
-            splitContainerControl1.Margin = new Padding(4, 4, 4, 4);
+            splitContainerControl1.Margin = new Padding(4);
             splitContainerControl1.Name = "splitContainerControl1";
             // 
             // splitContainerControl1.Panel1
@@ -252,7 +246,7 @@
             // textEditDiaChi
             // 
             textEditDiaChi.Location = new Point(697, 96);
-            textEditDiaChi.Margin = new Padding(4, 4, 4, 4);
+            textEditDiaChi.Margin = new Padding(4);
             textEditDiaChi.Name = "textEditDiaChi";
             textEditDiaChi.Properties.Appearance.Font = new Font("Times New Roman", 12F);
             textEditDiaChi.Properties.Appearance.Options.UseFont = true;
@@ -264,7 +258,7 @@
             labelControl4.Appearance.Font = new Font("Times New Roman", 14.25F);
             labelControl4.Appearance.Options.UseFont = true;
             labelControl4.Location = new Point(630, 101);
-            labelControl4.Margin = new Padding(4, 4, 4, 4);
+            labelControl4.Margin = new Padding(4);
             labelControl4.Name = "labelControl4";
             labelControl4.Size = new Size(59, 21);
             labelControl4.TabIndex = 0;
@@ -273,7 +267,7 @@
             // textEditSoDienThoai
             // 
             textEditSoDienThoai.Location = new Point(697, 34);
-            textEditSoDienThoai.Margin = new Padding(4, 4, 4, 4);
+            textEditSoDienThoai.Margin = new Padding(4);
             textEditSoDienThoai.Name = "textEditSoDienThoai";
             textEditSoDienThoai.Properties.Appearance.Font = new Font("Times New Roman", 12F);
             textEditSoDienThoai.Properties.Appearance.Options.UseFont = true;
@@ -285,7 +279,7 @@
             labelControl3.Appearance.Font = new Font("Times New Roman", 14.25F);
             labelControl3.Appearance.Options.UseFont = true;
             labelControl3.Location = new Point(587, 37);
-            labelControl3.Margin = new Padding(4, 4, 4, 4);
+            labelControl3.Margin = new Padding(4);
             labelControl3.Name = "labelControl3";
             labelControl3.Size = new Size(102, 21);
             labelControl3.TabIndex = 0;
@@ -294,7 +288,7 @@
             // textEditTen
             // 
             textEditTen.Location = new Point(161, 37);
-            textEditTen.Margin = new Padding(4, 4, 4, 4);
+            textEditTen.Margin = new Padding(4);
             textEditTen.Name = "textEditTen";
             textEditTen.Properties.Appearance.Font = new Font("Times New Roman", 12F);
             textEditTen.Properties.Appearance.Options.UseFont = true;
@@ -306,7 +300,7 @@
             labelControl2.Appearance.Font = new Font("Times New Roman", 14.25F);
             labelControl2.Appearance.Options.UseFont = true;
             labelControl2.Location = new Point(59, 40);
-            labelControl2.Margin = new Padding(4, 4, 4, 4);
+            labelControl2.Margin = new Padding(4);
             labelControl2.Name = "labelControl2";
             labelControl2.Size = new Size(94, 21);
             labelControl2.TabIndex = 0;
@@ -315,7 +309,7 @@
             // textEditEmail
             // 
             textEditEmail.Location = new Point(161, 99);
-            textEditEmail.Margin = new Padding(4, 4, 4, 4);
+            textEditEmail.Margin = new Padding(4);
             textEditEmail.MenuManager = barManager1;
             textEditEmail.Name = "textEditEmail";
             textEditEmail.Properties.Appearance.Font = new Font("Times New Roman", 12F);
@@ -328,7 +322,7 @@
             labelControl1.Appearance.Font = new Font("Times New Roman", 14.25F);
             labelControl1.Appearance.Options.UseFont = true;
             labelControl1.Location = new Point(108, 101);
-            labelControl1.Margin = new Padding(4, 4, 4, 4);
+            labelControl1.Margin = new Padding(4);
             labelControl1.Name = "labelControl1";
             labelControl1.Size = new Size(45, 21);
             labelControl1.TabIndex = 0;
@@ -337,10 +331,10 @@
             // gcDanhSach
             // 
             gcDanhSach.Dock = DockStyle.Fill;
-            gcDanhSach.EmbeddedNavigator.Margin = new Padding(4, 4, 4, 4);
+            gcDanhSach.EmbeddedNavigator.Margin = new Padding(4);
             gcDanhSach.Location = new Point(0, 0);
             gcDanhSach.MainView = gvDanhSach;
-            gcDanhSach.Margin = new Padding(4, 4, 4, 4);
+            gcDanhSach.Margin = new Padding(4);
             gcDanhSach.MenuManager = barManager1;
             gcDanhSach.Name = "gcDanhSach";
             gcDanhSach.Size = new Size(1272, 514);
@@ -433,7 +427,7 @@
             Controls.Add(barDockControlBottom);
             Controls.Add(barDockControlTop);
             Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            Margin = new Padding(4, 4, 4, 4);
+            Margin = new Padding(4);
             Name = "FormCongTy";
             Text = "CÔNG TY";
             Load += FormCongTy_Load;

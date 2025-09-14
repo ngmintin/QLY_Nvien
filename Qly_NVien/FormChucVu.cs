@@ -113,10 +113,6 @@ namespace Qly_NVien
             splitContainerControl1.PanelVisibility = DevExpress.XtraEditors.SplitPanelVisibility.Panel2;    //CHỈ HIỆN THỊ PANEL 2
         }
 
-        private void btIn_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-
-        }
 
         private void btDong_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {

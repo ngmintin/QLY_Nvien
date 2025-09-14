@@ -9,15 +9,15 @@ namespace BusinessLayer
 {
     public class KYCONGCHITIET_bs
     {
-        Qly_NvienEntities1  db = new Qly_NvienEntities1();
+        Qly_NvienEntities2  db = new Qly_NvienEntities2();
 
         public List<KYCONGCHITIET> getList(int makycong)
         {
-            return db.KYCONGCHITIETs.Where(x => x.MAKYCONG == makycong).ToList();
+            return db.KYCONGCHITIET.Where(x => x.MAKYCONG == makycong).ToList();
         }
         public void phatSinhKyCongChiTiet(int macty, int thang, int nam)
         {
-            var lstNV = db.NHANVIENs.ToList();
+            var lstNV = db.NHANVIEN.ToList();
             if (lstNV.Count == 0) return;
 
             foreach (var item in lstNV)
@@ -98,7 +98,7 @@ namespace BusinessLayer
                 kycongchitiet.D31 = listDay[30];
                 kycongchitiet.NGAYCONG = MyFunctions_bs.demSoNgayLamViecTrongThang(thang, nam);
                 kycongchitiet.TONGNGAYCONG = MyFunctions_bs.demSoNgayLamViecTrongThang(thang, nam);
-                db.KYCONGCHITIETs.Add(kycongchitiet);
+                db.KYCONGCHITIET.Add(kycongchitiet);
                 db.SaveChanges();
             }
 

@@ -64,13 +64,7 @@
     <Compile Update="FormQuenMatKhau.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="FormSuKien.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="FormThoat.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="FormThongBao.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="FormTrangChu.cs">

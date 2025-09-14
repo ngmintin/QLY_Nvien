@@ -9,16 +9,16 @@ namespace BusinessLayer
 {
     public class LOAICA_bs
     {
-        Qly_NvienEntities1 db = new Qly_NvienEntities1();
+        Qly_NvienEntities2 db = new Qly_NvienEntities2();
 
         public LOAICA getItem(int idloaica)
         {
-            return db.LOAICAs.FirstOrDefault(x => x.ID_LCA == idloaica);
+            return db.LOAICA.FirstOrDefault(x => x.ID_LCA == idloaica);
         }
 
         public List<LOAICA> getList()
         {
-            return db.LOAICAs.ToList();
+            return db.LOAICA.ToList();
         }
 
         //THÊM
@@ -26,7 +26,7 @@ namespace BusinessLayer
         {
             try
             {
-                db.LOAICAs.Add(lc);
+                db.LOAICA.Add(lc);
                 db.SaveChanges();
                 return lc;
             }
@@ -41,7 +41,7 @@ namespace BusinessLayer
         {
             try
             {
-                var _lc = db.LOAICAs.FirstOrDefault(x => x.ID_LCA == lc.ID_LCA);
+                var _lc = db.LOAICA.FirstOrDefault(x => x.ID_LCA == lc.ID_LCA);
                 _lc.TENLCA = lc.TENLCA;
                 _lc.HESO = lc.HESO;
                 _lc.UPDATED_BY = lc.UPDATED_BY;
@@ -58,7 +58,7 @@ namespace BusinessLayer
         //XÓA
         public void Delete(int idloaica, int iduser)
         {
-                var _lc = db.LOAICAs.FirstOrDefault(x => x.ID_LCA == idloaica);
+                var _lc = db.LOAICA.FirstOrDefault(x => x.ID_LCA == idloaica);
                 _lc.DELETED_BY = iduser;
                 _lc.DELETED_DATE = DateTime.Now;
                 db.SaveChanges();

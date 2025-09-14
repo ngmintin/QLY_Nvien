@@ -17,7 +17,8 @@ namespace DataLayer
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public LOAICA()
         {
-            this.TANGCAs = new HashSet<TANGCA>();
+            this.TANGCA = new HashSet<TANGCA>();
+            this.TANGCA1 = new HashSet<TANGCA>();
         }
     
         public int ID_LCA { get; set; }
@@ -31,6 +32,8 @@ namespace DataLayer
         public Nullable<System.DateTime> DELETED_DATE { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<TANGCA> TANGCAs { get; set; }
+        public virtual ICollection<TANGCA> TANGCA { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<TANGCA> TANGCA1 { get; set; }
     }
 }

@@ -10,17 +10,17 @@ namespace BusinessLayer
 {
     public class NHANVIEN_bs
     {
-        Qly_NvienEntities1 db = new Qly_NvienEntities1();
+        Qly_NvienEntities2 db = new Qly_NvienEntities2();
 
         //
         public NHANVIEN getItem(int idnv)
         {
-            return db.NHANVIENs.FirstOrDefault(x => x.MANV == idnv);
+            return db.NHANVIEN.FirstOrDefault(x => x.MANV == idnv);
         }
 
         public NHANVIEN_dto getItemFull(int id)
         {
-            var item = db.NHANVIENs.FirstOrDefault(x=>x.MANV==id);
+            var item = db.NHANVIEN.FirstOrDefault(x=>x.MANV==id);
             NHANVIEN_dto _nvdto = new NHANVIEN_dto();
                 _nvdto.MANV = item.MANV;
                 _nvdto.HOTEN = item.HOTEN;
@@ -31,20 +31,22 @@ namespace BusinessLayer
                 _nvdto.EMAIL = item.EMAIL;
                 _nvdto.HINHANH = item.HINHANH;
                 _nvdto.DATHOIVIEC = item.DATHOIVIEC;
+                _nvdto.TAIKHOAN = item.TAIKHOAN;
+                _nvdto.MATKHAU = item.MATKHAU;
                 _nvdto.ID_PB = item.ID_PB;
-                var pb = db.PHONGBANs.FirstOrDefault(x => x.ID_PB == item.ID_PB);
+                var pb = db.PHONGBAN.FirstOrDefault(x => x.ID_PB == item.ID_PB);
                 _nvdto.TENPB = pb.TENPB;
 
                 _nvdto.ID_BP = item.ID_BP;
-                var bp = db.BOPHANs.FirstOrDefault(x => x.ID_BP == item.ID_BP);
+                var bp = db.BOPHAN.FirstOrDefault(x => x.ID_BP == item.ID_BP);
                 _nvdto.TENBP = bp.TENBP;
 
                 _nvdto.ID_CV = item.ID_CV;
-                var cv = db.CHUCVUs.FirstOrDefault(x => x.ID_CV == item.ID_CV);
+                var cv = db.CHUCVU.FirstOrDefault(x => x.ID_CV == item.ID_CV);
                 _nvdto.TENCV = cv.TENCV;
 
                 _nvdto.ID_TD = item.ID_TD;
-                var td = db.TRINHDOes.FirstOrDefault(x => x.ID_TD == item.ID_TD);
+                var td = db.TRINHDO.FirstOrDefault(x => x.ID_TD == item.ID_TD);
                 _nvdto.TENTD = td.TENTD;
                 return _nvdto;
         }
@@ -52,12 +54,12 @@ namespace BusinessLayer
         //LẤY VỀ DANH SÁCH
         public List<NHANVIEN> getList()
         {
-            return db.NHANVIENs.ToList();
+            return db.NHANVIEN.ToList();
         }
 
         public List<NHANVIEN_dto> getListFull()
         {
-            var lsnv = db.NHANVIENs.ToList();
+            var lsnv = db.NHANVIEN.ToList();
             List<NHANVIEN_dto> lsnvdto = new List<NHANVIEN_dto>();
             NHANVIEN_dto _nvdto;
             foreach(var item in lsnv)
@@ -72,20 +74,22 @@ namespace BusinessLayer
                 _nvdto.EMAIL = item.EMAIL;
                 _nvdto.HINHANH = item.HINHANH;
                 _nvdto.DATHOIVIEC = item.DATHOIVIEC;
+                _nvdto.TAIKHOAN = item.TAIKHOAN;
+                _nvdto.MATKHAU = item.MATKHAU;
                 _nvdto.ID_PB = item.ID_PB;
-                var pb = db.PHONGBANs.FirstOrDefault(x => x.ID_PB == item.ID_PB);
+                var pb = db.PHONGBAN.FirstOrDefault(x => x.ID_PB == item.ID_PB);
                 _nvdto.TENPB = pb.TENPB;
 
                 _nvdto.ID_BP = item.ID_BP;
-                var bp = db.BOPHANs.FirstOrDefault(x => x.ID_BP == item.ID_BP);
+                var bp = db.BOPHAN.FirstOrDefault(x => x.ID_BP == item.ID_BP);
                 _nvdto.TENBP = bp.TENBP;
 
                 _nvdto.ID_CV = item.ID_CV;
-                var cv = db.CHUCVUs.FirstOrDefault(x => x.ID_CV == item.ID_CV);
+                var cv = db.CHUCVU.FirstOrDefault(x => x.ID_CV == item.ID_CV);
                 _nvdto.TENCV = cv.TENCV;
 
                 _nvdto.ID_TD = item.ID_TD;
-                var td = db.TRINHDOes.FirstOrDefault(x => x.ID_TD == item.ID_TD);
+                var td = db.TRINHDO.FirstOrDefault(x => x.ID_TD == item.ID_TD);
                 _nvdto.TENTD = td.TENTD;
 
                 lsnvdto.Add(_nvdto);
@@ -98,7 +102,7 @@ namespace BusinessLayer
         {
             try
             {
-                db.NHANVIENs.Add(nv);
+                db.NHANVIEN.Add(nv);
                 db.SaveChanges();
                 return nv;
             }
@@ -113,7 +117,7 @@ namespace BusinessLayer
         {
             try
             {
-                var _nv = db.NHANVIENs.FirstOrDefault(x => x.MANV == nv.MANV);
+                var _nv = db.NHANVIEN.FirstOrDefault(x => x.MANV == nv.MANV);
                 _nv.MANV = nv.MANV;
                 _nv.HOTEN = nv.HOTEN;
                 _nv.GIOITINH = nv.GIOITINH;
@@ -122,6 +126,7 @@ namespace BusinessLayer
                 _nv.DIACHI = nv.DIACHI;
                 _nv.EMAIL = nv.EMAIL;
                 _nv.HINHANH = nv.HINHANH;
+                _nv.MATKHAU = nv.MATKHAU;
                 _nv.DATHOIVIEC = nv.DATHOIVIEC;
                 _nv.ID_PB = nv.ID_PB;
                 _nv.ID_BP = nv.ID_BP;
@@ -143,8 +148,8 @@ namespace BusinessLayer
         {
             try
             {
-                var _nv = db.NHANVIENs.FirstOrDefault(x => x.MANV == idnv);
-                db.NHANVIENs.Remove(_nv);
+                var _nv = db.NHANVIEN.FirstOrDefault(x => x.MANV == idnv);
+                db.NHANVIEN.Remove(_nv);
                 db.SaveChanges();
             }
             catch (Exception ex)
@@ -156,7 +161,7 @@ namespace BusinessLayer
         //HÀM LẤY NHÂN VIÊN SINH NHẬT TRONG THÁNG
         public List<NHANVIEN> getSinhNhat()
         {
-            return db.NHANVIENs.Where(x => x.NGAYSINH.Value.Month == DateTime.Now.Month).ToList();
+            return db.NHANVIEN.Where(x => x.NGAYSINH.Value.Month == DateTime.Now.Month).ToList();
         }
     }
 }

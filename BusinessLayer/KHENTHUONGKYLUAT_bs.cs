@@ -10,23 +10,23 @@ namespace BusinessLayer
 {
     public class KHENTHUONGKYLUAT_bs
     {
-        Qly_NvienEntities1 db = new Qly_NvienEntities1();
+        Qly_NvienEntities2 db = new Qly_NvienEntities2();
 
         //
         public KHENTHUONGKYLUAT getItem(string soqd)
         {
-            return db.KHENTHUONGKYLUATs.FirstOrDefault(x => x.SOQUYETDINH == soqd);
+            return db.KHENTHUONGKYLUAT.FirstOrDefault(x => x.SOQUYETDINH == soqd);
         }
 
         //LẤY VỀ DANH SÁCH
         public List<KHENTHUONGKYLUAT> getList(int loai)
         {
-            return db.KHENTHUONGKYLUATs.Where(x=>x.LOAI == loai).ToList();
+            return db.KHENTHUONGKYLUAT.Where(x=>x.LOAI == loai).ToList();
         }
 
         public List<KHENTHUONGKYLUAT_dto> getListFull(int loai)
         {
-            List<KHENTHUONGKYLUAT> lsktkl = db.KHENTHUONGKYLUATs.Where(x=>x.LOAI==loai).ToList();
+            List<KHENTHUONGKYLUAT> lsktkl = db.KHENTHUONGKYLUAT.Where(x=>x.LOAI==loai).ToList();
             List<KHENTHUONGKYLUAT_dto> lsktkldto = new List<KHENTHUONGKYLUAT_dto>();
             KHENTHUONGKYLUAT_dto ktkldto;
             foreach (var item in lsktkl)
@@ -40,7 +40,7 @@ namespace BusinessLayer
                 ktkldto.NGAY = item.NGAY;
                 ktkldto.LYDO = item.LYDO;
                 ktkldto.MANV = item.MANV;
-                var nv = db.NHANVIENs.FirstOrDefault(x => x.MANV == item.MANV);
+                var nv = db.NHANVIEN.FirstOrDefault(x => x.MANV == item.MANV);
                 ktkldto.HOTEN = nv.HOTEN;
                 ktkldto.CREATED_BY = item.CREATED_BY;
                 ktkldto.CREATED_DATE = item.CREATED_DATE;
@@ -58,7 +58,7 @@ namespace BusinessLayer
         {
             try
             {
-                db.KHENTHUONGKYLUATs.Add(ktkl);
+                db.KHENTHUONGKYLUAT.Add(ktkl);
                 db.SaveChanges();
                 return ktkl;
             }
@@ -73,7 +73,7 @@ namespace BusinessLayer
         {
             try
             {
-                KHENTHUONGKYLUAT _ktkl = db.KHENTHUONGKYLUATs.FirstOrDefault(x => x.SOQUYETDINH == ktkl.SOQUYETDINH);
+                KHENTHUONGKYLUAT _ktkl = db.KHENTHUONGKYLUAT.FirstOrDefault(x => x.SOQUYETDINH == ktkl.SOQUYETDINH);
                 _ktkl.NGAY = ktkl.NGAY;
                 _ktkl.LYDO = ktkl.LYDO;
                 _ktkl.NOIDUNG = ktkl.NOIDUNG;
@@ -98,7 +98,7 @@ namespace BusinessLayer
             try
             {
                 
-                KHENTHUONGKYLUAT _ktkl = db.KHENTHUONGKYLUATs.FirstOrDefault(x => x.SOQUYETDINH == soqd);
+                KHENTHUONGKYLUAT _ktkl = db.KHENTHUONGKYLUAT.FirstOrDefault(x => x.SOQUYETDINH == soqd);
                 _ktkl.DELETED_BY = manv;
                 _ktkl.DELETED_DATE = DateTime.Now;
                 db.SaveChanges();
@@ -111,7 +111,7 @@ namespace BusinessLayer
 
         public string maxSoQD(int loai)
         {
-            var _hd = db.KHENTHUONGKYLUATs.Where(x=>x.LOAI==loai).OrderByDescending(x => x.CREATED_DATE).FirstOrDefault();
+            var _hd = db.KHENTHUONGKYLUAT.Where(x=>x.LOAI==loai).OrderByDescending(x => x.CREATED_DATE).FirstOrDefault();
             if (_hd != null)
             {
                 return _hd.SOQUYETDINH;

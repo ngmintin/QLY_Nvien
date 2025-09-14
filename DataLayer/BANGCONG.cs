@@ -20,6 +20,8 @@ namespace DataLayer
         public Nullable<int> ID_CC { get; set; }
     
         public virtual CHAMCONG CHAMCONG { get; set; }
+        public virtual CHAMCONG CHAMCONG1 { get; set; }
         public virtual LOAICONG LOAICONG { get; set; }
+        public virtual NHANVIEN NHANVIEN { get; set; }
     }
 }

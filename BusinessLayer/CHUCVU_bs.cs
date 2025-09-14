@@ -9,18 +9,18 @@ namespace BusinessLayer
 {
     public class CHUCVU_bs
     {
-        Qly_NvienEntities1 db = new Qly_NvienEntities1();
+        Qly_NvienEntities2 db = new Qly_NvienEntities2();
 
         //
         public CHUCVU getItem(int idcv)
         {
-            return db.CHUCVUs.FirstOrDefault(x => x.ID_CV == idcv);
+            return db.CHUCVU.FirstOrDefault(x => x.ID_CV == idcv);
         }
 
         //LẤY VỀ DANH SÁCH
         public List<CHUCVU> getList()
         {
-            return db.CHUCVUs.ToList();
+            return db.CHUCVU.ToList();
         }
 
         //THÊM
@@ -28,7 +28,7 @@ namespace BusinessLayer
         {
             try
             {
-                db.CHUCVUs.Add(cv);
+                db.CHUCVU.Add(cv);
                 db.SaveChanges();
                 return cv;
             }
@@ -43,7 +43,7 @@ namespace BusinessLayer
         {
             try
             {
-                var _cv = db.CHUCVUs.FirstOrDefault(x => x.ID_CV == cv.ID_CV);
+                var _cv = db.CHUCVU.FirstOrDefault(x => x.ID_CV == cv.ID_CV);
                 _cv.TENCV = cv.TENCV;
                 db.SaveChanges();
                 return cv;
@@ -59,8 +59,8 @@ namespace BusinessLayer
         {
             try
             {
-                var _cv = db.CHUCVUs.FirstOrDefault(x => x.ID_CV == idcv);
-                db.CHUCVUs.Remove(_cv);
+                var _cv = db.CHUCVU.FirstOrDefault(x => x.ID_CV == idcv);
+                db.CHUCVU.Remove(_cv);
                 db.SaveChanges();
             }
             catch (Exception ex)

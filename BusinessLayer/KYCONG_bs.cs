@@ -9,16 +9,16 @@ namespace BusinessLayer
 {
     public class KYCONG_bs
     {
-        Qly_NvienEntities1 db = new Qly_NvienEntities1();
+        Qly_NvienEntities2 db = new Qly_NvienEntities2();
 
         public KYCONG getItem(int makycong)
         {
-            return db.KYCONGs.FirstOrDefault(x => x.MAKYCONG == makycong);
+            return db.KYCONG.FirstOrDefault(x => x.MAKYCONG == makycong);
         }
 
         public List<KYCONG> getList()
         {
-            return db.KYCONGs.ToList();
+            return db.KYCONG.ToList();
         }
 
         //THÊM
@@ -26,7 +26,7 @@ namespace BusinessLayer
         {
             try
             {
-                db.KYCONGs.Add(kc);
+                db.KYCONG.Add(kc);
                 db.SaveChanges();
                 return kc;
             }
@@ -41,7 +41,7 @@ namespace BusinessLayer
         {
             try
             {
-                var _kc = db.KYCONGs.FirstOrDefault(x => x.MAKYCONG == kc.MAKYCONG);
+                var _kc = db.KYCONG.FirstOrDefault(x => x.MAKYCONG == kc.MAKYCONG);
                 _kc.MAKYCONG = kc.MAKYCONG;
                 _kc.NAM = kc.NAM;
                 _kc.THANG = kc.THANG;
@@ -65,7 +65,7 @@ namespace BusinessLayer
         {
             try
             {
-                var _kc = db.KYCONGs.FirstOrDefault(x => x.MAKYCONG == makycong);
+                var _kc = db.KYCONG.FirstOrDefault(x => x.MAKYCONG == makycong);
                 _kc.DELETED_BY = iduser;
                 _kc.DELETED_DATE = DateTime.Now;
                 db.SaveChanges();
@@ -79,7 +79,7 @@ namespace BusinessLayer
         //KTRA TRẠNG THÁI
         public bool kiemTraPhatSinhKyCong(int makycong)
         {
-            var kc = db.KYCONGs.FirstOrDefault(x=>x.MAKYCONG==makycong);
+            var kc = db.KYCONG.FirstOrDefault(x=>x.MAKYCONG==makycong);
             if(kc == null)
             {
                 return false;

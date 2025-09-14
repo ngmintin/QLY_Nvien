@@ -9,18 +9,18 @@ namespace BusinessLayer
 {
     public class PHONGBAN_bs
     {
-            Qly_NvienEntities1 db = new Qly_NvienEntities1();
+            Qly_NvienEntities2 db = new Qly_NvienEntities2();
 
             //
             public PHONGBAN getItem(int idpb)
             {
-                return db.PHONGBANs.FirstOrDefault(x => x.ID_PB == idpb);
+                return db.PHONGBAN.FirstOrDefault(x => x.ID_PB == idpb);
             }
 
             //LẤY VỀ DANH SÁCH
             public List<PHONGBAN> getList()
             {
-                return db.PHONGBANs.ToList();
+                return db.PHONGBAN.ToList();
             }
 
             //THÊM
@@ -28,7 +28,7 @@ namespace BusinessLayer
             {
                 try
                 {
-                    db.PHONGBANs.Add(pb);
+                    db.PHONGBAN.Add(pb);
                     db.SaveChanges();
                     return pb;
                 }
@@ -43,7 +43,7 @@ namespace BusinessLayer
             {
                 try
                 {
-                    var _pb = db.PHONGBANs.FirstOrDefault(x => x.ID_PB == pb.ID_PB);
+                    var _pb = db.PHONGBAN.FirstOrDefault(x => x.ID_PB == pb.ID_PB);
                     _pb.TENPB = pb.TENPB;
                     db.SaveChanges();
                     return pb;
@@ -59,8 +59,8 @@ namespace BusinessLayer
             {
                 try
                 {
-                    var _pb = db.PHONGBANs.FirstOrDefault(x => x.ID_PB == idpb);
-                    db.PHONGBANs.Remove(_pb);
+                    var _pb = db.PHONGBAN.FirstOrDefault(x => x.ID_PB == idpb);
+                    db.PHONGBAN.Remove(_pb);
                     db.SaveChanges();
                 }
                 catch (Exception ex)

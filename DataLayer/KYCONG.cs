@@ -28,5 +28,7 @@ namespace DataLayer
         public Nullable<System.DateTime> DELETED_DATE { get; set; }
         public Nullable<int> UPDATED_BY { get; set; }
         public Nullable<System.DateTime> UPDATED_DATE { get; set; }
+    
+        public virtual CONGTY CONGTY { get; set; }
     }
 }

@@ -10,7 +10,7 @@ namespace BusinessLayer
 {
     public class NHANVIEN_THOIVIEC_bs
     {
-        Qly_NvienEntities1 db = new Qly_NvienEntities1();
+        Qly_NvienEntities2 db = new Qly_NvienEntities2();
         
         public NHANVIEN_THOIVIEC getItem(string soqd)
         {
@@ -32,7 +32,7 @@ namespace BusinessLayer
                 _tvdto = new NHANVIEN_THOIVIEC_dto();
                 _tvdto.SOQD = item.SOQD;
                 _tvdto.MANV = item.MANV;
-                var nv = db.NHANVIENs.FirstOrDefault(x => x.MANV == item.MANV);
+                var nv = db.NHANVIEN.FirstOrDefault(x => x.MANV == item.MANV);
                 _tvdto.HOTEN = nv.HOTEN;
                 _tvdto.NGAYNOPDON = item.NGAYNOPDON;
                 _tvdto.NGAYNGHI = item.NGAYNGHI;

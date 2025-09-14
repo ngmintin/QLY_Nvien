@@ -16,6 +16,7 @@ namespace DataLayer
     {
         public string SOQD { get; set; }
         public Nullable<int> MANV { get; set; }
+        public string HOTEN { get; set; }
         public Nullable<System.DateTime> NGAYNOPDON { get; set; }
         public Nullable<System.DateTime> NGAYNGHI { get; set; }
         public string LYDO { get; set; }

@@ -9,18 +9,18 @@ namespace BusinessLayer
 {
     public class TRINHDOs
     {
-        Qly_NvienEntities1 db = new Qly_NvienEntities1();
+        Qly_NvienEntities2 db = new Qly_NvienEntities2();
 
         //
         public TRINHDO getItem(int idtd)
         {
-            return db.TRINHDOes.FirstOrDefault(x => x.ID_TD == idtd);
+            return db.TRINHDO.FirstOrDefault(x => x.ID_TD == idtd);
         }
 
         //LẤY VỀ DANH SÁCH
         public List<TRINHDO> getList()
         {
-            return db.TRINHDOes.ToList();
+            return db.TRINHDO.ToList();
         }
 
         //THÊM
@@ -28,7 +28,7 @@ namespace BusinessLayer
         {
             try
             {
-                db.TRINHDOes.Add(td);
+                db.TRINHDO.Add(td);
                 db.SaveChanges();
                 return td;
             }
@@ -43,7 +43,7 @@ namespace BusinessLayer
         {
             try
             {
-                var _td = db.TRINHDOes.FirstOrDefault(x => x.ID_TD == td.ID_TD);
+                var _td = db.TRINHDO.FirstOrDefault(x => x.ID_TD == td.ID_TD);
                 _td.TENTD = td.TENTD;
                 db.SaveChanges();
                 return td;
@@ -59,8 +59,8 @@ namespace BusinessLayer
         {
             try
             {
-                var _td = db.TRINHDOes.FirstOrDefault(x => x.ID_TD == idtd);
-                db.TRINHDOes.Remove(_td);
+                var _td = db.TRINHDO.FirstOrDefault(x => x.ID_TD == idtd);
+                db.TRINHDO.Remove(_td);
                 db.SaveChanges();
             }
             catch (Exception ex)

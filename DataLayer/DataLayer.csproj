@@ -55,109 +55,109 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BANGCONG.cs">
-      <DependentUpon>QLY_NVIEN.tt</DependentUpon>
+      <DependentUpon>Qly_Nvien1.tt</DependentUpon>
     </Compile>
     <Compile Include="BANGCONG_NHANVIEN_CHITIET.cs">
-      <DependentUpon>QLY_NVIEN.tt</DependentUpon>
+      <DependentUpon>Qly_Nvien1.tt</DependentUpon>
     </Compile>
     <Compile Include="BANGLUONG.cs">
-      <DependentUpon>QLY_NVIEN.tt</DependentUpon>
+      <DependentUpon>Qly_Nvien1.tt</DependentUpon>
     </Compile>
     <Compile Include="BAOCAO.cs">
-      <DependentUpon>QLY_NVIEN.tt</DependentUpon>
+      <DependentUpon>Qly_Nvien1.tt</DependentUpon>
     </Compile>
     <Compile Include="BOPHAN.cs">
-      <DependentUpon>QLY_NVIEN.tt</DependentUpon>
+      <DependentUpon>Qly_Nvien1.tt</DependentUpon>
     </Compile>
     <Compile Include="CHAMCONG.cs">
-      <DependentUpon>QLY_NVIEN.tt</DependentUpon>
+      <DependentUpon>Qly_Nvien1.tt</DependentUpon>
     </Compile>
     <Compile Include="CHUCVU.cs">
-      <DependentUpon>QLY_NVIEN.tt</DependentUpon>
+      <DependentUpon>Qly_Nvien1.tt</DependentUpon>
     </Compile>
     <Compile Include="CONGTY.cs">
-      <DependentUpon>QLY_NVIEN.tt</DependentUpon>
+      <DependentUpon>Qly_Nvien1.tt</DependentUpon>
     </Compile>
     <Compile Include="HOPDONG.cs">
-      <DependentUpon>QLY_NVIEN.tt</DependentUpon>
+      <DependentUpon>Qly_Nvien1.tt</DependentUpon>
     </Compile>
     <Compile Include="KHENTHUONGKYLUAT.cs">
-      <DependentUpon>QLY_NVIEN.tt</DependentUpon>
+      <DependentUpon>Qly_Nvien1.tt</DependentUpon>
     </Compile>
     <Compile Include="KYCONG.cs">
-      <DependentUpon>QLY_NVIEN.tt</DependentUpon>
+      <DependentUpon>Qly_Nvien1.tt</DependentUpon>
     </Compile>
     <Compile Include="KYCONGCHITIET.cs">
-      <DependentUpon>QLY_NVIEN.tt</DependentUpon>
+      <DependentUpon>Qly_Nvien1.tt</DependentUpon>
     </Compile>
     <Compile Include="LOAICA.cs">
-      <DependentUpon>QLY_NVIEN.tt</DependentUpon>
+      <DependentUpon>Qly_Nvien1.tt</DependentUpon>
     </Compile>
     <Compile Include="LOAICONG.cs">
-      <DependentUpon>QLY_NVIEN.tt</DependentUpon>
+      <DependentUpon>Qly_Nvien1.tt</DependentUpon>
     </Compile>
     <Compile Include="NHANVIEN.cs">
-      <DependentUpon>QLY_NVIEN.tt</DependentUpon>
+      <DependentUpon>Qly_Nvien1.tt</DependentUpon>
     </Compile>
     <Compile Include="NHANVIEN_BAOCAO.cs">
-      <DependentUpon>QLY_NVIEN.tt</DependentUpon>
+      <DependentUpon>Qly_Nvien1.tt</DependentUpon>
     </Compile>
     <Compile Include="NHANVIEN_NANGLUONG.cs">
-      <DependentUpon>QLY_NVIEN.tt</DependentUpon>
+      <DependentUpon>Qly_Nvien1.tt</DependentUpon>
     </Compile>
     <Compile Include="NHANVIEN_THOIVIEC.cs">
-      <DependentUpon>QLY_NVIEN.tt</DependentUpon>
+      <DependentUpon>Qly_Nvien1.tt</DependentUpon>
     </Compile>
     <Compile Include="PHONGBAN.cs">
-      <DependentUpon>QLY_NVIEN.tt</DependentUpon>
+      <DependentUpon>Qly_Nvien1.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="QLY_NVIEN.Context.cs">
+    <Compile Include="Qly_Nvien1.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>QLY_NVIEN.Context.tt</DependentUpon>
+      <DependentUpon>Qly_Nvien1.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="QLY_NVIEN.cs">
+    <Compile Include="Qly_Nvien1.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>QLY_NVIEN.tt</DependentUpon>
+      <DependentUpon>Qly_Nvien1.tt</DependentUpon>
     </Compile>
-    <Compile Include="QLY_NVIEN.Designer.cs">
+    <Compile Include="Qly_Nvien1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>QLY_NVIEN.edmx</DependentUpon>
+      <DependentUpon>Qly_Nvien1.edmx</DependentUpon>
     </Compile>
     <Compile Include="TANGCA.cs">
-      <DependentUpon>QLY_NVIEN.tt</DependentUpon>
+      <DependentUpon>Qly_Nvien1.tt</DependentUpon>
     </Compile>
     <Compile Include="TRINHDO.cs">
-      <DependentUpon>QLY_NVIEN.tt</DependentUpon>
+      <DependentUpon>Qly_Nvien1.tt</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <EntityDeploy Include="QLY_NVIEN.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>QLY_NVIEN.Designer.cs</LastGenOutput>
-    </EntityDeploy>
     <None Include="packages.config" />
-    <None Include="QLY_NVIEN.edmx.diagram">
-      <DependentUpon>QLY_NVIEN.edmx</DependentUpon>
+    <EntityDeploy Include="Qly_Nvien1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Qly_Nvien1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Qly_Nvien1.edmx.diagram">
+      <DependentUpon>Qly_Nvien1.edmx</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="QLY_NVIEN.Context.tt">
+    <Content Include="Qly_Nvien1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>QLY_NVIEN.edmx</DependentUpon>
-      <LastGenOutput>QLY_NVIEN.Context.cs</LastGenOutput>
+      <DependentUpon>Qly_Nvien1.edmx</DependentUpon>
+      <LastGenOutput>Qly_Nvien1.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="QLY_NVIEN.tt">
+    <Content Include="Qly_Nvien1.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>QLY_NVIEN.edmx</DependentUpon>
-      <LastGenOutput>QLY_NVIEN.cs</LastGenOutput>
+      <DependentUpon>Qly_Nvien1.edmx</DependentUpon>
+      <LastGenOutput>Qly_Nvien1.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

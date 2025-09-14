@@ -40,16 +40,6 @@ namespace Qly_NVien
         //BIẾN TOÀN CỤC
         NHANVIEN_bs _nhanvien;
 
-        private void btThongBao_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            openForm(typeof(FormThongBao));
-        }
-
-        private void btSuKien_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            openForm(typeof(FormSuKien));
-        }
-
         private void btmTrinhDo_ItemClick(object sender, ItemClickEventArgs e)
         {
             openForm(typeof(FormTrinhDo));

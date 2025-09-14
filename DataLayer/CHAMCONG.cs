@@ -17,7 +17,8 @@ namespace DataLayer
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public CHAMCONG()
         {
-            this.BANGCONGs = new HashSet<BANGCONG>();
+            this.BANGCONG = new HashSet<BANGCONG>();
+            this.BANGCONG1 = new HashSet<BANGCONG>();
         }
     
         public int ID_CC { get; set; }
@@ -31,6 +32,8 @@ namespace DataLayer
         public Nullable<int> BUOINGHIPHEP { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<BANGCONG> BANGCONGs { get; set; }
+        public virtual ICollection<BANGCONG> BANGCONG { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<BANGCONG> BANGCONG1 { get; set; }
     }
 }

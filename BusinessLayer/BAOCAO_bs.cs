@@ -10,7 +10,7 @@ namespace BusinessLayer
 {
     public class BAOCAO_bs
     {
-        Qly_NvienEntities1 db = new Qly_NvienEntities1();
+        Qly_NvienEntities2 db = new Qly_NvienEntities2();
 
         public NHANVIEN_BAOCAO getItem(int id)
         {
@@ -32,7 +32,7 @@ namespace BusinessLayer
                 nvbcdto.HOTEN = nv.HOTEN;
                 nvbcdto.TENCV = nv.TENCV;
                 nvbcdto.ID_BC = item.ID_BC;
-                var bc = db.BAOCAOs.FirstOrDefault(x => x.ID_BC == item.ID_BC);
+                var bc = db.BAOCAO.FirstOrDefault(x => x.ID_BC == item.ID_BC);
                 nvbcdto.TENBC = bc.TENBC;
                 nvbcdto.NOIDUNG = item.NOIDUNG;
                 nvbcdto.NGAY = item.NGAY;
@@ -51,12 +51,12 @@ namespace BusinessLayer
 
         public BAOCAO getItemBC(int id)
         {
-            return db.BAOCAOs.FirstOrDefault(x=>x.ID_BC==id);
+            return db.BAOCAO.FirstOrDefault(x=>x.ID_BC==id);
         }
 
         public List<BAOCAO> getListBC()
         {
-            return db.BAOCAOs.ToList();
+            return db.BAOCAO.ToList();
         }
 
         //THÊM

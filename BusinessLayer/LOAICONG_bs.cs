@@ -9,16 +9,16 @@ namespace BusinessLayer
 {
     public class LOAICONG_bs
     {
-        Qly_NvienEntities1 db = new Qly_NvienEntities1();
+        Qly_NvienEntities2 db = new Qly_NvienEntities2();
 
         public LOAICONG getItem(int idloaicong)
         {
-            return db.LOAICONGs.FirstOrDefault(x => x.ID_LC == idloaicong);
+            return db.LOAICONG.FirstOrDefault(x => x.ID_LC == idloaicong);
         }
 
         public List<LOAICONG> getList()
         {
-            return db.LOAICONGs.ToList();
+            return db.LOAICONG.ToList();
         }
 
         //THÊM
@@ -26,7 +26,7 @@ namespace BusinessLayer
         {
             try
             {
-                db.LOAICONGs.Add(lc);
+                db.LOAICONG.Add(lc);
                 db.SaveChanges();
                 return lc;
             }
@@ -41,7 +41,7 @@ namespace BusinessLayer
         {
             try
             {
-                var _lc = db.LOAICONGs.FirstOrDefault(x => x.ID_LC == lc.ID_LC);
+                var _lc = db.LOAICONG.FirstOrDefault(x => x.ID_LC == lc.ID_LC);
                 _lc.TENLC = lc.TENLC;
                 _lc.HESO = lc.HESO;
                 _lc.UPDATED_BY = lc.UPDATED_BY;
@@ -60,7 +60,7 @@ namespace BusinessLayer
         {
             try
             {
-                var _lc = db.LOAICONGs.FirstOrDefault(x => x.ID_LC == idloaicong);
+                var _lc = db.LOAICONG.FirstOrDefault(x => x.ID_LC == idloaicong);
                 _lc.DELETED_BY = _lc.DELETED_BY;
                 _lc.UPDATED_DATE = DateTime.Now;
                 db.SaveChanges();

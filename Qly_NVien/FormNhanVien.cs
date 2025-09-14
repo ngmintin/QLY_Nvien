@@ -84,6 +84,8 @@ namespace Qly_NVien
             simpleButtonHinhAnh.Enabled = !kt;
             dateTimePickerNgaySinh.Enabled = !kt;
             checkBoxGioiTinh.Enabled = !kt;
+            textEditTaiKhoan.Enabled = !kt;
+            textEditMatKhau.Enabled = !kt;
 
         }
 
@@ -138,6 +140,7 @@ namespace Qly_NVien
         {
             _them = false;
             showHide(false);
+            textEditTaiKhoan.ReadOnly = true;
             pictureBoxHinhAnh.Image = _hinh;
             splitContainerControl1.PanelVisibility = DevExpress.XtraEditors.SplitPanelVisibility.Both; //HIỆN THỊ CẢ 2 PANEL
         }
@@ -153,7 +156,7 @@ namespace Qly_NVien
 
         private void btnLuu_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            if (textEditHovaTen.Text == "" || textEditSDT.Text == "" || textEditEmail.Text == "" || textEditDiaChi.Text == "" || !checkBoxGioiTinh.Checked || comboBoxBoPhan.Text == "" || comboBoxChucVu.Text == "" || comboBoxPhongBan.Text == "" || comboBoxTrinhDo.Text == "")
+            if (textEditHovaTen.Text == "" || textEditSDT.Text == "" || textEditEmail.Text == "" || textEditDiaChi.Text == "" || comboBoxBoPhan.Text == "" || comboBoxChucVu.Text == "" || comboBoxPhongBan.Text == "" || comboBoxTrinhDo.Text == "")
             {
                 MessageBox.Show("Bạn chưa nhập đủ thông tin!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
@@ -198,6 +201,8 @@ namespace Qly_NVien
                 nv.HINHANH = ImageToBase64(pictureBoxHinhAnh.Image, pictureBoxHinhAnh.Image.RawFormat);
                 nv.GIOITINH = checkBoxGioiTinh.Checked;
                 nv.NGAYSINH = dateTimePickerNgaySinh.Value;
+                nv.TAIKHOAN = textEditTaiKhoan.Text;
+                nv.MATKHAU = textEditMatKhau.Text;
                 nv.ID_BP = int.Parse(comboBoxBoPhan.SelectedValue.ToString());
                 nv.ID_CV = int.Parse(comboBoxChucVu.SelectedValue.ToString());
                 nv.ID_PB = int.Parse(comboBoxPhongBan.SelectedValue.ToString());
@@ -214,6 +219,8 @@ namespace Qly_NVien
                 nv.EMAIL = textEditEmail.Text;
                 nv.GIOITINH = checkBoxGioiTinh.Checked;
                 nv.NGAYSINH = dateTimePickerNgaySinh.Value;
+                nv.TAIKHOAN = textEditTaiKhoan.Text;
+                nv.MATKHAU = textEditMatKhau.Text;
                 nv.HINHANH = ImageToBase64(pictureBoxHinhAnh.Image, pictureBoxHinhAnh.Image.RawFormat);
                 nv.ID_BP = int.Parse(comboBoxBoPhan.SelectedValue.ToString());
                 nv.ID_CV = int.Parse(comboBoxChucVu.SelectedValue.ToString());
@@ -234,6 +241,8 @@ namespace Qly_NVien
                 textEditSDT.Text = nv.SDT;
                 textEditDiaChi.Text = nv.DIACHI;
                 textEditEmail.Text = nv.EMAIL;
+                textEditTaiKhoan.Text = nv.TAIKHOAN;
+                textEditMatKhau.Text = nv.MATKHAU;
                 checkBoxGioiTinh.Checked = nv.GIOITINH.Value;
                 pictureBoxHinhAnh.Image = Base64ToImage(nv.HINHANH);
                 comboBoxBoPhan.SelectedValue = nv.ID_BP;
