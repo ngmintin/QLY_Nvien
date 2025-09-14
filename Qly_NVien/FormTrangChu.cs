@@ -149,5 +149,10 @@ namespace Qly_NVien
         {
             openForm(typeof(FormBangLuong));
         }
+
+        private void btnSuKien_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            openForm(typeof(FormSuKien));
+        }
     }
 }
