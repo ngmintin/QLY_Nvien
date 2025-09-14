@@ -38,7 +38,6 @@
             pictureBox3 = new PictureBox();
             txbMatKhau = new TextBox();
             cbGhiNho = new CheckBox();
-            llQuenMatKhau = new LinkLabel();
             buttonDangNhap = new Button();
             label2 = new Label();
             llDangKy = new LinkLabel();
@@ -186,19 +185,6 @@
             cbGhiNho.Text = "Ghi nhớ";
             cbGhiNho.UseVisualStyleBackColor = true;
             // 
-            // llQuenMatKhau
-            // 
-            llQuenMatKhau.AutoSize = true;
-            llQuenMatKhau.Font = new Font("Times New Roman", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            llQuenMatKhau.LinkColor = Color.Red;
-            llQuenMatKhau.Location = new Point(891, 364);
-            llQuenMatKhau.Name = "llQuenMatKhau";
-            llQuenMatKhau.Size = new Size(116, 17);
-            llQuenMatKhau.TabIndex = 3;
-            llQuenMatKhau.TabStop = true;
-            llQuenMatKhau.Text = "Quên mật khẩu?";
-            llQuenMatKhau.LinkClicked += llQuenMatKhau_LinkClicked;
-            // 
             // buttonDangNhap
             // 
             buttonDangNhap.Font = new Font("Times New Roman", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
@@ -297,7 +283,6 @@
             Controls.Add(llDangKy);
             Controls.Add(label2);
             Controls.Add(buttonDangNhap);
-            Controls.Add(llQuenMatKhau);
             Controls.Add(cbGhiNho);
             Controls.Add(tableLayoutPanel3);
             Controls.Add(tableLayoutPanel2);
@@ -336,7 +321,6 @@
         private TextBox txbMatKhau;
         private TableLayoutPanel tableLayoutPanel5;
         private CheckBox cbGhiNho;
-        private LinkLabel llQuenMatKhau;
         private Button buttonDangNhap;
         private Label label2;
         private LinkLabel llDangKy;

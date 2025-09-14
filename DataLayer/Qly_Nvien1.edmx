@@ -253,9 +253,9 @@
           <Property Name="HOTEN" Type="nvarchar(max)" />
           <Property Name="GIOITINH" Type="bit" />
           <Property Name="NGAYSINH" Type="datetime" />
-          <Property Name="SDT" Type="nvarchar(max)" />
-          <Property Name="DIACHI" Type="nvarchar(max)" />
-          <Property Name="EMAIL" Type="nvarchar(max)" />
+          <Property Name="SDT" Type="nvarchar" MaxLength="20" />
+          <Property Name="DIACHI" Type="nvarchar" MaxLength="200" />
+          <Property Name="EMAIL" Type="nvarchar" MaxLength="100" />
           <Property Name="ID_PB" Type="int" />
           <Property Name="ID_BP" Type="int" />
           <Property Name="ID_CV" Type="int" />
@@ -263,8 +263,8 @@
           <Property Name="ID_CTY" Type="int" />
           <Property Name="HINHANH" Type="varbinary(max)" />
           <Property Name="DATHOIVIEC" Type="bit" />
-          <Property Name="TAIKHOAN" Type="nvarchar" MaxLength="50" />
-          <Property Name="MATKHAU" Type="nvarchar" MaxLength="50" />
+          <Property Name="TAIKHOAN" Type="nvarchar" MaxLength="100" />
+          <Property Name="MATKHAU" Type="nvarchar" MaxLength="100" />
         </EntityType>
         <EntityType Name="NHANVIEN_BAOCAO">
           <Key>
@@ -1044,9 +1044,9 @@
           <Property Name="HOTEN" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="GIOITINH" Type="Boolean" />
           <Property Name="NGAYSINH" Type="DateTime" Precision="3" />
-          <Property Name="SDT" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="DIACHI" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="EMAIL" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SDT" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="DIACHI" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="EMAIL" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="ID_PB" Type="Int32" />
           <Property Name="ID_BP" Type="Int32" />
           <Property Name="ID_CV" Type="Int32" />
@@ -1054,8 +1054,8 @@
           <Property Name="ID_CTY" Type="Int32" />
           <Property Name="HINHANH" Type="Binary" MaxLength="Max" FixedLength="false" />
           <Property Name="DATHOIVIEC" Type="Boolean" />
-          <Property Name="TAIKHOAN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="MATKHAU" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TAIKHOAN" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="MATKHAU" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="BANGCONG" Relationship="Qly_NvienModel.FK_BANGCONG_NHANVIEN" FromRole="NHANVIEN" ToRole="BANGCONG" />
           <NavigationProperty Name="BANGCONG_NHANVIEN_CHITIET" Relationship="Qly_NvienModel.FK_BANGCONG_NHANVIEN_CHITIET_NHANVIEN" FromRole="NHANVIEN" ToRole="BANGCONG_NHANVIEN_CHITIET" />
           <NavigationProperty Name="BOPHAN" Relationship="Qly_NvienModel.FK_NHANVIEN_BOPHAN" FromRole="NHANVIEN" ToRole="BOPHAN" />
@@ -1383,7 +1383,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-      </Schema>
+        </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>

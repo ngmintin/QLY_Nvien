@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "5LMTMJeIuY4=",
+  "dgSpecHash": "VfSAMmfM7Nk=",
   "success": true,
   "projectFilePath": "D:\\QLYNV\\Project\\Qly_NVien\\Qly_NVien\\Qly_NVien.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Admin\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "D:\\DevExpress 25.1\\Components\\Offline Packages\\devexpress.charts\\25.1.4\\devexpress.charts.25.1.4.nupkg.sha512",
     "D:\\DevExpress 25.1\\Components\\Offline Packages\\devexpress.charts.core\\25.1.4\\devexpress.charts.core.25.1.4.nupkg.sha512",
     "D:\\DevExpress 25.1\\Components\\Offline Packages\\devexpress.codeparser\\25.1.4\\devexpress.codeparser.25.1.4.nupkg.sha512",

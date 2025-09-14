@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BusinessLayer;
+using DataLayer;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,10 +10,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace Qly_NVien
 {
     public partial class FormDangKy : Form
     {
+        Qly_NvienEntities2 db = new Qly_NvienEntities2();
         public FormDangKy()
         {
             InitializeComponent();
@@ -132,6 +136,35 @@ namespace Qly_NVien
             FormDangNhap dn = new FormDangNhap();
             dn.Show();
             this.Hide();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string ho = textBoxHo.Text.Trim();
+                string ten = textBoxTen.Text.Trim();
+                string hoTen = ho + " " + ten;
+                string taiKhoan = textBoxTenDangNhap.Text.Trim();
+                string matKhau = textBoxMatKhau.Text.Trim();
+                string xacNhan = textBoxXacNhan.Text.Trim();
+                string email = textBoxEmail.Text.Trim();
+
+                if (matKhau != xacNhan)
+                {
+                    MessageBox.Show("Mật khẩu xác nhận không khớp!");
+                    return;
+                }
+
+                NHANVIEN_bs bs = new NHANVIEN_bs();
+                bs.DangKy(hoTen, taiKhoan, matKhau, email);
+
+                MessageBox.Show("Đăng ký thành công!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi: " + ex.Message);
+            }
         }
     }
 }

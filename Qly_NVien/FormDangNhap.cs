@@ -1,7 +1,12 @@
+using DataLayer;
+using BCrypt.Net;
+
 namespace Qly_NVien
+
 {
     public partial class FormDangNhap : Form
     {
+        Qly_NvienEntities2 db = new Qly_NvienEntities2();
         public FormDangNhap()
         {
             InitializeComponent();
@@ -83,18 +88,39 @@ namespace Qly_NVien
 
         private void buttonDangNhap_Click(object sender, EventArgs e)
         {
-            if(txbTaiKhoan.Text == "Tên đăng nhập" && txbMatKhau.Text == "Mật khẩu")
-            {
-                MessageBox.Show("Tài khoản và mật khẩu không được để trống!");
-            }
-            else if(txbTaiKhoan.Text == "Tên đăng nhập")
+            string taiKhoan = txbTaiKhoan.Text.Trim();
+            string matKhau = txbMatKhau.Text.Trim();
+
+            if (taiKhoan == "Tên đăng nhập" || taiKhoan == "")
             {
                 MessageBox.Show("Tài khoản không được để trống!");
+                return;
             }
-            else if (txbMatKhau.Text == "Mật khẩu")
+
+            if (matKhau == "Mật khẩu" || matKhau == "")
             {
                 MessageBox.Show("Mật khẩu không được để trống!");
+                return;
             }
+
+            var nv = db.NHANVIEN.SingleOrDefault(x => x.TAIKHOAN == taiKhoan);
+            if (nv == null)
+            {
+                MessageBox.Show("Tài khoản không tồn tại!");
+                return;
+            }
+
+            if (!BCrypt.Net.BCrypt.Verify(matKhau, nv.MATKHAU))
+            {
+                MessageBox.Show("Mật khẩu không đúng!");
+                return;
+            }
+
+            // Đăng nhập thành công
+            MessageBox.Show($"Xin chào {nv.HOTEN}!");
+            FormTrangChu main = new FormTrangChu();
+            main.Show();
+            this.Hide();
         }
     }
 }

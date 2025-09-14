@@ -188,7 +188,6 @@ namespace Qly_NVien
             this.Close();
         }
 
-        //HÀM LƯU DL
         void saveData()
         {
             if (_them)
@@ -201,8 +200,6 @@ namespace Qly_NVien
                 nv.HINHANH = ImageToBase64(pictureBoxHinhAnh.Image, pictureBoxHinhAnh.Image.RawFormat);
                 nv.GIOITINH = checkBoxGioiTinh.Checked;
                 nv.NGAYSINH = dateTimePickerNgaySinh.Value;
-                nv.TAIKHOAN = textEditTaiKhoan.Text;
-                nv.MATKHAU = textEditMatKhau.Text;
                 nv.ID_BP = int.Parse(comboBoxBoPhan.SelectedValue.ToString());
                 nv.ID_CV = int.Parse(comboBoxChucVu.SelectedValue.ToString());
                 nv.ID_PB = int.Parse(comboBoxPhongBan.SelectedValue.ToString());
@@ -219,8 +216,6 @@ namespace Qly_NVien
                 nv.EMAIL = textEditEmail.Text;
                 nv.GIOITINH = checkBoxGioiTinh.Checked;
                 nv.NGAYSINH = dateTimePickerNgaySinh.Value;
-                nv.TAIKHOAN = textEditTaiKhoan.Text;
-                nv.MATKHAU = textEditMatKhau.Text;
                 nv.HINHANH = ImageToBase64(pictureBoxHinhAnh.Image, pictureBoxHinhAnh.Image.RawFormat);
                 nv.ID_BP = int.Parse(comboBoxBoPhan.SelectedValue.ToString());
                 nv.ID_CV = int.Parse(comboBoxChucVu.SelectedValue.ToString());
@@ -241,22 +236,24 @@ namespace Qly_NVien
                 textEditSDT.Text = nv.SDT;
                 textEditDiaChi.Text = nv.DIACHI;
                 textEditEmail.Text = nv.EMAIL;
-                textEditTaiKhoan.Text = nv.TAIKHOAN;
-                textEditMatKhau.Text = nv.MATKHAU;
-                checkBoxGioiTinh.Checked = nv.GIOITINH.Value;
+                checkBoxGioiTinh.Checked = nv.GIOITINH ?? false;
                 pictureBoxHinhAnh.Image = Base64ToImage(nv.HINHANH);
-                comboBoxBoPhan.SelectedValue = nv.ID_BP;
-                comboBoxChucVu.SelectedValue = nv.ID_CV;
-                comboBoxPhongBan.SelectedValue = nv.ID_PB;
-                comboBoxTrinhDo.SelectedValue = nv.ID_TD;
+
+                if (nv.ID_BP != null) comboBoxBoPhan.SelectedValue = nv.ID_BP;
+                if (nv.ID_CV != null) comboBoxChucVu.SelectedValue = nv.ID_CV;
+                if (nv.ID_PB != null) comboBoxPhongBan.SelectedValue = nv.ID_PB;
+                if (nv.ID_TD != null) comboBoxTrinhDo.SelectedValue = nv.ID_TD;
                 //nv.ID_CTY = 1;
 
             }
         }
 
+
         //HÀM CHUYỂN ĐỔI HÌNH ẢNH LƯU VÀO DB
         public byte[] ImageToBase64(Image image, System.Drawing.Imaging.ImageFormat format)
         {
+            if (image == null) return null;
+
             using (MemoryStream ms = new MemoryStream())
             {
                 image.Save(ms, format);
@@ -267,10 +264,12 @@ namespace Qly_NVien
 
         public Image Base64ToImage(byte[] imageBytes)
         {
-            MemoryStream ms = new MemoryStream(imageBytes, 0, imageBytes.Length);
-            ms.Write(imageBytes, 0, imageBytes.Length);
-            Image image = Image.FromStream(ms, true);
-            return image;
+            if (imageBytes == null || imageBytes.Length == 0) return null;
+
+            using (MemoryStream ms = new MemoryStream(imageBytes))
+            {
+                return Image.FromStream(ms);
+            }
         }
 
         private void simpleButtonHinhAnh_Click(object sender, EventArgs e)
