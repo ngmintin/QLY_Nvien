@@ -3,12 +3,20 @@
   "WorkspaceRootPath": "D:\\QLYNV\\Project\\Qly_NVien\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2015EEA1-8402-4860-B80E-501460727CE8}|Qly_NVien\\Qly_NVien.csproj|d:\\qlynv\\project\\qly_nvien\\qly_nvien\\formsukien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{2015EEA1-8402-4860-B80E-501460727CE8}|Qly_NVien\\Qly_NVien.csproj|solutionrelative:qly_nvien\\formsukien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{2015EEA1-8402-4860-B80E-501460727CE8}|Qly_NVien\\Qly_NVien.csproj|d:\\qlynv\\project\\qly_nvien\\qly_nvien\\chamcong\\formbangcong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2015EEA1-8402-4860-B80E-501460727CE8}|Qly_NVien\\Qly_NVien.csproj|solutionrelative:qly_nvien\\chamcong\\formbangcong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{850A8F48-50DC-4F85-8A52-FDDEF15DBBCA}|BusinessLayer\\BusinessLayer.csproj|D:\\QLYNV\\Project\\Qly_NVien\\BusinessLayer\\TRINHDOs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{850A8F48-50DC-4F85-8A52-FDDEF15DBBCA}|BusinessLayer\\BusinessLayer.csproj|solutionrelative:BusinessLayer\\TRINHDOs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{850A8F48-50DC-4F85-8A52-FDDEF15DBBCA}|BusinessLayer\\BusinessLayer.csproj|d:\\qlynv\\project\\qly_nvien\\businesslayer\\bangluong_bs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{850A8F48-50DC-4F85-8A52-FDDEF15DBBCA}|BusinessLayer\\BusinessLayer.csproj|solutionrelative:businesslayer\\bangluong_bs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2015EEA1-8402-4860-B80E-501460727CE8}|Qly_NVien\\Qly_NVien.csproj|d:\\qlynv\\project\\qly_nvien\\qly_nvien\\chamcong\\formbangluong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2015EEA1-8402-4860-B80E-501460727CE8}|Qly_NVien\\Qly_NVien.csproj|solutionrelative:qly_nvien\\chamcong\\formbangluong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2015EEA1-8402-4860-B80E-501460727CE8}|Qly_NVien\\Qly_NVien.csproj|D:\\QLYNV\\Project\\Qly_NVien\\qly_nvien\\chamcong\\formbangluong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2015EEA1-8402-4860-B80E-501460727CE8}|Qly_NVien\\Qly_NVien.csproj|solutionrelative:qly_nvien\\chamcong\\formbangluong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -23,26 +31,51 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "FormSuKien.cs [Design]",
-              "DocumentMoniker": "D:\\QLYNV\\Project\\Qly_NVien\\Qly_NVien\\FormSuKien.cs",
-              "RelativeDocumentMoniker": "Qly_NVien\\FormSuKien.cs",
-              "ToolTip": "D:\\QLYNV\\Project\\Qly_NVien\\Qly_NVien\\FormSuKien.cs [Design]",
-              "RelativeToolTip": "Qly_NVien\\FormSuKien.cs [Design]",
+              "Title": "FormBangCong.cs [Design]",
+              "DocumentMoniker": "D:\\QLYNV\\Project\\Qly_NVien\\Qly_NVien\\CHAMCONG\\FormBangCong.cs",
+              "RelativeDocumentMoniker": "Qly_NVien\\CHAMCONG\\FormBangCong.cs",
+              "ToolTip": "D:\\QLYNV\\Project\\Qly_NVien\\Qly_NVien\\CHAMCONG\\FormBangCong.cs [Design]",
+              "RelativeToolTip": "Qly_NVien\\CHAMCONG\\FormBangCong.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-14T16:25:47.465Z",
+              "WhenOpened": "2025-09-14T17:15:52.637Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "TRINHDOs.cs",
-              "DocumentMoniker": "D:\\QLYNV\\Project\\Qly_NVien\\BusinessLayer\\TRINHDOs.cs",
-              "RelativeDocumentMoniker": "BusinessLayer\\TRINHDOs.cs",
-              "ToolTip": "D:\\QLYNV\\Project\\Qly_NVien\\BusinessLayer\\TRINHDOs.cs",
-              "RelativeToolTip": "BusinessLayer\\TRINHDOs.cs",
-              "ViewState": "AgIAACkAAAAAAAAAAAAwwD4AAAAaAAAAAAAAAA==",
+              "Title": "BANGLUONG_bs.cs",
+              "DocumentMoniker": "D:\\QLYNV\\Project\\Qly_NVien\\BusinessLayer\\BANGLUONG_bs.cs",
+              "RelativeDocumentMoniker": "BusinessLayer\\BANGLUONG_bs.cs",
+              "ToolTip": "D:\\QLYNV\\Project\\Qly_NVien\\BusinessLayer\\BANGLUONG_bs.cs",
+              "RelativeToolTip": "BusinessLayer\\BANGLUONG_bs.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-14T07:43:13.965Z"
+              "WhenOpened": "2025-09-14T17:08:20.757Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FormBangLuong.cs",
+              "DocumentMoniker": "D:\\QLYNV\\Project\\Qly_NVien\\Qly_NVien\\CHAMCONG\\FormBangLuong.cs",
+              "RelativeDocumentMoniker": "Qly_NVien\\CHAMCONG\\FormBangLuong.cs",
+              "ToolTip": "D:\\QLYNV\\Project\\Qly_NVien\\Qly_NVien\\CHAMCONG\\FormBangLuong.cs",
+              "RelativeToolTip": "Qly_NVien\\CHAMCONG\\FormBangLuong.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-14T17:08:02.248Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "FormBangLuong.cs [Design]",
+              "DocumentMoniker": "D:\\QLYNV\\Project\\Qly_NVien\\Qly_NVien\\CHAMCONG\\FormBangLuong.cs",
+              "RelativeDocumentMoniker": "Qly_NVien\\CHAMCONG\\FormBangLuong.cs",
+              "ToolTip": "D:\\QLYNV\\Project\\Qly_NVien\\Qly_NVien\\CHAMCONG\\FormBangLuong.cs [Design]",
+              "RelativeToolTip": "Qly_NVien\\CHAMCONG\\FormBangLuong.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-14T17:07:22.645Z"
             }
           ]
         }

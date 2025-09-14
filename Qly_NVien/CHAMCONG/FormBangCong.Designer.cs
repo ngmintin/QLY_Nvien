@@ -289,7 +289,7 @@
             // 
             comboBoxNam.Font = new Font("Tahoma", 15.75F);
             comboBoxNam.FormattingEnabled = true;
-            comboBoxNam.Items.AddRange(new object[] { "2022", "2023", "2024", "2025", "2026", "2027", "2028", "2029", "2030" });
+            comboBoxNam.Items.AddRange(new object[] { "", "2025", "2026", "2027", "2028", "2029", "2030" });
             comboBoxNam.Location = new Point(114, 26);
             comboBoxNam.Name = "comboBoxNam";
             comboBoxNam.Size = new Size(191, 33);

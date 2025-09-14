@@ -48,7 +48,6 @@
             btnIn = new DevExpress.XtraBars.BarButtonItem();
             btIn = new DevExpress.XtraBars.BarButtonItem();
             splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
-            btnXemBangLuong = new DevExpress.XtraEditors.SimpleButton();
             comboBoxThang = new ComboBox();
             comboBoxNam = new ComboBox();
             labelControl2 = new DevExpress.XtraEditors.LabelControl();
@@ -114,7 +113,7 @@
             // 
             barButtonItemIn.Caption = "In";
             barButtonItemIn.Id = 9;
-            barButtonItemIn.ImageOptions.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("barButtonItem1.ImageOptions.SvgImage");
+            barButtonItemIn.ImageOptions.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("barButtonItemIn.ImageOptions.SvgImage");
             barButtonItemIn.Name = "barButtonItemIn";
             barButtonItemIn.ItemClick += barButtonItemIn_ItemClick;
             // 
@@ -233,7 +232,6 @@
             // 
             // splitContainerControl1.Panel1
             // 
-            splitContainerControl1.Panel1.Controls.Add(btnXemBangLuong);
             splitContainerControl1.Panel1.Controls.Add(comboBoxThang);
             splitContainerControl1.Panel1.Controls.Add(comboBoxNam);
             splitContainerControl1.Panel1.Controls.Add(labelControl2);
@@ -247,18 +245,6 @@
             splitContainerControl1.Size = new Size(914, 464);
             splitContainerControl1.SplitterPosition = 145;
             splitContainerControl1.TabIndex = 8;
-            // 
-            // btnXemBangLuong
-            // 
-            btnXemBangLuong.Appearance.Font = new Font("Times New Roman", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnXemBangLuong.Appearance.Options.UseFont = true;
-            btnXemBangLuong.ImageOptions.Image = (Image)resources.GetObject("btnXemBangLuong.ImageOptions.Image");
-            btnXemBangLuong.Location = new Point(370, 73);
-            btnXemBangLuong.Name = "btnXemBangLuong";
-            btnXemBangLuong.Size = new Size(132, 34);
-            btnXemBangLuong.TabIndex = 2;
-            btnXemBangLuong.Text = "Xem bảng lương";
-            btnXemBangLuong.Click += btnXemBangLuong_Click;
             // 
             // comboBoxThang
             // 
@@ -509,7 +495,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn NGAYCONGTRONGTHANG;
         private ComboBox comboBoxThang;
         private ComboBox comboBoxNam;
-        private DevExpress.XtraEditors.SimpleButton btnXemBangLuong;
         private DevExpress.XtraGrid.Columns.GridColumn IDNV;
         private DevExpress.XtraGrid.Columns.GridColumn NGAYPHEP;
         private DevExpress.XtraGrid.Columns.GridColumn NGAYCHUNHAT;
