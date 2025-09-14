@@ -124,15 +124,6 @@
             btThongBao.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             btThongBao.ItemClick += btThongBao_ItemClick;
             // 
-            // btSuKien
-            // 
-            btSuKien.Caption = "Sự kiện";
-            btSuKien.Id = 2;
-            btSuKien.ImageOptions.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("btSuKien.ImageOptions.SvgImage");
-            btSuKien.Name = "btSuKien";
-            btSuKien.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
-            btSuKien.ItemClick += btSuKien_ItemClick;
-            // 
             // btCa
             // 
             btCa.Caption = "Ca";
