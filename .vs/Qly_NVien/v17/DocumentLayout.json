@@ -3,10 +3,6 @@
   "WorkspaceRootPath": "D:\\QLYNV\\Project\\Qly_NVien\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2015EEA1-8402-4860-B80E-501460727CE8}|Qly_NVien\\Qly_NVien.csproj|d:\\qlynv\\project\\qly_nvien\\qly_nvien\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2015EEA1-8402-4860-B80E-501460727CE8}|Qly_NVien\\Qly_NVien.csproj|solutionrelative:qly_nvien\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{2015EEA1-8402-4860-B80E-501460727CE8}|Qly_NVien\\Qly_NVien.csproj|d:\\qlynv\\project\\qly_nvien\\qly_nvien\\formsukien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{2015EEA1-8402-4860-B80E-501460727CE8}|Qly_NVien\\Qly_NVien.csproj|solutionrelative:qly_nvien\\formsukien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
@@ -22,11 +18,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "FormSuKien.cs [Design]",
               "DocumentMoniker": "D:\\QLYNV\\Project\\Qly_NVien\\Qly_NVien\\FormSuKien.cs",
               "RelativeDocumentMoniker": "Qly_NVien\\FormSuKien.cs",
@@ -38,20 +34,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\QLYNV\\Project\\Qly_NVien\\Qly_NVien\\Program.cs",
-              "RelativeDocumentMoniker": "Qly_NVien\\Program.cs",
-              "ToolTip": "D:\\QLYNV\\Project\\Qly_NVien\\Qly_NVien\\Program.cs",
-              "RelativeToolTip": "Qly_NVien\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-14T10:05:55.57Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "TRINHDOs.cs",
               "DocumentMoniker": "D:\\QLYNV\\Project\\Qly_NVien\\BusinessLayer\\TRINHDOs.cs",
               "RelativeDocumentMoniker": "BusinessLayer\\TRINHDOs.cs",

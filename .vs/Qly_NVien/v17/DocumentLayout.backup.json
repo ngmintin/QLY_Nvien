@@ -7,14 +7,6 @@
       "RelativeMoniker": "D:0:0:{2015EEA1-8402-4860-B80E-501460727CE8}|Qly_NVien\\Qly_NVien.csproj|solutionrelative:qly_nvien\\formsukien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2015EEA1-8402-4860-B80E-501460727CE8}|Qly_NVien\\Qly_NVien.csproj|d:\\qlynv\\project\\qly_nvien\\qly_nvien\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2015EEA1-8402-4860-B80E-501460727CE8}|Qly_NVien\\Qly_NVien.csproj|solutionrelative:qly_nvien\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0B72FF65-5B44-4C4E-A2E1-71BABBFA1610}|DataLayer\\DataLayer.csproj|D:\\QLYNV\\Project\\Qly_NVien\\DataLayer\\App.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{0B72FF65-5B44-4C4E-A2E1-71BABBFA1610}|DataLayer\\DataLayer.csproj|solutionrelative:DataLayer\\App.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{850A8F48-50DC-4F85-8A52-FDDEF15DBBCA}|BusinessLayer\\BusinessLayer.csproj|D:\\QLYNV\\Project\\Qly_NVien\\BusinessLayer\\TRINHDOs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{850A8F48-50DC-4F85-8A52-FDDEF15DBBCA}|BusinessLayer\\BusinessLayer.csproj|solutionrelative:BusinessLayer\\TRINHDOs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -43,31 +35,6 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\QLYNV\\Project\\Qly_NVien\\Qly_NVien\\Program.cs",
-              "RelativeDocumentMoniker": "Qly_NVien\\Program.cs",
-              "ToolTip": "D:\\QLYNV\\Project\\Qly_NVien\\Qly_NVien\\Program.cs",
-              "RelativeToolTip": "Qly_NVien\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-14T10:05:55.57Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "App.config",
-              "DocumentMoniker": "D:\\QLYNV\\Project\\Qly_NVien\\DataLayer\\App.config",
-              "RelativeDocumentMoniker": "DataLayer\\App.config",
-              "ToolTip": "D:\\QLYNV\\Project\\Qly_NVien\\DataLayer\\App.config",
-              "RelativeToolTip": "DataLayer\\App.config",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABEAAACTAQAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2025-09-14T07:58:34.177Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
               "Title": "TRINHDOs.cs",
               "DocumentMoniker": "D:\\QLYNV\\Project\\Qly_NVien\\BusinessLayer\\TRINHDOs.cs",
               "RelativeDocumentMoniker": "BusinessLayer\\TRINHDOs.cs",
